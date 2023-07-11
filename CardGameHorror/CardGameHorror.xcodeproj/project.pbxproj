@@ -20,6 +20,8 @@
 		28314F812A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F802A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift */; };
 		28314F932A5CAB7C0031B95B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F922A5CAB7C0031B95B /* SwiftUIView.swift */; };
 		28314F992A5CADD70031B95B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F982A5CADD70031B95B /* File.swift */; };
+		286A54B02A5DC96000B2D6BC /* cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286A54AF2A5DC96000B2D6BC /* cards.swift */; };
+		286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */ = {isa = PBXBuildFile; fileRef = 286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		28314F802A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameHorrorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		28314F922A5CAB7C0031B95B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		28314F982A5CADD70031B95B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		286A54AF2A5DC96000B2D6BC /* cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cards.swift; sourceTree = "<group>"; };
+		286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Myaudio.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +159,8 @@
 		28314F8F2A5CAB120031B95B /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				28314F972A5CACD20031B95B /* Nodes */,
-				28314F952A5CAC4F0031B95B /* Scenes */,
-				28314F942A5CAC390031B95B /* UI */,
+				28314F972A5CACD20031B95B /* CutScene */,
+				28314F952A5CAC4F0031B95B /* Battle */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -186,27 +189,30 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		28314F952A5CAC4F0031B95B /* Scenes */ = {
+		28314F952A5CAC4F0031B95B /* Battle */ = {
 			isa = PBXGroup;
 			children = (
+				28314F942A5CAC390031B95B /* UI */,
 				28314F602A5CAAD10031B95B /* GameScene.swift */,
+				286A54AF2A5DC96000B2D6BC /* cards.swift */,
 			);
-			path = Scenes;
+			path = Battle;
 			sourceTree = "<group>";
 		};
 		28314F962A5CAC740031B95B /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
 		};
-		28314F972A5CACD20031B95B /* Nodes */ = {
+		28314F972A5CACD20031B95B /* CutScene */ = {
 			isa = PBXGroup;
 			children = (
 				28314F982A5CADD70031B95B /* File.swift */,
 			);
-			path = Nodes;
+			path = CutScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +321,7 @@
 			files = (
 				28314F662A5CAAD10031B95B /* Main.storyboard in Resources */,
 				28314F5D2A5CAAD10031B95B /* GameScene.sks in Resources */,
+				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
 				28314F5F2A5CAAD10031B95B /* Actions.sks in Resources */,
@@ -345,6 +352,7 @@
 				28314F992A5CADD70031B95B /* File.swift in Sources */,
 				28314F612A5CAAD10031B95B /* GameScene.swift in Sources */,
 				28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */,
+				286A54B02A5DC96000B2D6BC /* cards.swift in Sources */,
 				28314F932A5CAB7C0031B95B /* SwiftUIView.swift in Sources */,
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
 			);

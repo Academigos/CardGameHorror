@@ -5,4 +5,7 @@
 //  Created by Eduardo on 11/07/23.
 //
 
-import Foundation
+import SpriteKit
+
+class card: SKSpriteNode{    
+}

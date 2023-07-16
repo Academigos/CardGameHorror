@@ -1,15 +1,14 @@
 //
-//  GameScene.swift
+//  MonsterView.swift
 //  CardGameHorror
 //
-//  Created by Eduardo on 10/07/23.
+//  Created by Giovanni Favorin de Melo on 15/07/23.
 //
 
 import SpriteKit
-import GameplayKit
 
-class BattleScene: SKScene {
-    
+class MonsterView: SKScene {
+
     override func didMove(to view: SKView) {
         let monstro = Monster(monsterType: .initial)
         monstro.position = CGPoint(x: size.width * 0.5, y: size.height * 0.5)

@@ -18,8 +18,10 @@
 		28314F812A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F802A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift */; };
 		28314F932A5CAB7C0031B95B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F922A5CAB7C0031B95B /* SwiftUIView.swift */; };
 		28314F992A5CADD70031B95B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F982A5CADD70031B95B /* File.swift */; };
-		286A54B02A5DC96000B2D6BC /* cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286A54AF2A5DC96000B2D6BC /* cards.swift */; };
 		286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */ = {isa = PBXBuildFile; fileRef = 286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */; };
+		B823F2D92A62CC0D00F82ACB /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B823F2D82A62CC0D00F82ACB /* MonsterView.swift */; };
+		B823F2DB2A62CC1A00F82ACB /* MonsterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B823F2DA2A62CC1A00F82ACB /* MonsterController.swift */; };
+		B823F2DD2A62CDD800F82ACB /* MonsterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B823F2DC2A62CDD800F82ACB /* MonsterClass.swift */; };
 		C9D58C8B2A5DD2960023C654 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D58C8A2A5DD2960023C654 /* CardModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +57,10 @@
 		28314F802A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameHorrorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		28314F922A5CAB7C0031B95B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		28314F982A5CADD70031B95B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		286A54AF2A5DC96000B2D6BC /* cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cards.swift; sourceTree = "<group>"; };
 		286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Myaudio.sks; sourceTree = "<group>"; };
+		B823F2D82A62CC0D00F82ACB /* MonsterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
+		B823F2DA2A62CC1A00F82ACB /* MonsterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterController.swift; sourceTree = "<group>"; };
+		B823F2DC2A62CDD800F82ACB /* MonsterClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterClass.swift; sourceTree = "<group>"; };
 		C9D58C8A2A5DD2960023C654 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,8 +186,8 @@
 		28314F952A5CAC4F0031B95B /* Battle */ = {
 			isa = PBXGroup;
 			children = (
+				B823F2D72A62B26100F82ACB /* Monster */,
 				28314F602A5CAAD10031B95B /* BattleScene.swift */,
-				286A54AF2A5DC96000B2D6BC /* cards.swift */,
 			);
 			path = Battle;
 			sourceTree = "<group>";
@@ -202,6 +206,16 @@
 				28314F982A5CADD70031B95B /* File.swift */,
 			);
 			path = CutScene;
+			sourceTree = "<group>";
+		};
+		B823F2D72A62B26100F82ACB /* Monster */ = {
+			isa = PBXGroup;
+			children = (
+				B823F2D82A62CC0D00F82ACB /* MonsterView.swift */,
+				B823F2DA2A62CC1A00F82ACB /* MonsterController.swift */,
+				B823F2DC2A62CDD800F82ACB /* MonsterClass.swift */,
+			);
+			path = Monster;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,12 +350,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B823F2D92A62CC0D00F82ACB /* MonsterView.swift in Sources */,
 				28314F992A5CADD70031B95B /* File.swift in Sources */,
 				28314F612A5CAAD10031B95B /* BattleScene.swift in Sources */,
 				28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */,
 				C9D58C8B2A5DD2960023C654 /* CardModel.swift in Sources */,
-				286A54B02A5DC96000B2D6BC /* cards.swift in Sources */,
+				B823F2DD2A62CDD800F82ACB /* MonsterClass.swift in Sources */,
 				28314F932A5CAB7C0031B95B /* SwiftUIView.swift in Sources */,
+				B823F2DB2A62CC1A00F82ACB /* MonsterController.swift in Sources */,
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

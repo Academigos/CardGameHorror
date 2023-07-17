@@ -18,8 +18,9 @@
 		28314F812A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F802A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift */; };
 		28314F932A5CAB7C0031B95B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F922A5CAB7C0031B95B /* SwiftUIView.swift */; };
 		28314F992A5CADD70031B95B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F982A5CADD70031B95B /* File.swift */; };
-		286A54B02A5DC96000B2D6BC /* cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286A54AF2A5DC96000B2D6BC /* cards.swift */; };
+		286A54B02A5DC96000B2D6BC /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286A54AF2A5DC96000B2D6BC /* CardNode.swift */; };
 		286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */ = {isa = PBXBuildFile; fileRef = 286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */; };
+		C982D1012A6469E000A642AB /* HandCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = C982D1002A6469E000A642AB /* HandCards.swift */; };
 		C9D58C8B2A5DD2960023C654 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D58C8A2A5DD2960023C654 /* CardModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +56,9 @@
 		28314F802A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameHorrorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		28314F922A5CAB7C0031B95B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		28314F982A5CADD70031B95B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		286A54AF2A5DC96000B2D6BC /* cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cards.swift; sourceTree = "<group>"; };
+		286A54AF2A5DC96000B2D6BC /* CardNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNode.swift; sourceTree = "<group>"; };
 		286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Myaudio.sks; sourceTree = "<group>"; };
+		C982D1002A6469E000A642AB /* HandCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCards.swift; sourceTree = "<group>"; };
 		C9D58C8A2A5DD2960023C654 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,7 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				28314F602A5CAAD10031B95B /* BattleScene.swift */,
-				286A54AF2A5DC96000B2D6BC /* cards.swift */,
+				286A54AF2A5DC96000B2D6BC /* CardNode.swift */,
+				C982D1002A6469E000A642AB /* HandCards.swift */,
 			);
 			path = Battle;
 			sourceTree = "<group>";
@@ -338,9 +341,10 @@
 			files = (
 				28314F992A5CADD70031B95B /* File.swift in Sources */,
 				28314F612A5CAAD10031B95B /* BattleScene.swift in Sources */,
+				C982D1012A6469E000A642AB /* HandCards.swift in Sources */,
 				28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */,
 				C9D58C8B2A5DD2960023C654 /* CardModel.swift in Sources */,
-				286A54B02A5DC96000B2D6BC /* cards.swift in Sources */,
+				286A54B02A5DC96000B2D6BC /* CardNode.swift in Sources */,
 				28314F932A5CAB7C0031B95B /* SwiftUIView.swift in Sources */,
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
 			);
@@ -519,7 +523,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SVGXRR5RRA;
+				DEVELOPMENT_TEAM = 4VHUF9729L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -547,7 +551,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SVGXRR5RRA;
+				DEVELOPMENT_TEAM = 4VHUF9729L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

@@ -10,13 +10,14 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-    
+    static var screenSize = CGSize()
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        GameViewController.screenSize = view.bounds.size
         //MARK: -Battle Scene
         // get Scene
-        let battleScene = BattleScene(size: view.bounds.size)
+        let battleScene = BattleScene(size: GameViewController.screenSize)
         // Set the scale mode to scale to fit the window
         battleScene.scaleMode = .aspectFill
         

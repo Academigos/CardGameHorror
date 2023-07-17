@@ -6,6 +6,3 @@
 //
 
 import SpriteKit
-
-class card: SKSpriteNode{    
-}

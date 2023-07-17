@@ -10,13 +10,11 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //MARK: -Battle Scene
         // get Scene
-        let battleScene = BattleScene(size: view.bounds.size)
+        let battleScene = GameScene(size: view.bounds.size)
         // Set the scale mode to scale to fit the window
         battleScene.scaleMode = .aspectFill
         

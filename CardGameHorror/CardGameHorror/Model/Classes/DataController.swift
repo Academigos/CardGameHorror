@@ -9,36 +9,49 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-class PlayerController{
+protocol didMonsterAtack: AnyObject {
+    func didAttackPlayer(withDamage damage: Double)
+}
+
+protocol didPlayerAtack: AnyObject {
+    func didAttackMonster(withDamage damage: Double)
+}
+
+
+class PlayerController: didMonsterAtack {
+    
+    weak var delegateMonster: didPlayerAtack?
+    
     let player = DataManager().fetchPlayer()
-    let cards = DataManager().fetchCard()
-    let playerHealth: Double = 30
+    let playerMaxHealth: Double = 30
     let maxCard = 5
     let stackDaamge: [Double] = [2, 3]
-    
-    func getCardsInHand(){
-        DataManager().player(value: playerHealth, newCards: randomCards())
-        print(player.inHand!)
+        
+    func initPlayer() {
+        DataManager().player(value: playerMaxHealth)
     }
     
-    func getCardsInHand(playerHealth: Double){
+    func getCardsInHand() {
         if let cardInHand = player.inHand {
-            DataManager().player(value: playerHealth, newCards: randomCards(), usedCards: cardInHand)
+            DataManager().player(newCards: randomCards(), usedCards: cardInHand)
+        }else{
+            DataManager().player(newCards: randomCards())
         }
-        DataManager().player(value: playerHealth, newCards: randomCards())
     }
-    func cardsInHand() -> [Card]{
+    
+    func cardsInHand() -> [Card] {
         let cardInHand = DataManager().fetchCardPlayer(player: player)
         return cardInHand
     }
     
     private func randomCards() -> NSSet { // NSSet is replaced with Set<AnyHashable> in Swift
+        let cards = DataManager().fetchCard()
         let shuffledCards = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: Array(cards))
         let cardsInHand = NSSet(array: Array(shuffledCards.prefix(maxCard)))
         return cardsInHand
     }
     
-    func cardsDamage(cardSelected: [Card]){
+    func cardsEffect(cardSelected: [Card]) {
         var healValue: Double = 0
         var damageValue: Double = 0
         for card in cardSelected{
@@ -48,32 +61,71 @@ class PlayerController{
                 damageValue = damageValue + card.value
             }
         }
+        heal(value: healValue)
+        delegateMonster?.didAttackMonster(withDamage: damageValue)
     }
-    func isDead() -> Bool{
+    
+    private func heal(value: Double) {
+        if player.hp <= playerMaxHealth{
+            if player.hp + value > playerMaxHealth{
+                player.hp = playerMaxHealth
+            }else{
+                player.hp += value
+            }
+            DataManager().saveContext()
+        }
+    }
+    
+    func didAttackPlayer(withDamage damage: Double) {
+        if player.hp - damage < 0{
+            player.hp = 0
+        }else{
+            player.hp -= damage
+        }
+        DataManager().saveContext()
+    }
+    
+    func isDead() -> Bool {
         return player.hp <= 0
+    }
+    
+    func playerBarLife() -> Double {
+        return player.hp / playerMaxHealth
     }
 }
 
-class MonsterController{
+class MonsterController: didPlayerAtack {
+    weak var delagetePlayer: didMonsterAtack?
     
     let monster = DataManager().fetchMonster()
-    var monsterHelth: Double = 60
+    let monsterMaxHelth: Double = 60
     let minDmg: Double = 5
     let maxDmg: Double = 10
 
     
-    func health(){
-        monsterHelth = 60
-        DataManager().monster(value: self.monsterHelth)
+    func initMonster() {
+        DataManager().monster(value: monsterMaxHelth)
     }
     
-    func health(valeu: Double ){
-        monsterHelth = valeu
-        DataManager().monster(value: valeu)
+    func didAttackMonster(withDamage damage: Double) {
+        if monster[0].hp - damage < 0{
+            monster[0].hp = 0
+        }else{
+            monster[0].hp -= damage
+        }
+        DataManager().saveContext()
     }
     
-    func damage() -> Double{
+    func attack() {
         var dmg: Double = 5
-        return dmg
+        delagetePlayer?.didAttackPlayer(withDamage: dmg)
+    }
+    
+    func isDead() -> Bool {
+        return monster[0].hp <= 0
+    }
+    
+    func monsterBarLife() -> Double {
+        return monster[0].hp / monsterMaxHelth
     }
 }

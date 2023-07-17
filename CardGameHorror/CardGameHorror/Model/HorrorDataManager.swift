@@ -9,27 +9,19 @@ import Foundation
 import CoreData
 import UIKit
 
-class DataManager{
+class DataManager {
     static let shared = DataManager()
     
-    
-    //MARK: - Constante
-    private struct Constants {
-        static let vidaInicial: Double = 30
-        static let vidaMedoInicial: Double = 60
-        static let danoMinimo: Double = 2
-        
-    }
     // refence to managed object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+    let player = Player(context: DataManager().context)
+    let monster = Monster(context: DataManager().context)
     //define creation of card in database
-    init(){
-        do{
-            let playerCount = try self.context.count(for:Card.fetchRequest())
-            
-            if playerCount < 1{
-                card(image: "", type: "ATK", value: Constants.danoMinimo)
+    init() {
+        do {
+            let cardCount = try self.context.count(for:Card.fetchRequest())
+            if cardCount < 1{
+                card(image: "", type: "ATK", value: 2)
                 card(image: "", type: "ATK", value: 2)
                 card(image: "", type: "ATK", value: 2)
                 card(image: "", type: "ATK", value: 4)
@@ -46,7 +38,7 @@ class DataManager{
                 card(image: "", type: "HP", value: 6)
                 saveContext()
             }
-        }catch{
+        }catch {
             fatalError("fail to search data in init of CoreDataManager: \(error)")
         }
     }
@@ -54,7 +46,7 @@ class DataManager{
     // MARK: card CRUD
     
     //defalt create of card
-    private func card(image:String, type: String, value: Double){
+    private func card(image:String, type: String, value: Double) {
         let card = Card(context: self.context)
         card.id = UUID()
         card.image = image
@@ -63,18 +55,18 @@ class DataManager{
     }
     
     // MARK: player CRUD
-    func player(value: Double, newCards:NSSet){
-        let player = Player(context: self.context)
+    
+    /// Usado para atualizar a vida do jogador
+    func player (value: Double) {
         player.hp = value
+    }
+    
+    func player (newCards:NSSet) {
         addToHand(cards: newCards)
         saveContext()
     }
     
-    func player(value: Double, newCards:NSSet, usedCards:NSSet){
-        
-        let player = Player(context: self.context)
-        
-        player.hp = value
+    func player(newCards:NSSet, usedCards:NSSet) {
         cleanHand(cards: usedCards)
         addToHand(cards: newCards)
         saveContext()
@@ -82,26 +74,23 @@ class DataManager{
     
     // function about relationship inHand
     
-    private func addToHand(cards: NSSet){
-        let player = Player(context: self.context)
+    private func addToHand(cards: NSSet) {
         player.addToInHand(cards)
     }
     
-    private func cleanHand(cards: NSSet){
-        let player = Player(context: self.context)
+    private func cleanHand(cards: NSSet) {
         player.removeFromInHand(cards)
     }
     
     //MARK: enemy CRUD
     
-    func monster(value: Double){
-        let monster = Monster(context: self.context)
+    func monster(value: Double) {
         monster.hp = value
         saveContext()
     }
     
     // MARK: - fetchRequest
-    func fetchCardPlayer(player: Player) -> [Card]{
+    func fetchCardPlayer(player: Player) -> [Card] {
         let fetchRequest: NSFetchRequest<Card> = Card.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "player == %@", player)
         
@@ -113,30 +102,30 @@ class DataManager{
         }
     }
     
-    func fetchCard() -> [Card]{
-        do{
+    func fetchCard() -> [Card] {
+        do {
             let card = try self.context.fetch(Card.fetchRequest())
             return card
-        }catch{
+        }catch {
             fatalError("Error in fetchCard: \(error)")
         }
     }
     
-    func fetchPlayer() -> Player{
-        do{
+    func fetchPlayer() -> Player {
+        do {
             let player = try self.context.fetch(Player.fetchRequest())
             return player[0]
-        }catch{
+        }catch {
             fatalError("Error in fetchPlayer: \(error)")
         }
     }
     
-    func fetchMonster() -> [Monster]{
+    func fetchMonster() -> [Monster] {
         
-        do{
+        do {
             let monster = try self.context.fetch(Monster.fetchRequest())
             return monster
-        }catch{
+        }catch {
             fatalError("Erro in fetchEnemy: \(error)")
         }
     }

@@ -20,6 +20,7 @@
 		28314F992A5CADD70031B95B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F982A5CADD70031B95B /* File.swift */; };
 		286A54B02A5DC96000B2D6BC /* cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286A54AF2A5DC96000B2D6BC /* cards.swift */; };
 		286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */ = {isa = PBXBuildFile; fileRef = 286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */; };
+		28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD3AA02A65C05D00D5F951 /* Extensions.swift */; };
 		C9D58C8B2A5DD2960023C654 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D58C8A2A5DD2960023C654 /* CardModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		28314F982A5CADD70031B95B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		286A54AF2A5DC96000B2D6BC /* cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cards.swift; sourceTree = "<group>"; };
 		286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Myaudio.sks; sourceTree = "<group>"; };
+		28DD3AA02A65C05D00D5F951 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C9D58C8A2A5DD2960023C654 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 		28314F8E2A5CAAFC0031B95B /* System */ = {
 			isa = PBXGroup;
 			children = (
+				28DD3AA02A65C05D00D5F951 /* Extensions.swift */,
 				28314F5A2A5CAAD10031B95B /* AppDelegate.swift */,
 				28314F622A5CAAD10031B95B /* GameViewController.swift */,
 				28314F642A5CAAD10031B95B /* Main.storyboard */,
@@ -339,6 +342,7 @@
 				28314F992A5CADD70031B95B /* File.swift in Sources */,
 				28314F612A5CAAD10031B95B /* BattleScene.swift in Sources */,
 				28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */,
+				28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */,
 				C9D58C8B2A5DD2960023C654 /* CardModel.swift in Sources */,
 				286A54B02A5DC96000B2D6BC /* cards.swift in Sources */,
 				28314F932A5CAB7C0031B95B /* SwiftUIView.swift in Sources */,

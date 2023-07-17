@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F5A2A5CAAD10031B95B /* AppDelegate.swift */; };
-		28314F612A5CAAD10031B95B /* BattleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F602A5CAAD10031B95B /* BattleScene.swift */; };
+		28314F612A5CAAD10031B95B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F602A5CAAD10031B95B /* GameScene.swift */; };
 		28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F622A5CAAD10031B95B /* GameViewController.swift */; };
 		28314F662A5CAAD10031B95B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28314F642A5CAAD10031B95B /* Main.storyboard */; };
 		28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28314F672A5CAAD20031B95B /* Assets.xcassets */; };
@@ -20,8 +20,15 @@
 		28314F992A5CADD70031B95B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F982A5CADD70031B95B /* File.swift */; };
 		286A54B02A5DC96000B2D6BC /* cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286A54AF2A5DC96000B2D6BC /* cards.swift */; };
 		286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */ = {isa = PBXBuildFile; fileRef = 286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */; };
+
+		28BDF7772A6431F9002037EB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDF7762A6431F9002037EB /* DataController.swift */; };
+		28C52A6A2A617F49003AEF25 /* HorrorDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28C52A682A617F49003AEF25 /* HorrorDatabase.xcdatamodeld */; };
+		28C52A6C2A6181ED003AEF25 /* HorrorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C52A6B2A6181ED003AEF25 /* HorrorDataManager.swift */; };
+		28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */; };
+		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
+
 		28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD3AA02A65C05D00D5F951 /* Extensions.swift */; };
-		C9D58C8B2A5DD2960023C654 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D58C8A2A5DD2960023C654 /* CardModel.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +51,7 @@
 /* Begin PBXFileReference section */
 		28314F572A5CAAD10031B95B /* CardGameHorror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardGameHorror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28314F5A2A5CAAD10031B95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28314F602A5CAAD10031B95B /* BattleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleScene.swift; sourceTree = "<group>"; };
+		28314F602A5CAAD10031B95B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		28314F622A5CAAD10031B95B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		28314F652A5CAAD10031B95B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28314F672A5CAAD20031B95B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,8 +65,15 @@
 		28314F982A5CADD70031B95B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		286A54AF2A5DC96000B2D6BC /* cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cards.swift; sourceTree = "<group>"; };
 		286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Myaudio.sks; sourceTree = "<group>"; };
+
+		28BDF7762A6431F9002037EB /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		28C52A692A617F49003AEF25 /* HorrorDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HorrorDatabase.xcdatamodel; sourceTree = "<group>"; };
+		28C52A6B2A6181ED003AEF25 /* HorrorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorrorDataManager.swift; sourceTree = "<group>"; };
+		28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BigshotOne-Regular.ttf"; sourceTree = "<group>"; };
+		28F54D292A60923B00B692F5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+
 		28DD3AA02A65C05D00D5F951 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		C9D58C8A2A5DD2960023C654 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +153,7 @@
 		28314F8D2A5CAAE30031B95B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				28DD3A9B2A65B07A00D5F951 /* Fonts */,
 				28314F962A5CAC740031B95B /* Audio */,
 				28314F672A5CAAD20031B95B /* Assets.xcassets */,
 			);
@@ -153,6 +168,7 @@
 				28314F622A5CAAD10031B95B /* GameViewController.swift */,
 				28314F642A5CAAD10031B95B /* Main.storyboard */,
 				28314F692A5CAAD20031B95B /* LaunchScreen.storyboard */,
+				28C52A7D2A61E977003AEF25 /* Extensions.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -160,6 +176,7 @@
 		28314F8F2A5CAB120031B95B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				28314F602A5CAAD10031B95B /* GameScene.swift */,
 				28314F972A5CACD20031B95B /* CutScene */,
 				28314F952A5CAC4F0031B95B /* Battle */,
 			);
@@ -169,7 +186,9 @@
 		28314F902A5CAB1F0031B95B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C9D58C8A2A5DD2960023C654 /* CardModel.swift */,
+				28C52A732A618D35003AEF25 /* Classes */,
+				28C52A682A617F49003AEF25 /* HorrorDatabase.xcdatamodeld */,
+				28C52A6B2A6181ED003AEF25 /* HorrorDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,8 +204,7 @@
 		28314F952A5CAC4F0031B95B /* Battle */ = {
 			isa = PBXGroup;
 			children = (
-				28314F602A5CAAD10031B95B /* BattleScene.swift */,
-				286A54AF2A5DC96000B2D6BC /* cards.swift */,
+				28F54D2B2A60927F00B692F5 /* Player */,
 			);
 			path = Battle;
 			sourceTree = "<group>";
@@ -205,6 +223,39 @@
 				28314F982A5CADD70031B95B /* File.swift */,
 			);
 			path = CutScene;
+			sourceTree = "<group>";
+		};
+		28C52A732A618D35003AEF25 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28BDF7762A6431F9002037EB /* DataController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		28DD3A9B2A65B07A00D5F951 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		28F54D2B2A60927F00B692F5 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				28F54D2C2A60929F00B692F5 /* Components */,
+				28F54D292A60923B00B692F5 /* player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		28F54D2C2A60929F00B692F5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				286A54AF2A5DC96000B2D6BC /* cards.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +366,7 @@
 				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
+				28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,10 +392,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				28314F992A5CADD70031B95B /* File.swift in Sources */,
-				28314F612A5CAAD10031B95B /* BattleScene.swift in Sources */,
+				28314F612A5CAAD10031B95B /* GameScene.swift in Sources */,
 				28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */,
+
+				28C52A6C2A6181ED003AEF25 /* HorrorDataManager.swift in Sources */,
+				28F54D2A2A60923B00B692F5 /* player.swift in Sources */,
+				28BDF7772A6431F9002037EB /* DataController.swift in Sources */,
+				28C52A6A2A617F49003AEF25 /* HorrorDatabase.xcdatamodeld in Sources */,
+
 				28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */,
-				C9D58C8B2A5DD2960023C654 /* CardModel.swift in Sources */,
 				286A54B02A5DC96000B2D6BC /* cards.swift in Sources */,
 				28314F932A5CAB7C0031B95B /* SwiftUIView.swift in Sources */,
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
@@ -688,6 +745,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		28C52A682A617F49003AEF25 /* HorrorDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				28C52A692A617F49003AEF25 /* HorrorDatabase.xcdatamodel */,
+			);
+			currentVersion = 28C52A692A617F49003AEF25 /* HorrorDatabase.xcdatamodel */;
+			path = HorrorDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 28314F4F2A5CAAD10031B95B /* Project object */;
 }

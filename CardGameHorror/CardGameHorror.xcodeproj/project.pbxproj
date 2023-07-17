@@ -20,12 +20,15 @@
 		28314F992A5CADD70031B95B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F982A5CADD70031B95B /* File.swift */; };
 		286A54B02A5DC96000B2D6BC /* cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286A54AF2A5DC96000B2D6BC /* cards.swift */; };
 		286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */ = {isa = PBXBuildFile; fileRef = 286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */; };
+
 		28BDF7772A6431F9002037EB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDF7762A6431F9002037EB /* DataController.swift */; };
 		28C52A6A2A617F49003AEF25 /* HorrorDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28C52A682A617F49003AEF25 /* HorrorDatabase.xcdatamodeld */; };
 		28C52A6C2A6181ED003AEF25 /* HorrorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C52A6B2A6181ED003AEF25 /* HorrorDataManager.swift */; };
-		28C52A7E2A61E977003AEF25 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C52A7D2A61E977003AEF25 /* Extensions.swift */; };
 		28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */; };
 		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
+
+		28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD3AA02A65C05D00D5F951 /* Extensions.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,12 +65,15 @@
 		28314F982A5CADD70031B95B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		286A54AF2A5DC96000B2D6BC /* cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cards.swift; sourceTree = "<group>"; };
 		286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Myaudio.sks; sourceTree = "<group>"; };
+
 		28BDF7762A6431F9002037EB /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		28C52A692A617F49003AEF25 /* HorrorDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HorrorDatabase.xcdatamodel; sourceTree = "<group>"; };
 		28C52A6B2A6181ED003AEF25 /* HorrorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorrorDataManager.swift; sourceTree = "<group>"; };
-		28C52A7D2A61E977003AEF25 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BigshotOne-Regular.ttf"; sourceTree = "<group>"; };
 		28F54D292A60923B00B692F5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+
+		28DD3AA02A65C05D00D5F951 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,7 @@
 		28314F8E2A5CAAFC0031B95B /* System */ = {
 			isa = PBXGroup;
 			children = (
+				28DD3AA02A65C05D00D5F951 /* Extensions.swift */,
 				28314F5A2A5CAAD10031B95B /* AppDelegate.swift */,
 				28314F622A5CAAD10031B95B /* GameViewController.swift */,
 				28314F642A5CAAD10031B95B /* Main.storyboard */,
@@ -387,11 +394,13 @@
 				28314F992A5CADD70031B95B /* File.swift in Sources */,
 				28314F612A5CAAD10031B95B /* GameScene.swift in Sources */,
 				28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */,
+
 				28C52A6C2A6181ED003AEF25 /* HorrorDataManager.swift in Sources */,
 				28F54D2A2A60923B00B692F5 /* player.swift in Sources */,
 				28BDF7772A6431F9002037EB /* DataController.swift in Sources */,
-				28C52A7E2A61E977003AEF25 /* Extensions.swift in Sources */,
 				28C52A6A2A617F49003AEF25 /* HorrorDatabase.xcdatamodeld in Sources */,
+
+				28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */,
 				286A54B02A5DC96000B2D6BC /* cards.swift in Sources */,
 				28314F932A5CAB7C0031B95B /* SwiftUIView.swift in Sources */,
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,

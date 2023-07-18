@@ -8,8 +8,7 @@
 import SpriteKit
 import GameplayKit
 
-class BattleScene: SKScene {
-    
+class GameScene: SKScene {
     override func didMove(to view: SKView) {
         let monstro = Monster(monsterType: .initial)
         monstro.position = CGPoint(x: size.width * 0.5, y: size.height * 0.5)

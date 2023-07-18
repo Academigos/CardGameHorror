@@ -9,7 +9,8 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+    let hud = Hud()
     override func didMove(to view: SKView) {
-        
+        addChild(hud)
     }
 }

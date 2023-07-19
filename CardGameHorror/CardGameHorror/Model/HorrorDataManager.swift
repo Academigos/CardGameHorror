@@ -1,5 +1,5 @@
 //
-//  HorrorDataManager.swift
+//  DataManager.swift
 //  CardGameHorror
 //
 //  Created by Eduardo on 14/07/23.
@@ -12,87 +12,128 @@ import UIKit
 class DataManager {
     static let shared = DataManager()
     
-    // refence to managed object context
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let player = Player(context: DataManager().context)
-    let monster = Monster(context: DataManager().context)
-    //define creation of card in database
+    // Reference to managed object context
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     init() {
-        do {
-            let cardCount = try self.context.count(for:Card.fetchRequest())
-            if cardCount < 1{
-                card(image: "", type: "ATK", value: 2)
-                card(image: "", type: "ATK", value: 2)
-                card(image: "", type: "ATK", value: 2)
-                card(image: "", type: "ATK", value: 4)
-                card(image: "", type: "ATK", value: 4)
-                card(image: "", type: "ATK", value: 4)
-                card(image: "", type: "ATK", value: 6)
-                card(image: "", type: "ATK", value: 6)
-                card(image: "", type: "ATK", value: 8)
-                card(image: "", type: "HP", value: 2)
-                card(image: "", type: "HP", value: 2)
-                card(image: "", type: "HP", value: 2)
-                card(image: "", type: "HP", value: 4)
-                card(image: "", type: "HP", value: 4)
-                card(image: "", type: "HP", value: 6)
-                saveContext()
-            }
-        }catch {
-            fatalError("fail to search data in init of CoreDataManager: \(error)")
-        }
+        createInitialCardsIfNeeded()
+        createInitialPlayerIfNeeded()
+        createInitialMonsterIfNeeded()
     }
+    // MARK: - Card CRUD
     
-    // MARK: card CRUD
-    
-    //defalt create of card
-    private func card(image:String, type: String, value: Double) {
-        let card = Card(context: self.context)
+    // Default creation of card
+    private func createCard(image: String, type: String, value: Double) -> Card {
+        let card = Card(context: context)
         card.id = UUID()
         card.image = image
         card.type = type
         card.value = value
+        return card
     }
     
-    // MARK: player CRUD
+    func createInitialCardsIfNeeded() {
+        do {
+            let cardCount = try context.count(for: Card.fetchRequest())
+            guard cardCount < 1 else {
+                return // Initial cards already exist, no need to recreate
+            }
+
+            // Define your initial cards here
+            let cardsData: [(image: String, type: String, value: Double)] = [
+                ("", "ATK", 2),
+                ("", "ATK", 2),
+                ("", "ATK", 2),
+                ("", "ATK", 4),
+                ("", "ATK", 4),
+                ("", "ATK", 4),
+                ("", "ATK", 6),
+                ("", "ATK", 6),
+                ("", "ATK", 8),
+                ("", "HP", 2),
+                ("", "HP", 2),
+                ("", "HP", 2),
+                ("", "HP", 4),
+                ("", "HP", 4),
+                ("", "HP", 6)
+            ]
+
+            // Create and add the cards to the context
+            for cardData in cardsData {
+                _ = createCard(image: cardData.image, type: cardData.type, value: cardData.value)
+            }
+            saveContext()
+        } catch {
+            fatalError("Failed to check card count: \(error)")
+        }
+    }
+    // MARK: - Player CRUD
     
-    /// Usado para atualizar a vida do jogador
-    func player (value: Double) {
+    func createInitialPlayerIfNeeded() {
+        do {
+            let players = try context.fetch(Player.fetchRequest()) as! [Player]
+            guard players.isEmpty else {
+                return // Player already exists, no need to recreate
+            }
+            let player = Player(context: context)
+            player.hp = 30 // Set initial health points here
+            
+            saveContext()
+        } catch {
+            fatalError("Failed to create player: \(error)")
+        }
+    }
+    
+    /// Used to update the player's health points (HP)
+    func updatePlayerHP(value: Double) {
+        
+        let player = fetchPlayer()
         player.hp = value
-    }
-    
-    func player (newCards:NSSet) {
-        addToHand(cards: newCards)
         saveContext()
     }
     
-    func player(newCards:NSSet, usedCards:NSSet) {
-        cleanHand(cards: usedCards)
-        addToHand(cards: newCards)
+    func addCardsToPlayerHand(newCards: Set<Card>) {
+        let player = fetchPlayer()
+        player.addToInHand(newCards as NSSet)
         saveContext()
     }
     
-    // function about relationship inHand
-    
-    private func addToHand(cards: NSSet) {
-        player.addToInHand(cards)
+    func updatePlayerHand(newCards: Set<Card>, usedCards: Set<Card>) {
+        let player = fetchPlayer()
+        player.removeFromInHand(usedCards as NSSet)
+        player.addToInHand(newCards as NSSet)
+        saveContext()
     }
     
-    private func cleanHand(cards: NSSet) {
-        player.removeFromInHand(cards)
-    }
+    // MARK: - Monster CRUD
     
-    //MARK: enemy CRUD
+    func createInitialMonsterIfNeeded() {
+            do {
+                let monsters = try context.fetch(Monster.fetchRequest()) as! [Monster]
+                guard monsters.isEmpty else {
+                    return // Monster already exists, no need to recreate
+                }
+                
+                _ = Monster(context: context)
+                saveContext()
+            } catch {
+                fatalError("Failed to create monster: \(error)")
+            }
+        }
     
-    func monster(value: Double) {
+    func updateMonsterHP(value: Double) {
+        let monster = fetchMonster()
         monster.hp = value
         saveContext()
     }
     
-    // MARK: - fetchRequest
-    func fetchCardPlayer(player: Player) -> [Card] {
+    // MARK: - Fetch Requests
+    
+    func fetchCardPlayer() -> [Card] {
+        let player = fetchPlayer()
+        
         let fetchRequest: NSFetchRequest<Card> = Card.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "player == %@", player)
+        fetchRequest.predicate = NSPredicate(format: "inHand == %@", player)
         
         do {
             let cards = try context.fetch(fetchRequest)
@@ -104,42 +145,50 @@ class DataManager {
     
     func fetchCard() -> [Card] {
         do {
-            let card = try self.context.fetch(Card.fetchRequest())
+            let card = try context.fetch(Card.fetchRequest())
             return card
-        }catch {
+        } catch {
             fatalError("Error in fetchCard: \(error)")
         }
     }
     
     func fetchPlayer() -> Player {
         do {
-            let player = try self.context.fetch(Player.fetchRequest())
-            return player[0]
-        }catch {
+            let players = try context.fetch(Player.fetchRequest()) as! [Player]
+            if let player = players.first {
+                return player
+            } else {
+                let player = Player(context: context)
+                saveContext()
+                return player
+            }
+        } catch {
             fatalError("Error in fetchPlayer: \(error)")
         }
     }
     
-    func fetchMonster() -> [Monster] {
-        
+    func fetchMonster() -> Monster {
         do {
-            let monster = try self.context.fetch(Monster.fetchRequest())
-            return monster
-        }catch {
-            fatalError("Erro in fetchEnemy: \(error)")
+            let monsters = try context.fetch(Monster.fetchRequest()) as! [Monster]
+            if let monster = monsters.first {
+                return monster
+            } else {
+                let monster = Monster(context: context)
+                saveContext()
+                return monster
+            }
+        } catch {
+            fatalError("Error in fetchMonster: \(error)")
         }
     }
     
-    
     // MARK: - Core Data Saving support
-
-    func saveContext () {
-        if self.context.hasChanges {
+    
+    func saveContext() {
+        if context.hasChanges {
             do {
-                try self.context.save()
+                try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }

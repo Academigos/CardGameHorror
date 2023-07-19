@@ -9,7 +9,8 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+    let teste = 5
     override func didMove(to view: SKView) {
-        
+    
     }
 }

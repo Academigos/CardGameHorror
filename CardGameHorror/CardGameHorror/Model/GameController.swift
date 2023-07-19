@@ -1,3 +1,10 @@
+//
+// GameController.swift
+//  CardGameHorror
+//
+//  Created by Eduardo on 14/07/23.
+//
+
 import Foundation
 import CoreData
 import GameplayKit
@@ -9,6 +16,7 @@ class GameController {
     private let randomCardCount = 6
     let playerLife: Double = 30
     let monsterLife: Double = 100
+    var selectedCard: [Card] = []
     // MARK: - Game Actions
     
     // Function to start a new game
@@ -22,7 +30,7 @@ class GameController {
     // Function to draw cards for the player's initial hand
 
     
-    func replacePlayerHand() {
+    private func replacePlayerHand() {
         let player = dataManager.fetchPlayer()
         let allCards = dataManager.fetchCard()
         let selectedCards = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: allCards) as! [Card]
@@ -101,6 +109,18 @@ class GameController {
         let player = dataManager.fetchPlayer()
         let monster = dataManager.fetchMonster()
         return player.hp <= 0 || monster.hp <= 0
+    }
+    
+    func selectedCards(cardSelected: Card){
+        self.selectedCard.append(cardSelected)
+    }
+    
+    func addToSelectedCards(selectedCard: Card) {
+        if let index = self.selectedCard.firstIndex(of: selectedCard) {
+            self.selectedCard.remove(at: index)
+        } else {
+            self.selectedCard.append(selectedCard)
+        }
     }
     
     // MARK: - Helper Functions

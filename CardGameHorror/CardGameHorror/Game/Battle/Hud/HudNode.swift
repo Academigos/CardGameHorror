@@ -10,14 +10,14 @@ import SpriteKit
 
 class Hud: SKNode {
     
-    let DownBar = BottomBar()
+    let monsterHud = MonsterHud()
+    let bottom = BottomDivader()
+    
     override init() {
         super.init()
-        
-        // Add the DownBar node as a child to the Hud node
-        DownBar.position = CGPoint(x: GameViewController.screenSize.width * 0.5 , y: GameViewController.screenSize.height * 0.115)
-        DownBar.scale(to: autoScale(DownBar, widthProportion: 1, screenSize: GameViewController.screenSize))
-        addChild(DownBar)
+        addChild(bottom)
+        monsterHud.zPosition = 10
+        addChild(monsterHud)
     }
     
     required init?(coder aDecoder: NSCoder) {

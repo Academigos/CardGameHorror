@@ -8,14 +8,14 @@
 import SpriteKit
 
 class HandCards: SKSpriteNode {
-    let cardSpacing: CGFloat = 0
+    let cardSpacing: CGFloat = 7
     var cards: [CardNode] = []
     
-    init(sizeScreen: CGSize, cardCount: Int) {
+    init(cardCount: Int) {
         
         super.init(texture: nil, color: .blue, size: .zero)
         
-        setupCards(sizeScreen: sizeScreen, cardCount: cardCount)
+        setupCards(cardCount: cardCount)
         
     }
     
@@ -24,18 +24,12 @@ class HandCards: SKSpriteNode {
     }
     
     // posicionamentos das cartas na cena
-    func setupCards(sizeScreen: CGSize, cardCount: Int) {
+    func setupCards(cardCount: Int) {
         var totalWidth: CGFloat = 0.0
         var maxHeight: CGFloat = 0.0
         
         for _ in 1...cardCount {
             let cardNode = CardNode(cardModel: "", value: 20)
-
-            let proportionCard = cardNode.size.width / cardNode.size.height
-            
-            cardNode.scale(to: CGSize(width: sizeScreen.width * 0.14, height: sizeScreen.width * 0.14 / proportionCard))
-            
-            cardNode.savedInitialScale = CGSize(width: sizeScreen.width * 0.14, height: sizeScreen.width * 0.14 / proportionCard)
             
             totalWidth += cardNode.size.width + cardSpacing
             maxHeight = max(maxHeight, cardNode.size.height)
@@ -48,16 +42,17 @@ class HandCards: SKSpriteNode {
         }
         
         self.size = CGSize(width: totalWidth, height: maxHeight)
-  
+        
         animateCardAppearance()
     }
     
     func animateCardAppearance() {
+        let containerWidth = CGFloat(cards.count) * cards[0].newWidthCard + CGFloat(cards.count - 1) * cardSpacing
+        let startX = (-containerWidth / 2) + cards[0].newWidthCard / 2
         
-        var currentX: CGFloat = -self.size.width / 2 + cardSpacing / 2
+        var currentX: CGFloat = startX
         
         for (index, cardNode) in cards.enumerated() {
-            
             let configuration = CardConfigurations(rawValue: index + 1)
             guard let configuration = configuration else { return }
             
@@ -65,25 +60,20 @@ class HandCards: SKSpriteNode {
             
             let delay = TimeInterval(index) * 0.5 // Atraso para animar cada carta separadamente
             
-            let moveAction: SKAction
+            let moveAction = SKAction.move(to: CGPoint(x: currentX, y: cardNode.position.y), duration: 0.5)
             
-            moveAction = SKAction.move(to: CGPoint(x: currentX + cardNode.calculateAccumulatedFrame().width / 2, y: cardNode.position.y), duration: 0.5)
-            
-            currentX += cardNode.frame.width + cardSpacing
+            currentX += cards[0].newWidthCard + cardSpacing
             
             let delayAction = SKAction.wait(forDuration: delay)
             
             let rotateAction = SKAction.rotate(toAngle: configuration.rotation, duration: 0.5)
-                cardNode.run(rotateAction)
+            cardNode.run(rotateAction)
             
-            // Criação de uma sequência de ações: atraso, easeOut e movimento para a posição final
             let sequenceAction = SKAction.sequence([delayAction, moveAction, rotateAction])
             
             cardNode.run(sequenceAction)
-            
         }
     }
-    
 }
 
 // enum com definição padrão de posicionamentos

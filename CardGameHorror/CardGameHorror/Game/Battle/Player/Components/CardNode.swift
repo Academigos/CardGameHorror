@@ -9,23 +9,28 @@ import SpriteKit
 
 // Enumeração que define os tipos de textura disponíveis
 enum CardTexture: String {
-   case force
-   case car
-   case hanged
+    case force
+    case car
+    case hanged
 }
 
 // Enumeração que define os tipos de cartas disponíveis
 enum CardType: String {
-   case ATK
-   case DEF
+    case ATK
+    case DEF
 }
 
 class CardNode: SKSpriteNode {
     let cardTexture: CardTexture
     let cardType:CardType
     let frontTexture: SKTexture
-    let valueLabel: SKLabelNode
+    var valueLabel: SKLabelNode
     var value:Double = 0.0
+    var playerController:PlayerController = PlayerController()
+    
+    let proportionCard: CGFloat
+    var newWidthCard: CGFloat
+    var newHeightCard: CGFloat
     
     var faceUp = true
     var enlarged = false
@@ -34,7 +39,7 @@ class CardNode: SKSpriteNode {
     var savedInitialPosition = CGPoint.zero
     var savedInitialScale: CGSize = CGSize()
     var savedInitialRotation: CGFloat = 0.0
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported")
     }
@@ -42,30 +47,51 @@ class CardNode: SKSpriteNode {
     // inicializa o cardModel
     init(cardModel: Any, value: Double) {
         self.value = value
-        self.frontTexture = SKTexture(imageNamed: "força_atk_1x")
+        self.frontTexture = SKTexture(imageNamed: "forca_atk")
         self.cardTexture = CardTexture(rawValue: "car")!
         self.cardType = CardType(rawValue: "ATK")!
-
+        
+        proportionCard = frontTexture.size().width / frontTexture.size().height
+        newWidthCard = GameViewController.screenSize.width * 0.14
+        newHeightCard = newWidthCard / proportionCard
         
         // Configura o label de valor da carta
         valueLabel = SKLabelNode()
+        
+        // Inicializa a classe pai com a textura da carta
+        super.init(texture: frontTexture, color: .clear, size: frontTexture.size())
+        
+        setupValueLabel()
+        
+        self.scale(to: CGSize(width: newWidthCard, height: newHeightCard))
+        savedInitialScale = CGSize(width: newWidthCard, height: newHeightCard)
+        addNeonOutline()
+        
+        print(
+            playerController.getCardsInHand()
+        )
+    }
+    
+   
+    
+    private func setupValueLabel() {
         valueLabel.name = "valueLabel"
         valueLabel.fontSize = 32
         valueLabel.fontName = "Helvetica-Bold"
         valueLabel.fontColor = .white
-        valueLabel.position = CGPoint(x: frontTexture.size().width / 2 - 37, y: frontTexture.size().height / 2 - 55)
+        valueLabel.verticalAlignmentMode = .top
+        valueLabel.horizontalAlignmentMode = .right
+        valueLabel.position = CGPoint(x: size.width * 0.4, y: size.height * 0.43)
         valueLabel.text = String(Int(self.value))
-        valueLabel.zPosition = 99.0
+        valueLabel.zPosition = 1.0
         
-        // Inicializa a classe pai com a textura da carta
-        super.init(texture: frontTexture, color: .clear, size: frontTexture.size())
         addChild(valueLabel)
     }
     
     // identifica o toque na carta
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
-            let location = touch.location(in: self)
+            //   let location = touch.location(in: self)
             
             enlarge()
         }
@@ -83,7 +109,7 @@ class CardNode: SKSpriteNode {
             
             run(SKAction.group([slide, scaleDown])) {
                 self.enlarged = false
-               // self.zPosition = CardLevel.board.rawValue
+                // self.zPosition = CardLevel.board.rawValue
                 self.zRotation = self.savedInitialRotation
             }
         } else {
@@ -91,32 +117,46 @@ class CardNode: SKSpriteNode {
             enlarged = true
             savedInitialPosition = position
             
-          //  zPosition = CardLevel.enlarged.rawValue
+            //  zPosition = CardLevel.enlarged.rawValue
             
             if let parent = parent {
                 removeAllActions()
                 self.savedInitialRotation = zRotation
                 zRotation = 0
                 let newPosition = CGFloat(parent.frame.midY - parent.frame.height/4)
+
                 let slide = SKAction.moveTo(y: newPosition, duration: 0.3)
-                let scaleUp = SKAction.scale(to: 0.5, duration: 0.3)
+                
+                let scaleUp = SKAction.scale(to: CGSize(width: newWidthCard * 1.2, height: newHeightCard * 1.2), duration: 0.3)
                 
                 run(SKAction.group([scaleUp, slide]))
             }
         }
     }
     
+    func addNeonOutline() {
+        let outlineNode = SKShapeNode(rectOf: CGSize(width: self.newWidthCard * 3.2, height: self.newHeightCard * 3.2))
+        print(outlineNode.frame.width)
+        outlineNode.fillColor = .cyan
+     //   outlineNode.lineWidth = 5.0
+        outlineNode.glowWidth = 5.0
+        
+        let effectNode = SKEffectNode()
+        //effectNode.addChild(outlineNode)
+        effectNode.filter = CIFilter(name: "CIGaussianBlur", parameters: ["inputRadius": 10.0])
+        effectNode.zPosition = 99
+        addChild(outlineNode)
+    }
+    
     // executar ação da carta
     
-//    func useCard(enemy: Any,  player: Any) {
-//        switch cardType {
-//        case .ATK:
-//            enemy.takeDamage(damage: value)
-//        case .DEF:
-//            player.regenHealth(heal: value)
-//        }
-//    }
-
-    
+    //    func useCard(enemy: Any,  player: Any) {
+    //        switch cardType {
+    //        case .ATK:
+    //            enemy.takeDamage(damage: value)
+    //        case .DEF:
+    //            player.regenHealth(heal: value)
+    //        }
+    //    }
 }
 

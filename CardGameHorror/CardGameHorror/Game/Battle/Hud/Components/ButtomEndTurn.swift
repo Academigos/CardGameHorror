@@ -8,6 +8,9 @@
 import Foundation
 import SpriteKit
 class ButtonEndTurn: SKSpriteNode{
+    
+    weak var endTurnButtonDelegate: endTurnDelegate?
+    
     let buttomTexture: SKTexture
     init(buttomTexture: String) {
         self.buttomTexture = SKTexture(imageNamed: buttomTexture)
@@ -22,9 +25,14 @@ class ButtonEndTurn: SKSpriteNode{
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if GameController.shared.isGameOver() == false && GameController.shared.selectedCard.count == 3{
-            GameController.shared.processSelectedCards(selectedCards: GameController.shared.selectedCard as! Set)
+            let selectedCards = Set(GameController.shared.selectedCard)
+            GameController.shared.processSelectedCards(selectedCards: selectedCards)
             GameController.shared.playerTurn()
             GameController.shared.monsterTurn()
+            endTurnButtonDelegate?.handCardsDidFinishAnimating()
+            if let hud = parent as? Hud {
+                hud.updateLife(DataManager.shared.fetchPlayer().hp, DataManager.shared.fetchMonster().hp)
+            }
         }else if GameController.shared.isGameOver() == true{
             print("bla")
         }else{

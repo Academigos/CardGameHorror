@@ -18,8 +18,6 @@ class HandCards: SKSpriteNode {
         super.init(texture: nil, color: .clear, size: .zero)
         // configurações de visualização das cartas
         setupCards(cardCount: cardCount)
-        
-        print("teste")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -72,7 +70,7 @@ class HandCards: SKSpriteNode {
             let delay = TimeInterval(index) * 0.3 // Atraso para animar cada carta separadamente
             
             cardNode.position.y = configuration.position.y
-   
+            
             let moveAction = SKAction.move(to: CGPoint(x: finalPosition, y: configuration.position.y), duration: 0.5)
             moveAction.timingMode = .easeIn
             

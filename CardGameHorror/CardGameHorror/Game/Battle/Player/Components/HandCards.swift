@@ -19,6 +19,7 @@ class HandCards: SKSpriteNode {
         // configurações de visualização das cartas
         setupCards(cardCount: cardCount)
         
+        print("teste")
     }
     
     required init?(coder aDecoder: NSCoder) {

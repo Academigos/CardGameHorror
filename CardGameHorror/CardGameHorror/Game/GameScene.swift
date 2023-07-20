@@ -46,7 +46,7 @@ class GameScene: SKScene, endTurnDelegate {
     
     private func setupHud(){
         addChild(hud)
-        hud.bottom.endTurnButtom.endTurnButtonDelegate = self
+        hud.endTurnButtom.endTurnButtonDelegate = self
     }
     
     private func setupHand(cards: [Card]) {

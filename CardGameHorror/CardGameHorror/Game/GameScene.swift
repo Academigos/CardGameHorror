@@ -49,14 +49,5 @@ class GameScene: SKScene {
         let sequence = SKAction.sequence([moveAction, holdAction])
         handCards.run(sequence)
         addChild(handCards)
-
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            guard let touch = touches.first else { return }
-            let touchLocation = touch.location(in: self)
-            
-            if boss.contains(touchLocation) {
-                boss.enemyEntity.takingDamage()
-            }
-        }
 }

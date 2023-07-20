@@ -9,9 +9,18 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+    let boss = Boss()
     override func didMove(to view: SKView) {
-        let monstro = Monster(monsterType: .initial)
-        monstro.position = CGPoint(x: size.width * 0.5, y: size.height * 0.5)
-        addChild(monstro)
+    
+        addChild(boss)
+        boss.enemyEntity.startRotationAnimation()
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            guard let touch = touches.first else { return }
+            let touchLocation = touch.location(in: self)
+            
+            if boss.contains(touchLocation) {
+                boss.enemyEntity.takingDamage()
+            }
+        }
 }

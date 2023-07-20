@@ -20,7 +20,9 @@ class MonsterHud: SKNode{
         addChild(monsterName)
         addChild(monsterLifeBar)
     }
-    
+    func updateMonster(value: Double){
+        monsterLifeBar.setLife(DataManager.shared.fetchMonster().hp)
+    }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

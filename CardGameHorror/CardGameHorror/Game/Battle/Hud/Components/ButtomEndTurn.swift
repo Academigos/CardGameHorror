@@ -14,11 +14,12 @@ class ButtonEndTurn: SKSpriteNode{
     
     var counter = 0
     let totalCount = 3
-    
     let buttomTexture: SKTexture
+    
     init(buttomTexture: String) {
         self.buttomTexture = SKTexture(imageNamed: buttomTexture)
         super.init(texture: self.buttomTexture, color: .clear, size: self.buttomTexture.size())
+        GameController.shared.addObserver(self, forKeyPath: #keyPath(GameController.selectedCard),options: [.new], context: nil)
         setupValueLabel()
         isUserInteractionEnabled = true
         if GameController.shared.selectedCard.count < 3 {
@@ -28,6 +29,15 @@ class ButtonEndTurn: SKSpriteNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == #keyPath(GameController.selectedCard) {
+            // The observed property has changed, update the opacity
+            updateOpacity()
+            updateValueCartas()
+        }
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if GameController.shared.isGameOver() == false && GameController.shared.selectedCard.count == 3{
             let selectedCards = Set(GameController.shared.selectedCard)
@@ -46,6 +56,7 @@ class ButtonEndTurn: SKSpriteNode{
             impactFeedbackGenerator.impactOccurred()
         }
     }
+    
     func updateOpacity() {
         if GameController.shared.selectedCard.count < 3 {
             alpha = 0.5
@@ -53,20 +64,26 @@ class ButtonEndTurn: SKSpriteNode{
             alpha = 1.0
         }
     }
+    
     private func setupValueLabel() {
         valueLabel.name = "valueLabel"
         valueLabel.fontSize = 12
         valueLabel.fontName = "BigshotOne-Regular"
         valueLabel.fontColor = .white
-        valueLabel.text = "\(counter)/\(totalCount)"
+        valueLabel.text = "\(counter)/\(totalCount) Cartas"
         valueLabel.position = CGPoint(x: size.width * -0.2, y: size.height * 0.3)
        // valueLabel.zPosition = 1.0
         
         addChild(valueLabel)
     }
     
-    func updtateValueCartas(){
+    func updateValueCartas(){
         counter = GameController.shared.selectedCard.count
-        valueLabel.text = "\(counter)/\(totalCount)"
+        valueLabel.text = "\(counter)/\(totalCount) Cartas"
+    }
+    
+    deinit {
+        // Remove the observer when the instance is deallocated
+        GameController.shared.removeObserver(self, forKeyPath: #keyPath(GameController.selectedCard))
     }
 }

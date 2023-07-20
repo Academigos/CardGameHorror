@@ -14,6 +14,7 @@ class Boss: SKNode {
         super.init()
         
         enemyEntity.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)
+        enemyEntity.scale(to: autoScale(enemyEntity, widthProportion: 0.14, screenSize: GameViewController.screenSize))
         addChild(enemyEntity)
     }
     

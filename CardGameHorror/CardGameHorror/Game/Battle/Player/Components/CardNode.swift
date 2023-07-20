@@ -21,8 +21,10 @@ enum CardType: String {
 }
 
 class CardNode: SKSpriteNode {
-    let cardTexture: CardTexture
-    let cardType:CardType
+    let cardModel:Card
+    
+    //let cardTexture: CardTexture
+    var cardType:CardType?
     let frontTexture: SKTexture
     var valueLabel: SKLabelNode = SKLabelNode()
     var value:Double = 0.0
@@ -32,7 +34,6 @@ class CardNode: SKSpriteNode {
 //    var newHeightCard: CGFloat
     
     var faceUp = true
-    var enlarged = false
     var isSelected = false
     
     var savedInitialPosition = CGPoint.zero
@@ -46,12 +47,14 @@ class CardNode: SKSpriteNode {
     }
     
     // inicializa o cardModel
-    init(cardModel: Any, value: Double) {
-        self.value = value
-        self.frontTexture = SKTexture(imageNamed: "forca_atk")
-        self.cardTexture = CardTexture(rawValue: "car")!
-        self.cardType = CardType(rawValue: "ATK")!
-       // self.cardModel = cardModel
+    init(cardModel: Card) {
+        self.cardModel = cardModel
+        self.value = cardModel.value
+        self.frontTexture = SKTexture(imageNamed: cardModel.image ?? "")
+        //self.cardTexture = CardTexture(rawValue: "car")!
+        if let type = cardModel.type, let cardType = CardType(rawValue: type) {
+            self.cardType = cardType
+        }
         
         proportionCard = frontTexture.size().width / frontTexture.size().height
 //        newWidthCard = GameViewController.screenSize.width * 0.12
@@ -80,7 +83,7 @@ class CardNode: SKSpriteNode {
         valueLabel.fontColor = .white
         valueLabel.verticalAlignmentMode = .top
         valueLabel.horizontalAlignmentMode = .right
-        valueLabel.position = CGPoint(x: size.width * 0.4, y: size.height * 0.43)
+        valueLabel.position = CGPoint(x: size.width * 0.375, y: size.height * 0.43)
         valueLabel.text = String(Int(self.value))
         valueLabel.zPosition = 1.0
         
@@ -90,14 +93,13 @@ class CardNode: SKSpriteNode {
     // identifica o toque na carta
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if touches.first != nil {
-          //  let moreThanThreeSelected = HandCards.card.filter { $0.isSelected }.count < 3
+            let moreThanThreeSelected = GameController.shared.selectedCard.count < 3
             
-            // Verifica se às 3 cartas foram selecionadas
-            let moreThanThreeSelected = true
-            
-            if moreThanThreeSelected {
+            if moreThanThreeSelected || isSelected {
                 enlarge()
+                GameController.shared.addToSelectedCards(selectedCard:  cardModel)
             }
+
         }
         
         super.touchesBegan(touches, with: event)
@@ -105,7 +107,7 @@ class CardNode: SKSpriteNode {
     
     // Função para ampliar a carta
     func enlarge() {
-        if enlarged {
+        if isSelected {
             // Se a carta já estiver ampliada, reduz seu tamanho e a retorna para a posição original
             let slide = SKAction.move(to: savedInitialPosition, duration: 0.3)
             let scaleDown = SKAction.scale(to: savedInitialScale, duration: 0.3)
@@ -116,13 +118,13 @@ class CardNode: SKSpriteNode {
             self.zPosition = savedInitialZPosition
             
             run(SKAction.group([slide, scaleDown])) {
-                self.enlarged = false
+                self.isSelected = false
                 self.zRotation = self.savedInitialRotation
             }
             
         } else {
             // Se a carta não estiver ampliada, a amplia
-            enlarged = true
+            isSelected = true
             savedInitialPosition = position
             
             self.zPosition += savedInitialZPosition

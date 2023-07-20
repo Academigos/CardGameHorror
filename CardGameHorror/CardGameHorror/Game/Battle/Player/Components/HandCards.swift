@@ -12,25 +12,56 @@ class HandCards: SKSpriteNode {
     let cardSpacing: CGFloat = 7
     // array de nós de cartas
     var cards: [CardNode] = []
-    
-    init(cardCount: Int) {
+    var cardsModel: [Card] = []
+        
+    init(cards: [Card]) {
         
         super.init(texture: nil, color: .clear, size: .zero)
         // configurações de visualização das cartas
-        setupCards(cardCount: cardCount)
+        cardsModel = cards
+        setupCards()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func animateEntryHand() {
+        self.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: -self.size.height)
+        let finalPosition = CGPoint(x: GameViewController.screenSize.width * 0.5, y: self.size.height * 0.4)
+
+        // Crie uma ação para mover o nó de sua posição inicial até a posição final
+        let moveAction = SKAction.moveTo(y: finalPosition.y, duration: 1.0)
+        // Adicione uma ação de bloqueio para manter o nó na posição final
+        let holdAction = SKAction.wait(forDuration: 0.5)
+
+        // Combine as ações em uma sequência
+        let sequence = SKAction.sequence([moveAction, holdAction])
+        self.run(sequence)
+    }
+    
+    func animateExitHand() {
+ 
+        let finalPosition = CGPoint(x: GameViewController.screenSize.width * 0.5, y: -self.size.height * 0.5)
+
+        // Crie uma ação para mover o nó de sua posição inicial até a posição final
+        let moveAction = SKAction.moveTo(y: finalPosition.y, duration: 1.0)
+        // Adicione uma ação de bloqueio para manter o nó na posição final
+        // Crie uma ação para remover o nó da cena após a animação ser concluída
+        let removeAction = SKAction.removeFromParent()
+        let holdAction = SKAction.wait(forDuration: 0.5)
+
+        // Combine as ações em uma sequência
+        let sequence = SKAction.sequence([moveAction, removeAction, holdAction])
+        self.run(sequence)
+    }
+    
     // posicionamentos das cartas na cena
-    func setupCards(cardCount: Int) {
+    func setupCards() {
         var totalWidth: CGFloat = 0.0
         var maxHeight: CGFloat = 0.0
-        
-        for index in 1...cardCount {
-            let cardNode = CardNode(cardModel: "", value: 20)
+        for (index, cardModel) in cardsModel.enumerated() {
+            let cardNode = CardNode(cardModel: cardModel)
             
             totalWidth += cardNode.size.width + cardSpacing
             maxHeight = max(maxHeight, cardNode.size.height)

@@ -41,21 +41,21 @@ class DataManager {
 
             // Define your initial cards here
             let cardsData: [(image: String, type: String, value: Double)] = [
-                ("", "ATK", 2),
-                ("", "ATK", 2),
-                ("", "ATK", 2),
-                ("", "ATK", 4),
-                ("", "ATK", 4),
-                ("", "ATK", 4),
-                ("", "ATK", 6),
-                ("", "ATK", 6),
-                ("", "ATK", 8),
-                ("", "HP", 2),
-                ("", "HP", 2),
-                ("", "HP", 2),
-                ("", "HP", 4),
-                ("", "HP", 4),
-                ("", "HP", 6)
+                ("carro_atk", "ATK", 2),
+                ("enforcado_atk", "ATK", 2),
+                ("forca_atk", "ATK", 2),
+                ("carro_atk", "ATK", 4),
+                ("enforcado_atk", "ATK", 4),
+                ("forca_atk", "ATK", 4),
+                ("carro_atk", "ATK", 6),
+                ("enforcado_atk", "ATK", 6),
+                ("forca_atk", "ATK", 8),
+                ("carro_hp", "HP", 2),
+                ("enforcado_hp", "HP", 2),
+                ("forca_hp", "HP", 2),
+                ("carro_hp", "HP", 4),
+                ("enforcado_hp", "HP", 4),
+                ("forca_hp", "HP", 6)
             ]
 
             // Create and add the cards to the context

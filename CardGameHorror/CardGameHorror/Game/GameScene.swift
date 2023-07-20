@@ -26,6 +26,7 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        GameController.shared.startNewGame()
         setupHud()
         setupHand()
         self.isUserInteractionEnabled = true

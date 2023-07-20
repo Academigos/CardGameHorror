@@ -29,6 +29,7 @@ class GameScene: SKScene, endTurnDelegate {
     }
     
     override func didMove(to view: SKView) {
+        GameController.shared.startNewGame()
         setupHud()
         setupGameplay()
         self.isUserInteractionEnabled = true

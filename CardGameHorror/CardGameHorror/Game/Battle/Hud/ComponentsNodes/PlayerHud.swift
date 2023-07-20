@@ -20,6 +20,9 @@ class PlayerHud: SKNode{
         addChild(playerLifeBar)
     }
     
+    func updatePlayer(value: Double){
+        playerLifeBar.setLife(DataManager.shared.fetchPlayer().hp)
+    }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

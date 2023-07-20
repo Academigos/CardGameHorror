@@ -19,11 +19,11 @@ class LifeBarNode: SKNode{
         self.life = life
         self.defaultLife = defaultLife
         self.lifeBarName = lifeBarName
-    
+        
         self.lifeBar = LifeBar(lifeBarTexture: lifeBarName)
         
         super.init()
-        
+        print(life)
         backGround.scale(to: autoScale(backGround, widthProportion: 0.231, screenSize: GameViewController.screenSize))
         
         lifeBar.anchorPoint = CGPoint(x: -0.03, y: -0.55)
@@ -39,7 +39,9 @@ class LifeBarNode: SKNode{
     
     func updateLifeBar() {
         let scaleAction = SKAction.scaleX(to: CGFloat(life / defaultLife), duration: 0.3)
-        lifeBar.run(scaleAction)
+        let positionAction = SKAction.moveTo(x: 1, duration: 0.3)
+        let groupAction = SKAction.group([scaleAction, positionAction])
+        lifeBar.run(groupAction)
     }
     
     func setLife(_ life: Double) {

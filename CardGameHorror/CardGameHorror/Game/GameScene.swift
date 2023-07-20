@@ -8,16 +8,19 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+protocol endTurnDelegate: AnyObject {
+    func handCardsDidFinishAnimating()
+}
+
+
+class GameScene: SKScene, endTurnDelegate {
     
     // hud
     let hud = Hud()
-    
     // mão das cartas
-    let handCards: HandCards
+    var handCards: HandCards!
     
     override init(size: CGSize) {
-        handCards = HandCards(cardCount: 5)
         super.init(size: size)
     }
     
@@ -26,28 +29,39 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        GameController.shared.startNewGame()
         setupHud()
-        setupHand()
+        setupGameplay()
         self.isUserInteractionEnabled = true
+    }
+    
+    private func setupGameplay() {
+        // startGame
+        GameController.shared.startNewGame()
+        // cartas da mão inicial
+        let cardsHand = GameController.shared.cardsHandPlayer()
+        // configura visualização da mão de cartas
+        setupHand(cards: cardsHand)
     }
     
     private func setupHud(){
         addChild(hud)
+        hud.endTurnButtom.endTurnButtonDelegate = self
     }
     
-    private func setupHand() {
+    private func setupHand(cards: [Card]) {
+        handCards = HandCards(cards: cards)
         // Defina a posição inicial abaixo da tela
-        handCards.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: -handCards.size.height)
-        let finalPosition = CGPoint(x: GameViewController.screenSize.width * 0.5, y: handCards.size.height * 0.4)
-
-        // Crie uma ação para mover o nó de sua posição inicial até a posição final
-        let moveAction = SKAction.moveTo(y: finalPosition.y, duration: 1.0)
-        // Adicione uma ação de bloqueio para manter o nó na posição final
-        let holdAction = SKAction.wait(forDuration: 0.5)
-
-        // Combine as ações em uma sequência
-        let sequence = SKAction.sequence([moveAction, holdAction])
-        handCards.run(sequence)
+        handCards.name = "handCards"
+        handCards.animateEntryHand()
         addChild(handCards)
+    }
+    
+    func handCardsDidFinishAnimating() {
+        handCards.animateExitHand()
+        handCards.cardsModel = []
+        GameController.shared.selectedCard = []
+        let cardsHand = GameController.shared.cardsHandPlayer()
+        setupHand(cards: cardsHand)
     }
 }

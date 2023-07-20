@@ -33,7 +33,6 @@
 		28D123632A6848C200E37E43 /* MonsterHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D123622A6848C200E37E43 /* MonsterHud.swift */; };
 		28D123652A68529E00E37E43 /* PlayerHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D123642A68529E00E37E43 /* PlayerHud.swift */; };
 		28D123672A68743700E37E43 /* ButtomEndTurn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D123662A68743700E37E43 /* ButtomEndTurn.swift */; };
-		28D123692A6883A900E37E43 /* BottonDivader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D123682A6883A900E37E43 /* BottonDivader.swift */; };
 		28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */; };
 		28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD3AA02A65C05D00D5F951 /* Extensions.swift */; };
 		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
@@ -91,7 +90,6 @@
 		28D123622A6848C200E37E43 /* MonsterHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterHud.swift; sourceTree = "<group>"; };
 		28D123642A68529E00E37E43 /* PlayerHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHud.swift; sourceTree = "<group>"; };
 		28D123662A68743700E37E43 /* ButtomEndTurn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtomEndTurn.swift; sourceTree = "<group>"; };
-		28D123682A6883A900E37E43 /* BottonDivader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottonDivader.swift; sourceTree = "<group>"; };
 		28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BigshotOne-Regular.ttf"; sourceTree = "<group>"; };
 		28DD3AA02A65C05D00D5F951 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		28F54D292A60923B00B692F5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 				28D1235D2A681E9D00E37E43 /* LifeBarNode.swift */,
 				28D123622A6848C200E37E43 /* MonsterHud.swift */,
 				28D123642A68529E00E37E43 /* PlayerHud.swift */,
-				28D123682A6883A900E37E43 /* BottonDivader.swift */,
 			);
 			path = ComponentsNodes;
 			sourceTree = "<group>";
@@ -490,8 +487,6 @@
 				28C52A6A2A617F49003AEF25 /* HorrorDatabase.xcdatamodeld in Sources */,
 				28C322C02A66E5BF000E83FF /* HudNode.swift in Sources */,
 				28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */,
-				28D123692A6883A900E37E43 /* BottonDivader.swift in Sources */,
-
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

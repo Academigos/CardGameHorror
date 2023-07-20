@@ -28,6 +28,10 @@ class GameController {
     }
     
     // Function to draw cards for the player's initial hand
+    
+    func cardsHandPlayer() -> [Card] {
+        return dataManager.fetchCardPlayer()
+    }
 
     
     private func replacePlayerHand() {
@@ -81,7 +85,7 @@ class GameController {
         print(healingValue)
         print("Dano player")
         print(damageValue)
-        print("fim player")
+        print("fim turno player")
         let newPlayerHP = min(player.hp + healingValue, 30)
         dataManager.updatePlayerHP(value: newPlayerHP)
         

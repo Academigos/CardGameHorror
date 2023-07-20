@@ -9,6 +9,10 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+    
+    // hud
+    let hud = Hud()
+    
     // mão das cartas
     let handCards: HandCards
     
@@ -22,8 +26,13 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        setupHud()
         setupHand()
         self.isUserInteractionEnabled = true
+    }
+    
+    private func setupHud(){
+        addChild(hud)
     }
     
     private func setupHand() {
@@ -39,7 +48,6 @@ class GameScene: SKScene {
         // Combine as ações em uma sequência
         let sequence = SKAction.sequence([moveAction, holdAction])
         handCards.run(sequence)
-        
         addChild(handCards)
     }
 }

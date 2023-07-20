@@ -19,6 +19,8 @@ class GameScene: SKScene, endTurnDelegate {
     let hud = Hud()
     // mão das cartas
     var handCards: HandCards!
+    // inimigo
+    let boss = Boss()
     
     override init(size: CGSize) {
         super.init(size: size)
@@ -32,6 +34,7 @@ class GameScene: SKScene, endTurnDelegate {
         GameController.shared.startNewGame()
         setupHud()
         setupGameplay()
+        setupBoss()
         self.isUserInteractionEnabled = true
     }
     
@@ -47,6 +50,11 @@ class GameScene: SKScene, endTurnDelegate {
     private func setupHud(){
         addChild(hud)
         hud.endTurnButtom.endTurnButtonDelegate = self
+    }
+    
+    private func setupBoss() {
+        addChild(boss)
+        boss.enemyEntity.idle()
     }
     
     private func setupHand(cards: [Card]) {

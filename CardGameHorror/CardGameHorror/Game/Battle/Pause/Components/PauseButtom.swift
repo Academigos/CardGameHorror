@@ -11,8 +11,8 @@ import SpriteKit
 class PauseMenu: SKSpriteNode{
     let pauseTexture: SKTexture
     
-    init(pauseTexture: String) {
-        self.pauseTexture = SKTexture(imageNamed: pauseTexture)
+    init() {
+        self.pauseTexture = SKTexture(imageNamed: "PauseBackground")
         super.init(texture: self.pauseTexture, color: .clear, size: self.pauseTexture.size())
     }
     

@@ -231,7 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				28314F602A5CAAD10031B95B /* GameScene.swift */,
-				28314F972A5CACD20031B95B /* CutScene */,
+				28314F972A5CACD20031B95B /* Intro */,
 				28314F952A5CAC4F0031B95B /* Battle */,
 			);
 			path = Game;
@@ -275,12 +275,15 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
-		28314F972A5CACD20031B95B /* CutScene */ = {
+		28314F972A5CACD20031B95B /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				B888CB282A6B19E1008D8E3E /* Transition */,
+				B888CB262A6B19AD008D8E3E /* Dialog */,
+				B888CB252A6B19A3008D8E3E /* Oppening */,
 				28314F982A5CADD70031B95B /* File.swift */,
 			);
-			path = CutScene;
+			path = Intro;
 			sourceTree = "<group>";
 		};
 		28C322BD2A66E583000E83FF /* Hud */ = {
@@ -339,6 +342,27 @@
 				C9856EB62A6637CC00936CF2 /* HandCards.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B888CB252A6B19A3008D8E3E /* Oppening */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Oppening;
+			sourceTree = "<group>";
+		};
+		B888CB262A6B19AD008D8E3E /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		B888CB282A6B19E1008D8E3E /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 		B8B246982A66CEDE00EB2FFB /* MonsterNode */ = {

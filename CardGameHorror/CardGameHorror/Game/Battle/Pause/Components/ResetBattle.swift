@@ -10,8 +10,9 @@ import SpriteKit
 
 class ResetBattle: SKSpriteNode{
     let resetBattle: SKTexture
+    weak var delegate: ClosePauseDelegate?
     init() {
-        self.resetBattle = SKTexture(imageNamed: "ResetBattle")
+        self.resetBattle = SKTexture(imageNamed: "Buttom")
         super.init(texture: resetBattle, color: .clear, size: resetBattle.size())
         isUserInteractionEnabled = true
     }
@@ -21,7 +22,7 @@ class ResetBattle: SKSpriteNode{
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Change the color when touched (for example, to red)
-        self.texture = SKTexture(imageNamed: "PressedResetBattle")
+        self.texture = SKTexture(imageNamed: "PressedButtom")
         
         // Add a slight delay (e.g., 0.1 seconds) to revert the color back to clear
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -30,5 +31,6 @@ class ResetBattle: SKSpriteNode{
         
         // Call the startNewGame() function from the GameController
         GameController.shared.startNewGame()
+        delegate?.closePauseButtonTapped()
     }
 }

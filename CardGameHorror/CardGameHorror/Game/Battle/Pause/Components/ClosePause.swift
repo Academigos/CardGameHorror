@@ -8,15 +8,21 @@
 import Foundation
 import SpriteKit
 
-class ClosePause: SKSpriteNode{
+protocol ClosePauseDelegate: AnyObject {
+    func closePauseButtonTapped()
+}
 
+class ClosePause: SKSpriteNode{
+    
+    weak var delegate: ClosePauseDelegate?
+    
     let ClosePause: SKTexture
     
     init() {
         self.ClosePause = SKTexture(imageNamed: "ClosePause")
         super.init(texture: ClosePause, color: .clear, size: ClosePause.size())
         isUserInteractionEnabled = true
-
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -24,6 +30,6 @@ class ClosePause: SKSpriteNode{
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        PauseButtom().remove()
+        delegate?.closePauseButtonTapped()
     }
 }

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "inimigo_idle_2-11_1x.svg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "inimigo_idle_2-11_2x.svg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "inimigo_idle_2-11_3x.svg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

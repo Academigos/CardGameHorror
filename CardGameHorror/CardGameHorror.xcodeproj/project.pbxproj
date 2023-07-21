@@ -44,6 +44,21 @@
 		28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD3AA02A65C05D00D5F951 /* Extensions.swift */; };
 		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
 		B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B246992A66CF3400EB2FFB /* MonsterView.swift */; };
+		B8F0015C2A6B255800392235 /* Cenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0014B2A6B255800392235 /* Cenario.swift */; };
+		B8F0015D2A6B255800392235 /* Fundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0014D2A6B255800392235 /* Fundo.swift */; };
+		B8F0015E2A6B255800392235 /* Frente.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0014E2A6B255800392235 /* Frente.swift */; };
+		B8F0015F2A6B255800392235 /* Carros.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0014F2A6B255800392235 /* Carros.swift */; };
+		B8F001602A6B255800392235 /* ArvoresFrente.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F001512A6B255800392235 /* ArvoresFrente.swift */; };
+		B8F001612A6B255800392235 /* Estrada.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F001522A6B255800392235 /* Estrada.swift */; };
+		B8F001622A6B255800392235 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F001532A6B255800392235 /* Background.swift */; };
+		B8F001632A6B255800392235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F001542A6B255800392235 /* Assets.xcassets */; };
+		B8F001642A6B255800392235 /* Fumaca.sks in Resources */ = {isa = PBXBuildFile; fileRef = B8F001552A6B255800392235 /* Fumaca.sks */; };
+		B8F001652A6B255800392235 /* Carro2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F001562A6B255800392235 /* Carro2.swift */; };
+		B8F001662A6B255800392235 /* FumacaP.sks in Resources */ = {isa = PBXBuildFile; fileRef = B8F001572A6B255800392235 /* FumacaP.sks */; };
+		B8F001672A6B255800392235 /* FumacaPart.sks in Resources */ = {isa = PBXBuildFile; fileRef = B8F001582A6B255800392235 /* FumacaPart.sks */; };
+		B8F001682A6B255800392235 /* Carro1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F001592A6B255800392235 /* Carro1.swift */; };
+		B8F001692A6B255800392235 /* Farol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0015A2A6B255800392235 /* Farol.swift */; };
+		B8F0016A2A6B255800392235 /* ArvoresFundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0015B2A6B255800392235 /* ArvoresFundo.swift */; };
 		B8F9155D2A671E4600D828A2 /* MonsterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9155C2A671E4600D828A2 /* MonsterEntity.swift */; };
 		B8F9155F2A67214200D828A2 /* MonsterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9155E2A67214200D828A2 /* MonsterEntry.swift */; };
 		C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9856EB62A6637CC00936CF2 /* HandCards.swift */; };
@@ -107,6 +122,21 @@
 		28DD3AA02A65C05D00D5F951 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		28F54D292A60923B00B692F5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		B8B246992A66CF3400EB2FFB /* MonsterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
+		B8F0014B2A6B255800392235 /* Cenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cenario.swift; sourceTree = "<group>"; };
+		B8F0014D2A6B255800392235 /* Fundo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fundo.swift; sourceTree = "<group>"; };
+		B8F0014E2A6B255800392235 /* Frente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Frente.swift; sourceTree = "<group>"; };
+		B8F0014F2A6B255800392235 /* Carros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carros.swift; sourceTree = "<group>"; };
+		B8F001512A6B255800392235 /* ArvoresFrente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArvoresFrente.swift; sourceTree = "<group>"; };
+		B8F001522A6B255800392235 /* Estrada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Estrada.swift; sourceTree = "<group>"; };
+		B8F001532A6B255800392235 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		B8F001542A6B255800392235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8F001552A6B255800392235 /* Fumaca.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fumaca.sks; sourceTree = "<group>"; };
+		B8F001562A6B255800392235 /* Carro2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carro2.swift; sourceTree = "<group>"; };
+		B8F001572A6B255800392235 /* FumacaP.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FumacaP.sks; sourceTree = "<group>"; };
+		B8F001582A6B255800392235 /* FumacaPart.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FumacaPart.sks; sourceTree = "<group>"; };
+		B8F001592A6B255800392235 /* Carro1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carro1.swift; sourceTree = "<group>"; };
+		B8F0015A2A6B255800392235 /* Farol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Farol.swift; sourceTree = "<group>"; };
+		B8F0015B2A6B255800392235 /* ArvoresFundo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArvoresFundo.swift; sourceTree = "<group>"; };
 		B8F9155C2A671E4600D828A2 /* MonsterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterEntity.swift; sourceTree = "<group>"; };
 		B8F9155E2A67214200D828A2 /* MonsterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterEntry.swift; sourceTree = "<group>"; };
 		C9856EB62A6637CC00936CF2 /* HandCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCards.swift; sourceTree = "<group>"; };
@@ -234,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				28314F602A5CAAD10031B95B /* GameScene.swift */,
-				28314F972A5CACD20031B95B /* CutScene */,
+				28314F972A5CACD20031B95B /* Intro */,
 				28314F952A5CAC4F0031B95B /* Battle */,
 			);
 			path = Game;
@@ -261,6 +291,7 @@
 		28314F952A5CAC4F0031B95B /* Battle */ = {
 			isa = PBXGroup;
 			children = (
+				B8F0014A2A6B255800392235 /* Cenario  */,
 				280A534D2A6AABF200267B9E /* Pause */,
 				B8B246982A66CEDE00EB2FFB /* MonsterNode */,
 				28C322BD2A66E583000E83FF /* Hud */,
@@ -278,12 +309,15 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
-		28314F972A5CACD20031B95B /* CutScene */ = {
+		28314F972A5CACD20031B95B /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				B888CB282A6B19E1008D8E3E /* Transition */,
+				B888CB262A6B19AD008D8E3E /* Dialog */,
+				B888CB252A6B19A3008D8E3E /* Oppening */,
 				28314F982A5CADD70031B95B /* File.swift */,
 			);
-			path = CutScene;
+			path = Intro;
 			sourceTree = "<group>";
 		};
 		28C322BD2A66E583000E83FF /* Hud */ = {
@@ -344,6 +378,27 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		B888CB252A6B19A3008D8E3E /* Oppening */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Oppening;
+			sourceTree = "<group>";
+		};
+		B888CB262A6B19AD008D8E3E /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		B888CB282A6B19E1008D8E3E /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		B8B246982A66CEDE00EB2FFB /* MonsterNode */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +406,44 @@
 				B8B246992A66CF3400EB2FFB /* MonsterView.swift */,
 			);
 			path = MonsterNode;
+			sourceTree = "<group>";
+		};
+		B8F0014A2A6B255800392235 /* Cenario  */ = {
+			isa = PBXGroup;
+			children = (
+				B8F0014B2A6B255800392235 /* Cenario.swift */,
+				B8F0014C2A6B255800392235 /* ComponentsNodes */,
+				B8F001502A6B255800392235 /* Components */,
+			);
+			path = "Cenario ";
+			sourceTree = "<group>";
+		};
+		B8F0014C2A6B255800392235 /* ComponentsNodes */ = {
+			isa = PBXGroup;
+			children = (
+				B8F0014D2A6B255800392235 /* Fundo.swift */,
+				B8F0014E2A6B255800392235 /* Frente.swift */,
+				B8F0014F2A6B255800392235 /* Carros.swift */,
+			);
+			path = ComponentsNodes;
+			sourceTree = "<group>";
+		};
+		B8F001502A6B255800392235 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B8F001512A6B255800392235 /* ArvoresFrente.swift */,
+				B8F001522A6B255800392235 /* Estrada.swift */,
+				B8F001532A6B255800392235 /* Background.swift */,
+				B8F001542A6B255800392235 /* Assets.xcassets */,
+				B8F001552A6B255800392235 /* Fumaca.sks */,
+				B8F001562A6B255800392235 /* Carro2.swift */,
+				B8F001572A6B255800392235 /* FumacaP.sks */,
+				B8F001582A6B255800392235 /* FumacaPart.sks */,
+				B8F001592A6B255800392235 /* Carro1.swift */,
+				B8F0015A2A6B255800392235 /* Farol.swift */,
+				B8F0015B2A6B255800392235 /* ArvoresFundo.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		B8F9155B2A671E1400D828A2 /* MonsterComponents */ = {
@@ -469,7 +562,12 @@
 				28314F662A5CAAD10031B95B /* Main.storyboard in Resources */,
 				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
+				28204D8D2A69B90B00D77247 /* Pause in Resources */,
+				B8F001632A6B255800392235 /* Assets.xcassets in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
+				B8F001642A6B255800392235 /* Fumaca.sks in Resources */,
+				B8F001672A6B255800392235 /* FumacaPart.sks in Resources */,
+				B8F001662A6B255800392235 /* FumacaP.sks in Resources */,
 				28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,19 +601,28 @@
 				280DF6792A6B18AD00EFF162 /* Languages.swift in Sources */,
 				28D123612A6847A400E37E43 /* NamePlaceHolder.swift in Sources */,
 				28314F612A5CAAD10031B95B /* GameScene.swift in Sources */,
+				B8F0015E2A6B255800392235 /* Frente.swift in Sources */,
 				28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */,
 				280A53522A6AB0AB00267B9E /* PauseBackground.swift in Sources */,
 				280A53562A6ABDC900267B9E /* ResetBattle.swift in Sources */,
 				28C322C22A66E740000E83FF /* BottomBar.swift in Sources */,
 				28C52A6C2A6181ED003AEF25 /* HorrorDataManager.swift in Sources */,
+				B8F001622A6B255800392235 /* Background.swift in Sources */,
 				28D1235E2A681E9D00E37E43 /* LifeBarNode.swift in Sources */,
+				B8F0015C2A6B255800392235 /* Cenario.swift in Sources */,
+				B8F001692A6B255800392235 /* Farol.swift in Sources */,
+				B8F0016A2A6B255800392235 /* ArvoresFundo.swift in Sources */,
+				B8F0015D2A6B255800392235 /* Fundo.swift in Sources */,
 				280A534F2A6AAC0A00267B9E /* PauseNode.swift in Sources */,
 				28D123652A68529E00E37E43 /* PlayerHud.swift in Sources */,
 				280A53542A6ABD0000267B9E /* ClosePause.swift in Sources */,
 				28F54D2A2A60923B00B692F5 /* player.swift in Sources */,
 				B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */,
 				286536712A68BE4D007E8CD3 /* CardConfigurations.swift in Sources */,
+				B8F001652A6B255800392235 /* Carro2.swift in Sources */,
 				C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */,
+				B8F001612A6B255800392235 /* Estrada.swift in Sources */,
+				B8F0015F2A6B255800392235 /* Carros.swift in Sources */,
 				286A54B02A5DC96000B2D6BC /* CardNode.swift in Sources */,
 				28D123672A68743700E37E43 /* ButtomEndTurn.swift in Sources */,
 				280A53582A6ABEC400267B9E /* MainMenu.swift in Sources */,
@@ -523,10 +630,12 @@
 				28D1235C2A68195900E37E43 /* LifeBarBackGround.swift in Sources */,
 				28BDF7772A6431F9002037EB /* GameController.swift in Sources */,
 				28C52A6A2A617F49003AEF25 /* HorrorDatabase.xcdatamodeld in Sources */,
+				B8F001602A6B255800392235 /* ArvoresFrente.swift in Sources */,
 				28C322C02A66E5BF000E83FF /* HudNode.swift in Sources */,
 				280A535A2A6AC10A00267B9E /* PauseButtom.swift in Sources */,
 				28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */,
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
+				B8F001682A6B255800392235 /* Carro1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

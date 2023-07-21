@@ -72,6 +72,8 @@ class GameScene: SKScene, endTurnDelegate {
         GameController.shared.selectedCard = []
         let cardsHand = GameController.shared.cardsHandPlayer()
         setupHand(cards: cardsHand)
+        
+        //boss animations
         boss.enemyEntity.takingDamage()
     }
 }

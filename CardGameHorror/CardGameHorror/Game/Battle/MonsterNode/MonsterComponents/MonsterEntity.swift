@@ -46,7 +46,6 @@ class Enemy: SKSpriteNode {
     
     func takingDamage() {
         // Animação de tremer
-        self.removeAllActions()
         let shakeAction = SKAction.sequence([
             SKAction.scale(to: autoScale(self, widthProportion: 0.16, screenSize: GameViewController.screenSize), duration: 0.1),
             SKAction.scale(to: autoScale(self, widthProportion: 0.14, screenSize: GameViewController.screenSize), duration: 0.1),
@@ -59,14 +58,12 @@ class Enemy: SKSpriteNode {
     }
     
     func dying() {
-        self.removeAllActions()
         let fadeOutAction = SKAction.fadeOut(withDuration: 1.0)
         self.run(fadeOutAction)
         idle()
     }
     
     func idle() {
-        self.removeAllActions()
         let animationAction = SKAction.animate(with: idleTexture, timePerFrame: 0.5)
         
         let loopAction = SKAction.repeatForever(animationAction)

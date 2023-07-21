@@ -33,6 +33,8 @@ class LifeBarNode: SKNode{
         lifeBar.zPosition = 1
         backGround.addChild(lifeBar)
         addChild(backGround)
+        
+        updateLifeBar()
     }
     
     required init?(coder aDecoder: NSCoder) {

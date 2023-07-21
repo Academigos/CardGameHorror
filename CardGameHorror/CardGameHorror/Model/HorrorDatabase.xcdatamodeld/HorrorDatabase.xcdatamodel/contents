@@ -4,6 +4,7 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="typeTexture" optional="YES" attributeType="String"/>
         <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="inHand" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="inHand" inverseEntity="Player"/>
     </entity>

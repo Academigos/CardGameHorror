@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "carro_atk_1x.svg",
+      "filename" : "carro_atk_3x-3.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "carro_atk_2x.svg",
+      "filename" : "carro_atk_3x-2.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },

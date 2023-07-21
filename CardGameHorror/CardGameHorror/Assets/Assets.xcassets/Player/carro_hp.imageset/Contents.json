@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "carro_hp_1x.svg",
+      "filename" : "carro_hp_3x-3.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "carro_hp_2x.svg",
+      "filename" : "carro_hp_3x-2.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },

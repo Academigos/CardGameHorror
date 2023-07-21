@@ -40,8 +40,6 @@ class GameScene: SKScene, endTurnDelegate {
     }
     
     private func setupGameplay() {
-        // startGame
-//        GameController.shared.startNewGame()
         // cartas da mão inicial
         let cardsHand = GameController.shared.cardsHandPlayer()
         // configura visualização da mão de cartas
@@ -67,12 +65,14 @@ class GameScene: SKScene, endTurnDelegate {
     }
     
     func handCardsDidFinishAnimating() {
-        handCards.animateExitHand()
-        handCards.cardsModel = []
-        GameController.shared.selectedCard = []
-        let cardsHand = GameController.shared.cardsHandPlayer()
-        setupHand(cards: cardsHand)
+        func clearHead() {
+            handCards.cardsModel = []
+            GameController.shared.selectedCard = []
+            let cardsHand = GameController.shared.cardsHandPlayer()
+            setupHand(cards: cardsHand)
+        }
         
+        handCards.animateExitHand(completion: clearHead)
         //boss animations
         boss.enemyEntity.takingDamage()
     }

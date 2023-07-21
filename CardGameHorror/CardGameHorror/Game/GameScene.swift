@@ -12,13 +12,14 @@ protocol endTurnDelegate: AnyObject {
     func handCardsDidFinishAnimating()
 }
 
-
 class GameScene: SKScene, endTurnDelegate {
     
     // hud
     let hud = Hud()
     // mão das cartas
     var handCards: HandCards!
+    // inimigo
+    let boss = Boss()
     
     override init(size: CGSize) {
         super.init(size: size)
@@ -34,6 +35,7 @@ class GameScene: SKScene, endTurnDelegate {
         }
         setupHud()
         setupGameplay()
+        setupBoss()
         self.isUserInteractionEnabled = true
     }
     
@@ -51,6 +53,11 @@ class GameScene: SKScene, endTurnDelegate {
         hud.endTurnButtom.endTurnButtonDelegate = self
     }
     
+    private func setupBoss() {
+        addChild(boss)
+        boss.enemyEntity.idle()
+    }
+    
     private func setupHand(cards: [Card]) {
         handCards = HandCards(cards: cards)
         // Defina a posição inicial abaixo da tela
@@ -65,5 +72,6 @@ class GameScene: SKScene, endTurnDelegate {
         GameController.shared.selectedCard = []
         let cardsHand = GameController.shared.cardsHandPlayer()
         setupHand(cards: cardsHand)
+        boss.enemyEntity.takingDamage()
     }
 }

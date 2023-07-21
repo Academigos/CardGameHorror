@@ -12,7 +12,7 @@ class LifeBarNode: SKNode{
     let lifeBarName: String
     var life: Double
     let defaultLife: Double
-    let backGround = LifeBarBackGround()
+    let backGround: LifeBarBackGround
     let lifeBar: LifeBar
     init(lifeBarName: String, life: Double, defaultLife: Double) {
         
@@ -21,6 +21,8 @@ class LifeBarNode: SKNode{
         self.lifeBarName = lifeBarName
         
         self.lifeBar = LifeBar(lifeBarTexture: lifeBarName)
+        
+        backGround = LifeBarBackGround(life: life, defaultLife: defaultLife)
         
         super.init()
         print(life)
@@ -41,6 +43,8 @@ class LifeBarNode: SKNode{
         let scaleAction = SKAction.scaleX(to: CGFloat(life / defaultLife), duration: 0.3)
         let positionAction = SKAction.moveTo(x: 1, duration: 0.3)
         let groupAction = SKAction.group([scaleAction, positionAction])
+        
+        backGround.updateLifeBar(hp: life)
         lifeBar.run(groupAction)
     }
     
@@ -48,5 +52,4 @@ class LifeBarNode: SKNode{
         self.life = life
         updateLifeBar()
     }
-    
 }

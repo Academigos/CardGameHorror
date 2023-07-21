@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Finalizar Turno.svg",
+      "filename" : "inimigo_ataque_2-5_1x.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "inimigo_ataque_2-5_2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "inimigo_ataque_2-5_3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

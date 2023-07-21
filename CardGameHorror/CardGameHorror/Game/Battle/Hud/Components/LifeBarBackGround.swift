@@ -10,11 +10,31 @@ import SpriteKit
 
 class LifeBarBackGround: SKSpriteNode{
     let BackGroundTexture: SKTexture = SKTexture(imageNamed: "LifeBarBackGround")
-    init() {
+    var hp = 0
+    var totalHp = 3
+    var valueLabel: SKLabelNode = SKLabelNode()
+    init(life: Double, defaultLife: Double) {
+        self.hp = Int(life)
+        self.totalHp = Int(defaultLife)
         super.init(texture: BackGroundTexture, color: .clear, size: BackGroundTexture.size())
+        setupValueLabel()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    private func setupValueLabel() {
+        valueLabel.name = "valueLabel"
+        valueLabel.fontSize = 12
+        valueLabel.fontName = "BigshotOne-Regular"
+        valueLabel.fontColor = .white
+        valueLabel.text = "\(hp)/\(totalHp)"
+        valueLabel.zPosition = 2.0
+        valueLabel.position = CGPoint(x: self.size.width * 0.5, y: self.size.height * 0.4)
+        addChild(valueLabel)
+    }
+    
+     func updateLifeBar(hp: Double) {
+        valueLabel.text = "\(Int(hp))/\(totalHp)"
     }
 }

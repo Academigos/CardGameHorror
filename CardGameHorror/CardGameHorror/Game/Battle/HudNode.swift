@@ -11,6 +11,7 @@ import SpriteKit
 class Hud: SKNode {
     let playerHud = PlayerHud()
     let monsterHud = MonsterHud()
+    let pause = PauseNode()
     let endTurnButtom = ButtonEndTurn(buttomTexture: "EndTurn")
     override init() {
         super.init()
@@ -24,6 +25,9 @@ class Hud: SKNode {
         
         monsterHud.zPosition = 10
         addChild(monsterHud)
+        
+        pause.zPosition = 100
+        addChild(pause)
     }
     
     required init?(coder aDecoder: NSCoder) {

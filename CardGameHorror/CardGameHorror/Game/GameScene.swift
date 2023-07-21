@@ -14,7 +14,8 @@ protocol endTurnDelegate: AnyObject {
 
 
 class GameScene: SKScene, endTurnDelegate {
-    
+    //cenario
+    let cenario = Cenario()
     // hud
     let hud = Hud()
     // mão das cartas
@@ -30,6 +31,7 @@ class GameScene: SKScene, endTurnDelegate {
     
     override func didMove(to view: SKView) {
         GameController.shared.startNewGame()
+        setupCenario()
         setupHud()
         setupGameplay()
         self.isUserInteractionEnabled = true
@@ -43,7 +45,9 @@ class GameScene: SKScene, endTurnDelegate {
         // configura visualização da mão de cartas
         setupHand(cards: cardsHand)
     }
-    
+    private func setupCenario(){
+        addChild(cenario)
+    }
     private func setupHud(){
         addChild(hud)
         hud.endTurnButtom.endTurnButtonDelegate = self

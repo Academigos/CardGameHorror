@@ -23,7 +23,6 @@
 		28BDF7772A6431F9002037EB /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDF7762A6431F9002037EB /* GameController.swift */; };
 		28C322C02A66E5BF000E83FF /* HudNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322BF2A66E5BF000E83FF /* HudNode.swift */; };
 		28C322C22A66E740000E83FF /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322C12A66E740000E83FF /* BottomBar.swift */; };
-		28C322C82A671955000E83FF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F922A5CAB7C0031B95B /* SwiftUIView.swift */; };
 		28C322CA2A671DBA000E83FF /* LifeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322C92A671DBA000E83FF /* LifeBar.swift */; };
 		28C52A6A2A617F49003AEF25 /* HorrorDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28C52A682A617F49003AEF25 /* HorrorDatabase.xcdatamodeld */; };
 		28C52A6C2A6181ED003AEF25 /* HorrorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C52A6B2A6181ED003AEF25 /* HorrorDataManager.swift */; };
@@ -36,6 +35,18 @@
 		28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */; };
 		28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD3AA02A65C05D00D5F951 /* Extensions.swift */; };
 		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
+		70C7C7FE2A69B35800765F33 /* Cenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C7FD2A69B35800765F33 /* Cenario.swift */; };
+		70C7C8002A69B89700765F33 /* Carros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C7FF2A69B89700765F33 /* Carros.swift */; };
+		70C7C8022A69C84500765F33 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C8012A69C84500765F33 /* Background.swift */; };
+		70C7C8062A69CA9100765F33 /* Carro1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C8052A69CA9100765F33 /* Carro1.swift */; };
+		70C7C8082A69CA9C00765F33 /* Carro2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C8072A69CA9C00765F33 /* Carro2.swift */; };
+		70C7C80A2A69CAA500765F33 /* Farol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C8092A69CAA500765F33 /* Farol.swift */; };
+		70C7C80C2A69CAB200765F33 /* Estrada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C80B2A69CAB200765F33 /* Estrada.swift */; };
+		70C7C80E2A69CAC100765F33 /* ArvoresFundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C80D2A69CAC100765F33 /* ArvoresFundo.swift */; };
+		70C7C8102A69CACF00765F33 /* ArvoresFrente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C80F2A69CACF00765F33 /* ArvoresFrente.swift */; };
+		70C7C8122A69CD8B00765F33 /* Fundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C8112A69CD8B00765F33 /* Fundo.swift */; };
+		70C7C8142A69E0F500765F33 /* Frente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C8132A69E0F500765F33 /* Frente.swift */; };
+		70C7C8152A69E6BC00765F33 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F922A5CAB7C0031B95B /* SwiftUIView.swift */; };
 		C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9856EB62A6637CC00936CF2 /* HandCards.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +100,17 @@
 		28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BigshotOne-Regular.ttf"; sourceTree = "<group>"; };
 		28DD3AA02A65C05D00D5F951 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		28F54D292A60923B00B692F5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+		70C7C7FD2A69B35800765F33 /* Cenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cenario.swift; sourceTree = "<group>"; };
+		70C7C7FF2A69B89700765F33 /* Carros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carros.swift; sourceTree = "<group>"; };
+		70C7C8012A69C84500765F33 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		70C7C8052A69CA9100765F33 /* Carro1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carro1.swift; sourceTree = "<group>"; };
+		70C7C8072A69CA9C00765F33 /* Carro2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carro2.swift; sourceTree = "<group>"; };
+		70C7C8092A69CAA500765F33 /* Farol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Farol.swift; sourceTree = "<group>"; };
+		70C7C80B2A69CAB200765F33 /* Estrada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estrada.swift; sourceTree = "<group>"; };
+		70C7C80D2A69CAC100765F33 /* ArvoresFundo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArvoresFundo.swift; sourceTree = "<group>"; };
+		70C7C80F2A69CACF00765F33 /* ArvoresFrente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArvoresFrente.swift; sourceTree = "<group>"; };
+		70C7C8112A69CD8B00765F33 /* Fundo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundo.swift; sourceTree = "<group>"; };
+		70C7C8132A69E0F500765F33 /* Frente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frente.swift; sourceTree = "<group>"; };
 		C9856EB62A6637CC00936CF2 /* HandCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +241,7 @@
 		28314F952A5CAC4F0031B95B /* Battle */ = {
 			isa = PBXGroup;
 			children = (
+				70C7C7FC2A69B25600765F33 /* Cenario */,
 				28C322BD2A66E583000E83FF /* Hud */,
 				28F54D2B2A60927F00B692F5 /* Player */,
 			);
@@ -298,6 +321,40 @@
 				C9856EB62A6637CC00936CF2 /* HandCards.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		70C7C7FC2A69B25600765F33 /* Cenario */ = {
+			isa = PBXGroup;
+			children = (
+				70C7C8042A69C9EE00765F33 /* ComponentsNodes */,
+				70C7C8032A69C9DE00765F33 /* Components */,
+				70C7C7FD2A69B35800765F33 /* Cenario.swift */,
+			);
+			path = Cenario;
+			sourceTree = "<group>";
+		};
+		70C7C8032A69C9DE00765F33 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				70C7C8012A69C84500765F33 /* Background.swift */,
+				70C7C8052A69CA9100765F33 /* Carro1.swift */,
+				70C7C8072A69CA9C00765F33 /* Carro2.swift */,
+				70C7C8092A69CAA500765F33 /* Farol.swift */,
+				70C7C80B2A69CAB200765F33 /* Estrada.swift */,
+				70C7C80D2A69CAC100765F33 /* ArvoresFundo.swift */,
+				70C7C80F2A69CACF00765F33 /* ArvoresFrente.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		70C7C8042A69C9EE00765F33 /* ComponentsNodes */ = {
+			isa = PBXGroup;
+			children = (
+				70C7C7FF2A69B89700765F33 /* Carros.swift */,
+				70C7C8112A69CD8B00765F33 /* Fundo.swift */,
+				70C7C8132A69E0F500765F33 /* Frente.swift */,
+			);
+			path = ComponentsNodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,7 +490,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28C322C82A671955000E83FF /* SwiftUIView.swift in Sources */,
+				70C7C80C2A69CAB200765F33 /* Estrada.swift in Sources */,
+				70C7C8142A69E0F500765F33 /* Frente.swift in Sources */,
+				70C7C8152A69E6BC00765F33 /* SwiftUIView.swift in Sources */,
+				70C7C8122A69CD8B00765F33 /* Fundo.swift in Sources */,
+				70C7C8002A69B89700765F33 /* Carros.swift in Sources */,
 				28314F992A5CADD70031B95B /* File.swift in Sources */,
 				28C322CA2A671DBA000E83FF /* LifeBar.swift in Sources */,
 				28D123612A6847A400E37E43 /* NamePlaceHolder.swift in Sources */,
@@ -442,19 +503,26 @@
 				28C322C22A66E740000E83FF /* BottomBar.swift in Sources */,
 				28C52A6C2A6181ED003AEF25 /* HorrorDataManager.swift in Sources */,
 				28D1235E2A681E9D00E37E43 /* LifeBarNode.swift in Sources */,
+				70C7C8102A69CACF00765F33 /* ArvoresFrente.swift in Sources */,
 				28D123652A68529E00E37E43 /* PlayerHud.swift in Sources */,
 				28F54D2A2A60923B00B692F5 /* player.swift in Sources */,
 				286536712A68BE4D007E8CD3 /* CardConfigurations.swift in Sources */,
 				C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */,
+				70C7C80E2A69CAC100765F33 /* ArvoresFundo.swift in Sources */,
+				70C7C80A2A69CAA500765F33 /* Farol.swift in Sources */,
+				70C7C8022A69C84500765F33 /* Background.swift in Sources */,
 				286A54B02A5DC96000B2D6BC /* CardNode.swift in Sources */,
 				28D123672A68743700E37E43 /* ButtomEndTurn.swift in Sources */,
 				28D123632A6848C200E37E43 /* MonsterHud.swift in Sources */,
+				70C7C7FE2A69B35800765F33 /* Cenario.swift in Sources */,
 				28D1235C2A68195900E37E43 /* LifeBarBackGround.swift in Sources */,
 				28BDF7772A6431F9002037EB /* GameController.swift in Sources */,
 				28C52A6A2A617F49003AEF25 /* HorrorDatabase.xcdatamodeld in Sources */,
+				70C7C8082A69CA9C00765F33 /* Carro2.swift in Sources */,
 				28C322C02A66E5BF000E83FF /* HudNode.swift in Sources */,
 				28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */,
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
+				70C7C8062A69CA9100765F33 /* Carro1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

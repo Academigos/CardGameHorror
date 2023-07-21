@@ -47,7 +47,7 @@ class LifeBarNode: SKNode{
         let groupAction = SKAction.group([scaleAction, positionAction])
         
         backGround.updateLifeBar(hp: life)
-        lifeBar.run(scaleAction)
+        lifeBar.run(groupAction)
     }
     
     func setLife(_ life: Double) {

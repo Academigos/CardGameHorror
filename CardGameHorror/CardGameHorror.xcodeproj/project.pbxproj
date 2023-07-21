@@ -42,7 +42,6 @@
 		28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */; };
 		28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD3AA02A65C05D00D5F951 /* Extensions.swift */; };
 		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
-		C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */; };
 		B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B246992A66CF3400EB2FFB /* MonsterView.swift */; };
 		B8F0015C2A6B255800392235 /* Cenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0014B2A6B255800392235 /* Cenario.swift */; };
 		B8F0015D2A6B255800392235 /* Fundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0014D2A6B255800392235 /* Fundo.swift */; };
@@ -61,6 +60,7 @@
 		B8F0016A2A6B255800392235 /* ArvoresFundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0015B2A6B255800392235 /* ArvoresFundo.swift */; };
 		B8F9155D2A671E4600D828A2 /* MonsterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9155C2A671E4600D828A2 /* MonsterEntity.swift */; };
 		B8F9155F2A67214200D828A2 /* MonsterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9155E2A67214200D828A2 /* MonsterEntry.swift */; };
+		C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */; };
 		C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9856EB62A6637CC00936CF2 /* HandCards.swift */; };
 /* End PBXBuildFile section */
 
@@ -120,8 +120,6 @@
 		28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BigshotOne-Regular.ttf"; sourceTree = "<group>"; };
 		28DD3AA02A65C05D00D5F951 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		28F54D292A60923B00B692F5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
-		C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BreeSerif-Regular.ttf"; sourceTree = "<group>"; };
-		C976B3A62A69E786004F891B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8B246992A66CF3400EB2FFB /* MonsterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
 		B8F0014B2A6B255800392235 /* Cenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cenario.swift; sourceTree = "<group>"; };
 		B8F0014D2A6B255800392235 /* Fundo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fundo.swift; sourceTree = "<group>"; };
@@ -140,6 +138,8 @@
 		B8F0015B2A6B255800392235 /* ArvoresFundo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArvoresFundo.swift; sourceTree = "<group>"; };
 		B8F9155C2A671E4600D828A2 /* MonsterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterEntity.swift; sourceTree = "<group>"; };
 		B8F9155E2A67214200D828A2 /* MonsterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterEntry.swift; sourceTree = "<group>"; };
+		C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BreeSerif-Regular.ttf"; sourceTree = "<group>"; };
+		C976B3A62A69E786004F891B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9856EB62A6637CC00936CF2 /* HandCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -565,7 +565,6 @@
 				C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */,
 				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
-				28204D8D2A69B90B00D77247 /* Pause in Resources */,
 				B8F001632A6B255800392235 /* Assets.xcassets in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
 				B8F001642A6B255800392235 /* Fumaca.sks in Resources */,
@@ -814,7 +813,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VHUF9729L;
+				DEVELOPMENT_TEAM = SVGXRR5RRA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -843,7 +842,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VHUF9729L;
+				DEVELOPMENT_TEAM = SVGXRR5RRA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

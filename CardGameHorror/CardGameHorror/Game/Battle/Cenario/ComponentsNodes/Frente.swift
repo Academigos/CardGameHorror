@@ -9,15 +9,12 @@ import SpriteKit
 
 class Frente:SKNode{
 
-    let arvoresFrente = ArvoresFrente(arvoresFrente: "Arvores")
-    
+    let estrada = Estrada(estrada: "Estrada")
+    let arvoresFrentre = ArvoresFrente(arvoresFrente: "Arvores")
     override init() {
-        super.init()
-//        arvoresFrente.scale(to: autoScale(arvoresFrente, widthProportion: 1, screenSize: GameViewController.screenSize))
-//        
-//        arvoresFrente.position = CGPoint(x: GameViewController.screenSize.width*0.5, y: GameViewController.screenSize.height*0.5)
-        
-        addChild(arvoresFrente)
+        super.init()  
+        addChild(estrada)
+        addChild(arvoresFrentre)
     }
     
     required init?(coder aDecoder: NSCoder) {

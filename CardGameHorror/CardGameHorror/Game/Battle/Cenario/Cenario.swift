@@ -22,7 +22,7 @@ class Cenario:SKNode{
         
         fundo.zPosition = -10
         carro.zPosition = -9
-        frente.zPosition = -8
+        frente.zPosition = -7
         
         addChild(fundo)
         addChild(carro)

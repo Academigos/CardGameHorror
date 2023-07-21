@@ -35,6 +35,8 @@
 		28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */; };
 		28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD3AA02A65C05D00D5F951 /* Extensions.swift */; };
 		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
+		704A513F2A6B126300B37B0D /* Fumaca.sks in Resources */ = {isa = PBXBuildFile; fileRef = 704A513D2A6B126300B37B0D /* Fumaca.sks */; };
+		704A51402A6B126300B37B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704A513E2A6B126300B37B0D /* Assets.xcassets */; };
 		70C7C7FE2A69B35800765F33 /* Cenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C7FD2A69B35800765F33 /* Cenario.swift */; };
 		70C7C8002A69B89700765F33 /* Carros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C7FF2A69B89700765F33 /* Carros.swift */; };
 		70C7C8022A69C84500765F33 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7C8012A69C84500765F33 /* Background.swift */; };
@@ -100,6 +102,8 @@
 		28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BigshotOne-Regular.ttf"; sourceTree = "<group>"; };
 		28DD3AA02A65C05D00D5F951 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		28F54D292A60923B00B692F5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+		704A513D2A6B126300B37B0D /* Fumaca.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fumaca.sks; sourceTree = "<group>"; };
+		704A513E2A6B126300B37B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70C7C7FD2A69B35800765F33 /* Cenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cenario.swift; sourceTree = "<group>"; };
 		70C7C7FF2A69B89700765F33 /* Carros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carros.swift; sourceTree = "<group>"; };
 		70C7C8012A69C84500765F33 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
@@ -343,6 +347,8 @@
 				70C7C80B2A69CAB200765F33 /* Estrada.swift */,
 				70C7C80D2A69CAC100765F33 /* ArvoresFundo.swift */,
 				70C7C80F2A69CACF00765F33 /* ArvoresFrente.swift */,
+				704A513D2A6B126300B37B0D /* Fumaca.sks */,
+				704A513E2A6B126300B37B0D /* Assets.xcassets */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -461,9 +467,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704A513F2A6B126300B37B0D /* Fumaca.sks in Resources */,
 				28314F662A5CAAD10031B95B /* Main.storyboard in Resources */,
 				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
+				704A51402A6B126300B37B0D /* Assets.xcassets in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
 				28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */,
 			);

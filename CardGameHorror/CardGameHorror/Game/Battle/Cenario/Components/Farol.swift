@@ -18,19 +18,15 @@ class Farol:SKSpriteNode{
         farol0 = SKTexture(imageNamed: "farol01")
         super.init(texture: farol0, color: UIColor.clear, size: farol0.size())
         farolAnimation()
+        self.scale(to: autoScale(self, widthProportion: 0.05, screenSize: GameViewController.screenSize))
+       
     }
    
     func farolAnimation(){
         farol = getTexture(with: "Farol", textureAtlasName: "FarolAtlas")
         var farold = farol!
-        
-//        let farol0 = SKSpriteNode(texture: farol[0])
-//        farol0.position.x = self.size.width*0.5
-//        farol0.position.y = self.size.height*0.5
-//        farol0.scale(to: CGSize())
-//        addChild(farol0)
-        
-        let action = SKAction.animate(with: farold, timePerFrame: 1/TimeInterval(farold.count), resize: true, restore: true)
+ 
+        let action = SKAction.animate(with: farold, timePerFrame: 5/TimeInterval(farold.count), resize: true, restore: true)
         self.run(SKAction.repeatForever(action))
         
     }

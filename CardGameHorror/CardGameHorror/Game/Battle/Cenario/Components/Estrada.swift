@@ -13,6 +13,7 @@ class Estrada: SKSpriteNode{
     init(estrada: String) {
         self.estrada = SKTexture(imageNamed: estrada)
         super.init(texture: self.estrada, color: .clear, size: self.estrada.size())
+        self.scale(to: autoScale(self, widthProportion: 1, screenSize: GameViewController.screenSize))
     }
     
     required init?(coder aDecoder: NSCoder) {

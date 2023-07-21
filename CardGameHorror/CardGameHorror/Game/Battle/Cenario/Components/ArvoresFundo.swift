@@ -13,6 +13,7 @@ class ArvoresFundo: SKSpriteNode{
     init(arvoresFundo: String) {
         self.arvoresFundo = SKTexture(imageNamed: arvoresFundo)
         super.init(texture: self.arvoresFundo, color: .clear, size: self.arvoresFundo.size())
+        self.scale(to: autoScale(self, widthProportion: 1, screenSize: GameViewController.screenSize))
     }
     
     required init?(coder aDecoder: NSCoder) {

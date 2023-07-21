@@ -131,7 +131,7 @@ class GameController: NSObject {
 
     
     private func calculateMonsterDamage() -> Int {
-        let randomDamage = Int.random(in: 5...10)
+        let randomDamage = Int.random(in: 5...15)
         return randomDamage
     }
 }

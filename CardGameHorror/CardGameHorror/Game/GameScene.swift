@@ -29,7 +29,9 @@ class GameScene: SKScene, endTurnDelegate {
     }
     
     override func didMove(to view: SKView) {
-        GameController.shared.startNewGame()
+        if GameController.shared.isGameOver() == true{
+            GameController.shared.startNewGame()
+        }
         setupHud()
         setupGameplay()
         self.isUserInteractionEnabled = true
@@ -37,7 +39,7 @@ class GameScene: SKScene, endTurnDelegate {
     
     private func setupGameplay() {
         // startGame
-        GameController.shared.startNewGame()
+//        GameController.shared.startNewGame()
         // cartas da mão inicial
         let cardsHand = GameController.shared.cardsHandPlayer()
         // configura visualização da mão de cartas

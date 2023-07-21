@@ -2,18 +2,19 @@
 //  PauseBackground.swift
 //  CardGameHorror
 //
-//  Created by Eduardo on 19/07/23.
+//  Created by Eduardo on 21/07/23.
 //
 
 import Foundation
 import SpriteKit
 
-class PauseBackGround: SKSpriteNode{
-    let pauseBackGround: SKTexture
+
+class PauseBackground: SKSpriteNode{
+     let pauseBackGround: SKTexture
     
-    init(pauseBackground: String) {
-        self.pauseBackGround = SKTexture(imageNamed: pauseBackground)
-        super.init(texture: self.pauseBackGround, color: .clear, size: self.pauseBackGround.size())
+    init() {
+        self.pauseBackGround = SKTexture(imageNamed: "PauseBackground")
+        super.init(texture: pauseBackGround, color: .clear, size: pauseBackGround.size())
     }
     
     required init?(coder aDecoder: NSCoder) {

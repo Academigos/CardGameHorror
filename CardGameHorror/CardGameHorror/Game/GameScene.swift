@@ -58,10 +58,13 @@ class GameScene: SKScene, endTurnDelegate {
     }
     
     func handCardsDidFinishAnimating() {
-        handCards.animateExitHand()
-        handCards.cardsModel = []
-        GameController.shared.selectedCard = []
-        let cardsHand = GameController.shared.cardsHandPlayer()
-        setupHand(cards: cardsHand)
+        func clearHead() {
+            handCards.cardsModel = []
+            GameController.shared.selectedCard = []
+            let cardsHand = GameController.shared.cardsHandPlayer()
+            setupHand(cards: cardsHand)
+        }
+        
+        handCards.animateExitHand(completion: clearHead)
     }
 }

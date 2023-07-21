@@ -71,8 +71,8 @@ class ButtonEndTurn: SKSpriteNode{
         valueLabel.fontName = "BigshotOne-Regular"
         valueLabel.fontColor = .white
         valueLabel.text = "\(counter)/\(totalCount) Cartas"
-        valueLabel.position = CGPoint(x: size.width * -0.2, y: size.height * 0.3)
-       // valueLabel.zPosition = 1.0
+        valueLabel.position = CGPoint(x: size.width * 0, y: size.height * 0.3)
+        valueLabel.zPosition = 1.0
         
         addChild(valueLabel)
     }

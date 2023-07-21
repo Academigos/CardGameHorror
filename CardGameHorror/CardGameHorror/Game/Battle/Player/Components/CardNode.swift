@@ -40,14 +40,15 @@ class CardNode: SKSpriteNode {
     var savedInitialScale: CGSize = CGSize()
     var savedInitialRotation: CGFloat = 0.0
     var savedInitialZPosition:CGFloat = 0
-
+    
+    let indexArray: Int
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported")
     }
     
     // inicializa o cardModel
-    init(cardModel: Card) {
+    init(cardModel: Card, indexArray: Int) {
         self.cardModel = cardModel
         self.value = cardModel.value
         self.frontTexture = SKTexture(imageNamed: cardModel.image ?? "")
@@ -55,7 +56,7 @@ class CardNode: SKSpriteNode {
         if let type = cardModel.type, let cardType = CardType(rawValue: type) {
             self.cardType = cardType
         }
-        
+        self.indexArray = indexArray
         proportionCard = frontTexture.size().width / frontTexture.size().height
 //        newWidthCard = GameViewController.screenSize.width * 0.12
 //        newHeightCard = newWidthCard / proportionCard
@@ -85,9 +86,9 @@ class CardNode: SKSpriteNode {
         valueLabel.horizontalAlignmentMode = .right
         valueLabel.position = CGPoint(x: size.width * 0.375, y: size.height * 0.43)
         valueLabel.text = String(Int(self.value))
-        valueLabel.zPosition = 1.0
         
         addChild(valueLabel)
+        valueLabel.zPosition = zPosition + 0.1
     }
     
     // identifica o toque na carta
@@ -118,7 +119,7 @@ class CardNode: SKSpriteNode {
             // retorna efeito carta normal
             self.addGlow(color: .black)
             // retorna zPosition inicial
-            self.zPosition = savedInitialZPosition
+            self.zPosition -= 2
             
             run(SKAction.group([slide, scaleDown])) {
                 self.isSelected = false
@@ -130,7 +131,7 @@ class CardNode: SKSpriteNode {
             isSelected = true
             savedInitialPosition = position
             
-            self.zPosition += savedInitialZPosition
+             self.zPosition += 2
             
             if let parent = parent {
                 removeAllActions()

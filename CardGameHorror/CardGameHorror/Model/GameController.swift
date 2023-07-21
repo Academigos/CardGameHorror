@@ -15,7 +15,7 @@ class GameController: NSObject {
     
     private let randomCardCount = 6
     let playerLife: Double = 30
-    let monsterLife: Double = 100
+    let monsterLife: Double = 50
     @objc dynamic var selectedCard: [Card] = []
     // MARK: - Game Actions
     

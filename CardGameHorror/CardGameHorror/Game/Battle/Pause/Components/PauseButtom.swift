@@ -18,7 +18,7 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
     let languages = Languages()
     
     init() {
-        self.pauseButtom = SKTexture(imageNamed: "gear")
+        self.pauseButtom = SKTexture(imageNamed: "PauseButtom")
         super.init(texture: pauseButtom, color: .clear, size: pauseButtom.size())
         isUserInteractionEnabled = true
         closePause.delegate = self

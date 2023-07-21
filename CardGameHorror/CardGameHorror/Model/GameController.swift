@@ -15,7 +15,7 @@ class GameController: NSObject {
     
     private let randomCardCount = 6
     let playerLife: Double = 30
-    let monsterLife: Double = 50
+    let monsterLife: Double = 100
     @objc dynamic var selectedCard: [Card] = []
     // MARK: - Game Actions
     
@@ -131,7 +131,7 @@ class GameController: NSObject {
 
     
     private func calculateMonsterDamage() -> Int {
-        let randomDamage = Int.random(in: 5...15)
+        let randomDamage = Int.random(in: 5...10)
         return randomDamage
     }
 }

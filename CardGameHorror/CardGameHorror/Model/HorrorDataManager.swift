@@ -23,12 +23,13 @@ class DataManager {
     // MARK: - Card CRUD
     
     // Default creation of card
-    private func createCard(image: String, type: String, value: Double) -> Card {
+    private func createCard(typeTexture: String, image: String, type: String, value: Double) -> Card {
         let card = Card(context: context)
         card.id = UUID()
         card.image = image
         card.type = type
         card.value = value
+        card.typeTexture = typeTexture
         return card
     }
     
@@ -40,27 +41,27 @@ class DataManager {
             }
 
             // Define your initial cards here
-            let cardsData: [(image: String, type: String, value: Double)] = [
-                ("carro_atk", "ATK", 2),
-                ("enforcado_atk", "ATK", 2),
-                ("forca_atk", "ATK", 2),
-                ("carro_atk", "ATK", 4),
-                ("enforcado_atk", "ATK", 4),
-                ("forca_atk", "ATK", 4),
-                ("carro_atk", "ATK", 6),
-                ("enforcado_atk", "ATK", 6),
-                ("forca_atk", "ATK", 8),
-                ("carro_hp", "HP", 2),
-                ("enforcado_hp", "HP", 2),
-                ("forca_hp", "HP", 2),
-                ("carro_hp", "HP", 4),
-                ("enforcado_hp", "HP", 4),
-                ("forca_hp", "HP", 6)
+            let cardsData: [(typeTexture: String,image: String, type: String, value: Double)] = [
+                ("car", "carro_atk", "ATK", 2),
+                ("hanged", "enforcado_atk", "ATK", 2),
+                ("force", "forca_atk", "ATK", 2),
+                ("car", "carro_atk", "ATK", 4),
+                ("hanged", "enforcado_atk", "ATK", 4),
+                ("force", "forca_atk", "ATK", 4),
+                ("car", "carro_atk", "ATK", 6),
+                ("hanged", "enforcado_atk", "ATK", 6),
+                ("force", "forca_atk", "ATK", 8),
+                ("car", "carro_hp", "HP", 2),
+                ("hanged", "enforcado_hp", "HP", 2),
+                ("force", "forca_hp", "HP", 2),
+                ("car", "carro_hp", "HP", 4),
+                ("hanged", "enforcado_hp", "HP", 4),
+                ("force", "forca_hp", "HP", 6)
             ]
 
             // Create and add the cards to the context
             for cardData in cardsData {
-                _ = createCard(image: cardData.image, type: cardData.type, value: cardData.value)
+                _ = createCard(typeTexture: cardData.typeTexture, image: cardData.image, type: cardData.type, value: cardData.value)
             }
             saveContext()
         } catch {

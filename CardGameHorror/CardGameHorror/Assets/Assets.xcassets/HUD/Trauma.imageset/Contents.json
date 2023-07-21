@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Trauma.png",
+      "filename" : "batalha_label_inimigo_1x.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "batalha_label_inimigo_2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Opções-3.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28204D912A69D96000D77247 /* Pause in Resources */ = {isa = PBXBuildFile; fileRef = 28204D902A69D96000D77247 /* Pause */; };
 		28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F5A2A5CAAD10031B95B /* AppDelegate.swift */; };
 		28314F612A5CAAD10031B95B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F602A5CAAD10031B95B /* GameScene.swift */; };
 		28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F622A5CAAD10031B95B /* GameViewController.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28204D902A69D96000D77247 /* Pause */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pause; sourceTree = "<group>"; };
 		28314F572A5CAAD10031B95B /* CardGameHorror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardGameHorror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28314F5A2A5CAAD10031B95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28314F602A5CAAD10031B95B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				28D29B852A69B6D400C5F6B3 /* Pause */,
+				28204D902A69D96000D77247 /* Pause */,
 				28C322BD2A66E583000E83FF /* Hud */,
 				28F54D2B2A60927F00B692F5 /* Player */,
 			);
@@ -411,6 +414,7 @@
 				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
 				28D29B862A69B6D400C5F6B3 /* Pause in Resources */,
+				28204D912A69D96000D77247 /* Pause in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
 				28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */,
 			);
@@ -635,7 +639,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SVGXRR5RRA;
+				DEVELOPMENT_TEAM = 4VHUF9729L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -663,7 +667,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SVGXRR5RRA;
+				DEVELOPMENT_TEAM = 4VHUF9729L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

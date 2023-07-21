@@ -99,7 +99,10 @@ class CardNode: SKSpriteNode {
                 enlarge()
                 GameController.shared.addToSelectedCards(selectedCard:  cardModel)
             }
-
+            
+            if let hud = parent as? Hud {
+                hud.updateLife(DataManager.shared.fetchPlayer().hp, DataManager.shared.fetchMonster().hp)
+            }
         }
         
         super.touchesBegan(touches, with: event)

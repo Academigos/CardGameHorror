@@ -9,14 +9,14 @@ import Foundation
 import CoreData
 import GameplayKit
 
-class GameController {
+class GameController: NSObject {
     static let shared = GameController()
     private let dataManager = DataManager.shared
     
     private let randomCardCount = 6
     let playerLife: Double = 30
     let monsterLife: Double = 100
-    var selectedCard: [Card] = []
+    @objc dynamic var selectedCard: [Card] = []
     // MARK: - Game Actions
     
     // Function to start a new game

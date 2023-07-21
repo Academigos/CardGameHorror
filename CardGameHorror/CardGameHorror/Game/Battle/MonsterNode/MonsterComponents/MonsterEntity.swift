@@ -36,30 +36,40 @@ class Enemy: SKSpriteNode {
         super.init(texture: enemyTexture, color: UIColor.clear, size: enemyTexture.size())
     }
     
-    
-    
     func attacking() {
+        self.removeAllActions()
         //        let frameChanges
         // mudança na tela
         // Fala do inimigo
+        idle()
     }
     
     func takingDamage() {
-        let scaleOut = SKAction.fadeOut(withDuration: 1.0)
-        self.run(scaleOut)
+        // Animação de tremer
+        self.removeAllActions()
+        let shakeAction = SKAction.sequence([
+            SKAction.scale(to: autoScale(self, widthProportion: 0.16, screenSize: GameViewController.screenSize), duration: 0.1),
+            SKAction.scale(to: autoScale(self, widthProportion: 0.14, screenSize: GameViewController.screenSize), duration: 0.1),
+            SKAction.scale(to: autoScale(self, widthProportion: 0.16, screenSize: GameViewController.screenSize), duration: 0.1),
+            SKAction.scale(to: autoScale(self, widthProportion: 0.14, screenSize: GameViewController.screenSize), duration: 0.1)
+        ])
+
+        self.run(shakeAction)
+        idle()
+    }
+    
+    func dying() {
+        self.removeAllActions()
+        let fadeOutAction = SKAction.fadeOut(withDuration: 1.0)
+        self.run(fadeOutAction)
+        idle()
     }
     
     func idle() {
-        let animationAction = SKAction.animate(with: idleTexture, timePerFrame: 0.1)
+        self.removeAllActions()
+        let animationAction = SKAction.animate(with: idleTexture, timePerFrame: 0.5)
         
-        // Crie uma ação de loop infinito usando a ação de animação
         let loopAction = SKAction.repeatForever(animationAction)
         self.run(loopAction)
-    }
-    
-    func startRotationAnimation() {
-        let rotateAction = SKAction.rotate(byAngle: .pi, duration: 1.0)
-        let repeatAction = SKAction.repeatForever(rotateAction)
-        self.run(repeatAction)
     }
 }

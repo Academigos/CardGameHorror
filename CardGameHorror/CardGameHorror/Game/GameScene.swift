@@ -12,7 +12,6 @@ protocol endTurnDelegate: AnyObject {
     func handCardsDidFinishAnimating()
 }
 
-
 class GameScene: SKScene, endTurnDelegate {
     
     // hud
@@ -71,5 +70,6 @@ class GameScene: SKScene, endTurnDelegate {
         GameController.shared.selectedCard = []
         let cardsHand = GameController.shared.cardsHandPlayer()
         setupHand(cards: cardsHand)
+        boss.enemyEntity.takingDamage()
     }
 }

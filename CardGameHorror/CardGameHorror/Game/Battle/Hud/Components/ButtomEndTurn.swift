@@ -20,9 +20,11 @@ class ButtonEndTurn: SKSpriteNode{
             alpha = 0.5
         }
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if GameController.shared.isGameOver() == false && GameController.shared.selectedCard.count == 3{
             let selectedCards = Set(GameController.shared.selectedCard)
@@ -41,6 +43,7 @@ class ButtonEndTurn: SKSpriteNode{
             impactFeedbackGenerator.impactOccurred()
         }
     }
+    
     func updateOpacity() {
         if GameController.shared.selectedCard.count < 3 {
             alpha = 0.5

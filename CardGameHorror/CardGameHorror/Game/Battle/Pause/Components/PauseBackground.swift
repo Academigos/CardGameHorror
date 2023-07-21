@@ -11,6 +11,8 @@ import SpriteKit
 
 class PauseBackground: SKSpriteNode{
      let pauseBackGround: SKTexture
+    weak var delegate: ClosePauseDelegate?
+
     
     init() {
         self.pauseBackGround = SKTexture(imageNamed: "PauseBackground")

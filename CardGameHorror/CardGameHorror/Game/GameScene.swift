@@ -12,7 +12,6 @@ protocol endTurnDelegate: AnyObject {
     func handCardsDidFinishAnimating()
 }
 
-
 class GameScene: SKScene, endTurnDelegate {
     //cenario
     let cenario = Cenario()
@@ -20,6 +19,8 @@ class GameScene: SKScene, endTurnDelegate {
     let hud = Hud()
     // mão das cartas
     var handCards: HandCards!
+    // inimigo
+    let boss = Boss()
     
     override init(size: CGSize) {
         super.init(size: size)
@@ -30,16 +31,18 @@ class GameScene: SKScene, endTurnDelegate {
     }
     
     override func didMove(to view: SKView) {
-        GameController.shared.startNewGame()
-        setupCenario()
+        if GameController.shared.isGameOver() == true{
+            GameController.shared.startNewGame()
+        }
         setupHud()
         setupGameplay()
+        setupBoss()
         self.isUserInteractionEnabled = true
     }
     
     private func setupGameplay() {
         // startGame
-        GameController.shared.startNewGame()
+//        GameController.shared.startNewGame()
         // cartas da mão inicial
         let cardsHand = GameController.shared.cardsHandPlayer()
         // configura visualização da mão de cartas
@@ -51,6 +54,11 @@ class GameScene: SKScene, endTurnDelegate {
     private func setupHud(){
         addChild(hud)
         hud.endTurnButtom.endTurnButtonDelegate = self
+    }
+    
+    private func setupBoss() {
+        addChild(boss)
+        boss.enemyEntity.idle()
     }
     
     private func setupHand(cards: [Card]) {
@@ -67,5 +75,6 @@ class GameScene: SKScene, endTurnDelegate {
         GameController.shared.selectedCard = []
         let cardsHand = GameController.shared.cardsHandPlayer()
         setupHand(cards: cardsHand)
+        boss.enemyEntity.takingDamage()
     }
 }

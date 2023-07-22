@@ -46,11 +46,16 @@ class ButtonEndTurn: SKSpriteNode{
             let selectedCards = Set(GameController.shared.selectedCard)
             GameController.shared.processSelectedCards(selectedCards: selectedCards)
             GameController.shared.playerTurn()
-            GameController.shared.monsterTurn()
-            endTurnButtonDelegate?.handCardsDidFinishAnimating()
-            if let hud = parent as? Hud {
-                hud.updateLife(DataManager.shared.fetchPlayer().hp, DataManager.shared.fetchMonster().hp)
+            // Verifica se há pelo menos uma carta no array com type igual a "DEF"
+            let hasATKCard = GameController.shared.selectedCard.contains { card in
+                return card.type == "HP"
             }
+            
+            if let hud = parent as? Hud {                
+                hud.updateLife()
+            }
+            
+            endTurnButtonDelegate?.handCardsDidFinishAnimating()
         }else if GameController.shared.isGameOver() == true{
             print("bla")
         }else{
@@ -106,7 +111,7 @@ class ButtonEndTurn: SKSpriteNode{
         finishTurnLabel.fontName = "BreeSerif-Regular"
         finishTurnLabel.numberOfLines = 0
         finishTurnLabel.lineBreakMode = .byWordWrapping
-        finishTurnLabel.preferredMaxLayoutWidth = 250 // Define a largura máxima para quebrar o
+        finishTurnLabel.preferredMaxLayoutWidth = size.width * 0.55 // Define a largura máxima para quebrar o
         finishTurnLabel.horizontalAlignmentMode = .center
         finishTurnLabel.position = CGPoint(x: 0, y: size.height * -0.35)
         finishTurnLabel.zPosition = 1.0

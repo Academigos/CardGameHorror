@@ -66,19 +66,38 @@ class Enemy: SKSpriteNode {
     }
     
     func takingDamage() {
+        // Verifica se há pelo menos uma carta no array com type igual a "ATK"
+        let hasATKCard = GameController.shared.selectedCard.contains { card in
+            return card.type == "ATK"
+        }
+        
+        if DataManager.shared.fetchMonster().hp <= 0 {
+            return
+        }
+        
         // Animação de tremer
-        let shakeAction = SKAction.sequence([
-            SKAction.scale(to: autoScale(self, widthProportion: 0.16, screenSize: GameViewController.screenSize), duration: 0.1),
-            SKAction.scale(to: autoScale(self, widthProportion: 0.14, screenSize: GameViewController.screenSize), duration: 0.1),
-            SKAction.scale(to: autoScale(self, widthProportion: 0.16, screenSize: GameViewController.screenSize), duration: 0.1),
-            SKAction.scale(to: autoScale(self, widthProportion: 0.14, screenSize: GameViewController.screenSize), duration: 0.1),
-            SKAction.wait(forDuration: 1.0),
-            SKAction.run { [weak self] in
+        if hasATKCard {
+            let shakeAction = SKAction.sequence([
+                SKAction.scale(to: autoScale(self, widthProportion: 0.16, screenSize: GameViewController.screenSize), duration: 0.1),
+                SKAction.scale(to: autoScale(self, widthProportion: 0.14, screenSize: GameViewController.screenSize), duration: 0.1),
+                SKAction.scale(to: autoScale(self, widthProportion: 0.16, screenSize: GameViewController.screenSize), duration: 0.1),
+                SKAction.scale(to: autoScale(self, widthProportion: 0.14, screenSize: GameViewController.screenSize), duration: 0.1),
+                SKAction.wait(forDuration: 1.0),
+                SKAction.run { [weak self] in
+                    self?.attacking()
+                }
+            ])
+            
+            self.run(shakeAction)
+            
+        } else {
+           let attacking = SKAction.run { [weak self] in
                 self?.attacking()
             }
-        ])
+            
+            self.run(SKAction.sequence([SKAction.wait(forDuration: 1.0), attacking]))
+        }
         
-        self.run(shakeAction)
         idle()
     }
     

@@ -34,8 +34,16 @@ class Hud: SKNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func updateLife(_ newPlayerLife: Double, _ newMonsterLife: Double) {
-        playerHud.updatePlayer(value: newPlayerLife)
-        monsterHud.updateMonster(value: newMonsterLife)
+    func updateLife() {
+        if playerHud.playerLifeBar.life != DataManager.shared.fetchPlayer().hp {
+            self.playerHud.updatePlayer(value: DataManager.shared.fetchPlayer().hp)
+        }
+        self.monsterHud.updateMonster(value: DataManager.shared.fetchMonster().hp)
+        GameController.shared.monsterTurn()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            if self.playerHud.playerLifeBar.life != DataManager.shared.fetchPlayer().hp {
+                self.playerHud.updatePlayer(value: DataManager.shared.fetchPlayer().hp)
+            }
+        }
     }
 }

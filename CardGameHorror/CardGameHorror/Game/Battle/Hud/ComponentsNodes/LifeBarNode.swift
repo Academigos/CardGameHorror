@@ -28,8 +28,9 @@ class LifeBarNode: SKNode{
         print(life)
         backGround.scale(to: autoScale(backGround, widthProportion: 0.231, screenSize: GameViewController.screenSize))
         
-        lifeBar.anchorPoint = CGPoint(x: -0.03, y: -0.55)
-        backGround.anchorPoint = CGPoint(x: 0, y: 0)
+        self.backGround.anchorPoint = CGPoint(x: 0.027, y: 0) // Ancoragem na extremidade esquerda do backGround
+        self.lifeBar.anchorPoint = CGPoint(x: 1.0, y:  -0.55)
+        
         lifeBar.zPosition = 1
         backGround.addChild(lifeBar)
         addChild(backGround)
@@ -42,9 +43,11 @@ class LifeBarNode: SKNode{
     }
     
     func updateLifeBar() {
-        let scaleAction = SKAction.scaleX(to: CGFloat(life / defaultLife), duration: 0.3)
-        let positionAction = SKAction.moveTo(x: 1, duration: 0.3)
-        let groupAction = SKAction.group([scaleAction, positionAction])
+        let scaleAction = SKAction.scaleX(to: -CGFloat(life / defaultLife), duration: 0.3)
+        
+        let makeVisible = SKAction.sequence([SKAction.fadeAlpha(to: 0.5, duration: 0.6), SKAction.fadeAlpha(to: 1.0, duration: 0.6)])
+        
+        let groupAction = SKAction.group([scaleAction, makeVisible])
         
         backGround.updateLifeBar(hp: life)
         lifeBar.run(groupAction)

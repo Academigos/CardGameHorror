@@ -16,7 +16,7 @@ enum CardType: String {
 class CardNode: SKSpriteNode {
     let cardModel:Card
     
-    let cardTexture: CardTexture
+    let cardTexture: CardTexture?
     var cardType:CardType?
     let frontTexture: SKTexture
     var valueLabel: SKLabelNode = SKLabelNode()
@@ -46,10 +46,7 @@ class CardNode: SKSpriteNode {
         self.cardModel = cardModel
         self.value = cardModel.value
         self.frontTexture = SKTexture(imageNamed: cardModel.image ?? "")
-        self.cardTexture = CardTexture.fromString(cardModel.typeTexture!)!
-        if let type = cardModel.type, let cardType = CardType(rawValue: type) {
-            self.cardType = cardType
-        }
+        self.cardTexture = CardTexture.fromString(cardModel.typeTexture ?? "")
         self.indexArray = indexArray
         proportionCard = frontTexture.size().width / frontTexture.size().height
         //        newWidthCard = GameViewController.screenSize.width * 0.12
@@ -100,6 +97,8 @@ class CardNode: SKSpriteNode {
             labelNome.text = "O Carro"
         case .hanged:
             labelNome.text = "O Enforcado"
+        case .none:
+            labelNome.text = ""
         }
         
         addChild(labelNome)

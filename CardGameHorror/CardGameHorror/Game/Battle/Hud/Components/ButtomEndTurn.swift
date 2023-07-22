@@ -46,17 +46,10 @@ class ButtonEndTurn: SKSpriteNode{
             let selectedCards = Set(GameController.shared.selectedCard)
             GameController.shared.processSelectedCards(selectedCards: selectedCards)
             GameController.shared.playerTurn()
-            if DataManager.shared.fetchMonster().hp > 0{
-                GameController.shared.monsterTurn()
-            }
             if GameController.shared.isGameOver() == true{   
                 // colocar para trasitar a scenea para a scena final pos batalha
             }
             // Verifica se há pelo menos uma carta no array com type igual a "DEF"
-            let hasATKCard = GameController.shared.selectedCard.contains { card in
-                return card.type == "HP"
-            }
-            
             if let hud = parent as? Hud {                
                 hud.updateLife()
             }

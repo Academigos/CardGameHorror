@@ -45,24 +45,34 @@ class Enemy: SKSpriteNode {
     
     func attacking() {
         // Ação de animação de ataque
-        let attackAction = SKAction.animate(with: attackTexture, timePerFrame: 0.1)
-        
-        let original:CGSize = self.size
-        
-        // Ação de escala para aumentar o tamanho do nó (usando o SKAction.scale(by:))
-        let scaleUpAction = SKAction.scale(by: 1.7, duration: 0.5)
-        // Ação de escala para restaurar o tamanho original do nó
-        let scaleDownAction = SKAction.scale(to: original, duration: 0.3)
-        
-        // Sequência de ações para aumentar e restaurar o tamanho do nó durante o ataque
-        let scaleSequence = SKAction.sequence([scaleUpAction, attackAction, SKAction.wait(forDuration: 0.5), scaleDownAction])
-        
-        // Sequência de ações completa: animação de ataque + animação idle
-        let sequenceAction = SKAction.sequence([scaleSequence, SKAction.run { [weak self] in
-            self?.idle()
-        }])
-        
-        self.run(sequenceAction)
+            let attackAction = SKAction.sequence([SKAction.animate(with: attackTexture, timePerFrame: 0.1), SKAction.wait(forDuration: 0.5)])
+    
+            let original: CGSize = self.size
+            
+            // Ação de escala para aumentar o tamanho do nó (usando o SKAction.scale(by:))
+            let scaleUpAction = SKAction.scale(by: 1.7, duration: 0.5)
+            
+            // Movendo o nó verticalmente para baixo
+            let moveDownAction = SKAction.moveBy(x: 0, y: -50, duration: 0.5) // Ajuste o valor do y conforme necessário para controlar a posição vertical
+            
+            // Movendo o nó verticalmente para cima (voltando à posição original)
+            let moveUpAction = SKAction.moveBy(x: 0, y: 50, duration: 0.5) // Usamos o mesmo valor de y, mas negativo, para voltar à posição original
+            
+            // Ação de escala para restaurar o tamanho original do nó
+            let scaleDownAction = SKAction.scale(to: original, duration: 0.5)
+            
+            // Sequência de ações para aumentar, mover para baixo, mover para cima, restaurar o tamanho do nó durante o ataque
+            let scaleMoveSequence = SKAction.group([scaleUpAction, moveDownAction])
+            let scaleMoveWaitMoveSequence = SKAction.sequence([scaleMoveSequence, SKAction.wait(forDuration: 0.5)])
+            let returning = SKAction.group([scaleDownAction, moveUpAction])
+            let scaleMoveWaitMoveAndRestoreSequence = SKAction.sequence([scaleMoveWaitMoveSequence, attackAction, returning])
+            
+            // Sequência de ações completa: animação de ataque + animação idle
+            let sequenceAction = SKAction.sequence([scaleMoveWaitMoveAndRestoreSequence, SKAction.run { [weak self] in
+                self?.idle()
+            }])
+            
+            self.run(sequenceAction)
     }
     
     func takingDamage() {

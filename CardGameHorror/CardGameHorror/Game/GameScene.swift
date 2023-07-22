@@ -73,13 +73,22 @@ class GameScene: SKScene, endTurnDelegate {
     }
     
     func handCardsDidFinishAnimating() {
+        // Configure o atraso
+        let atraso: Double = 3.0
+        
         func clearHead() {
             handCards.cardsModel = []
             GameController.shared.selectedCard = []
             let cardsHand = GameController.shared.cardsHandPlayer()
-            setupHand(cards: cardsHand)
+            // Configure o despacho assíncrono após o atraso
+            DispatchQueue.main.asyncAfter(deadline: .now() + atraso) {
+                if DataManager.shared.fetchPlayer().hp <= 0 {
+                    return
+                }
+                self.setupHand(cards: cardsHand)
+            }
         }
-        
+        // exit hand animation
         handCards.animateExitHand(completion: clearHead)
         //boss animations
         boss!.enemyEntity.takingDamage()

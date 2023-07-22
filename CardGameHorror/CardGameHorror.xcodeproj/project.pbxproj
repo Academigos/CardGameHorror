@@ -383,9 +383,26 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		B8744E012A6C87B800180816 /* Diário */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Diário";
+			path = "Diário";
+			sourceTree = "<group>";
+		};
+		B8744E022A6C87CF00180816 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
 		B888CB252A6B19A3008D8E3E /* Oppening */ = {
 			isa = PBXGroup;
 			children = (
+				B8744E022A6C87CF00180816 /* MainMenu */,
+				B8744E012A6C87B800180816 /* Diário */,
 			);
 			path = Oppening;
 			sourceTree = "<group>";
@@ -817,7 +834,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SVGXRR5RRA;
+				DEVELOPMENT_TEAM = TLC9D54B8V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -846,7 +863,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SVGXRR5RRA;
+				DEVELOPMENT_TEAM = TLC9D54B8V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -875,7 +892,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SVGXRR5RRA;
+				DEVELOPMENT_TEAM = TLC9D54B8V;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -895,7 +912,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SVGXRR5RRA;
+				DEVELOPMENT_TEAM = TLC9D54B8V;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -914,7 +931,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SVGXRR5RRA;
+				DEVELOPMENT_TEAM = TLC9D54B8V;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Eduardo.CardGameHorrorUITests;
@@ -932,7 +949,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SVGXRR5RRA;
+				DEVELOPMENT_TEAM = TLC9D54B8V;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Eduardo.CardGameHorrorUITests;

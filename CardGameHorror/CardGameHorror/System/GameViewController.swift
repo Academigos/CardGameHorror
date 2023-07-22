@@ -10,6 +10,7 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+
     static var screenSize = CGSize()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,13 +18,14 @@ class GameViewController: UIViewController {
         GameViewController.screenSize = view.bounds.size
         //MARK: -Battle Scene
         // get Scene
-        let battleScene = BattleScene(size: GameViewController.screenSize)
+        let gameScene = GameScene(size: GameViewController.screenSize)
+
         // Set the scale mode to scale to fit the window
-        battleScene.scaleMode = .aspectFill
+            gameScene.scaleMode = .aspectFill
         
         // Present the scene
         if let view = self.view as! SKView? {
-            view.presentScene(battleScene)
+            view.presentScene(gameScene)
             
             view.ignoresSiblingOrder = true
             view.showsFPS = true

@@ -21,9 +21,9 @@ class GameController: NSObject {
     
     // Function to start a new game
     func startNewGame() {
+       _ = DataManager()
         dataManager.updatePlayerHP(value: playerLife) // Reset player's health points
         dataManager.updateMonsterHP(value: monsterLife) // Reset monster's health points
-        dataManager.createInitialCardsIfNeeded() // Reset the initial cards
         replacePlayerHand()
     }
     

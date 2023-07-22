@@ -24,7 +24,7 @@ class Farol:SKSpriteNode{
    
     func farolAnimation(){
         farol = getTexture(with: "Farol", textureAtlasName: "FarolAtlas")
-        var farold = farol!
+        let farold = farol!
  
         let action = SKAction.animate(with: farold, timePerFrame: 5/TimeInterval(farold.count), resize: true, restore: true)
         self.run(SKAction.repeatForever(action))

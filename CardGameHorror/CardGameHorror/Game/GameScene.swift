@@ -13,13 +13,13 @@ protocol endTurnDelegate: AnyObject {
 }
 
 class GameScene: SKScene, endTurnDelegate {
-    
+    var cenario: Cenario?
     // hud
-    let hud = Hud()
+    var hud: Hud?
     // mão das cartas
     var handCards: HandCards!
     // inimigo
-    let boss = Boss()
+    var boss: Boss?
     
     override init(size: CGSize) {
         super.init(size: size)
@@ -33,6 +33,7 @@ class GameScene: SKScene, endTurnDelegate {
         if GameController.shared.isGameOver() == true{
             GameController.shared.startNewGame()
         }
+        setupCenario()
         setupHud()
         setupGameplay()
         setupBoss()
@@ -47,13 +48,20 @@ class GameScene: SKScene, endTurnDelegate {
     }
     
     private func setupHud(){
-        addChild(hud)
-        hud.endTurnButtom.endTurnButtonDelegate = self
+        hud = Hud()
+        addChild(hud!)
+        hud!.endTurnButtom.endTurnButtonDelegate = self
     }
     
     private func setupBoss() {
-        addChild(boss)
-        boss.enemyEntity.idle()
+        boss = Boss()
+        addChild(boss!)
+        boss!.enemyEntity.idle()
+    }
+    
+    private func setupCenario(){
+        cenario = Cenario()
+        addChild(cenario!)
     }
     
     private func setupHand(cards: [Card]) {
@@ -83,6 +91,6 @@ class GameScene: SKScene, endTurnDelegate {
         // exit hand animation
         handCards.animateExitHand(completion: clearHead)
         //boss animations
-        boss.enemyEntity.takingDamage()
+        boss!.enemyEntity.takingDamage()
     }
 }

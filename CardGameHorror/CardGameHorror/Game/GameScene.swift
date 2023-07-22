@@ -13,7 +13,7 @@ protocol endTurnDelegate: AnyObject {
 }
 
 class GameScene: SKScene, endTurnDelegate {
-    
+    let cenario = Cenario()
     // hud
     let hud = Hud()
     // mão das cartas
@@ -33,6 +33,7 @@ class GameScene: SKScene, endTurnDelegate {
         if GameController.shared.isGameOver() == true{
             GameController.shared.startNewGame()
         }
+        setupCenario()
         setupHud()
         setupGameplay()
         setupBoss()
@@ -56,6 +57,10 @@ class GameScene: SKScene, endTurnDelegate {
     private func setupBoss() {
         addChild(boss)
         boss.enemyEntity.idle()
+    }
+    
+    private func setupCenario(){
+        addChild(cenario)
     }
     
     private func setupHand(cards: [Card]) {

@@ -13,7 +13,7 @@ class HandCards: SKSpriteNode {
     // array de nós de cartas
     var cards: [CardNode] = []
     var cardsModel: [Card] = []
-        
+    
     init(cards: [Card]) {
         
         super.init(texture: nil, color: .clear, size: .zero)
@@ -29,30 +29,39 @@ class HandCards: SKSpriteNode {
     func animateEntryHand() {
         self.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: -self.size.height)
         let finalPosition = CGPoint(x: GameViewController.screenSize.width * 0.5, y: self.size.height * 0.4)
-
+        
         // Crie uma ação para mover o nó de sua posição inicial até a posição final
         let moveAction = SKAction.moveTo(y: finalPosition.y, duration: 1.0)
         // Adicione uma ação de bloqueio para manter o nó na posição final
         let holdAction = SKAction.wait(forDuration: 0.5)
-
+        
         // Combine as ações em uma sequência
         let sequence = SKAction.sequence([moveAction, holdAction])
         self.run(sequence)
     }
     
-    func animateExitHand() {
- 
-        let finalPosition = CGPoint(x: GameViewController.screenSize.width * 0.5, y: -self.size.height * 0.5)
-
+    func animateExitHand(completion: @escaping () -> Void) {
+        
+        let finalPosition = CGPoint(x: GameViewController.screenSize.width * 0.5, y: -self.size.height * 0.9)
+        
         // Crie uma ação para mover o nó de sua posição inicial até a posição final
         let moveAction = SKAction.moveTo(y: finalPosition.y, duration: 1.0)
-        // Adicione uma ação de bloqueio para manter o nó na posição final
+        
         // Crie uma ação para remover o nó da cena após a animação ser concluída
         let removeAction = SKAction.removeFromParent()
+        
+        // Define a função executada após a animação
+        func clearHand() {
+            completion()
+        }
+        
+        // Crie um SKAction.run e passe a função clearHand como parâmetro
+        let clearHandAction = SKAction.run(clearHand)
+        
         let holdAction = SKAction.wait(forDuration: 0.5)
-
+        
         // Combine as ações em uma sequência
-        let sequence = SKAction.sequence([moveAction, removeAction, holdAction])
+        let sequence = SKAction.sequence([moveAction, removeAction, clearHandAction, holdAction])
         self.run(sequence)
     }
     
@@ -61,16 +70,13 @@ class HandCards: SKSpriteNode {
         var totalWidth: CGFloat = 0.0
         var maxHeight: CGFloat = 0.0
         for (index, cardModel) in cardsModel.enumerated() {
-            let cardNode = CardNode(cardModel: cardModel)
+            let cardNode = CardNode(cardModel: cardModel, indexArray: index)
             
             totalWidth += cardNode.size.width + cardSpacing
             maxHeight = max(maxHeight, cardNode.size.height)
             
-            cardNode.isUserInteractionEnabled = true
-            
             cardNode.savedInitialZPosition = CGFloat(index + 1)
             cardNode.zPosition = cardNode.savedInitialZPosition
-            
             addChild(cardNode)
             
             cards.append(cardNode)
@@ -122,9 +128,13 @@ class HandCards: SKSpriteNode {
             
             let delayAction = SKAction.wait(forDuration: delay)
             
+            let enableInteractionAction = SKAction.run {
+                cardNode.isUserInteractionEnabled = true
+            }
+            
             let rotateAction = SKAction.rotate(toAngle: configuration.rotation, duration: 0.1)
             
-            let sequenceAction = SKAction.sequence([delay1, delayAction, moveAction, rotateAction])
+            let sequenceAction = SKAction.sequence([delay1, delayAction, moveAction, rotateAction, enableInteractionAction])
             
             cardNode.run(sequenceAction)
         }

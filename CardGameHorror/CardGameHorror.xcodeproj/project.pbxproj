@@ -61,6 +61,7 @@
 		B8F0016A2A6B255800392235 /* ArvoresFundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0015B2A6B255800392235 /* ArvoresFundo.swift */; };
 		B8F9155D2A671E4600D828A2 /* MonsterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9155C2A671E4600D828A2 /* MonsterEntity.swift */; };
 		B8F9155F2A67214200D828A2 /* MonsterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9155E2A67214200D828A2 /* MonsterEntry.swift */; };
+		C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */; };
 		C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9856EB62A6637CC00936CF2 /* HandCards.swift */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +140,8 @@
 		B8F0015B2A6B255800392235 /* ArvoresFundo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArvoresFundo.swift; sourceTree = "<group>"; };
 		B8F9155C2A671E4600D828A2 /* MonsterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterEntity.swift; sourceTree = "<group>"; };
 		B8F9155E2A67214200D828A2 /* MonsterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterEntry.swift; sourceTree = "<group>"; };
+		C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BreeSerif-Regular.ttf"; sourceTree = "<group>"; };
+		C976B3A62A69E786004F891B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9856EB62A6637CC00936CF2 /* HandCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +215,7 @@
 		28314F592A5CAAD10031B95B /* CardGameHorror */ = {
 			isa = PBXGroup;
 			children = (
+				C976B3A62A69E786004F891B /* Info.plist */,
 				28314F8F2A5CAB120031B95B /* Game */,
 				28314F902A5CAB1F0031B95B /* Model */,
 				28314F8D2A5CAAE30031B95B /* Assets */,
@@ -355,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */,
+				C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -560,9 +565,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				28314F662A5CAAD10031B95B /* Main.storyboard in Resources */,
+				C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */,
 				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
-				28204D8D2A69B90B00D77247 /* Pause in Resources */,
 				B8F001632A6B255800392235 /* Assets.xcassets in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
 				B8F001642A6B255800392235 /* Fumaca.sks in Resources */,
@@ -812,8 +817,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VHUF9729L;
+				DEVELOPMENT_TEAM = SVGXRR5RRA;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -840,8 +846,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VHUF9729L;
+				DEVELOPMENT_TEAM = SVGXRR5RRA;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

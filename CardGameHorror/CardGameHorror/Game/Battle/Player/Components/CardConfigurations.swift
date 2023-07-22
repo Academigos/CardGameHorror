@@ -66,3 +66,24 @@ enum CardConfigurations: Int {
         return angle * .pi / 180.0
     }
 }
+
+// Enumeração que define os tipos de textura disponíveis
+enum CardTexture: String {
+    case force = "A Força"
+    case car = "O Carro"
+    case hanged = "O Enforcado"
+    
+    // Método estático para converter uma string em um valor da enumeração CardTexture
+    static func fromString(_ string: String) -> CardTexture? {
+        switch string.lowercased() {
+        case "car":
+            return .car
+        case "force":
+            return .force
+        case "hanged":
+            return .hanged
+        default:
+            return nil
+        }
+    }
+}

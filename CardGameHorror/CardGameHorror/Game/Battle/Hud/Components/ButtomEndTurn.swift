@@ -10,7 +10,8 @@ import SpriteKit
 class ButtonEndTurn: SKSpriteNode{
     
     weak var endTurnButtonDelegate: endTurnDelegate?
-    var valueLabel: SKLabelNode = SKLabelNode()
+    var cardsSelectLabel: SKLabelNode = SKLabelNode()
+    var finishTurnLabel: SKLabelNode = SKLabelNode()
     
     var counter = 0
     let totalCount = 3
@@ -20,7 +21,8 @@ class ButtonEndTurn: SKSpriteNode{
         self.buttomTexture = SKTexture(imageNamed: buttomTexture)
         super.init(texture: self.buttomTexture, color: .clear, size: self.buttomTexture.size())
         GameController.shared.addObserver(self, forKeyPath: #keyPath(GameController.selectedCard),options: [.new], context: nil)
-        setupValueLabel()
+        setupCardsSelectLabel()
+        setupFinishTurnLabel()
         isUserInteractionEnabled = true
         if GameController.shared.selectedCard.count < 3 {
             alpha = 0.5
@@ -66,21 +68,55 @@ class ButtonEndTurn: SKSpriteNode{
         }
     }
     
-    private func setupValueLabel() {
-        valueLabel.name = "valueLabel"
-        valueLabel.fontSize = 12
-        valueLabel.fontName = "BigshotOne-Regular"
-        valueLabel.fontColor = .white
-        valueLabel.text = "\(counter)/\(totalCount) Cartas"
-        valueLabel.position = CGPoint(x: size.width * -0.2, y: size.height * 0.3)
-       // valueLabel.zPosition = 1.0
+    private func setupCardsSelectLabel() {
+        cardsSelectLabel.name = "cardsSelectLabel"
+        cardsSelectLabel.fontSize = size.height * 0.16
+        cardsSelectLabel.fontName = "BreeSerif-Regular"
+        cardsSelectLabel.fontColor = SKColor(red: 129/255, green: 134/255, blue: 150/255, alpha: 1.0)
+        cardsSelectLabel.text = "\(counter)/\(totalCount) Cartas"
+        cardsSelectLabel.position = CGPoint(x: size.width * 0, y: size.height * 0.3)
+        cardsSelectLabel.zPosition = 1.0
         
-        addChild(valueLabel)
+        addChild(cardsSelectLabel)
+    }
+    
+    private func setupFinishTurnLabel() {
+        
+        let text = "Finalizar turno"
+        let fontSize = size.height * 0.18 // Definindo o tamanho da fonte com base na altura da tela
+        
+        let font = UIFont(name: "BreeSerif-Regular", size: fontSize)
+        
+        if let customFont = font {
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .center
+            let attrString = NSMutableAttributedString(string: text, attributes: [
+                .font: customFont,
+                .foregroundColor: UIColor(red: CGFloat(0x17) / 255.0, green: CGFloat(0x18) / 255.0, blue: CGFloat(0x1C) / 255.0, alpha: 1.0),
+                .paragraphStyle: paragraphStyle
+            ])
+            
+            finishTurnLabel.attributedText = attrString
+        } else {
+            finishTurnLabel.text = "Finalizar turno"
+        }
+        
+        finishTurnLabel.name = "finishTurnLabel"
+        finishTurnLabel.fontSize = size.height * 0.16
+        finishTurnLabel.fontName = "BreeSerif-Regular"
+        finishTurnLabel.numberOfLines = 0
+        finishTurnLabel.lineBreakMode = .byWordWrapping
+        finishTurnLabel.preferredMaxLayoutWidth = 250 // Define a largura máxima para quebrar o
+        finishTurnLabel.horizontalAlignmentMode = .center
+        finishTurnLabel.position = CGPoint(x: 0, y: size.height * -0.35)
+        finishTurnLabel.zPosition = 1.0
+        
+        addChild(finishTurnLabel)
     }
     
     func updateValueCartas(){
         counter = GameController.shared.selectedCard.count
-        valueLabel.text = "\(counter)/\(totalCount) Cartas"
+        cardsSelectLabel.text = "\(counter)/\(totalCount) Cartas"
     }
     
     deinit {

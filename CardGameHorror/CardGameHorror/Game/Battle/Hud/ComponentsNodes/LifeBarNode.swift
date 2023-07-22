@@ -25,7 +25,6 @@ class LifeBarNode: SKNode{
         backGround = LifeBarBackGround(life: life, defaultLife: defaultLife)
         
         super.init()
-        print(life)
         backGround.scale(to: autoScale(backGround, widthProportion: 0.231, screenSize: GameViewController.screenSize))
         
         lifeBar.anchorPoint = CGPoint(x: -0.03, y: -0.55)

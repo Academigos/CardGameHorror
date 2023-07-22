@@ -89,6 +89,7 @@ class HandCards: SKSpriteNode {
     
     // animação de inicialização das cartas
     func animateCardAppearance() {
+        print(cards)
         let containerWidth = CGFloat(cards.count) * cards[0].size.width + CGFloat(cards.count - 1) * cardSpacing
         let startX = (-containerWidth / 2) + cards[0].size.width / 2
         

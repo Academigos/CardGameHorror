@@ -76,8 +76,7 @@ class DataManager {
             guard players.isEmpty else {
                 return // Player already exists, no need to recreate
             }
-            let player = Player(context: context)
-            player.hp = 30 // Set initial health points here
+            _ = Player(context: context)
             
             saveContext()
         } catch {

@@ -46,10 +46,15 @@ class ButtonEndTurn: SKSpriteNode{
             let selectedCards = Set(GameController.shared.selectedCard)
             GameController.shared.processSelectedCards(selectedCards: selectedCards)
             GameController.shared.playerTurn()
-            GameController.shared.monsterTurn()
+            if DataManager.shared.fetchMonster().hp > 0{
+                GameController.shared.monsterTurn()
+            }
             endTurnButtonDelegate?.handCardsDidFinishAnimating()
             if let hud = parent as? Hud {
                 hud.updateLife(DataManager.shared.fetchPlayer().hp, DataManager.shared.fetchMonster().hp)
+            }
+            if GameController.shared.isGameOver() == true{
+                
             }
         }else if GameController.shared.isGameOver() == true{
             print("bla")

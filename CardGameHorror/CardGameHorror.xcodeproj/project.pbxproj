@@ -23,7 +23,6 @@
 		28314F752A5CAAD20031B95B /* CardGameHorrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F742A5CAAD20031B95B /* CardGameHorrorTests.swift */; };
 		28314F7F2A5CAAD20031B95B /* CardGameHorrorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F7E2A5CAAD20031B95B /* CardGameHorrorUITests.swift */; };
 		28314F812A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F802A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift */; };
-		28314F992A5CADD70031B95B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F982A5CADD70031B95B /* File.swift */; };
 		286536712A68BE4D007E8CD3 /* CardConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286536702A68BE4D007E8CD3 /* CardConfigurations.swift */; };
 		286A54B02A5DC96000B2D6BC /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286A54AF2A5DC96000B2D6BC /* CardNode.swift */; };
 		286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */ = {isa = PBXBuildFile; fileRef = 286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */; };
@@ -45,6 +44,9 @@
 		28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */; };
 		28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD3AA02A65C05D00D5F951 /* Extensions.swift */; };
 		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
+		B86261432A6D6DBE00EB5C93 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86261422A6D6DBE00EB5C93 /* TextBox.swift */; };
+		B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AECE082A6D5B770032AC66 /* IntroBackground.swift */; };
+		B8AECE0B2A6D5B880032AC66 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AECE0A2A6D5B880032AC66 /* DialogView.swift */; };
 		B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B246992A66CF3400EB2FFB /* MonsterView.swift */; };
 		B8F0015C2A6B255800392235 /* Cenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0014B2A6B255800392235 /* Cenario.swift */; };
 		B8F0015D2A6B255800392235 /* Fundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0014D2A6B255800392235 /* Fundo.swift */; };
@@ -65,6 +67,8 @@
 		B8F9155F2A67214200D828A2 /* MonsterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9155E2A67214200D828A2 /* MonsterEntry.swift */; };
 		C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */; };
 		C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9856EB62A6637CC00936CF2 /* HandCards.swift */; };
+		C9C208FD2A6CD797009C73C4 /* farol.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C9C208FC2A6CD797009C73C4 /* farol.atlas */; };
+		C9C209042A6D5371009C73C4 /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209032A6D5371009C73C4 /* IntroScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +109,6 @@
 		28314F7E2A5CAAD20031B95B /* CardGameHorrorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameHorrorUITests.swift; sourceTree = "<group>"; };
 		28314F802A5CAAD20031B95B /* CardGameHorrorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameHorrorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		28314F922A5CAB7C0031B95B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
-		28314F982A5CADD70031B95B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		286536702A68BE4D007E8CD3 /* CardConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardConfigurations.swift; sourceTree = "<group>"; };
 		286A54AF2A5DC96000B2D6BC /* CardNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNode.swift; sourceTree = "<group>"; };
 		286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Myaudio.sks; sourceTree = "<group>"; };
@@ -126,6 +129,9 @@
 		28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BigshotOne-Regular.ttf"; sourceTree = "<group>"; };
 		28DD3AA02A65C05D00D5F951 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		28F54D292A60923B00B692F5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+		B86261422A6D6DBE00EB5C93 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
+		B8AECE082A6D5B770032AC66 /* IntroBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroBackground.swift; sourceTree = "<group>"; };
+		B8AECE0A2A6D5B880032AC66 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 		B8B246992A66CF3400EB2FFB /* MonsterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
 		B8F0014B2A6B255800392235 /* Cenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cenario.swift; sourceTree = "<group>"; };
 		B8F0014D2A6B255800392235 /* Fundo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fundo.swift; sourceTree = "<group>"; };
@@ -147,6 +153,8 @@
 		C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BreeSerif-Regular.ttf"; sourceTree = "<group>"; };
 		C976B3A62A69E786004F891B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9856EB62A6637CC00936CF2 /* HandCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCards.swift; sourceTree = "<group>"; };
+		C9C208FC2A6CD797009C73C4 /* farol.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = farol.atlas; path = CardGameHorror/farol.atlas; sourceTree = SOURCE_ROOT; };
+		C9C209032A6D5371009C73C4 /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroScene.swift; path = CardGameHorror/Game/IntroScene.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +281,7 @@
 			children = (
 				28314F602A5CAAD10031B95B /* GameScene.swift */,
 				28314F972A5CACD20031B95B /* Intro */,
+				C9C209032A6D5371009C73C4 /* IntroScene.swift */,
 				28314F952A5CAC4F0031B95B /* Battle */,
 			);
 			path = Game;
@@ -322,7 +331,6 @@
 				B888CB282A6B19E1008D8E3E /* Transition */,
 				B888CB262A6B19AD008D8E3E /* Dialog */,
 				B888CB252A6B19A3008D8E3E /* Oppening */,
-				28314F982A5CADD70031B95B /* File.swift */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -389,6 +397,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		B86261412A6D6B9900EB5C93 /* TextComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B86261422A6D6DBE00EB5C93 /* TextBox.swift */,
+			);
+			path = TextComponents;
+			sourceTree = "<group>";
+		};
 		B8744E012A6C87B800180816 /* Diário */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +432,9 @@
 		B888CB262A6B19AD008D8E3E /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
+				B86261412A6D6B9900EB5C93 /* TextComponents */,
+				B8AECE0C2A6D60AB0032AC66 /* ScenaryComponents */,
+				B8AECE0A2A6D5B880032AC66 /* DialogView.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -425,6 +444,14 @@
 			children = (
 			);
 			path = Transition;
+			sourceTree = "<group>";
+		};
+		B8AECE0C2A6D60AB0032AC66 /* ScenaryComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B8AECE082A6D5B770032AC66 /* IntroBackground.swift */,
+			);
+			path = ScenaryComponents;
 			sourceTree = "<group>";
 		};
 		B8B246982A66CEDE00EB2FFB /* MonsterNode */ = {
@@ -459,6 +486,7 @@
 		B8F001502A6B255800392235 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C9C208FC2A6CD797009C73C4 /* farol.atlas */,
 				B8F001512A6B255800392235 /* ArvoresFrente.swift */,
 				B8F001522A6B255800392235 /* Estrada.swift */,
 				B8F001532A6B255800392235 /* Background.swift */,
@@ -591,6 +619,7 @@
 				C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */,
 				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
+				C9C208FD2A6CD797009C73C4 /* farol.atlas in Resources */,
 				B8F001632A6B255800392235 /* Assets.xcassets in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
 				B8F001642A6B255800392235 /* Fumaca.sks in Resources */,
@@ -622,11 +651,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				28C322C82A671955000E83FF /* SwiftUIView.swift in Sources */,
-				28314F992A5CADD70031B95B /* File.swift in Sources */,
 				B8F9155F2A67214200D828A2 /* MonsterEntry.swift in Sources */,
 				B8F9155D2A671E4600D828A2 /* MonsterEntity.swift in Sources */,
 				28C322CA2A671DBA000E83FF /* LifeBar.swift in Sources */,
 				280DF6792A6B18AD00EFF162 /* Languages.swift in Sources */,
+				B86261432A6D6DBE00EB5C93 /* TextBox.swift in Sources */,
 				28D123612A6847A400E37E43 /* NamePlaceHolder.swift in Sources */,
 				28314F612A5CAAD10031B95B /* GameScene.swift in Sources */,
 				B8F0015E2A6B255800392235 /* Frente.swift in Sources */,
@@ -643,18 +672,21 @@
 				B8F0015D2A6B255800392235 /* Fundo.swift in Sources */,
 				280A534F2A6AAC0A00267B9E /* PauseNode.swift in Sources */,
 				28D123652A68529E00E37E43 /* PlayerHud.swift in Sources */,
+				B8AECE0B2A6D5B880032AC66 /* DialogView.swift in Sources */,
 				280A53542A6ABD0000267B9E /* ClosePause.swift in Sources */,
 				28F54D2A2A60923B00B692F5 /* player.swift in Sources */,
 				B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */,
 				286536712A68BE4D007E8CD3 /* CardConfigurations.swift in Sources */,
 				288F53072A6D677B00BC24A2 /* Camera.swift in Sources */,
 				B8F001652A6B255800392235 /* Carro2.swift in Sources */,
+				B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */,
 				C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */,
 				B8F001612A6B255800392235 /* Estrada.swift in Sources */,
 				B8F0015F2A6B255800392235 /* Carros.swift in Sources */,
 				286A54B02A5DC96000B2D6BC /* CardNode.swift in Sources */,
 				28D123672A68743700E37E43 /* ButtomEndTurn.swift in Sources */,
 				280A53582A6ABEC400267B9E /* MainMenu.swift in Sources */,
+				C9C209042A6D5371009C73C4 /* IntroScene.swift in Sources */,
 				28D123632A6848C200E37E43 /* MonsterHud.swift in Sources */,
 				28D1235C2A68195900E37E43 /* LifeBarBackGround.swift in Sources */,
 				28BDF7772A6431F9002037EB /* GameController.swift in Sources */,
@@ -842,7 +874,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TLC9D54B8V;
+				DEVELOPMENT_TEAM = 4VHUF9729L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -871,7 +903,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TLC9D54B8V;
+				DEVELOPMENT_TEAM = 4VHUF9729L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

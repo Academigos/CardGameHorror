@@ -15,11 +15,16 @@ protocol ResetBattleDelegate: AnyObject {
 class ResetBattle: SKSpriteNode{
     let resetBattle: SKTexture
     weak var delegate: ClosePauseDelegate?
+
     weak var resetDelegate: ResetBattleDelegate?
+  
+    var resetBattleLabel: SKLabelNode = SKLabelNode()
+  
     init() {
         self.resetBattle = SKTexture(imageNamed: "Buttom")
         super.init(texture: resetBattle, color: .clear, size: resetBattle.size())
         isUserInteractionEnabled = true
+        setResetBattleLabel()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,5 +43,17 @@ class ResetBattle: SKSpriteNode{
         GameController.shared.startNewGame()
         delegate?.closePauseButtonTapped()
         resetDelegate?.resetButtonTapped()
+    }
+    
+    private func setResetBattleLabel() {
+        resetBattleLabel.name = "resetBattleLabel"
+        resetBattleLabel.fontSize = size.height * 0.3
+        resetBattleLabel.fontName = "BreeSerif-Regular"
+        resetBattleLabel.fontColor = SKColor(red: CGFloat(0x17) / 255.0, green: CGFloat(0x18) / 255.0, blue: CGFloat(0x1C) / 255.0, alpha: 1.0)
+        resetBattleLabel.text = "Recomeçar Batalha"
+        resetBattleLabel.position = CGPoint(x: size.width * 0, y: size.height * -0.1)
+        resetBattleLabel.zPosition = 1.0
+        
+        addChild(resetBattleLabel)
     }
 }

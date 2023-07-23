@@ -21,6 +21,8 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
     // inimigo
     var boss: Boss?
     
+    var dialogView: DialogView? = DialogView()
+    
     override init(size: CGSize) {
         super.init(size: size)
     }
@@ -33,11 +35,12 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         if GameController.shared.isGameOver() == true{
             GameController.shared.startNewGame()
         }
-        setupCenario()
-        setupHud()
-        setupGameplay()
-        setupBoss()
-        self.isUserInteractionEnabled = true
+        addChild(dialogView!)
+//        setupCenario()
+//        setupHud()
+//        setupGameplay()
+//        setupBoss()
+//        self.isUserInteractionEnabled = true
     }
     
     private func setupGameplay() {

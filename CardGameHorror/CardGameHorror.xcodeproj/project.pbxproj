@@ -43,6 +43,8 @@
 		28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */; };
 		28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD3AA02A65C05D00D5F951 /* Extensions.swift */; };
 		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
+		B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AECE082A6D5B770032AC66 /* IntroBackground.swift */; };
+		B8AECE0B2A6D5B880032AC66 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AECE0A2A6D5B880032AC66 /* DialogView.swift */; };
 		B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B246992A66CF3400EB2FFB /* MonsterView.swift */; };
 		B8F0015C2A6B255800392235 /* Cenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0014B2A6B255800392235 /* Cenario.swift */; };
 		B8F0015D2A6B255800392235 /* Fundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0014D2A6B255800392235 /* Fundo.swift */; };
@@ -122,6 +124,8 @@
 		28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BigshotOne-Regular.ttf"; sourceTree = "<group>"; };
 		28DD3AA02A65C05D00D5F951 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		28F54D292A60923B00B692F5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+		B8AECE082A6D5B770032AC66 /* IntroBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroBackground.swift; sourceTree = "<group>"; };
+		B8AECE0A2A6D5B880032AC66 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 		B8B246992A66CF3400EB2FFB /* MonsterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
 		B8F0014B2A6B255800392235 /* Cenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cenario.swift; sourceTree = "<group>"; };
 		B8F0014D2A6B255800392235 /* Fundo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fundo.swift; sourceTree = "<group>"; };
@@ -299,7 +303,6 @@
 				280A534D2A6AABF200267B9E /* Pause */,
 				B8B246982A66CEDE00EB2FFB /* MonsterNode */,
 				28C322BD2A66E583000E83FF /* Hud */,
-				28C322BF2A66E5BF000E83FF /* HudNode.swift */,
 				28F54D2B2A60927F00B692F5 /* Player */,
 			);
 			path = Battle;
@@ -327,6 +330,7 @@
 		28C322BD2A66E583000E83FF /* Hud */ = {
 			isa = PBXGroup;
 			children = (
+				28C322BF2A66E5BF000E83FF /* HudNode.swift */,
 				28D1235F2A68416500E37E43 /* ComponentsNodes */,
 				28C322BE2A66E58E000E83FF /* Components */,
 			);
@@ -393,6 +397,8 @@
 		B888CB262A6B19AD008D8E3E /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
+				B8AECE0C2A6D60AB0032AC66 /* DialogComponents */,
+				B8AECE0A2A6D5B880032AC66 /* DialogView.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -402,6 +408,14 @@
 			children = (
 			);
 			path = Transition;
+			sourceTree = "<group>";
+		};
+		B8AECE0C2A6D60AB0032AC66 /* DialogComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B8AECE082A6D5B770032AC66 /* IntroBackground.swift */,
+			);
+			path = DialogComponents;
 			sourceTree = "<group>";
 		};
 		B8B246982A66CEDE00EB2FFB /* MonsterNode */ = {
@@ -620,11 +634,13 @@
 				B8F0015D2A6B255800392235 /* Fundo.swift in Sources */,
 				280A534F2A6AAC0A00267B9E /* PauseNode.swift in Sources */,
 				28D123652A68529E00E37E43 /* PlayerHud.swift in Sources */,
+				B8AECE0B2A6D5B880032AC66 /* DialogView.swift in Sources */,
 				280A53542A6ABD0000267B9E /* ClosePause.swift in Sources */,
 				28F54D2A2A60923B00B692F5 /* player.swift in Sources */,
 				B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */,
 				286536712A68BE4D007E8CD3 /* CardConfigurations.swift in Sources */,
 				B8F001652A6B255800392235 /* Carro2.swift in Sources */,
+				B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */,
 				C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */,
 				B8F001612A6B255800392235 /* Estrada.swift in Sources */,
 				B8F0015F2A6B255800392235 /* Carros.swift in Sources */,

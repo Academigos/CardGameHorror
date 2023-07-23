@@ -42,6 +42,7 @@
 		28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */; };
 		28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD3AA02A65C05D00D5F951 /* Extensions.swift */; };
 		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
+		B86261432A6D6DBE00EB5C93 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86261422A6D6DBE00EB5C93 /* TextBox.swift */; };
 		B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AECE082A6D5B770032AC66 /* IntroBackground.swift */; };
 		B8AECE0B2A6D5B880032AC66 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AECE0A2A6D5B880032AC66 /* DialogView.swift */; };
 		B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B246992A66CF3400EB2FFB /* MonsterView.swift */; };
@@ -66,9 +67,6 @@
 		C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9856EB62A6637CC00936CF2 /* HandCards.swift */; };
 		C9C208FD2A6CD797009C73C4 /* farol.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C9C208FC2A6CD797009C73C4 /* farol.atlas */; };
 		C9C209042A6D5371009C73C4 /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209032A6D5371009C73C4 /* IntroScene.swift */; };
-		C9C2090A2A6D5AB7009C73C4 /* TextNodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209092A6D5AB7009C73C4 /* TextNodeManager.swift */; };
-		C9C2090C2A6D5D33009C73C4 /* TextBoxCayla.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2090B2A6D5D33009C73C4 /* TextBoxCayla.swift */; };
-		C9C2090E2A6D5D47009C73C4 /* TextBoxFortuneTeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2090D2A6D5D47009C73C4 /* TextBoxFortuneTeller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +125,7 @@
 		28DD3A992A65B06F00D5F951 /* BigshotOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BigshotOne-Regular.ttf"; sourceTree = "<group>"; };
 		28DD3AA02A65C05D00D5F951 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		28F54D292A60923B00B692F5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+		B86261422A6D6DBE00EB5C93 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
 		B8AECE082A6D5B770032AC66 /* IntroBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroBackground.swift; sourceTree = "<group>"; };
 		B8AECE0A2A6D5B880032AC66 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 		B8B246992A66CF3400EB2FFB /* MonsterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
@@ -152,9 +151,6 @@
 		C9856EB62A6637CC00936CF2 /* HandCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCards.swift; sourceTree = "<group>"; };
 		C9C208FC2A6CD797009C73C4 /* farol.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = farol.atlas; path = CardGameHorror/farol.atlas; sourceTree = SOURCE_ROOT; };
 		C9C209032A6D5371009C73C4 /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroScene.swift; path = CardGameHorror/Game/IntroScene.swift; sourceTree = SOURCE_ROOT; };
-		C9C209092A6D5AB7009C73C4 /* TextNodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextNodeManager.swift; path = CardGameHorror/Game/Intro/Components/TextNodeManager.swift; sourceTree = SOURCE_ROOT; };
-		C9C2090B2A6D5D33009C73C4 /* TextBoxCayla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextBoxCayla.swift; path = CardGameHorror/Game/Intro/Components/TextBoxCayla.swift; sourceTree = SOURCE_ROOT; };
-		C9C2090D2A6D5D47009C73C4 /* TextBoxFortuneTeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextBoxFortuneTeller.swift; path = CardGameHorror/Game/Intro/Components/TextBoxFortuneTeller.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,7 +256,6 @@
 				28DD3A9B2A65B07A00D5F951 /* Fonts */,
 				28314F962A5CAC740031B95B /* Audio */,
 				28314F672A5CAAD20031B95B /* Assets.xcassets */,
-				C9C209012A6D519D009C73C4 /* New Group */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -396,6 +391,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		B86261412A6D6B9900EB5C93 /* TextComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B86261422A6D6DBE00EB5C93 /* TextBox.swift */,
+			);
+			path = TextComponents;
+			sourceTree = "<group>";
+		};
 		B8744E012A6C87B800180816 /* Diário */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,11 +426,9 @@
 		B888CB262A6B19AD008D8E3E /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
-				B8AECE0C2A6D60AB0032AC66 /* DialogComponents */,
+				B86261412A6D6B9900EB5C93 /* TextComponents */,
+				B8AECE0C2A6D60AB0032AC66 /* ScenaryComponents */,
 				B8AECE0A2A6D5B880032AC66 /* DialogView.swift */,
-				C9C2090D2A6D5D47009C73C4 /* TextBoxFortuneTeller.swift */,
-				C9C2090B2A6D5D33009C73C4 /* TextBoxCayla.swift */,
-				C9C209092A6D5AB7009C73C4 /* TextNodeManager.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -439,12 +440,12 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
-		B8AECE0C2A6D60AB0032AC66 /* DialogComponents */ = {
+		B8AECE0C2A6D60AB0032AC66 /* ScenaryComponents */ = {
 			isa = PBXGroup;
 			children = (
 				B8AECE082A6D5B770032AC66 /* IntroBackground.swift */,
 			);
-			path = DialogComponents;
+			path = ScenaryComponents;
 			sourceTree = "<group>";
 		};
 		B8B246982A66CEDE00EB2FFB /* MonsterNode */ = {
@@ -502,13 +503,6 @@
 				B8F9155E2A67214200D828A2 /* MonsterEntry.swift */,
 			);
 			path = MonsterComponents;
-			sourceTree = "<group>";
-		};
-		C9C209012A6D519D009C73C4 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -655,6 +649,7 @@
 				B8F9155D2A671E4600D828A2 /* MonsterEntity.swift in Sources */,
 				28C322CA2A671DBA000E83FF /* LifeBar.swift in Sources */,
 				280DF6792A6B18AD00EFF162 /* Languages.swift in Sources */,
+				B86261432A6D6DBE00EB5C93 /* TextBox.swift in Sources */,
 				28D123612A6847A400E37E43 /* NamePlaceHolder.swift in Sources */,
 				28314F612A5CAAD10031B95B /* GameScene.swift in Sources */,
 				B8F0015E2A6B255800392235 /* Frente.swift in Sources */,
@@ -663,13 +658,11 @@
 				280A53562A6ABDC900267B9E /* ResetBattle.swift in Sources */,
 				28C322C22A66E740000E83FF /* BottomBar.swift in Sources */,
 				28C52A6C2A6181ED003AEF25 /* HorrorDataManager.swift in Sources */,
-				C9C2090E2A6D5D47009C73C4 /* TextBoxFortuneTeller.swift in Sources */,
 				B8F001622A6B255800392235 /* Background.swift in Sources */,
 				28D1235E2A681E9D00E37E43 /* LifeBarNode.swift in Sources */,
 				B8F0015C2A6B255800392235 /* Cenario.swift in Sources */,
 				B8F001692A6B255800392235 /* Farol.swift in Sources */,
 				B8F0016A2A6B255800392235 /* ArvoresFundo.swift in Sources */,
-				C9C2090A2A6D5AB7009C73C4 /* TextNodeManager.swift in Sources */,
 				B8F0015D2A6B255800392235 /* Fundo.swift in Sources */,
 				280A534F2A6AAC0A00267B9E /* PauseNode.swift in Sources */,
 				28D123652A68529E00E37E43 /* PlayerHud.swift in Sources */,
@@ -696,7 +689,6 @@
 				280A535A2A6AC10A00267B9E /* PauseButtom.swift in Sources */,
 				28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */,
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
-				C9C2090C2A6D5D33009C73C4 /* TextBoxCayla.swift in Sources */,
 				B8F001682A6B255800392235 /* Carro1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

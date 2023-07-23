@@ -8,14 +8,14 @@
 import SpriteKit
 
 class DialogView: SKNode {
-    let firstScenary = IntroScenary(backgroundType: .desk)
+    let scenary = IntroScenary(backgroundType: .desk)
+    let textBox = TextBox(textBoxType: .cayla)
     
     override init() {
         super.init()
         
-        firstScenary.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)
-        firstScenary.scale(to: autoScale(firstScenary, widthProportion: 1, screenSize: GameViewController.screenSize))
-        addChild(firstScenary)
+        addChild(scenary)
+        addChild(textBox)
     }
     
     required init?(coder aDecoder: NSCoder) {

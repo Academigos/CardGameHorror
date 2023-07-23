@@ -22,6 +22,7 @@ class GameScene: SKScene, endTurnDelegate {
     var boss: Boss?
     
     var dialogView: DialogView? = DialogView()
+    
     override init(size: CGSize) {
         super.init(size: size)
     }

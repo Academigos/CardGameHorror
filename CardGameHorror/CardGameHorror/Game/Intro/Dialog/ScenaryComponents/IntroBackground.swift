@@ -29,7 +29,10 @@ class IntroScenary: SKSpriteNode {
         case .room:
             scenaryTexture = SKTexture(imageNamed: "room")
         }
-
+        
         super.init(texture: scenaryTexture, color: UIColor.clear, size: scenaryTexture.size())
+        self.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)
+        self.scale(to: autoScale(self, widthProportion: 1, screenSize: GameViewController.screenSize))
+        zPosition = 1
     }
 }

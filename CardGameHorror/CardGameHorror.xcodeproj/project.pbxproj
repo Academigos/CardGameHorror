@@ -26,9 +26,11 @@
 		286536712A68BE4D007E8CD3 /* CardConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286536702A68BE4D007E8CD3 /* CardConfigurations.swift */; };
 		286A54B02A5DC96000B2D6BC /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286A54AF2A5DC96000B2D6BC /* CardNode.swift */; };
 		286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */ = {isa = PBXBuildFile; fileRef = 286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */; };
+		288F53052A6D637000BC24A2 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F53042A6D637000BC24A2 /* Divider.swift */; };
+		288F53072A6D677B00BC24A2 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F53062A6D677B00BC24A2 /* Camera.swift */; };
+		288F53092A6D760500BC24A2 /* LifeBarOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F53082A6D760500BC24A2 /* LifeBarOverlay.swift */; };
 		28BDF7772A6431F9002037EB /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDF7762A6431F9002037EB /* GameController.swift */; };
 		28C322C02A66E5BF000E83FF /* HudNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322BF2A66E5BF000E83FF /* HudNode.swift */; };
-		28C322C22A66E740000E83FF /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322C12A66E740000E83FF /* BottomBar.swift */; };
 		28C322C82A671955000E83FF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F922A5CAB7C0031B95B /* SwiftUIView.swift */; };
 		28C322CA2A671DBA000E83FF /* LifeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322C92A671DBA000E83FF /* LifeBar.swift */; };
 		28C52A6A2A617F49003AEF25 /* HorrorDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28C52A682A617F49003AEF25 /* HorrorDatabase.xcdatamodeld */; };
@@ -110,9 +112,11 @@
 		286536702A68BE4D007E8CD3 /* CardConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardConfigurations.swift; sourceTree = "<group>"; };
 		286A54AF2A5DC96000B2D6BC /* CardNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNode.swift; sourceTree = "<group>"; };
 		286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Myaudio.sks; sourceTree = "<group>"; };
+		288F53042A6D637000BC24A2 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
+		288F53062A6D677B00BC24A2 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		288F53082A6D760500BC24A2 /* LifeBarOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeBarOverlay.swift; sourceTree = "<group>"; };
 		28BDF7762A6431F9002037EB /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		28C322BF2A66E5BF000E83FF /* HudNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudNode.swift; sourceTree = "<group>"; };
-		28C322C12A66E740000E83FF /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		28C322C92A671DBA000E83FF /* LifeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeBar.swift; sourceTree = "<group>"; };
 		28C52A692A617F49003AEF25 /* HorrorDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HorrorDatabase.xcdatamodel; sourceTree = "<group>"; };
 		28C52A6B2A6181ED003AEF25 /* HorrorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorrorDataManager.swift; sourceTree = "<group>"; };
@@ -344,11 +348,13 @@
 		28C322BE2A66E58E000E83FF /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				28C322C12A66E740000E83FF /* BottomBar.swift */,
 				28C322C92A671DBA000E83FF /* LifeBar.swift */,
 				28D1235B2A68195900E37E43 /* LifeBarBackGround.swift */,
 				28D123602A6847A400E37E43 /* NamePlaceHolder.swift */,
 				28D123662A68743700E37E43 /* ButtomEndTurn.swift */,
+				288F53042A6D637000BC24A2 /* Divider.swift */,
+				288F53062A6D677B00BC24A2 /* Camera.swift */,
+				288F53082A6D760500BC24A2 /* LifeBarOverlay.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -655,8 +661,8 @@
 				B8F0015E2A6B255800392235 /* Frente.swift in Sources */,
 				28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */,
 				280A53522A6AB0AB00267B9E /* PauseBackground.swift in Sources */,
+				288F53092A6D760500BC24A2 /* LifeBarOverlay.swift in Sources */,
 				280A53562A6ABDC900267B9E /* ResetBattle.swift in Sources */,
-				28C322C22A66E740000E83FF /* BottomBar.swift in Sources */,
 				28C52A6C2A6181ED003AEF25 /* HorrorDataManager.swift in Sources */,
 				B8F001622A6B255800392235 /* Background.swift in Sources */,
 				28D1235E2A681E9D00E37E43 /* LifeBarNode.swift in Sources */,
@@ -671,6 +677,7 @@
 				28F54D2A2A60923B00B692F5 /* player.swift in Sources */,
 				B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */,
 				286536712A68BE4D007E8CD3 /* CardConfigurations.swift in Sources */,
+				288F53072A6D677B00BC24A2 /* Camera.swift in Sources */,
 				B8F001652A6B255800392235 /* Carro2.swift in Sources */,
 				B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */,
 				C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */,
@@ -686,6 +693,7 @@
 				28C52A6A2A617F49003AEF25 /* HorrorDatabase.xcdatamodeld in Sources */,
 				B8F001602A6B255800392235 /* ArvoresFrente.swift in Sources */,
 				28C322C02A66E5BF000E83FF /* HudNode.swift in Sources */,
+				288F53052A6D637000BC24A2 /* Divider.swift in Sources */,
 				280A535A2A6AC10A00267B9E /* PauseButtom.swift in Sources */,
 				28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */,
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,

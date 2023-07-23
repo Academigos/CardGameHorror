@@ -12,7 +12,7 @@ protocol endTurnDelegate: AnyObject {
     func handCardsDidFinishAnimating()
 }
 
-class GameScene: SKScene, endTurnDelegate {
+class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
     var cenario: Cenario?
     // hud
     var hud: Hud?
@@ -54,6 +54,8 @@ class GameScene: SKScene, endTurnDelegate {
         hud = Hud()
         addChild(hud!)
         hud!.endTurnButtom.endTurnButtonDelegate = self
+        hud!.pause.pauseButtom.resetBattle.resetDelegate = self
+        
     }
     
     private func setupBoss() {
@@ -76,24 +78,26 @@ class GameScene: SKScene, endTurnDelegate {
     }
     
     func handCardsDidFinishAnimating() {
-        // Configure o atraso
-        let atraso: Double = 3.0
-        
-        func clearHead() {
-            handCards.cardsModel = []
-            GameController.shared.selectedCard = []
-            let cardsHand = GameController.shared.cardsHandPlayer()
-            // Configure o despacho assíncrono após o atraso
-            DispatchQueue.main.asyncAfter(deadline: .now() + atraso) {
-                if DataManager.shared.fetchPlayer().hp <= 0 {
-                    return
-                }
-                self.setupHand(cards: cardsHand)
-            }
-        }
         // exit hand animation
-        handCards.animateExitHand(completion: clearHead)
+        handCards.animateExitHand(completion: clearHand)
         //boss animations
         boss!.enemyEntity.takingDamage()
+    }
+    func clearHand() {
+        let atraso: Double = 3.0
+        handCards.cardsModel = []
+        GameController.shared.selectedCard = []
+        let cardsHand = GameController.shared.cardsHandPlayer()
+        // Configure o despacho assíncrono após o atraso
+        DispatchQueue.main.asyncAfter(deadline: .now() + atraso) {
+            if DataManager.shared.fetchPlayer().hp <= 0 {
+                return
+            }
+            self.setupHand(cards: cardsHand)
+        }
+    }
+    func resetButtonTapped() {
+        handCards.animateExitHand(completion: clearHand)
+        hud!.resetLife()
     }
 }

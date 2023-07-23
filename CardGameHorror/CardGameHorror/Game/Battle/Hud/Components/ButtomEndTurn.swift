@@ -17,8 +17,8 @@ class ButtonEndTurn: SKSpriteNode{
     let totalCount = 3
     let buttomTexture: SKTexture
     
-    init(buttomTexture: String) {
-        self.buttomTexture = SKTexture(imageNamed: buttomTexture)
+    init() {
+        self.buttomTexture = SKTexture(imageNamed: "EndTurn")
         super.init(texture: self.buttomTexture, color: .clear, size: self.buttomTexture.size())
         GameController.shared.addObserver(self, forKeyPath: #keyPath(GameController.selectedCard),options: [.new], context: nil)
         setupCardsSelectLabel()

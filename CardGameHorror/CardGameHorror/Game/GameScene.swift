@@ -35,12 +35,12 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         if GameController.shared.isGameOver() == true{
             GameController.shared.startNewGame()
         }
-        addChild(dialogView!)
-//        setupCenario()
-//        setupHud()
-//        setupGameplay()
-//        setupBoss()
-//        self.isUserInteractionEnabled = true
+//        addChild(dialogView!)
+        setupCenario()
+        setupHud()
+        setupGameplay()
+        setupBoss()
+        self.isUserInteractionEnabled = true
     }
     
     private func setupGameplay() {

@@ -12,7 +12,7 @@ class Hud: SKNode {
     let playerHud = PlayerHud()
     let monsterHud = MonsterHud()
     let pause = PauseNode()
-    let endTurnButtom = ButtonEndTurn(buttomTexture: "EndTurn")
+    let endTurnButtom = ButtonEndTurn()
 
     let divader = Divader()
     let camera = Camera()
@@ -37,11 +37,6 @@ class Hud: SKNode {
         addChild(playerHud)
         
         monsterHud.zPosition = 90
-
-        endTurnButtom.zPosition = 10
-        addChild(endTurnButtom)
-        
-   
 
         addChild(monsterHud)
         
@@ -78,9 +73,6 @@ class Hud: SKNode {
 
 
         self.monsterHud.updateMonster(value: DataManager.shared.fetchMonster().hp)
-        if DataManager.shared.fetchMonster().hp > 0{
-            GameController.shared.monsterTurn()
-        }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             if self.playerHud.playerLifeBar.life != DataManager.shared.fetchPlayer().hp {

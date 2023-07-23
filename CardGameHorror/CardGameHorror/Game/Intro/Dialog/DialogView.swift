@@ -14,7 +14,7 @@ class DialogView: SKNode {
         super.init()
         
         firstScenary.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)
-        firstScenary.scale(to: autoScale(firstScenary, widthProportion: 0.14, screenSize: GameViewController.screenSize))
+        firstScenary.scale(to: autoScale(firstScenary, widthProportion: 1, screenSize: GameViewController.screenSize))
         addChild(firstScenary)
     }
     

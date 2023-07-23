@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "batalha_barra_hp_fundo_1x.pdf",
+      "filename" : "batalha_overlay_vhs_1x.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "batalha_barra_hp_fundo_2x.pdf",
+      "filename" : "batalha_overlay_vhs_2x.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "batalha_barra_hp_fundo_3x.pdf",
+      "filename" : "batalha_overlay_vhs_3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }

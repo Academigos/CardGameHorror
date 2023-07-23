@@ -13,17 +13,28 @@ class Hud: SKNode {
     let monsterHud = MonsterHud()
     let pause = PauseNode()
     let endTurnButtom = ButtonEndTurn(buttomTexture: "EndTurn")
+    let divader = Divader()
+    let camera = Camera()
     override init() {
         super.init()
         endTurnButtom.position = CGPoint(x: GameViewController.screenSize.width * 0.85, y: GameViewController.screenSize.height * 0.18)
         endTurnButtom.scale(to: autoScale(endTurnButtom, widthProportion: 0.14, screenSize: GameViewController.screenSize))
-        endTurnButtom.zPosition = 10
+        endTurnButtom.zPosition = 90
         addChild(endTurnButtom)
         
-        playerHud.zPosition = 10
+        
+        camera.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)
+        camera.zPosition = 0
+        addChild(camera)
+        
+        divader.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.154)
+        divader.zPosition = 80
+        addChild(divader)
+        
+        playerHud.zPosition = 90
         addChild(playerHud)
         
-        monsterHud.zPosition = 10
+        monsterHud.zPosition = 90
         addChild(monsterHud)
         
         pause.zPosition = 100
@@ -38,11 +49,24 @@ class Hud: SKNode {
         if playerHud.playerLifeBar.life != DataManager.shared.fetchPlayer().hp {
             self.playerHud.updatePlayer(value: DataManager.shared.fetchPlayer().hp)
         }
-
+        
         self.monsterHud.updateMonster(value: DataManager.shared.fetchMonster().hp)
+        
         if DataManager.shared.fetchMonster().hp > 0{
             GameController.shared.monsterTurn()
         }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            if self.playerHud.playerLifeBar.life != DataManager.shared.fetchPlayer().hp {
+                self.playerHud.updatePlayer(value: DataManager.shared.fetchPlayer().hp)
+            }
+        }
+    }
+    func resetLife(){
+        if playerHud.playerLifeBar.life != DataManager.shared.fetchPlayer().hp {
+            self.playerHud.updatePlayer(value: DataManager.shared.fetchPlayer().hp)
+        }
+        self.monsterHud.updateMonster(value: DataManager.shared.fetchMonster().hp)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             if self.playerHud.playerLifeBar.life != DataManager.shared.fetchPlayer().hp {
                 self.playerHud.updatePlayer(value: DataManager.shared.fetchPlayer().hp)

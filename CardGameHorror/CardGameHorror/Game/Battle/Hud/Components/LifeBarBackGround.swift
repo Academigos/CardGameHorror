@@ -30,7 +30,7 @@ class LifeBarBackGround: SKSpriteNode{
         valueLabel.fontColor = SKColor(red: 191/255.0, green: 197/255.0, blue: 217/255.0, alpha: 1.0)
         valueLabel.text = "\(hp)/\(totalHp)"
         valueLabel.zPosition = 2.0
-        valueLabel.position = CGPoint(x: self.size.width * 0.5, y: self.size.height * 0.4)
+        valueLabel.position = CGPoint(x: self.size.width * 0.5, y: self.size.height * 0.28)
         addChild(valueLabel)
     }
     

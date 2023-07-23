@@ -8,9 +8,14 @@
 import Foundation
 import SpriteKit
 
+protocol ResetBattleDelegate: AnyObject {
+    func resetButtonTapped()
+}
+
 class ResetBattle: SKSpriteNode{
     let resetBattle: SKTexture
     weak var delegate: ClosePauseDelegate?
+    weak var resetDelegate: ResetBattleDelegate?
     init() {
         self.resetBattle = SKTexture(imageNamed: "Buttom")
         super.init(texture: resetBattle, color: .clear, size: resetBattle.size())
@@ -32,5 +37,6 @@ class ResetBattle: SKSpriteNode{
         // Call the startNewGame() function from the GameController
         GameController.shared.startNewGame()
         delegate?.closePauseButtonTapped()
+        resetDelegate?.resetButtonTapped()
     }
 }

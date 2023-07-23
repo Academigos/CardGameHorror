@@ -11,10 +11,12 @@ import SpriteKit
 class MainMenu: SKSpriteNode{
      let mainMenu: SKTexture
     weak var delegate: ClosePauseDelegate?
+    var mainMenuLabel: SKLabelNode = SKLabelNode()
 
     init() {
         self.mainMenu = SKTexture(imageNamed: "Buttom")
         super.init(texture: mainMenu, color: .clear, size: mainMenu.size())
+        setupMainMenuLabel()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,5 +35,17 @@ class MainMenu: SKSpriteNode{
         // Call the startNewGame() function from the GameController
         delegate?.closePauseButtonTapped()
 
+    }
+    
+    private func setupMainMenuLabel() {
+        mainMenuLabel.name = "mainMenuLabel"
+        mainMenuLabel.fontSize = size.height * 0.3
+        mainMenuLabel.fontName = "BreeSerif-Regular"
+        mainMenuLabel.fontColor = SKColor(red: CGFloat(0x17) / 255.0, green: CGFloat(0x18) / 255.0, blue: CGFloat(0x1C) / 255.0, alpha: 1.0)
+        mainMenuLabel.text = "Menu Principal"
+        mainMenuLabel.position = CGPoint(x: size.width * 0, y: size.height * -0.1)
+        mainMenuLabel.zPosition = 1.0
+        
+        addChild(mainMenuLabel)
     }
 }

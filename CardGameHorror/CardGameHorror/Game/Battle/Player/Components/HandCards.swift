@@ -34,7 +34,6 @@ class HandCards: SKSpriteNode {
         let moveAction = SKAction.moveTo(y: finalPosition.y, duration: 0.7)
         // Adicione uma ação de bloqueio para manter o nó na posição final
         let holdAction = SKAction.wait(forDuration: 0.5)
-        let waitAction = SKAction.wait(forDuration: 1.5)
         
         // Combine as ações em uma sequência
         let sequence = SKAction.sequence([moveAction, holdAction])

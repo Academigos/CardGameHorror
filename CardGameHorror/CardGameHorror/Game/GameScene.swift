@@ -92,12 +92,15 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         addChild(handCards)
     }
     
+    // animação cartas final de turno
     func handCardsDidFinishAnimating() {
-        // exit hand animation
+        // sair hand animação
         handCards.animateExitHand(completion: clearHand)
         //boss animations
         boss!.enemyEntity.takingDamage()
     }
+    
+    // Limpa a mão e reseta com atraso por conta do delay da animação do monstro
     func clearHand() {
         let atraso: Double = 3.0
         handCards.cardsModel = []
@@ -111,8 +114,12 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
             self.setupHand(cards: cardsHand)
         }
     }
+    
+    // reseta batalha
     func resetButtonTapped() {
-        handCards.animateExitHand(completion: clearHand)
+        handCards.cardsModel = []
+        GameController.shared.selectedCard = []
+        handCards.animateExitHand(completion: self.setupGameplay)
         hud!.resetLife()
     }
 }

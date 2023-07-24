@@ -12,6 +12,7 @@ class ButtonEndTurn: SKSpriteNode{
     weak var endTurnButtonDelegate: endTurnDelegate?
     var cardsSelectLabel: SKLabelNode = SKLabelNode()
     var finishTurnLabel: SKLabelNode = SKLabelNode()
+    var stackPopUp:FloatingNode?
     
     var counter = 0
     let totalCount = 3
@@ -55,6 +56,7 @@ class ButtonEndTurn: SKSpriteNode{
             }
             
             endTurnButtonDelegate?.handCardsDidFinishAnimating()
+            stackPopUp?.checkStackSelectedCards(position: self.position)
         }else if GameController.shared.isGameOver() == true{
             print("bla")
         }else{

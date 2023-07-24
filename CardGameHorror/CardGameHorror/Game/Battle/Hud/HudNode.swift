@@ -13,11 +13,13 @@ class Hud: SKNode {
     let monsterHud = MonsterHud()
     let pause = PauseNode()
     let endTurnButtom = ButtonEndTurn()
+    let stackpopup = FloatingNode()
 
     let divader = Divader()
     let camera = Camera()
     override init() {
         super.init()
+        endTurnButtom.stackPopUp = stackpopup
         endTurnButtom.position = CGPoint(x: GameViewController.screenSize.width * 0.85, y: GameViewController.screenSize.height * -0.18)
         endTurnButtom.scale(to: autoScale(endTurnButtom, widthProportion: 0.14, screenSize: GameViewController.screenSize))
         endTurnButtom.zPosition = 90
@@ -56,6 +58,9 @@ class Hud: SKNode {
         
         pause.zPosition = 100
         addChild(pause)
+        
+        stackpopup.zPosition = 100
+        addChild(stackpopup)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -69,11 +74,16 @@ class Hud: SKNode {
  
         self.monsterHud.updateMonster(value: DataManager.shared.fetchMonster().hp)
         
+        var damageMonster = 0
         if DataManager.shared.fetchMonster().hp > 0{
-            GameController.shared.monsterTurn()
+            damageMonster = GameController.shared.monsterTurn()
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            if damageMonster != 0 {
+                self.stackpopup.showDamagePopUp(at: CGPoint(x:  GameViewController.screenSize.width * 0.31, y: GameViewController.screenSize.height * 0.2), value: damageMonster)
+            }
+            
             if self.playerHud.playerLifeBar.life != DataManager.shared.fetchPlayer().hp {
                 self.playerHud.updatePlayer(value: DataManager.shared.fetchPlayer().hp)
             }

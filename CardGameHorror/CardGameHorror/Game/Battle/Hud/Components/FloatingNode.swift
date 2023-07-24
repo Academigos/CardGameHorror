@@ -124,26 +124,26 @@ class FloatingLabel: SKLabelNode {
         self.fontColor = color
         self.zPosition = 0
         
-        let containerNode = SKEffectNode()
-        containerNode.zPosition = -1
-        
-        var widthShadow = self.frame.width
-        if self.frame.width > 100  {
-            widthShadow -= 20
-        }
-        
-        let ellipseNode = SKShapeNode(ellipseOf: CGSize(width: widthShadow, height: self.frame.height))
-        ellipseNode.fillColor = .black
-        ellipseNode.alpha = 0.9 // Adjust the opacity of the ellipse as desired
-        
-        let blurFilter = CIFilter(name: "CIGaussianBlur")
-        blurFilter?.setValue(15, forKey: "inputRadius") // Adjust the blur radius as desired
-        containerNode.filter = blurFilter
-        
-        containerNode.addChild(ellipseNode)
-        containerNode.position = CGPoint(x: 0, y: self.frame.height * 0.25)
-        
-        self.addChild(containerNode)
+//        let containerNode = SKEffectNode()
+//        containerNode.zPosition = -1
+//        
+//        var widthShadow = self.frame.width
+//        if self.frame.width > 100  {
+//            widthShadow -= 20
+//        }
+//        
+//        let ellipseNode = SKShapeNode(ellipseOf: CGSize(width: widthShadow, height: self.frame.height))
+//        ellipseNode.fillColor = .black
+//        ellipseNode.alpha = 0.9 // Adjust the opacity of the ellipse as desired
+//        
+//        let blurFilter = CIFilter(name: "CIGaussianBlur")
+//        blurFilter?.setValue(15, forKey: "inputRadius") // Adjust the blur radius as desired
+//        containerNode.filter = blurFilter
+//        
+//        containerNode.addChild(ellipseNode)
+//        containerNode.position = CGPoint(x: 0, y: self.frame.height * 0.25)
+//        
+//        self.addChild(containerNode)
     }
     
     required init?(coder aDecoder: NSCoder) {

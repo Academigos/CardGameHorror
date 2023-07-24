@@ -39,7 +39,7 @@ class Hud: SKNode {
         divader.zPosition = 80
         addChild(divader)
         // animação divider entrada
-        let finalPositionDiviser = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.154)
+        let finalPositionDiviser = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.15)
         // Crie uma ação para mover o nó de sua posição inicial até a posição final
         let moveActionDiviser = SKAction.moveTo(y: finalPositionDiviser.y, duration: 0.5)
         divader.run(moveActionDiviser)

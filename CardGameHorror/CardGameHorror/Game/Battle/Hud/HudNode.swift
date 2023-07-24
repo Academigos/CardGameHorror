@@ -29,7 +29,7 @@ class Hud: SKNode {
         camera.zPosition = 0
         addChild(camera)
         
-        divader.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.154)
+        divader.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.15)
         divader.zPosition = 80
         addChild(divader)
         
@@ -69,9 +69,6 @@ class Hud: SKNode {
         if playerHud.playerLifeBar.life != DataManager.shared.fetchPlayer().hp {
             self.playerHud.updatePlayer(value: DataManager.shared.fetchPlayer().hp)
         }
-        self.monsterHud.updateMonster(value: DataManager.shared.fetchMonster().hp)
-
-
         self.monsterHud.updateMonster(value: DataManager.shared.fetchMonster().hp)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {

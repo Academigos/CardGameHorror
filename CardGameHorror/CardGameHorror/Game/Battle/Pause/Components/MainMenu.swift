@@ -9,13 +9,14 @@ import Foundation
 import SpriteKit
 
 class MainMenu: SKSpriteNode{
-     let mainMenu: SKTexture
+    let mainMenu: SKTexture
     weak var delegate: ClosePauseDelegate?
     var mainMenuLabel: SKLabelNode = SKLabelNode()
-
+    
     init() {
         self.mainMenu = SKTexture(imageNamed: "Buttom")
         super.init(texture: mainMenu, color: .clear, size: mainMenu.size())
+        isUserInteractionEnabled = true
         setupMainMenuLabel()
     }
     
@@ -32,11 +33,14 @@ class MainMenu: SKSpriteNode{
             self.texture = self.mainMenu
         }
         
-        // Call the startNewGame() function from the GameController
-        delegate?.closePauseButtonTapped()
-
+        if let currentScene = self.scene {
+            let transition = SKTransition.fade(withDuration: 0.5)
+            let mainMenuScene = MainMenuScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+            currentScene.view?.presentScene(mainMenuScene, transition: transition)
+            // Call the startNewGame() function from the GameController
+            delegate?.closePauseButtonTapped()
+        }
     }
-    
     private func setupMainMenuLabel() {
         mainMenuLabel.name = "mainMenuLabel"
         mainMenuLabel.fontSize = size.height * 0.3

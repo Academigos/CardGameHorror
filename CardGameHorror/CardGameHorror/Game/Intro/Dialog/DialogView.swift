@@ -5,7 +5,8 @@ class DialogView: SKNode {
     var scenary = IntroScenary(backgroundType: .room)
     let caixaTexto = TextBox(dialogo: dialogo[0])
     private var currentIndex = 0 // Índice inicial
-    
+    let maos = Maos()
+    let taro = Taro()
     
     override init() {
         super.init()
@@ -16,8 +17,8 @@ class DialogView: SKNode {
         
         addChild(scenary)
         addChild(caixaTexto)
-        addChild(maos)
-        addChild(taro)
+//        addChild(maos)
+//        addChild(taro)
         //startDialog()
     }
     

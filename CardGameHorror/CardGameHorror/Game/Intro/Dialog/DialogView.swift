@@ -10,12 +10,20 @@ import SpriteKit
 class DialogView: SKNode {
     let scenary = IntroScenary(backgroundType: .desk)
     let caixaTexto = TextBox(dialogo: dialogo[3])
+    let maos = Maos()
+    let taro = Taro()
     
     override init() {
         super.init()
+        scenary.zPosition = -1
+        caixaTexto.zPosition = 2
+        maos.zPosition = 1
+        taro.zPosition = 0
         
         addChild(scenary)
         addChild(caixaTexto)
+        addChild(maos)
+        addChild(taro)
         //startDialog()
     }
     

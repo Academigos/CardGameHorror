@@ -45,34 +45,32 @@ class Enemy: SKSpriteNode {
     
     func attacking() {
         // Ação de animação de ataque
-            let attackAction = SKAction.sequence([SKAction.animate(with: attackTexture, timePerFrame: 0.1), SKAction.wait(forDuration: 0.5)])
-    
-            let original: CGSize = self.size
-            
-            // Ação de escala para aumentar o tamanho do nó (usando o SKAction.scale(by:))
-            let scaleUpAction = SKAction.scale(by: 1.7, duration: 0.5)
-            
-            // Movendo o nó verticalmente para baixo
-            let moveDownAction = SKAction.moveBy(x: 0, y: -50, duration: 0.5) // Ajuste o valor do y conforme necessário para controlar a posição vertical
-            
-            // Movendo o nó verticalmente para cima (voltando à posição original)
-            let moveUpAction = SKAction.moveBy(x: 0, y: 50, duration: 0.5) // Usamos o mesmo valor de y, mas negativo, para voltar à posição original
-            
-            // Ação de escala para restaurar o tamanho original do nó
-            let scaleDownAction = SKAction.scale(to: original, duration: 0.5)
-            
-            // Sequência de ações para aumentar, mover para baixo, mover para cima, restaurar o tamanho do nó durante o ataque
-            let scaleMoveSequence = SKAction.group([scaleUpAction, moveDownAction])
-            let scaleMoveWaitMoveSequence = SKAction.sequence([scaleMoveSequence, SKAction.wait(forDuration: 0.5)])
-            let returning = SKAction.group([scaleDownAction, moveUpAction])
-            let scaleMoveWaitMoveAndRestoreSequence = SKAction.sequence([scaleMoveWaitMoveSequence, attackAction, returning])
-            
-            // Sequência de ações completa: animação de ataque + animação idle
-            let sequenceAction = SKAction.sequence([scaleMoveWaitMoveAndRestoreSequence, SKAction.run { [weak self] in
-                self?.idle()
-            }])
-            
-            self.run(sequenceAction)
+        let attackAction = SKAction.sequence([SKAction.animate(with: attackTexture, timePerFrame: 0.1), SKAction.wait(forDuration: 0.5)])
+        
+        // Ação de escala para aumentar o tamanho do nó (usando o SKAction.scale(by:))
+        let scaleUpAction = SKAction.scale(by: 1.5, duration: 0.5)
+        
+        // Movendo o nó verticalmente para baixo
+        let moveDownAction = SKAction.moveBy(x: 0, y: -50, duration: 0.5) // Ajuste o valor do y conforme necessário para controlar a posição vertical
+        
+        // Movendo o nó verticalmente para cima (voltando à posição original)
+        let moveUpAction = SKAction.moveBy(x: 0, y: 50, duration: 0.5) // Usamos o mesmo valor de y, mas negativo, para voltar à posição original
+        
+        // Ação de escala para restaurar o tamanho original do nó
+        let scaleDownAction = SKAction.scale(to: autoScale( self, widthProportion: 0.19, screenSize: GameViewController.screenSize), duration: 0.5)
+        
+        // Sequência de ações para aumentar, mover para baixo, mover para cima, restaurar o tamanho do nó durante o ataque
+        let scaleMoveSequence = SKAction.group([scaleUpAction, moveDownAction])
+        let scaleMoveWaitMoveSequence = SKAction.sequence([scaleMoveSequence, SKAction.wait(forDuration: 0.5)])
+        let returning = SKAction.group([scaleDownAction, moveUpAction])
+        let scaleMoveWaitMoveAndRestoreSequence = SKAction.sequence([scaleMoveWaitMoveSequence, attackAction, returning])
+        
+        // Sequência de ações completa: animação de ataque + animação idle
+        let sequenceAction = SKAction.sequence([scaleMoveWaitMoveAndRestoreSequence, SKAction.run { [weak self] in
+            self?.idle()
+        }])
+        
+        self.run(sequenceAction)
     }
     
     func takingDamage() {
@@ -89,9 +87,10 @@ class Enemy: SKSpriteNode {
         if hasATKCard {
             let shakeAction = SKAction.sequence([
                 SKAction.scale(to: autoScale(self, widthProportion: 0.16, screenSize: GameViewController.screenSize), duration: 0.1),
-                SKAction.scale(to: autoScale(self, widthProportion: 0.14, screenSize: GameViewController.screenSize), duration: 0.1),
+                SKAction.scale(to: autoScale(self, widthProportion: 0.14, screenSize: GameViewController.screenSize), duration: 0.2),
                 SKAction.scale(to: autoScale(self, widthProportion: 0.16, screenSize: GameViewController.screenSize), duration: 0.1),
-                SKAction.scale(to: autoScale(self, widthProportion: 0.14, screenSize: GameViewController.screenSize), duration: 0.1),
+                SKAction.scale(to: autoScale(self, widthProportion: 0.14, screenSize: GameViewController.screenSize), duration: 0.2),
+                SKAction.scale(to: autoScale(self, widthProportion: 0.19, screenSize: GameViewController.screenSize), duration: 0.1),
                 SKAction.wait(forDuration: 1.0),
                 SKAction.run { [weak self] in
                     self?.attacking()
@@ -101,7 +100,7 @@ class Enemy: SKSpriteNode {
             self.run(shakeAction)
             
         } else {
-           let attacking = SKAction.run { [weak self] in
+            let attacking = SKAction.run { [weak self] in
                 self?.attacking()
             }
             
@@ -122,5 +121,19 @@ class Enemy: SKSpriteNode {
         
         let loopAction = SKAction.repeatForever(animationAction)
         self.run(loopAction)
+    }
+    
+    func fadeIn() {
+        // Defina a opacidade inicial para 0
+        alpha = 0.0
+        // Crie uma ação de espera de 1 segundo antes de iniciar a animação de fade in
+        let waitAction = SKAction.wait(forDuration: 1.5)
+        
+        // Crie uma ação de fade in que altera a opacidade para 1 (totalmente visível) durante a duração especificada
+        let fadeInAction = SKAction.fadeIn(withDuration: 1.0)
+        
+        // Crie uma sequência de ações para realizar o atraso e, em seguida, o fade in
+        let sequenceAction = SKAction.sequence([waitAction, fadeInAction])
+        run(sequenceAction)
     }
 }

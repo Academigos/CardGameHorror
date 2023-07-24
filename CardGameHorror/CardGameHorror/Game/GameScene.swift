@@ -23,6 +23,8 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
     
     var dialogView: DialogView? = DialogView()
     
+    var monsterEntry: MonsterEntry = MonsterEntry()
+    
     override init(size: CGSize) {
         super.init(size: size)
     }
@@ -37,9 +39,15 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         }
 //        addChild(dialogView!)
         setupCenario()
-        setupHud()
-        setupGameplay()
         setupBoss()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.setupHud()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            self.setupGameplay()
+        }
+
         self.isUserInteractionEnabled = true
     }
     
@@ -56,11 +64,18 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         hud!.endTurnButtom.endTurnButtonDelegate = self
         hud!.pause.pauseButtom.resetBattle.resetDelegate = self
         
+        hud!.alpha = 0.0
+        let fadeInAction = SKAction.fadeIn(withDuration: 1.5)
+
+        hud!.run(fadeInAction)
     }
     
     private func setupBoss() {
         boss = Boss()
+        addChild(monsterEntry)
         addChild(boss!)
+        boss!.enemyEntity.scale(to: autoScale( boss!.enemyEntity, widthProportion: 0.19, screenSize: GameViewController.screenSize))
+        boss!.enemyEntity.fadeIn()
         boss!.enemyEntity.idle()
     }
     

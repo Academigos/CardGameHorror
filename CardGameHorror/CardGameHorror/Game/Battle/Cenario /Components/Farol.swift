@@ -18,7 +18,7 @@ class Farol:SKSpriteNode {
         farol0 = SKTexture(imageNamed: "farol1")
         super.init(texture: farol0, color: UIColor.clear, size: farol0.size())
         farolAnimation()
-        self.scale(to: autoScale(self, widthProportion: 1, screenSize: GameViewController.screenSize))
+        self.scale(to: GameViewController.screenSize)
        
     }
    

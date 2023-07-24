@@ -14,7 +14,7 @@ class Divader: SKSpriteNode{
     init() {
         self.divader = SKTexture(imageNamed: "Divider")
         super.init(texture: self.divader, color: .clear, size: divader.size())
-        self.scale(to: autoScale(self, widthProportion: 1, screenSize: GameViewController.screenSize))
+        self.scale(to: CGSize(width: GameViewController.screenSize.width * 1, height: GameViewController.screenSize.height * 0.30))
         isUserInteractionEnabled = true
     }
     

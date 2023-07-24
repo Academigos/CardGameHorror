@@ -23,6 +23,8 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
     
     var dialogView: DialogView? = DialogView()
     
+    var monsterEntry: MonsterEntry = MonsterEntry()
+    
     override init(size: CGSize) {
         super.init(size: size)
     }
@@ -37,9 +39,15 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         }
 //        addChild(dialogView!)
         setupCenario()
-        setupHud()
-        setupGameplay()
         setupBoss()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.setupHud()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            self.setupGameplay()
+        }
+
         self.isUserInteractionEnabled = true
     }
     
@@ -56,11 +64,18 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         hud!.endTurnButtom.endTurnButtonDelegate = self
         hud!.pause.pauseButtom.resetBattle.resetDelegate = self
         
+        hud!.alpha = 0.0
+        let fadeInAction = SKAction.fadeIn(withDuration: 1.5)
+
+        hud!.run(fadeInAction)
     }
     
     private func setupBoss() {
         boss = Boss()
+        addChild(monsterEntry)
         addChild(boss!)
+        boss!.enemyEntity.scale(to: autoScale( boss!.enemyEntity, widthProportion: 0.19, screenSize: GameViewController.screenSize))
+        boss!.enemyEntity.fadeIn()
         boss!.enemyEntity.idle()
     }
     
@@ -77,12 +92,15 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         addChild(handCards)
     }
     
+    // animação cartas final de turno
     func handCardsDidFinishAnimating() {
-        // exit hand animation
+        // sair hand animação
         handCards.animateExitHand(completion: clearHand)
         //boss animations
         boss!.enemyEntity.takingDamage()
     }
+    
+    // Limpa a mão e reseta com atraso por conta do delay da animação do monstro
     func clearHand() {
         let atraso: Double = 3.0
         handCards.cardsModel = []
@@ -96,8 +114,12 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
             self.setupHand(cards: cardsHand)
         }
     }
+    
+    // reseta batalha
     func resetButtonTapped() {
-        handCards.animateExitHand(completion: clearHand)
+        handCards.cardsModel = []
+        GameController.shared.selectedCard = []
+        handCards.animateExitHand(completion: self.setupGameplay)
         hud!.resetLife()
     }
 }

@@ -99,13 +99,14 @@ class GameController: NSObject {
     }
     
     // Function to simulate a monster's turn
-    func monsterTurn() {
+    func monsterTurn() -> Int {
         let player = dataManager.fetchPlayer()
         let monsterDamage = calculateMonsterDamage()
         print("monster dano")
         print(monsterDamage)
         let newPlayerHP = max(player.hp - Double(monsterDamage), 0)
         dataManager.updatePlayerHP(value: newPlayerHP)
+        return monsterDamage
     }
     
     // Function to check if the game is over

@@ -78,6 +78,7 @@
 		C9C209042A6D5371009C73C4 /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209032A6D5371009C73C4 /* IntroScene.swift */; };
 		C9C2091F2A6E0CF6009C73C4 /* FloatingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2091E2A6E0CF6009C73C4 /* FloatingNode.swift */; };
 		C9C209232A6EC071009C73C4 /* OverlayPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209222A6EC071009C73C4 /* OverlayPause.swift */; };
+		C9C209252A6EFB91009C73C4 /* DayNightTransitionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +174,7 @@
 		C9C209032A6D5371009C73C4 /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroScene.swift; path = CardGameHorror/Game/IntroScene.swift; sourceTree = SOURCE_ROOT; };
 		C9C2091E2A6E0CF6009C73C4 /* FloatingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNode.swift; sourceTree = "<group>"; };
 		C9C209222A6EC071009C73C4 /* OverlayPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPause.swift; sourceTree = "<group>"; };
+		C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNightTransitionScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +343,7 @@
 				C9C209032A6D5371009C73C4 /* IntroScene.swift */,
 				28314F952A5CAC4F0031B95B /* Battle */,
 				28314F602A5CAAD10031B95B /* GameScene.swift */,
+				C9C209262A6EFD61009C73C4 /* DayNighScene */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -570,6 +573,14 @@
 			path = MonsterComponents;
 			sourceTree = "<group>";
 		};
+		C9C209262A6EFD61009C73C4 /* DayNighScene */ = {
+			isa = PBXGroup;
+			children = (
+				C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */,
+			);
+			path = DayNighScene;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -766,6 +777,7 @@
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
 				28076A7C2A6DC6FE00F2BD7B /* ContinueGameButtom.swift in Sources */,
 				B8F001682A6B255800392235 /* Carro1.swift in Sources */,
+				C9C209252A6EFB91009C73C4 /* DayNightTransitionScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

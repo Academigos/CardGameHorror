@@ -8,6 +8,7 @@
 import SpriteKit
 
 class IntroScene: SKScene {
+    var dialogView: DialogView? = DialogView()
 
     override init(size: CGSize) {
         super.init(size: size)
@@ -18,7 +19,7 @@ class IntroScene: SKScene {
     }
     
     override func didMove(to view: SKView) {        
-        
+        addChild(dialogView!)
     }
     
 }

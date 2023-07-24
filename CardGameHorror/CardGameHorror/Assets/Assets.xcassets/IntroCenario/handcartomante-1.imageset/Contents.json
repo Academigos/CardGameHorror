@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Finalizar Turno-5.svg",
+      "filename" : "Mao cartomante 1.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "batalha_finalizar_ativo_2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "batalha_finalizar_ativo_3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
@@ -19,8 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }

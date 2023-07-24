@@ -9,14 +9,23 @@ import SpriteKit
 
 class DialogView: SKNode {
     let scenary = IntroScenary(backgroundType: .desk)
-    let textBox = TextBox(textBoxType: .cayla)
+    let caixaTexto = TextBox(textBoxType: .cayla)
     
     override init() {
         super.init()
         
         addChild(scenary)
-        addChild(textBox)
+        startDialog()
     }
+    
+    func startDialog() {
+            let textBox = TextBox(textBoxType: .cartomante)
+            // Adicione a caixa de diálogo à sua cena
+            self.addChild(textBox)
+            
+            // Iniciar o diálogo
+            textBox.playDialog()
+        }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

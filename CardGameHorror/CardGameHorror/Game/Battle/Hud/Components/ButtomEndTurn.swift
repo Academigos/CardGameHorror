@@ -7,6 +7,7 @@
 
 import Foundation
 import SpriteKit
+
 class ButtonEndTurn: SKSpriteNode{
     
     weak var endTurnButtonDelegate: endTurnDelegate?
@@ -43,22 +44,34 @@ class ButtonEndTurn: SKSpriteNode{
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if GameController.shared.isGameOver() == false && GameController.shared.selectedCard.count == 3{
+        if GameController.shared.selectedCard.count == 3{
             let selectedCards = Set(GameController.shared.selectedCard)
             GameController.shared.processSelectedCards(selectedCards: selectedCards)
             GameController.shared.playerTurn()
-            if GameController.shared.isGameOver() == true{   
-                // colocar para trasitar a scenea para a scena final pos batalha
-            }
             // Verifica se há pelo menos uma carta no array com type igual a "DEF"
-            if let hud = parent as? Hud {                
+            if let hud = parent as? Hud {
                 hud.updateLife()
             }
-            
             endTurnButtonDelegate?.handCardsDidFinishAnimating()
-            stackPopUp?.checkStackSelectedCards(position: self.position)
-        }else if GameController.shared.isGameOver() == true{
-            print("bla")
+            stackPopUp?.checkStackSelectedCards(position: self.position)    
+            // change the scene in case of player or monster die
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                if DataManager.shared.fetchPlayer().hp <= 0{
+                    if let currentScene = self.scene {
+                        let transition = SKTransition.fade(withDuration: 1)
+                        let mainMenuScene = MonsterEnd(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                        currentScene.view?.presentScene(mainMenuScene, transition: transition)
+                        // Call the startNewGame() function from the GameController
+                    }
+                }else if DataManager.shared.fetchMonster().hp <= 0{
+                    if let currentScene = self.scene {
+                        let transition = SKTransition.fade(withDuration: 1)
+                        let mainMenuScene = PlayerEnd(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                        currentScene.view?.presentScene(mainMenuScene, transition: transition)
+                        // Call the startNewGame() function from the GameController
+                    }
+                }
+            }
         }else{
             let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
             impactFeedbackGenerator.prepare()

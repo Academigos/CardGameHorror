@@ -13,7 +13,7 @@ class ArvoresFrente: SKSpriteNode{
     init(arvoresFrente: String) {
         self.arvoresFrente = SKTexture(imageNamed: arvoresFrente)
         super.init(texture: self.arvoresFrente, color: .clear, size: self.arvoresFrente.size())
-        self.scale(to: autoScale(self, widthProportion: 1, screenSize: GameViewController.screenSize))
+        self.scale(to: GameViewController.screenSize)
     }
     
     required init?(coder aDecoder: NSCoder) {

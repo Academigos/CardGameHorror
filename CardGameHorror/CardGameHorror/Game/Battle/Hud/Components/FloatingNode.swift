@@ -72,7 +72,7 @@ class FloatingNode: SKSpriteNode {
         let damageLabel = FloatingLabel(text: "+\(stack) Bônus", color: colorLabel)
         damageLabel.position = position
         damageLabel.position.y = damageLabel.position.y * 1.7
-        damageLabel.fontSize = self.size.width * 0.2
+        damageLabel.fontSize = self.size.width * 0.25
         addChild(damageLabel)
         
         // Animação para o número flutuante
@@ -87,7 +87,7 @@ class FloatingNode: SKSpriteNode {
     func showDamagePopUp(at position: CGPoint, value: Int) {
         let damageLabel = FloatingLabel(text: "-\(value)", color: .red)
         damageLabel.position = position
-        damageLabel.fontSize = self.size.width * 0.2
+        damageLabel.fontSize = self.size.width * 0.25
         addChild(damageLabel)
         
         // Animação para o número flutuante
@@ -102,7 +102,7 @@ class FloatingNode: SKSpriteNode {
     func showHealPopUp(value: Int) {
         let damageLabel = FloatingLabel(text: "+\(value)", color: .green)
         damageLabel.position = CGPoint(x:  GameViewController.screenSize.width * 0.31, y: GameViewController.screenSize.height * 0.2)
-        damageLabel.fontSize = self.size.width * 0.2
+        damageLabel.fontSize = self.size.width * 0.25
         addChild(damageLabel)
         
         // Animação para o número flutuante

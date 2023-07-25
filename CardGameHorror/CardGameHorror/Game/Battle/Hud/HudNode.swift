@@ -17,6 +17,8 @@ class Hud: SKNode {
 
     let divader = Divader()
     let camera = Camera()
+    let cameraNode = SKCameraNode()
+
     override init() {
         super.init()
         endTurnButtom.stackPopUp = stackpopup

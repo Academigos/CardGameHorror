@@ -19,6 +19,8 @@ class ButtonEndTurn: SKSpriteNode{
     let totalCount = 3
     let buttomTexture: SKTexture
     
+    var isButtonInteractionEnabled = true
+    
     init() {
         self.buttomTexture = SKTexture(imageNamed: "EndTurn")
         super.init(texture: self.buttomTexture, color: .clear, size: self.buttomTexture.size())
@@ -44,7 +46,14 @@ class ButtonEndTurn: SKSpriteNode{
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        guard isButtonInteractionEnabled else {
+               return
+           }
+        
         if GameController.shared.selectedCard.count == 3{
+            isButtonInteractionEnabled = false
+            
             let selectedCards = Set(GameController.shared.selectedCard)
             GameController.shared.processSelectedCards(selectedCards: selectedCards)
             GameController.shared.playerTurn()
@@ -55,7 +64,10 @@ class ButtonEndTurn: SKSpriteNode{
             endTurnButtonDelegate?.handCardsDidFinishAnimating()
             stackPopUp?.checkStackSelectedCards(position: self.position)    
             // change the scene in case of player or monster die
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
+                
+                isButtonInteractionEnabled = true
+                
                 if DataManager.shared.fetchPlayer().hp <= 0{
                     if let currentScene = self.scene {
                         let transition = SKTransition.fade(withDuration: 1)

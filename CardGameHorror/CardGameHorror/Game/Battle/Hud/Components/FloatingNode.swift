@@ -59,12 +59,18 @@ class FloatingNode: SKSpriteNode {
         
         // Dano de ataque
         if damage != 0 {
-            showDamagePopUp(at: CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.7), value: damage + stack)
+            if attackCount > 1 {
+                damage += stack
+            }
+            showDamagePopUp(at: CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.7), value: damage)
         }
         
         // valor de cura
         if heal != 0 {
-            showHealPopUp(value: heal + stack)
+            if hpCount > 1 {
+                heal += stack
+            }
+            showHealPopUp(value: heal)
         }
     }
     
@@ -72,7 +78,7 @@ class FloatingNode: SKSpriteNode {
         let damageLabel = FloatingLabel(text: "+\(stack) Bônus", color: colorLabel)
         damageLabel.position = position
         damageLabel.position.y = damageLabel.position.y * 1.7
-        damageLabel.fontSize = self.size.width * 0.2
+        damageLabel.fontSize = self.size.width * 0.25
         addChild(damageLabel)
         
         // Animação para o número flutuante
@@ -87,7 +93,7 @@ class FloatingNode: SKSpriteNode {
     func showDamagePopUp(at position: CGPoint, value: Int) {
         let damageLabel = FloatingLabel(text: "-\(value)", color: .red)
         damageLabel.position = position
-        damageLabel.fontSize = self.size.width * 0.2
+        damageLabel.fontSize = self.size.width * 0.25
         addChild(damageLabel)
         
         // Animação para o número flutuante
@@ -102,7 +108,7 @@ class FloatingNode: SKSpriteNode {
     func showHealPopUp(value: Int) {
         let damageLabel = FloatingLabel(text: "+\(value)", color: .green)
         damageLabel.position = CGPoint(x:  GameViewController.screenSize.width * 0.31, y: GameViewController.screenSize.height * 0.2)
-        damageLabel.fontSize = self.size.width * 0.2
+        damageLabel.fontSize = self.size.width * 0.25
         addChild(damageLabel)
         
         // Animação para o número flutuante
@@ -124,26 +130,44 @@ class FloatingLabel: SKLabelNode {
         self.fontColor = color
         self.zPosition = 0
         
-//        let containerNode = SKEffectNode()
-//        containerNode.zPosition = -1
-//        
-//        var widthShadow = self.frame.width
-//        if self.frame.width > 100  {
-//            widthShadow -= 20
-//        }
-//        
-//        let ellipseNode = SKShapeNode(ellipseOf: CGSize(width: widthShadow, height: self.frame.height))
-//        ellipseNode.fillColor = .black
-//        ellipseNode.alpha = 0.9 // Adjust the opacity of the ellipse as desired
-//        
-//        let blurFilter = CIFilter(name: "CIGaussianBlur")
-//        blurFilter?.setValue(15, forKey: "inputRadius") // Adjust the blur radius as desired
-//        containerNode.filter = blurFilter
-//        
-//        containerNode.addChild(ellipseNode)
-//        containerNode.position = CGPoint(x: 0, y: self.frame.height * 0.25)
-//        
-//        self.addChild(containerNode)
+        // Crie o sprite do fundo
+        var backgroundNode:SKSpriteNode // Substitua "fundo_bonus_menor_2x" pelo nome da sua textura de fundo
+        
+        if self.frame.width > 100  {
+            backgroundNode = SKSpriteNode(imageNamed: "fundo_bonus_maior")
+        } else {
+            // Crie o sprite do fundo
+           backgroundNode = SKSpriteNode(imageNamed: "fundo_bonus_menor") // Substitua "fundo_bonus_menor_2x" pelo nome da sua textura de fundo
+        }
+        
+        backgroundNode.zPosition = -1 // Coloque o fundo atrás do texto definindo um zPosition menor
+        // Ajuste o tamanho e a posição do fundo para se adequar ao texto
+        backgroundNode.size = CGSize(width: self.frame.width + 20, height: self.frame.height + 20)
+        backgroundNode.position =  CGPoint(x: 0, y: self.frame.height * 0.25)
+        
+        // Adicione o fundo como um filho do label
+        self.addChild(backgroundNode)
+//
+//                let containerNode = SKEffectNode()
+//                containerNode.zPosition = -1
+//
+//                var widthShadow = self.frame.width
+//                if self.frame.width > 100  {
+//                    widthShadow -= 20
+//                }
+//
+//                let ellipseNode = SKShapeNode(ellipseOf: CGSize(width: widthShadow, height: self.frame.height))
+//                ellipseNode.fillColor = .black
+//                ellipseNode.alpha = 0.9 // Adjust the opacity of the ellipse as desired
+//
+//                let blurFilter = CIFilter(name: "CIGaussianBlur")
+//                blurFilter?.setValue(15, forKey: "inputRadius") // Adjust the blur radius as desired
+//                containerNode.filter = blurFilter
+//
+//                containerNode.addChild(ellipseNode)
+//                containerNode.position = CGPoint(x: 0, y: self.frame.height * 0.25)
+//
+//                self.addChild(containerNode)
     }
     
     required init?(coder aDecoder: NSCoder) {

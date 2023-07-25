@@ -46,7 +46,7 @@ class DialogView: SKNode {
             GameController.shared.isCutScenePassed = true
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = GameScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = DayNightTransitionScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
             // O diálogo terminou, você pode executar alguma ação ou remover a caixa de texto se desejar.

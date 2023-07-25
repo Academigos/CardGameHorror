@@ -102,7 +102,7 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
     
     // Limpa a mão e reseta com atraso por conta do delay da animação do monstro
     func clearHand() {
-        let atraso: Double = 3.0
+        let atraso: Double = 4.0
         handCards.cardsModel = []
         GameController.shared.selectedCard = []
         let cardsHand = GameController.shared.cardsHandPlayer()

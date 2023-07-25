@@ -22,7 +22,6 @@
 		280A535A2A6AC10A00267B9E /* PauseButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280A53592A6AC10A00267B9E /* PauseButtom.swift */; };
 		280DF6792A6B18AD00EFF162 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280DF6782A6B18AD00EFF162 /* Languages.swift */; };
 		28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F5A2A5CAAD10031B95B /* AppDelegate.swift */; };
-		28314F612A5CAAD10031B95B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F602A5CAAD10031B95B /* GameScene.swift */; };
 		28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F622A5CAAD10031B95B /* GameViewController.swift */; };
 		28314F662A5CAAD10031B95B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28314F642A5CAAD10031B95B /* Main.storyboard */; };
 		28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28314F672A5CAAD20031B95B /* Assets.xcassets */; };
@@ -54,6 +53,7 @@
 		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
 		28FC6C672A6F10D200C0A9BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28FC6C692A6F10D200C0A9BE /* Localizable.strings */; };
 		28FC6C6C2A6F1C5E00C0A9BE /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C6B2A6F1C5E00C0A9BE /* LanguageManager.swift */; };
+		28FDCD622A70115F00C87920 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDCD612A70115F00C87920 /* GameScene.swift */; };
 		70D72CE42A6EF4600010AFA8 /* Mao1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CE32A6EF4600010AFA8 /* Mao1.swift */; };
 		70D72CE62A6EF46D0010AFA8 /* Mao2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CE52A6EF46D0010AFA8 /* Mao2.swift */; };
 		70D72CE82A6EF4BE0010AFA8 /* Carta1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CE72A6EF4BE0010AFA8 /* Carta1.swift */; };
@@ -87,6 +87,7 @@
 		C9C209042A6D5371009C73C4 /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209032A6D5371009C73C4 /* IntroScene.swift */; };
 		C9C2091F2A6E0CF6009C73C4 /* FloatingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2091E2A6E0CF6009C73C4 /* FloatingNode.swift */; };
 		C9C209232A6EC071009C73C4 /* OverlayPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209222A6EC071009C73C4 /* OverlayPause.swift */; };
+		C9C209252A6EFB91009C73C4 /* DayNightTransitionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +124,6 @@
 		280DF6782A6B18AD00EFF162 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		28314F572A5CAAD10031B95B /* CardGameHorror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardGameHorror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28314F5A2A5CAAD10031B95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28314F602A5CAAD10031B95B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		28314F622A5CAAD10031B95B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		28314F652A5CAAD10031B95B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28314F672A5CAAD20031B95B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +160,7 @@
 		28FC6C682A6F10D200C0A9BE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		28FC6C6A2A6F10D600C0A9BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		28FC6C6B2A6F1C5E00C0A9BE /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		28FDCD612A70115F00C87920 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = Battle/GameScene.swift; sourceTree = "<group>"; };
 		70D72CE32A6EF4600010AFA8 /* Mao1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mao1.swift; sourceTree = "<group>"; };
 		70D72CE52A6EF46D0010AFA8 /* Mao2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mao2.swift; sourceTree = "<group>"; };
 		70D72CE72A6EF4BE0010AFA8 /* Carta1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carta1.swift; sourceTree = "<group>"; };
@@ -194,6 +195,7 @@
 		C9C209032A6D5371009C73C4 /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroScene.swift; path = CardGameHorror/Game/Intro/IntroScene.swift; sourceTree = SOURCE_ROOT; };
 		C9C2091E2A6E0CF6009C73C4 /* FloatingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNode.swift; sourceTree = "<group>"; };
 		C9C209222A6EC071009C73C4 /* OverlayPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPause.swift; sourceTree = "<group>"; };
+		C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNightTransitionScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +365,8 @@
 				28076A772A6DBB0800F2BD7B /* MainMenu */,
 				28314F972A5CACD20031B95B /* Intro */,
 				28314F952A5CAC4F0031B95B /* Battle */,
+				28FDCD612A70115F00C87920 /* GameScene.swift */,
+				C9C209262A6EFD61009C73C4 /* DayNighScene */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -388,7 +392,6 @@
 		28314F952A5CAC4F0031B95B /* Battle */ = {
 			isa = PBXGroup;
 			children = (
-				28314F602A5CAAD10031B95B /* GameScene.swift */,
 				B8F0014A2A6B255800392235 /* Cenario  */,
 				280A534D2A6AABF200267B9E /* Pause */,
 				B8B246982A66CEDE00EB2FFB /* MonsterNode */,
@@ -600,6 +603,14 @@
 			path = MonsterComponents;
 			sourceTree = "<group>";
 		};
+		C9C209262A6EFD61009C73C4 /* DayNighScene */ = {
+			isa = PBXGroup;
+			children = (
+				C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */,
+			);
+			path = DayNighScene;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -749,7 +760,6 @@
 				280DF6792A6B18AD00EFF162 /* Languages.swift in Sources */,
 				B86261432A6D6DBE00EB5C93 /* TextBox.swift in Sources */,
 				28D123612A6847A400E37E43 /* NamePlaceHolder.swift in Sources */,
-				28314F612A5CAAD10031B95B /* GameScene.swift in Sources */,
 				28FC6C6C2A6F1C5E00C0A9BE /* LanguageManager.swift in Sources */,
 				28076A842A6DF87D00F2BD7B /* ResetBattleButtom.swift in Sources */,
 				B8F0015E2A6B255800392235 /* Frente.swift in Sources */,
@@ -802,10 +812,12 @@
 				288F53052A6D637000BC24A2 /* Divider.swift in Sources */,
 				280A535A2A6AC10A00267B9E /* PauseButtom.swift in Sources */,
 				28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */,
+				28FDCD622A70115F00C87920 /* GameScene.swift in Sources */,
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
 				70D72CF02A6EFCFA0010AFA8 /* Taro.swift in Sources */,
 				28076A7C2A6DC6FE00F2BD7B /* ContinueGameButtom.swift in Sources */,
 				B8F001682A6B255800392235 /* Carro1.swift in Sources */,
+				C9C209252A6EFB91009C73C4 /* DayNightTransitionScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

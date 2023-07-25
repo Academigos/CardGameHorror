@@ -11,8 +11,8 @@ import SpriteKit
 class MainPause: SKNode{
     
     
-    init(isIntro: Bool) {
-        let PauseButtom = MainPauseButtom(isIntro: isIntro, currentScene: "MainMenu")
+    init(isIntro: Bool, currentScene: String) {
+        let PauseButtom = MainPauseButtom(isIntro: isIntro, currentScene: currentScene)
         super.init()
         PauseButtom.zPosition = 5
         PauseButtom.position = CGPoint(x: GameViewController.screenSize.width * 0.90, y: GameViewController.screenSize.height * 0.90)

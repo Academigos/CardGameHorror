@@ -12,7 +12,7 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate{
     
     let background = MainMenuBackground()
     let startGame = NewGameButtom()
-    let pause = MainPause(isIntro: false)
+    let pause = MainPause(isIntro: false, currentScene: "MainMenu")
     override func didMove(to view: SKView) {
         let continueGame = ContinueGameButtom()
         

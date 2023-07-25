@@ -39,6 +39,7 @@ class MainMenu: SKSpriteNode{
             currentScene.view?.presentScene(mainMenuScene, transition: transition)
             // Call the startNewGame() function from the GameController
             delegate?.closePauseButtonTapped()
+            GameController.shared.selectedCard = []
         }
     }
     

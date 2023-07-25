@@ -54,6 +54,11 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
                 closePause.scale(to: autoScale(closePause, widthProportion: 0.2, screenSize: pauseBackground.size))
                 pauseBackground.addChild(closePause)
                 
+                languages.zPosition = 100
+                languages.position = CGPoint(x: GameViewController.screenSize.width * 0.05, y: GameViewController.screenSize.height * 0.03)
+                languages.scale(to: autoScale(languages, widthProportion: 0.40, screenSize: pauseBackground.size))
+                pauseBackground.addChild(languages)
+                
                 resetBattle.zPosition = 100
                 resetBattle.position = CGPoint(x: GameViewController.screenSize.width * 0, y: GameViewController.screenSize.height * -0.12)
                 resetBattle.scale(to: autoScale(resetBattle, widthProportion: 0.85, screenSize: pauseBackground.size))
@@ -86,6 +91,7 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
                     self.resetBattle.removeFromParent()
                     self.mainMenu.removeFromParent()
                     self.pauseBackground.removeFromParent()
+                    self.languages.removeFromParent()
                     self.overlayPause.removeFromParent()
                     self.isAnimating = false
                 }
@@ -111,6 +117,7 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
                 self.resetBattle.removeFromParent()
                 self.mainMenu.removeFromParent()
                 self.pauseBackground.removeFromParent()
+                self.languages.removeFromParent()
                 self.overlayPause.removeFromParent()
                 self.isAnimating = false
             }

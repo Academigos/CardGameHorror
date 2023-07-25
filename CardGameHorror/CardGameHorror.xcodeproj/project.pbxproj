@@ -88,6 +88,7 @@
 		C9C2091F2A6E0CF6009C73C4 /* FloatingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2091E2A6E0CF6009C73C4 /* FloatingNode.swift */; };
 		C9C209232A6EC071009C73C4 /* OverlayPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209222A6EC071009C73C4 /* OverlayPause.swift */; };
 		C9C209252A6EFB91009C73C4 /* DayNightTransitionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */; };
+		C9C2094C2A704473009C73C4 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9C2094A2A704473009C73C4 /* MyParticle.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +197,7 @@
 		C9C2091E2A6E0CF6009C73C4 /* FloatingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNode.swift; sourceTree = "<group>"; };
 		C9C209222A6EC071009C73C4 /* OverlayPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPause.swift; sourceTree = "<group>"; };
 		C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNightTransitionScene.swift; sourceTree = "<group>"; };
+		C9C2094A2A704473009C73C4 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */,
+				C9C2094A2A704473009C73C4 /* MyParticle.sks */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -722,6 +725,7 @@
 				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
 				C9C208FD2A6CD797009C73C4 /* farol.atlas in Resources */,
+				C9C2094C2A704473009C73C4 /* MyParticle.sks in Resources */,
 				B8F001632A6B255800392235 /* Assets.xcassets in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
 				B8F001642A6B255800392235 /* Fumaca.sks in Resources */,

@@ -26,6 +26,7 @@ class GameController: NSObject {
         dataManager.updatePlayerHP(value: playerLife) // Reset player's health points
         dataManager.updateMonsterHP(value: monsterLife) // Reset monster's health points
         replacePlayerHand()
+        print(GameController.shared.dataManager.fetchPlayer())
     }
     
     // Function to draw cards for the player's initial hand
@@ -82,11 +83,6 @@ class GameController: NSObject {
         }else if stackATK == 3 {
             damageValue += 3
         }
-        print("cura player")
-        print(healingValue)
-        print("Dano player")
-        print(damageValue)
-        print("fim turno player")
         let newPlayerHP = min(player.hp + healingValue, 30)
         dataManager.updatePlayerHP(value: newPlayerHP)
         
@@ -103,8 +99,6 @@ class GameController: NSObject {
     func monsterTurn() -> Int {
         let player = dataManager.fetchPlayer()
         let monsterDamage = calculateMonsterDamage()
-        print("monster dano")
-        print(monsterDamage)
         let newPlayerHP = max(player.hp - Double(monsterDamage), 0)
         dataManager.updatePlayerHP(value: newPlayerHP)
         return monsterDamage

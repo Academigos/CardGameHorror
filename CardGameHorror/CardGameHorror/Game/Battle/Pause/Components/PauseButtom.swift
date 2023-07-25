@@ -15,12 +15,13 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
     let closePause = ClosePause()
     let resetBattle = ResetBattle()
     let mainMenu = MainMenu()
-    let languages = Languages()
+    let languages: Languages
     let overlayPause = OverlayPause()
     
     var isAnimating = false // Adicione a flag booleana
     
-    init() {
+    init(currentScene: String) {
+        languages = Languages(currentScene: currentScene)
         self.pauseButtom = SKTexture(imageNamed: "PauseButtom")
         super.init(texture: pauseButtom, color: .clear, size: pauseButtom.size())
         isUserInteractionEnabled = true

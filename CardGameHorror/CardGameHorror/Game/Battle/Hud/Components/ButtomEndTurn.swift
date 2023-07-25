@@ -104,7 +104,8 @@ class ButtonEndTurn: SKSpriteNode{
         cardsSelectLabel.fontSize = size.height * 0.16
         cardsSelectLabel.fontName = "BreeSerif-Regular"
         cardsSelectLabel.fontColor = SKColor(red: 129/255, green: 134/255, blue: 150/255, alpha: 1.0)
-        cardsSelectLabel.text = "\(counter)/\(totalCount) Cartas"
+        let localizedText = LanguageManager.shared.localizedString("key_for_my_text", count: counter, total: totalCount)
+        cardsSelectLabel.text = localizedText
         cardsSelectLabel.position = CGPoint(x: size.width * 0, y: size.height * 0.3)
         cardsSelectLabel.zPosition = 1.0
         
@@ -113,7 +114,7 @@ class ButtonEndTurn: SKSpriteNode{
     
     private func setupFinishTurnLabel() {
         
-        let text = "Finalizar turno"
+        let text =  LanguageManager.shared.localizedString("Finalizar turno")
         let fontSize = size.height * 0.18 // Definindo o tamanho da fonte com base na altura da tela
         
         let font = UIFont(name: "BreeSerif-Regular", size: fontSize)
@@ -129,7 +130,7 @@ class ButtonEndTurn: SKSpriteNode{
             
             finishTurnLabel.attributedText = attrString
         } else {
-            finishTurnLabel.text = "Finalizar turno"
+            finishTurnLabel.text = text
         }
         
         finishTurnLabel.name = "finishTurnLabel"
@@ -139,7 +140,11 @@ class ButtonEndTurn: SKSpriteNode{
         finishTurnLabel.lineBreakMode = .byWordWrapping
         finishTurnLabel.preferredMaxLayoutWidth = size.width * 0.55 // Define a largura máxima para quebrar o
         finishTurnLabel.horizontalAlignmentMode = .center
-        finishTurnLabel.position = CGPoint(x: 0, y: size.height * -0.35)
+        if LanguageManager.shared.currentLanguage == "pt-BR"{
+            finishTurnLabel.position = CGPoint(x: 0, y: size.height * -0.35)
+        }else{
+            finishTurnLabel.position = CGPoint(x: 0, y: size.height * -0.2)
+        }
         finishTurnLabel.zPosition = 1.0
         
         addChild(finishTurnLabel)
@@ -147,7 +152,8 @@ class ButtonEndTurn: SKSpriteNode{
     
     func updateValueCartas(){
         counter = GameController.shared.selectedCard.count
-        cardsSelectLabel.text = "\(counter)/\(totalCount) Cartas"
+        let localizedText = LanguageManager.shared.localizedString("key_for_my_text", count: counter, total: totalCount)
+        cardsSelectLabel.text = localizedText
     }
     
     deinit {

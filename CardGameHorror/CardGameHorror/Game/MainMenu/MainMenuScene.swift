@@ -10,21 +10,23 @@ import SpriteKit
 
 class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate{
     
-    
+    let background = MainMenuBackground()
     let startGame = NewGameButtom()
-    let defaults = UserDefaults.standard
-    var isCutScenePassed: Bool = true
     
     override func didMove(to view: SKView) {
-        defaults.set(isCutScenePassed, forKey: "IsCutScenePassed")
-        let continueGame = ContinueGameButtom(isCutScenePassed: isCutScenePassed)
+        let continueGame = ContinueGameButtom()
         
-        continueGame.position = CGPoint(x: GameViewController.screenSize.width * 0.2, y: GameViewController.screenSize.height * 0.7)
+        continueGame.zPosition = 1
+        continueGame.position = CGPoint(x: GameViewController.screenSize.width * 0.20, y: GameViewController.screenSize.height * 0.58)
         addChild(continueGame)
         
-        startGame.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.2)
+        startGame.zPosition = 1
+        startGame.position = CGPoint(x: GameViewController.screenSize.width * 0.49, y: GameViewController.screenSize.height * 0.55)
         addChild(startGame)
         
+        background.zPosition = 0
+        background.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)
+        addChild(background)
         continueGame.delegate = self
         startGame.delegate = self
     }
@@ -37,8 +39,8 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate{
         self.view?.presentScene(gameScene,transition: transition)
     }
     func newGameButtonTapped() {
-        if isCutScenePassed{
-            isCutScenePassed = false
+        if GameController.shared.isCutScenePassed{
+            GameController.shared.isCutScenePassed = false
         }
         let gameScene = IntroScene(size: GameViewController.screenSize)
         gameScene.scaleMode = .aspectFill

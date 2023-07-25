@@ -9,7 +9,7 @@ import Foundation
 import SpriteKit
 
 class PauseNode: SKNode{
-    let pauseButtom = PauseButtom()
+    let pauseButtom = PauseButtom(currentScene: "GameScene")
     
     override init() {
         super.init()

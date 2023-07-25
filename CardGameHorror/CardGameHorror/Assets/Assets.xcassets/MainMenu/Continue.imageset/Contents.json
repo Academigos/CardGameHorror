@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "câmera_início_1x.pdf",
+      "filename" : "câmera_início_1x.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "câmera_início_2x.pdf",
+      "filename" : "câmera_início_2x.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "câmera_início_3x.pdf",
+      "filename" : "câmera_início_3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }

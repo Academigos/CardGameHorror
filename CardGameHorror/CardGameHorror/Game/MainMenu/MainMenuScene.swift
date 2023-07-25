@@ -12,14 +12,15 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate{
     
     let background = MainMenuBackground()
     let startGame = NewGameButtom()
-    
+    let pause = MainPause(isIntro: false)
     override func didMove(to view: SKView) {
         let continueGame = ContinueGameButtom()
         
         continueGame.zPosition = 1
         continueGame.position = CGPoint(x: GameViewController.screenSize.width * 0.20, y: GameViewController.screenSize.height * 0.58)
         addChild(continueGame)
-        
+        pause.zPosition = 10
+        addChild(pause)
         startGame.zPosition = 1
         startGame.position = CGPoint(x: GameViewController.screenSize.width * 0.49, y: GameViewController.screenSize.height * 0.55)
         addChild(startGame)

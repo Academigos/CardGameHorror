@@ -59,12 +59,18 @@ class FloatingNode: SKSpriteNode {
         
         // Dano de ataque
         if damage != 0 {
-            showDamagePopUp(at: CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.7), value: damage + stack)
+            if attackCount > 1 {
+                damage += stack
+            }
+            showDamagePopUp(at: CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.7), value: damage)
         }
         
         // valor de cura
         if heal != 0 {
-            showHealPopUp(value: heal + stack)
+            if hpCount > 1 {
+                heal += stack
+            }
+            showHealPopUp(value: heal)
         }
     }
     

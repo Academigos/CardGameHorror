@@ -41,12 +41,13 @@ class MainMenu: SKSpriteNode{
             delegate?.closePauseButtonTapped()
         }
     }
+    
     private func setupMainMenuLabel() {
         mainMenuLabel.name = "mainMenuLabel"
-        mainMenuLabel.fontSize = size.height * 0.3
+        mainMenuLabel.fontSize = size.height * 0.32
         mainMenuLabel.fontName = "BreeSerif-Regular"
         mainMenuLabel.fontColor = SKColor(red: CGFloat(0x17) / 255.0, green: CGFloat(0x18) / 255.0, blue: CGFloat(0x1C) / 255.0, alpha: 1.0)
-        mainMenuLabel.text = "Menu Principal"
+        mainMenuLabel.text = LanguageManager.shared.localizedString("Menu Principal")
         mainMenuLabel.position = CGPoint(x: size.width * 0, y: size.height * -0.1)
         mainMenuLabel.zPosition = 1.0
         

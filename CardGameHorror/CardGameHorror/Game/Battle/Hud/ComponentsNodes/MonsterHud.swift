@@ -27,7 +27,7 @@ class MonsterHud: SKNode{
         label.fontSize = monsterName.size.height * 1.5
         label.fontName = "BigshotOne-Regular"
         label.fontColor = SKColor(red: 129/255, green: 134/255, blue: 150/255, alpha: 1.0)
-        label.text = "Trauma"
+        label.text = LanguageManager.shared.localizedString("Trauma")
         label.position = CGPoint(x: 0, y: -10)
         label.zPosition = 1.0
         

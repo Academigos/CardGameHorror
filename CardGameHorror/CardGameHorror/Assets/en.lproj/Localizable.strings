@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  CardGameHorror
+
+  Created by Eduardo on 24/07/23.
+  
+*/
+"Menu Principal" = "Main Menu";
+"Começar" = "Start";
+"Continuar" = "Continue";
+"pt-BR" = "en-US";
+"Opções" = "Options";
+"Idioma" = "Language";
+"Recomeçar Batalha" = "Restart Battle";
+"Trauma" = "Trauma";
+"Coragem" = "Courage";
+"key_for_my_text" = "%d/%d Cards";
+"Finalizar turno" = "End Turn";

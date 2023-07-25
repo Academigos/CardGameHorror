@@ -28,7 +28,7 @@ class PlayerHud: SKNode{
         label.fontSize = playerName.size.height * 1.5
         label.fontName = "BigshotOne-Regular"
         label.fontColor = SKColor(red: 129/255, green: 134/255, blue: 150/255, alpha: 1.0)
-        label.text = "Coragem"
+        label.text = LanguageManager.shared.localizedString("Coragem")
         label.position = CGPoint(x: 0, y: -10)
         label.zPosition = 1.0
         

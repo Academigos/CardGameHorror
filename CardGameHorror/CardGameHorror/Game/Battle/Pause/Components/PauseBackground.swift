@@ -30,10 +30,10 @@ class PauseBackground: SKSpriteNode{
     
     private func setUpContinueLabel() {
         continueLabel.name = "continueLabel"
-        continueLabel.fontSize = size.height * 0.045
+        continueLabel.fontSize = size.height * 0.05
         continueLabel.fontName = "BreeSerif-Regular"
         continueLabel.fontColor = SKColor(red: CGFloat(191.0 / 255.0), green: CGFloat(197.0 / 255.0), blue: CGFloat(217.0 / 255.0), alpha: 1.0)
-        continueLabel.text = "Continuar"
+        continueLabel.text = LanguageManager.shared.localizedString("Continuar")
         continueLabel.position = CGPoint(x: size.width * -0.1, y: size.height * 0.38)
         continueLabel.zPosition = 1.0
         
@@ -45,7 +45,7 @@ class PauseBackground: SKSpriteNode{
         optionLabel.fontSize = size.height * 0.075
         optionLabel.fontName = "BigshotOne-Regular"
         optionLabel.fontColor = SKColor(red: CGFloat(0x17) / 255.0, green: CGFloat(0x18) / 255.0, blue: CGFloat(0x1C) / 255.0, alpha: 1.0)
-        optionLabel.text = "Opções"
+        optionLabel.text = LanguageManager.shared.localizedString("Opções")
         optionLabel.position = CGPoint(x: size.width * 0, y: size.height * 0.18)
         optionLabel.zPosition = 1.0
         
@@ -54,10 +54,10 @@ class PauseBackground: SKSpriteNode{
     
     private func setLanguageLabel() {
         languageLabel.name = "languageLabel"
-        languageLabel.fontSize = size.height * 0.042
+        languageLabel.fontSize = size.height * 0.04
         languageLabel.fontName = "BreeSerif-Regular"
         languageLabel.fontColor = SKColor(red: CGFloat(0x17) / 255.0, green: CGFloat(0x18) / 255.0, blue: CGFloat(0x1C) / 255.0, alpha: 1.0)
-        languageLabel.text = "Idioma"
+        languageLabel.text = LanguageManager.shared.localizedString("Idioma")
         languageLabel.position = CGPoint(x: size.width * -0.17, y: size.height * 0.01)
         languageLabel.zPosition = 1.0
         

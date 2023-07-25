@@ -12,12 +12,9 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate{
     
     let background = MainMenuBackground()
     let startGame = NewGameButtom()
-    let defaults = UserDefaults.standard
-    var isCutScenePassed: Bool = true
     
     override func didMove(to view: SKView) {
-        defaults.set(isCutScenePassed, forKey: "IsCutScenePassed")
-        let continueGame = ContinueGameButtom(isCutScenePassed: isCutScenePassed)
+        let continueGame = ContinueGameButtom()
         
         continueGame.zPosition = 1
         continueGame.position = CGPoint(x: GameViewController.screenSize.width * 0.20, y: GameViewController.screenSize.height * 0.58)
@@ -42,8 +39,8 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate{
         self.view?.presentScene(gameScene,transition: transition)
     }
     func newGameButtonTapped() {
-        if isCutScenePassed{
-            isCutScenePassed = false
+        if GameController.shared.isCutScenePassed{
+            GameController.shared.isCutScenePassed = false
         }
         let gameScene = IntroScene(size: GameViewController.screenSize)
         gameScene.scaleMode = .aspectFill

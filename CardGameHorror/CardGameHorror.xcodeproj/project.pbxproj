@@ -191,7 +191,7 @@
 		C976B3A62A69E786004F891B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9856EB62A6637CC00936CF2 /* HandCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCards.swift; sourceTree = "<group>"; };
 		C9C208FC2A6CD797009C73C4 /* farol.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = farol.atlas; path = CardGameHorror/farol.atlas; sourceTree = SOURCE_ROOT; };
-		C9C209032A6D5371009C73C4 /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroScene.swift; path = CardGameHorror/Game/IntroScene.swift; sourceTree = SOURCE_ROOT; };
+		C9C209032A6D5371009C73C4 /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroScene.swift; path = CardGameHorror/Game/Intro/IntroScene.swift; sourceTree = SOURCE_ROOT; };
 		C9C2091E2A6E0CF6009C73C4 /* FloatingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNode.swift; sourceTree = "<group>"; };
 		C9C209222A6EC071009C73C4 /* OverlayPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPause.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -362,9 +362,7 @@
 				28076A7D2A6DF81300F2BD7B /* EndScene */,
 				28076A772A6DBB0800F2BD7B /* MainMenu */,
 				28314F972A5CACD20031B95B /* Intro */,
-				C9C209032A6D5371009C73C4 /* IntroScene.swift */,
 				28314F952A5CAC4F0031B95B /* Battle */,
-				28314F602A5CAAD10031B95B /* GameScene.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -390,6 +388,7 @@
 		28314F952A5CAC4F0031B95B /* Battle */ = {
 			isa = PBXGroup;
 			children = (
+				28314F602A5CAAD10031B95B /* GameScene.swift */,
 				B8F0014A2A6B255800392235 /* Cenario  */,
 				280A534D2A6AABF200267B9E /* Pause */,
 				B8B246982A66CEDE00EB2FFB /* MonsterNode */,
@@ -410,6 +409,7 @@
 		28314F972A5CACD20031B95B /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				C9C209032A6D5371009C73C4 /* IntroScene.swift */,
 				B888CB282A6B19E1008D8E3E /* Transition */,
 				B888CB262A6B19AD008D8E3E /* Dialog */,
 				B888CB252A6B19A3008D8E3E /* Oppening */,

@@ -12,7 +12,8 @@ import GameplayKit
 class GameController: NSObject {
     static let shared = GameController()
     private let dataManager = DataManager.shared
-    
+    let defaults = UserDefaults.standard
+    var isCutScenePassed: Bool = false
     private let randomCardCount = 6
     let playerLife: Double = 30
     let monsterLife: Double = 100

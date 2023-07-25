@@ -14,15 +14,13 @@ protocol ContinueGameButtomDelegate: AnyObject {
 
 class ContinueGameButtom: SKSpriteNode{
     let continueGameButtom: SKTexture
-    let isCutScenePassed: Bool
     var continueLabel: SKLabelNode = SKLabelNode()
     
     weak var delegate: ContinueGameButtomDelegate?
 
     
-    init(isCutScenePassed: Bool) {
+    init() {
         self.continueGameButtom = SKTexture(imageNamed: "Continue")
-        self.isCutScenePassed = isCutScenePassed
         super.init(texture: self.continueGameButtom, color: .clear, size: self.continueGameButtom.size())
         self.scale(to: autoScale(self, widthProportion: 0.17, screenSize: GameViewController.screenSize))
         setupContinueLabel()
@@ -37,7 +35,7 @@ class ContinueGameButtom: SKSpriteNode{
     }
     
     private func opacity(){
-        if isCutScenePassed {
+        if GameController.shared.isCutScenePassed {
             self.alpha = 1.0 // Full opacity (visible and touchable)
             self.isUserInteractionEnabled = true // Enable touch interaction
         } else {

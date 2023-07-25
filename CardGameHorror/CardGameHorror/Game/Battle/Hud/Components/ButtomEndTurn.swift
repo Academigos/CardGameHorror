@@ -118,7 +118,7 @@ class ButtonEndTurn: SKSpriteNode{
             
             finishTurnLabel.attributedText = attrString
         } else {
-            finishTurnLabel.text = LanguageManager.shared.localizedString("Finalizar turno")
+            finishTurnLabel.text = text
         }
         
         finishTurnLabel.name = "finishTurnLabel"
@@ -128,7 +128,11 @@ class ButtonEndTurn: SKSpriteNode{
         finishTurnLabel.lineBreakMode = .byWordWrapping
         finishTurnLabel.preferredMaxLayoutWidth = size.width * 0.55 // Define a largura máxima para quebrar o
         finishTurnLabel.horizontalAlignmentMode = .center
-        finishTurnLabel.position = CGPoint(x: 0, y: size.height * -0.35)
+        if LanguageManager.shared.currentLanguage == "pt-BR"{
+            finishTurnLabel.position = CGPoint(x: 0, y: size.height * -0.35)
+        }else{
+            finishTurnLabel.position = CGPoint(x: 0, y: size.height * -0.2)
+        }
         finishTurnLabel.zPosition = 1.0
         
         addChild(finishTurnLabel)

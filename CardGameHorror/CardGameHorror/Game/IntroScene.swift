@@ -1,24 +1,16 @@
-//
-//  IntroScene.swift
-//  CardGameHorror
-//
-//  Created by Erick Ribeiro on 23/07/23.
-//
-
 import SpriteKit
 
 class IntroScene: SKScene {
-
-    override init(size: CGSize) {
-        super.init(size: size)
-    }
+    let dialogView = DialogView()
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func didMove(to view: SKView) {        
+    override func didMove(to view: SKView) {
+        addChild(dialogView)
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        view.addGestureRecognizer(tapGesture)
     }
     
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        dialogView.handleTap()
+    }
 }

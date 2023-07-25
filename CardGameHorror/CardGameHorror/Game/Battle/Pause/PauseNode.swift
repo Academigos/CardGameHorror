@@ -13,7 +13,7 @@ class PauseNode: SKNode{
     
     override init() {
         super.init()
-        pauseButtom.position = CGPoint(x: GameViewController.screenSize.width * 0.90, y: GameViewController.screenSize.height * 0.90)
+        pauseButtom.position = CGPoint(x: GameViewController.screenSize.width * 0.92, y: GameViewController.screenSize.height * 0.883)
         addChild(pauseButtom)
     }
     

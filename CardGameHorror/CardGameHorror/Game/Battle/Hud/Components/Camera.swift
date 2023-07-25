@@ -14,7 +14,7 @@ class Camera: SKSpriteNode {
     init(){
         camera = SKTexture(imageNamed: "Camera")
         super.init(texture: camera, color: .clear, size: camera.size())
-        self.scale(to: CGSize(width: GameViewController.screenSize.width * 0.9, height: GameViewController.screenSize.height * 0.9))
+        self.scale(to: CGSize(width: GameViewController.screenSize.width * 0.92, height: GameViewController.screenSize.height * 0.92))
         isUserInteractionEnabled = false
     }
     

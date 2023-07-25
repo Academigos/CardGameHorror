@@ -145,7 +145,7 @@ class Enemy: SKSpriteNode {
         cameraNode.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)
         self.scene?.addChild(cameraNode)
         
-        shakeCameraWithZoom(duration: 0.5, zoomFactor: 0.977we)
+        shakeCameraWithZoom(duration: 0.5, zoomFactor: 0.977)
     }
 
 

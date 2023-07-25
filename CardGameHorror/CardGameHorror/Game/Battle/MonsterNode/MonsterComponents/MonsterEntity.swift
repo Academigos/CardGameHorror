@@ -167,6 +167,9 @@ class Enemy: SKSpriteNode {
             
             shakeActionsArray.append(shakeAction)
             shakeActionsArray.append(shakeAction.reversed())
+            let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
+            impactFeedbackGenerator.prepare()
+            impactFeedbackGenerator.impactOccurred()
         }
         
         let shakeSequence = SKAction.sequence(shakeActionsArray)

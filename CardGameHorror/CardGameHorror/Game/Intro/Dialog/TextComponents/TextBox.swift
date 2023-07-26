@@ -21,7 +21,7 @@ class TextBox: SKSpriteNode {
         super.init(texture: textBoxTexture, color: UIColor.clear, size: textBoxTexture.size())
         self.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.305)
         self.scale(to: autoScale(self, widthProportion: 0.909, screenSize: GameViewController.screenSize))
-        zPosition = 2
+        
         addTextContent(textContent: dialogo)
     }
     
@@ -73,8 +73,8 @@ class TextBox: SKSpriteNode {
     }
     
     func showNextDialogContent(textContent: TextBoxContent) {
-        removeAllTextContent() // Remover o conteúdo anterior
-        addTextContent(textContent: textContent) // Adicionar o novo diálogo
+        removeAllTextContent()
+        addTextContent(textContent: textContent)
         
         // Trocar a boxType de acordo com a do diálogo atual
         let textBoxTexture: SKTexture

@@ -413,9 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				C9C209032A6D5371009C73C4 /* IntroScene.swift */,
-				B888CB282A6B19E1008D8E3E /* Transition */,
 				B888CB262A6B19AD008D8E3E /* Dialog */,
-				B888CB252A6B19A3008D8E3E /* Oppening */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -494,30 +492,6 @@
 			path = TextComponents;
 			sourceTree = "<group>";
 		};
-		B8744E012A6C87B800180816 /* Diário */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Diário";
-			path = "Diário";
-			sourceTree = "<group>";
-		};
-		B8744E022A6C87CF00180816 /* MainMenu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MainMenu;
-			sourceTree = "<group>";
-		};
-		B888CB252A6B19A3008D8E3E /* Oppening */ = {
-			isa = PBXGroup;
-			children = (
-				B8744E022A6C87CF00180816 /* MainMenu */,
-				B8744E012A6C87B800180816 /* Diário */,
-			);
-			path = Oppening;
-			sourceTree = "<group>";
-		};
 		B888CB262A6B19AD008D8E3E /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,13 +500,6 @@
 				B8AECE0A2A6D5B880032AC66 /* DialogView.swift */,
 			);
 			path = Dialog;
-			sourceTree = "<group>";
-		};
-		B888CB282A6B19E1008D8E3E /* Transition */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Transition;
 			sourceTree = "<group>";
 		};
 		B8AECE0C2A6D60AB0032AC66 /* ScenaryComponents */ = {

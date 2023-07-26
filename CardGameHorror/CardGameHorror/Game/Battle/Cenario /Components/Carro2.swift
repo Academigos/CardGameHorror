@@ -13,7 +13,7 @@ class Carro2: SKSpriteNode{
     init(carro2: String) {
         self.carro2 = SKTexture(imageNamed: carro2)
         super.init(texture: self.carro2, color: .clear, size: self.carro2.size())
-        self.scale(to: autoScale(self, widthProportion: 1, screenSize: GameViewController.screenSize))
+        self.scale(to: GameViewController.screenSize)
     }
     
     required init?(coder aDecoder: NSCoder) {

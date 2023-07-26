@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "PlayerLifeBar.png",
+      "filename" : "batalha_barra_hp_jogador_1x.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "batalha_barra_hp_jogador_2x.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "batalha_barra_hp_jogador_3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }

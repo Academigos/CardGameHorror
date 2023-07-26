@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-class Farol:SKSpriteNode{
+class Farol:SKSpriteNode {
     var farol: [SKTexture]?
     let farol0:SKTexture
     
@@ -15,25 +15,24 @@ class Farol:SKSpriteNode{
         fatalError("erro")
     }
     init(){
-        farol0 = SKTexture(imageNamed: "farol01")
+        farol0 = SKTexture(imageNamed: "farol1")
         super.init(texture: farol0, color: UIColor.clear, size: farol0.size())
         farolAnimation()
-        self.scale(to: autoScale(self, widthProportion: 0.05, screenSize: GameViewController.screenSize))
+        self.scale(to: GameViewController.screenSize)
        
     }
    
-    func farolAnimation(){
-        farol = getTexture(with: "Farol", textureAtlasName: "FarolAtlas")
+    func farolAnimation() {
+        farol = getTexture(with: "farol", textureAtlasName: "farol")
         let farold = farol!
  
         let action = SKAction.animate(with: farold, timePerFrame: 5/TimeInterval(farold.count), resize: true, restore: true)
         self.run(SKAction.repeatForever(action))
-        
     }
     
     
     //busca das texturas
-    func getTexture(with name:String, textureAtlasName:String) -> [SKTexture]{
+    func getTexture(with name:String, textureAtlasName:String) -> [SKTexture] {
         let textureAtlas = SKTextureAtlas(named: textureAtlasName)
         var textures: [SKTexture] = []
         let names = textureAtlas.textureNames.sorted()

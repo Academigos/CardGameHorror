@@ -31,7 +31,7 @@ class HandCards: SKSpriteNode {
         let finalPosition = CGPoint(x: GameViewController.screenSize.width * 0.5, y: self.size.height * 0.4)
         
         // Crie uma ação para mover o nó de sua posição inicial até a posição final
-        let moveAction = SKAction.moveTo(y: finalPosition.y, duration: 1.0)
+        let moveAction = SKAction.moveTo(y: finalPosition.y, duration: 0.7)
         // Adicione uma ação de bloqueio para manter o nó na posição final
         let holdAction = SKAction.wait(forDuration: 0.5)
         
@@ -45,7 +45,7 @@ class HandCards: SKSpriteNode {
         let finalPosition = CGPoint(x: GameViewController.screenSize.width * 0.5, y: -self.size.height * 0.9)
         
         // Crie uma ação para mover o nó de sua posição inicial até a posição final
-        let moveAction = SKAction.moveTo(y: finalPosition.y, duration: 1.0)
+        let moveAction = SKAction.moveTo(y: finalPosition.y, duration: 0.7)
         
         // Crie uma ação para remover o nó da cena após a animação ser concluída
         let removeAction = SKAction.removeFromParent()
@@ -58,7 +58,7 @@ class HandCards: SKSpriteNode {
         // Crie um SKAction.run e passe a função clearHand como parâmetro
         let clearHandAction = SKAction.run(clearHand)
         
-        let holdAction = SKAction.wait(forDuration: 0.5)
+        let holdAction = SKAction.wait(forDuration: 0.6)
         
         // Combine as ações em uma sequência
         let sequence = SKAction.sequence([moveAction, removeAction, clearHandAction, holdAction])
@@ -89,7 +89,6 @@ class HandCards: SKSpriteNode {
     
     // animação de inicialização das cartas
     func animateCardAppearance() {
-        print(cards)
         let containerWidth = CGFloat(cards.count) * cards[0].size.width + CGFloat(cards.count - 1) * cardSpacing
         let startX = (-containerWidth / 2) + cards[0].size.width / 2
         

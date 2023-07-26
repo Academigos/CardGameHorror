@@ -14,6 +14,7 @@ class LifeBarNode: SKNode{
     let defaultLife: Double
     let backGround: LifeBarBackGround
     let lifeBar: LifeBar
+    let lifeOverlay: LifeBarOverlay = LifeBarOverlay()
     init(lifeBarName: String, life: Double, defaultLife: Double) {
         
         self.life = life
@@ -26,9 +27,12 @@ class LifeBarNode: SKNode{
         
         super.init()
         backGround.scale(to: autoScale(backGround, widthProportion: 0.231, screenSize: GameViewController.screenSize))
-        
+        lifeOverlay.scale(to: autoScale(lifeOverlay, widthProportion: 0.231, screenSize: GameViewController.screenSize))
+        lifeOverlay.anchorPoint = CGPoint(x: 0.027, y: 0.08)
+        lifeOverlay.zPosition = 2
+        addChild(lifeOverlay)
         self.backGround.anchorPoint = CGPoint(x: 0.027, y: 0) // Ancoragem na extremidade esquerda do backGround
-        self.lifeBar.anchorPoint = CGPoint(x: 1.0, y:  -0.55)
+        self.lifeBar.anchorPoint = CGPoint(x: 1.0, y:  -0.2)
         
         lifeBar.zPosition = 1
         backGround.addChild(lifeBar)

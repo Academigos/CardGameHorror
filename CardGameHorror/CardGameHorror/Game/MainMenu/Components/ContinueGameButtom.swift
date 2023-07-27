@@ -34,7 +34,7 @@ class ContinueGameButtom: SKSpriteNode{
     }
     
     private func opacity() {
-        if GameController.shared.isCutScenePassed {
+        if GameController.isCutScenePassed == true {
             self.alpha = 1.0 // Full opacity (visible and touchable)
             self.isUserInteractionEnabled = true // Enable touch interaction
         } else {
@@ -49,7 +49,7 @@ class ContinueGameButtom: SKSpriteNode{
         continueLabel.fontName = "BreeSerif-Regular"
         continueLabel.fontColor = SKColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
         continueLabel.text = LanguageManager.shared.localizedString("Continuar")
-        continueLabel.position = CGPoint(x: size.width * 0.11, y: size.height * -0.43)
+        continueLabel.position = CGPoint(x: GameViewController.screenSize.width * 0.025, y: GameViewController.screenSize.height * -0.2)
         continueLabel.zPosition = 1.0
         addChild(continueLabel)
     }

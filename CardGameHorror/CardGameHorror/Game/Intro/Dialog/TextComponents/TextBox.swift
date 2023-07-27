@@ -1,4 +1,5 @@
 import SpriteKit
+import UIKit
 
 class TextBox: SKSpriteNode {
     let dialogo: TextBoxContent
@@ -27,18 +28,29 @@ class TextBox: SKSpriteNode {
     
     func addTextContent(textContent: TextBoxContent) {
         let labelContentNode = SKLabelNode()
-        labelContentNode.text = textContent.content
+        labelContentNode.text = LanguageManager.shared.localizedString(textContent.content)
         setupContentText(label: labelContentNode)
         
         let labelTitleNode = SKLabelNode()
-        labelTitleNode.text = textContent.title
+        labelTitleNode.text = LanguageManager.shared.localizedString(textContent.title)
         setupTitleText(label: labelTitleNode)
         
         labelContentNode.preferredMaxLayoutWidth = size.width * 0.71
         labelContentNode.position = CGPoint(x: 0, y: -size.height * 0.09)
         
         labelTitleNode.preferredMaxLayoutWidth = size.width * 0.71
-        labelTitleNode.position = CGPoint(x: -size.width * 0.287, y: size.height * 0.39)
+      
+        if GameController.shared.getDeviceModel() == "iPhone SE"{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.36, y: size.height * 0.48)
+        }else if GameController.shared.getDeviceModel() == "iPhone X"{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.30, y: size.height * 0.41)
+        }else if GameController.shared.getDeviceModel() == "iPhone 11"{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.275, y: size.height * 0.37)
+        }else if GameController.shared.getDeviceModel() == "iPhone 14"{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.265, y: size.height * 0.345)
+        }else{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.287, y: size.height * 0.39)
+        }
         
         addChild(labelTitleNode)
         addChild(labelContentNode)
@@ -56,7 +68,7 @@ class TextBox: SKSpriteNode {
     }
     
     private func setupTitleText(label: SKLabelNode) {
-        label.fontName = "BreeSerif-Regular"
+        label.fontName = "BigshotOne-Regular"
         label.fontSize = 19
         label.numberOfLines = 4
         label.zPosition = 4

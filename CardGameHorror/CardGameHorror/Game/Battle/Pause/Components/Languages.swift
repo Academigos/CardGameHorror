@@ -12,8 +12,10 @@ class Languages: SKSpriteNode {
     let languages: SKTexture
     let newLanguage: [String] = ["pt-BR", "en"]
     var LanguageLabel: SKLabelNode = SKLabelNode()
+    var currentScene: String
     
-    init() {
+    init(currentScene: String) {
+        self.currentScene = currentScene
         self.languages = SKTexture(imageNamed: "Langueges")
         super.init(texture: languages, color: .clear, size: languages.size())
         setupLanguageLabel()
@@ -28,11 +30,36 @@ class Languages: SKSpriteNode {
         }else{
             LanguageManager.shared.setLanguage(newLanguage[0])
         }
-        if let currentScene = self.scene {
-            let transition = SKTransition.fade(withDuration: 0.5)
-            let mainMenuScene = GameScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
-            currentScene.view?.presentScene(mainMenuScene, transition: transition)
-
+        if currentScene == "GameScene"{
+            if let currentScene = self.scene {
+                let transition = SKTransition.fade(withDuration: 0.5)
+                let mainMenuScene = GameScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                currentScene.view?.presentScene(mainMenuScene, transition: transition)
+            }
+        }else if currentScene == "Intro"{
+            if let currentScene = self.scene {
+                let transition = SKTransition.fade(withDuration: 0.5)
+                let mainMenuScene = IntroScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                currentScene.view?.presentScene(mainMenuScene, transition: transition)
+            }
+        }else if currentScene == "EndPlayer"{
+            if let currentScene = self.scene {
+                let transition = SKTransition.fade(withDuration: 0.5)
+                let mainMenuScene = PlayerEnd(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                currentScene.view?.presentScene(mainMenuScene, transition: transition)
+            }
+        }else if currentScene == "EndMonster"{
+            if let currentScene = self.scene {
+                let transition = SKTransition.fade(withDuration: 0.5)
+                let mainMenuScene = MonsterEnd(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                currentScene.view?.presentScene(mainMenuScene, transition: transition)
+            }
+        }else if currentScene == "MainMenu"{
+            if let currentScene = self.scene {
+                let transition = SKTransition.fade(withDuration: 0.5)
+                let mainMenuScene = MainMenuScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                currentScene.view?.presentScene(mainMenuScene, transition: transition)
+            }
         }
     }
     private func setupLanguageLabel() {

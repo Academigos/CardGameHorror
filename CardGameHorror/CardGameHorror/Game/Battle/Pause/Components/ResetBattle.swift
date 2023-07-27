@@ -12,7 +12,7 @@ protocol ResetBattleDelegate: AnyObject {
     func resetButtonTapped()
 }
 
-class ResetBattle: SKSpriteNode{
+class ResetBattle: SKSpriteNode {
     let resetBattle: SKTexture
     weak var delegate: ClosePauseDelegate?
 
@@ -21,7 +21,7 @@ class ResetBattle: SKSpriteNode{
     var resetBattleLabel: SKLabelNode = SKLabelNode()
   
     init() {
-        self.resetBattle = SKTexture(imageNamed: "Buttom")
+        self.resetBattle = SKTexture(imageNamed: "Button")
         super.init(texture: resetBattle, color: .clear, size: resetBattle.size())
         isUserInteractionEnabled = true
         setResetBattleLabel()

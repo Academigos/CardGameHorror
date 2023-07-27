@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-class LifeBar: SKSpriteNode{
+class LifeBar: SKSpriteNode {
     let lifeBarTexture: SKTexture
     
     init(lifeBarTexture: String) {

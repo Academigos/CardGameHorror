@@ -8,8 +8,8 @@
 import SpriteKit
 
 class Maos : SKNode{
-    let mao1 = Mao1(mao1: "handcartomante-1")
-    let mao2 = Mao2(mao2: "handcartomante-2")
+    let mao1 = Mao1(mao1: "handCartomante-1")
+    let mao2 = Mao2(mao2: "handCartomante-2")
     
     override init() {
         super.init()

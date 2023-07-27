@@ -17,7 +17,6 @@ class ContinueGameButtom: SKSpriteNode{
     var continueLabel: SKLabelNode = SKLabelNode()
     
     weak var delegate: ContinueGameButtomDelegate?
-
     
     init() {
         self.continueGameButtom = SKTexture(imageNamed: "Continue")
@@ -34,7 +33,7 @@ class ContinueGameButtom: SKSpriteNode{
             delegate?.continueGameButtonTapped()
     }
     
-    private func opacity(){
+    private func opacity() {
         if GameController.shared.isCutScenePassed {
             self.alpha = 1.0 // Full opacity (visible and touchable)
             self.isUserInteractionEnabled = true // Enable touch interaction
@@ -43,6 +42,7 @@ class ContinueGameButtom: SKSpriteNode{
             self.isUserInteractionEnabled = false // Disable touch interaction
         }
     }
+    
     private func setupContinueLabel() {
         continueLabel.name = "ContinueLabel"
         continueLabel.fontSize = size.height * 0.12

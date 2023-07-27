@@ -8,12 +8,12 @@
 import Foundation
 import SpriteKit
 
-class Cenario:SKNode{
+class Cenario:SKNode {
     let fundo = Fundo()
     let carro = Carros()
     let frente = Frente()
     
-    override init(){
+    override init() {
         super.init()
         
         fundo.position = CGPoint(x: GameViewController.screenSize.width*0.5, y: GameViewController.screenSize.height*0.5)

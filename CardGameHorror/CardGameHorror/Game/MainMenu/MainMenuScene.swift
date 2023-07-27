@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate{
+class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate {
     
     let background = MainMenuBackground()
     let startGame = NewGameButtom()

@@ -8,8 +8,8 @@
 import Foundation
 import SpriteKit
 
-class LifeBarBackGround: SKSpriteNode{
-    let BackGroundTexture: SKTexture = SKTexture(imageNamed: "LifeBarBackGround")
+class LifeBarBackGround: SKSpriteNode {
+    let BackGroundTexture: SKTexture = SKTexture(imageNamed: "LifeBarBackground")
     var hp = 0
     var totalHp = 3
     var valueLabel: SKLabelNode = SKLabelNode()

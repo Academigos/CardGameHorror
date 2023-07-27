@@ -8,13 +8,13 @@
 import Foundation
 import SpriteKit
 
-class MainMenu: SKSpriteNode{
+class MainMenu: SKSpriteNode {
     let mainMenu: SKTexture
     weak var delegate: ClosePauseDelegate?
     var mainMenuLabel: SKLabelNode = SKLabelNode()
     
     init() {
-        self.mainMenu = SKTexture(imageNamed: "Buttom")
+        self.mainMenu = SKTexture(imageNamed: "Button")
         super.init(texture: mainMenu, color: .clear, size: mainMenu.size())
         isUserInteractionEnabled = true
         setupMainMenuLabel()

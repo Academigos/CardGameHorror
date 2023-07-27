@@ -8,12 +8,13 @@
 import Foundation
 import SpriteKit
 
-class PlayerEnd: SKScene{
-    let resetButtom = ResetButtom()
-    let backToMenu = MainMenuButtom()
+class PlayerEnd: SKScene {
+    let resetButton = ResetButton()
+    let backToMenu = MainMenuButton()
+    
     override func didMove(to view: SKView) {
-        resetButtom.position = CGPoint(x: GameViewController.screenSize.width * 0.3 , y: GameViewController.screenSize.height * 0.5)
-        addChild(resetButtom)
+        resetButton.position = CGPoint(x: GameViewController.screenSize.width * 0.3 , y: GameViewController.screenSize.height * 0.5)
+        addChild(resetButton)
         
         backToMenu.position = CGPoint(x: GameViewController.screenSize.width * 0.7 , y: GameViewController.screenSize.height * 0.5)
         addChild(backToMenu)

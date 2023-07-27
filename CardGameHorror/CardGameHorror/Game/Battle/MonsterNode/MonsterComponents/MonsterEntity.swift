@@ -147,8 +147,8 @@ class Enemy: SKSpriteNode {
         
         shakeCameraWithZoom(duration: 0.5, zoomFactor: 0.977)
     }
-
-
+    
+    
     func shakeCameraWithZoom(duration: Float, zoomFactor: CGFloat) {
         let amplitudeX: CGFloat = 40.0
         let amplitudeY: CGFloat = 15.0

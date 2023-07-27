@@ -8,13 +8,14 @@
 import Foundation
 import SpriteKit
 
-
-class MainMenuButtom: SKSpriteNode{
-    let resetButtom: SKTexture
+///SpriteNode responsável por gerir o botão de retornar ao menu principal
+class MainMenuButton: SKSpriteNode{
+    let resetButton: SKTexture
     var mainMenuLabel: SKLabelNode = SKLabelNode()
+    
     init() {
-        self.resetButtom = SKTexture(imageNamed: "Buttom")
-        super.init(texture: resetButtom, color: .clear, size: resetButtom.size())
+        self.resetButton = SKTexture(imageNamed: "Button")
+        super.init(texture: resetButton, color: .clear, size: resetButton.size())
         scale(to: autoScale(self, widthProportion: 0.4, screenSize: GameViewController.screenSize))
         isUserInteractionEnabled = true
         setupMainMenuLabel()
@@ -23,17 +24,17 @@ class MainMenuButtom: SKSpriteNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let currentScene = self.scene {
             let transition = SKTransition.fade(withDuration: 0.5)
-            let mainMenuScene = MainMenuScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+            let mainMenuScene = MainMenuScene(size: currentScene.size)
             currentScene.view?.presentScene(mainMenuScene, transition: transition)
-            // Call the startNewGame() function from the GameController
         }
     }
+    
+    ///Responsável por configurar o Texto presente no botao de retornar
     private func setupMainMenuLabel() {
-        
-        mainMenuLabel.name = "ContinueLabel"
         mainMenuLabel.fontSize = size.height * 0.3
         mainMenuLabel.fontName = "BreeSerif-Regular"
         mainMenuLabel.fontColor = SKColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)

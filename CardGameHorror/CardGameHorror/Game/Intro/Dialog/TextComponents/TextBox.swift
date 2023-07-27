@@ -13,9 +13,9 @@ class TextBox: SKSpriteNode {
         
         switch dialogo.boxType {
         case .cayla:
-            textBoxTexture = SKTexture(imageNamed: "textbox_cayla")
+            textBoxTexture = SKTexture(imageNamed: "textboxCayla")
         case .cartomante:
-            textBoxTexture = SKTexture(imageNamed: "textbox_cartomante")
+            textBoxTexture = SKTexture(imageNamed: "textboxCartomante")
         }
         
         super.init(texture: textBoxTexture, color: UIColor.clear, size: textBoxTexture.size())
@@ -80,9 +80,9 @@ class TextBox: SKSpriteNode {
         let textBoxTexture: SKTexture
         switch textContent.boxType {
         case .cayla:
-            textBoxTexture = SKTexture(imageNamed: "textbox_cayla")
+            textBoxTexture = SKTexture(imageNamed: "textboxCayla")
         case .cartomante:
-            textBoxTexture = SKTexture(imageNamed: "textbox_cartomante")
+            textBoxTexture = SKTexture(imageNamed: "textboxCartomante")
         }
         texture = textBoxTexture
     }

@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-class MainMenuBackground: SKSpriteNode{
+class MainMenuBackground: SKSpriteNode {
     let background: SKTexture
     
     init() {

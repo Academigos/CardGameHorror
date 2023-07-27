@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-class NamePlaceHolder: SKSpriteNode{
+class NamePlaceHolder: SKSpriteNode {
     let textureName: SKTexture
     
     init(texture: String) {

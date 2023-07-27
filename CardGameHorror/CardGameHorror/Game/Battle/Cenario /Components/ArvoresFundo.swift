@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-class ArvoresFundo: SKSpriteNode{
+class ArvoresFundo: SKSpriteNode {
     let arvoresFundo : SKTexture
     
     init(arvoresFundo: String) {

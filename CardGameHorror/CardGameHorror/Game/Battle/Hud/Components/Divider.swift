@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-class Divader: SKSpriteNode{
+class Divader: SKSpriteNode {
     let divader : SKTexture
     
     init() {

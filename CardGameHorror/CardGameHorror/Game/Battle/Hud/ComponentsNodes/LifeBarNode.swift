@@ -8,13 +8,14 @@
 import Foundation
 import SpriteKit
 
-class LifeBarNode: SKNode{
+class LifeBarNode: SKNode {
     let lifeBarName: String
     var life: Double
     let defaultLife: Double
     let backGround: LifeBarBackGround
     let lifeBar: LifeBar
     let lifeOverlay: LifeBarOverlay = LifeBarOverlay()
+    
     init(lifeBarName: String, life: Double, defaultLife: Double) {
         
         self.life = life

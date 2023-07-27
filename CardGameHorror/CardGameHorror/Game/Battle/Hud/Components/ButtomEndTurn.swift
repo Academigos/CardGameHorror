@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-class ButtonEndTurn: SKSpriteNode{
+class ButtonEndTurn: SKSpriteNode {
     
     weak var endTurnButtonDelegate: endTurnDelegate?
     var cardsSelectLabel: SKLabelNode = SKLabelNode()

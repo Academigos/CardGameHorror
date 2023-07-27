@@ -12,17 +12,14 @@ protocol ClosePauseDelegate: AnyObject {
     func closePauseButtonTapped()
 }
 
-class ClosePause: SKSpriteNode{
-    
+class ClosePause: SKSpriteNode {
     weak var delegate: ClosePauseDelegate?
-    
     let ClosePause: SKTexture
     
     init() {
         self.ClosePause = SKTexture(imageNamed: "ClosePause")
         super.init(texture: ClosePause, color: .clear, size: ClosePause.size())
         isUserInteractionEnabled = true
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

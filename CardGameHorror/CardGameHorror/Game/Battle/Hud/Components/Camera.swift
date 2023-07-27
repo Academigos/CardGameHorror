@@ -11,7 +11,7 @@ import SpriteKit
 class Camera: SKSpriteNode {
     let camera: SKTexture
     
-    init(){
+    init() {
         camera = SKTexture(imageNamed: "Camera")
         super.init(texture: camera, color: .clear, size: camera.size())
         self.scale(to: CGSize(width: GameViewController.screenSize.width * 0.92, height: GameViewController.screenSize.height * 0.92))

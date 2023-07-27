@@ -9,12 +9,12 @@ import SpriteKit
 
 class Farol:SKSpriteNode {
     var farol: [SKTexture]?
-    let farol0:SKTexture
+    let farol0: SKTexture
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("erro")
     }
-    init(){
+    init() {
         farol0 = SKTexture(imageNamed: "farol1")
         super.init(texture: farol0, color: UIColor.clear, size: farol0.size())
         farolAnimation()
@@ -30,7 +30,6 @@ class Farol:SKSpriteNode {
         self.run(SKAction.repeatForever(action))
     }
     
-    
     //busca das texturas
     func getTexture(with name:String, textureAtlasName:String) -> [SKTexture] {
         let textureAtlas = SKTextureAtlas(named: textureAtlasName)
@@ -45,6 +44,5 @@ class Farol:SKSpriteNode {
             }
         }
         return textures
-        
     }
 }

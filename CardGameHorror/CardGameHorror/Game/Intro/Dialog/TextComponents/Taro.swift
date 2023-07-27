@@ -52,7 +52,6 @@ class Taro: SKSpriteNode{
     func animacaoTaro(carta:SKSpriteNode, posicao:CGPoint){
         let delay = SKAction.wait(forDuration: 0.4)
         let animacaoCarta = SKAction.sequence([SKAction.fadeAlpha(to: 0, duration: 0),delay, SKAction.fadeAlpha(to: 1.0, duration: 0.5)])
-        //self.addChild(carta)
         carta.run(animacaoCarta)
 
         carta.position = posicao

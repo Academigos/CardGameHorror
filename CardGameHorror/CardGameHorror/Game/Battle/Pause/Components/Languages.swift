@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-class Languages: SKSpriteNode{
+class Languages: SKSpriteNode {
     let languages: SKTexture
     let newLanguage: [String] = ["pt-BR", "en"]
     var LanguageLabel: SKLabelNode = SKLabelNode()

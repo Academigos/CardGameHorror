@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-class PauseButtom: SKSpriteNode, ClosePauseDelegate{
+class PauseButtom: SKSpriteNode, ClosePauseDelegate {
     
     let pauseButtom: SKTexture
     let pauseBackground = PauseBackground()
@@ -21,7 +21,7 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
     var isAnimating = false // Adicione a flag booleana
     
     init() {
-        self.pauseButtom = SKTexture(imageNamed: "PauseButtom")
+        self.pauseButtom = SKTexture(imageNamed: "PauseButton")
         super.init(texture: pauseButtom, color: .clear, size: pauseButtom.size())
         isUserInteractionEnabled = true
         closePause.delegate = self

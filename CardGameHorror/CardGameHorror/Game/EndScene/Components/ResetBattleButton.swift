@@ -8,13 +8,14 @@
 import Foundation
 import SpriteKit
 
-class ResetButtom: SKSpriteNode{
-    let resetButtom: SKTexture
+///SpriteNode responsável por gerir o botão de reset no menu de configuração
+class ResetButton: SKSpriteNode{
+    let resetButton: SKTexture
     var resetLabel: SKLabelNode = SKLabelNode()
     
     init() {
-        self.resetButtom = SKTexture(imageNamed: "Buttom")
-        super.init(texture: resetButtom, color: .clear, size: resetButtom.size())
+        self.resetButton = SKTexture(imageNamed: "Button")
+        super.init(texture: resetButton, color: .clear, size: resetButton.size())
         scale(to: autoScale(self, widthProportion: 0.4, screenSize: GameViewController.screenSize))
         setupResetLabel()
         isUserInteractionEnabled = true
@@ -23,17 +24,17 @@ class ResetButtom: SKSpriteNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let currentScene = self.scene {
             let transition = SKTransition.fade(withDuration: 0.5)
-            let mainMenuScene = GameScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+            let mainMenuScene = GameScene(size: currentScene.size)
             currentScene.view?.presentScene(mainMenuScene, transition: transition)
-            // Call the startNewGame() function from the GameController
         }
     }
+    
+    ///Função responsável por gerir a configuração dos textos que serão apresentados
     private func setupResetLabel() {
-        
-        resetLabel.name = "ContinueLabel"
         resetLabel.fontSize = size.height * 0.12
         resetLabel.fontName = "BreeSerif-Regular"
         resetLabel.fontColor = SKColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)

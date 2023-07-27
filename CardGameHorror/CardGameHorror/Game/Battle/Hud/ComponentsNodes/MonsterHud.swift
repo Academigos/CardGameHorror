@@ -8,10 +8,11 @@
 import Foundation
 import SpriteKit
 
-class MonsterHud: SKNode{
+class MonsterHud: SKNode {
     let monsterLifeBar = LifeBarNode(lifeBarName: "MonsterLifeBar", life: DataManager.shared.fetchMonster().hp, defaultLife: GameController.shared.monsterLife)
     let monsterName = NamePlaceHolder(texture: "Trauma")
     var label: SKLabelNode = SKLabelNode()
+    
     override init() {
         super.init()
         monsterName.scale(to: autoScale(monsterName, widthProportion: 0.12, screenSize: GameViewController.screenSize))
@@ -22,6 +23,7 @@ class MonsterHud: SKNode{
         
         setupValueLabel()
     }
+    
     private func setupValueLabel() {
         label.name = "labelTrauma"
         label.fontSize = monsterName.size.height * 1.5
@@ -37,6 +39,7 @@ class MonsterHud: SKNode{
     func updateMonster(value: Double){
         monsterLifeBar.setLife(DataManager.shared.fetchMonster().hp)
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

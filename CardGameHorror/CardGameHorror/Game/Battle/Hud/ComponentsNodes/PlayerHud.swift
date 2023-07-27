@@ -8,9 +8,9 @@
 import Foundation
 import SpriteKit
 
-class PlayerHud: SKNode{
+class PlayerHud: SKNode {
     let playerLifeBar = LifeBarNode(lifeBarName: "PlayerLifeBar", life: DataManager.shared.fetchPlayer().hp, defaultLife: GameController.shared.playerLife)
-    let playerName = NamePlaceHolder(texture: "Corage")
+    let playerName = NamePlaceHolder(texture: "Courage")
     var label: SKLabelNode = SKLabelNode()
     override init() {
         super.init()
@@ -35,7 +35,7 @@ class PlayerHud: SKNode{
         playerName.addChild(label)
     }
     
-    func updatePlayer(value: Double){
+    func updatePlayer(value: Double) {
         playerLifeBar.setLife(DataManager.shared.fetchPlayer().hp)
     }
     required init?(coder aDecoder: NSCoder) {

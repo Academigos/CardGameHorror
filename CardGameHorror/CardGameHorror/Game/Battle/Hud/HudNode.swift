@@ -91,7 +91,7 @@ class Hud: SKNode {
             }
         }
     }
-    func resetLife(){
+    func resetLife() {
         if playerHud.playerLifeBar.life != DataManager.shared.fetchPlayer().hp {
             self.playerHud.updatePlayer(value: DataManager.shared.fetchPlayer().hp)
         }

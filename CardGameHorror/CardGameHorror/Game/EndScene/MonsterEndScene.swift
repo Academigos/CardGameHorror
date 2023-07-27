@@ -9,8 +9,8 @@ import Foundation
 import SpriteKit
 
 class MonsterEnd: SKScene{
-    let resetButtom = ResetButtom()
-    let backToMenu = MainMenuButtom()
+    let resetButtom = ResetButton()
+    let backToMenu = MainMenuButton()
     override func didMove(to view: SKView) {
         resetButtom.position = CGPoint(x: GameViewController.screenSize.width * 0.3 , y: GameViewController.screenSize.height * 0.5)
         addChild(resetButtom)

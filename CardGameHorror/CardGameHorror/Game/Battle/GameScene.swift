@@ -58,7 +58,7 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         setupHand(cards: cardsHand)
     }
     
-    private func setupHud(){
+    private func setupHud() {
         hud = Hud()
         addChild(hud!)
         hud!.endTurnButtom.endTurnButtonDelegate = self
@@ -79,7 +79,7 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         boss!.enemyEntity.idle()
     }
     
-    private func setupCenario(){
+    private func setupCenario() {
         cenario = Cenario()
         addChild(cenario!)
     }

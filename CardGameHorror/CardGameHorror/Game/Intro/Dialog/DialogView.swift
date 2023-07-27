@@ -11,7 +11,6 @@ class DialogView: SKNode {
     let carta3 = Taro(carta: .carta3)
     private var isWaitingForDialog = false // Variável para controlar se está esperando o Timer
     
-    
     override init() {
         super.init()
         
@@ -19,7 +18,6 @@ class DialogView: SKNode {
         Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { [self]_ in
             addChild(caixaTexto)
         }
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,7 +45,6 @@ class DialogView: SKNode {
                     self.addChild(self.carta1)
                 }
             }
-            
             Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { [self]_ in
                 self.caixaTexto.isHidden = false
                 isUserInteractionEnabled = true
@@ -80,13 +77,12 @@ class DialogView: SKNode {
         }
         
         if currentIndex < dialogo.count {
-            
             isUserInteractionEnabled = false
             isWaitingForDialog = true
             Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { [self]_ in
                 caixaTexto.showNextDialogContent(textContent: dialogo[currentIndex])
                 isUserInteractionEnabled = true
-                isWaitingForDialog = false // Terminou a espera, permite interação novamente
+                isWaitingForDialog = false
             }
         } else {
             GameController.shared.isCutScenePassed = true
@@ -95,7 +91,6 @@ class DialogView: SKNode {
                 let mainMenuScene = DayNightTransitionScene(size: currentScene.size)
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
-            // O diálogo terminou, você pode executar alguma ação ou remover a caixa de texto se desejar.
             caixaTexto.removeFromParent()
         }
     }

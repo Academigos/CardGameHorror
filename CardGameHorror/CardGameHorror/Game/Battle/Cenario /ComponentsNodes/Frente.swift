@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-class Frente:SKNode{
+class Frente:SKNode {
 
     let estrada = Estrada(estrada: "Estrada")
     let arvoresFrentre = ArvoresFrente(arvoresFrente: "Arvores")

@@ -8,9 +8,8 @@
 import Foundation
 import SpriteKit
 
-
-class PauseBackground: SKSpriteNode{
-     let pauseBackGround: SKTexture
+class PauseBackground: SKSpriteNode {
+    let pauseBackGround: SKTexture
     weak var delegate: ClosePauseDelegate?
     var optionLabel: SKLabelNode = SKLabelNode()
     var languageLabel: SKLabelNode = SKLabelNode()

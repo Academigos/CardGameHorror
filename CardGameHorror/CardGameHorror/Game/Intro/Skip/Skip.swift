@@ -24,6 +24,7 @@ class SkipButtom:SKSpriteNode{
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        GameController.isCutScenePassed = true
         if let currentScene = self.scene {
             let transition = SKTransition.fade(withDuration: 0.5)
             let mainMenuScene = DayNightTransitionScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.

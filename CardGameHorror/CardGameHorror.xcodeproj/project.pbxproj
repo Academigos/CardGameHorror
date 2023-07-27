@@ -425,7 +425,6 @@
 			children = (
 				C9C209032A6D5371009C73C4 /* IntroScene.swift */,
 				B888CB262A6B19AD008D8E3E /* Dialog */,
-				B888CB252A6B19A3008D8E3E /* Oppening */,
 				28EC727F2A70666B00266619 /* Skip */,
 			);
 			path = Intro;
@@ -1022,6 +1021,8 @@
 				DEVELOPMENT_TEAM = 4VHUF9729L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MindNight;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1054,6 +1055,8 @@
 				DEVELOPMENT_TEAM = SVGXRR5RRA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MindNight;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

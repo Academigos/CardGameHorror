@@ -1,4 +1,5 @@
 import SpriteKit
+import UIKit
 
 class TextBox: SKSpriteNode {
     let dialogo: TextBoxContent
@@ -38,7 +39,18 @@ class TextBox: SKSpriteNode {
         labelContentNode.position = CGPoint(x: 0, y: -size.height * 0.09)
         
         labelTitleNode.preferredMaxLayoutWidth = size.width * 0.71
-        labelTitleNode.position = CGPoint(x: -size.width * 0.287, y: size.height * 0.39)
+      
+        if GameController.shared.getDeviceModel() == "iPhone SE"{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.36, y: size.height * 0.48)
+        }else if GameController.shared.getDeviceModel() == "iPhone X"{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.30, y: size.height * 0.41)
+        }else if GameController.shared.getDeviceModel() == "iPhone 11"{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.275, y: size.height * 0.37)
+        }else if GameController.shared.getDeviceModel() == "iPhone 14"{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.265, y: size.height * 0.345)
+        }else{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.287, y: size.height * 0.39)
+        }
         
         addChild(labelTitleNode)
         addChild(labelContentNode)

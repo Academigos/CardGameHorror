@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "diário_aberto_pag2_direita_1x.pdf",
+      "filename" : "diário_aberto_pag1_direita_2x 3.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "diário_aberto_pag1_direita_2x 2.pdf",
+      "filename" : "diário_aberto_pag1_direita_3x 2.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "diário_aberto_pag1_direita_3x 1.pdf",
+      "filename" : "diário_aberto_pag2_direita_1x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }

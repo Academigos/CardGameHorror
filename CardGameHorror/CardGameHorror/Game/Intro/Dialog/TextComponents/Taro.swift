@@ -7,18 +7,39 @@
 
 import SpriteKit
 
-class Taro:SKNode{
-    let carta1 = Carta1(carta1: "Carta1")
-    let carta2 = Carta2(carta2: "Carta2")
-    let carta3 = Carta3(carta3: "Carta3")
-    override init() {
-        super.init()
-        carta1.scale(to: autoScale(carta1, widthProportion: 0.08, screenSize: GameViewController.screenSize))
-        carta2.scale(to: autoScale(carta2, widthProportion: 0.08, screenSize: GameViewController.screenSize))
-        carta3.scale(to: autoScale(carta3, widthProportion: 0.08, screenSize: GameViewController.screenSize))
-        animacaoTaro(carta: carta1, posicao: positionCarta1)
-        animacaoTaro(carta: carta2, posicao: positionCarta2)
-        animacaoTaro(carta: carta3, posicao: positionCarta3)
+enum CartaIntroType: Int {
+    case carta1
+    case carta2
+    case carta3
+}
+
+class Taro: SKSpriteNode{
+    let carta:CartaIntroType
+    
+    init(carta: CartaIntroType) {
+        self.carta = carta
+        let cartaTexture: SKTexture
+        
+        switch carta {
+        case .carta1:
+            cartaTexture = SKTexture(imageNamed: "Carta1")
+        case .carta2:
+            cartaTexture = SKTexture(imageNamed: "Carta2")
+        case .carta3:
+            cartaTexture = SKTexture(imageNamed: "Carta3")
+        }
+        
+        super.init(texture: cartaTexture, color: UIColor.clear, size: cartaTexture.size())
+        zPosition = 2
+        self.scale(to: autoScale(self, widthProportion: 0.08, screenSize: GameViewController.screenSize))
+        switch carta {
+        case .carta1:
+            animacaoTaro(carta: self, posicao: positionCarta1)
+        case .carta2:
+            animacaoTaro(carta: self, posicao: positionCarta2)
+        case .carta3:
+            animacaoTaro(carta: self, posicao: positionCarta3)
+        }
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -29,9 +50,9 @@ class Taro:SKNode{
     let positionCarta3 = CGPoint(x: 506, y: 295)
     
     func animacaoTaro(carta:SKSpriteNode, posicao:CGPoint){
-        let delay = SKAction.wait(forDuration: 1)
-        let animacaoCarta = SKAction.sequence([SKAction.fadeAlpha(to: 0, duration: 0),delay, SKAction.fadeAlpha(to: 1.0, duration: 2)])
-        self.addChild(carta)
+        let delay = SKAction.wait(forDuration: 0.4)
+        let animacaoCarta = SKAction.sequence([SKAction.fadeAlpha(to: 0, duration: 0),delay, SKAction.fadeAlpha(to: 1.0, duration: 0.5)])
+        //self.addChild(carta)
         carta.run(animacaoCarta)
 
         carta.position = posicao

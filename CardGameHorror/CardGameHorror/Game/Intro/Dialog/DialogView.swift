@@ -4,26 +4,29 @@ import SpriteKit
 class DialogView: SKNode {
     var scenary = IntroScenary(backgroundType: .room)
     let caixaTexto = TextBox(dialogo: dialogo[0])
-    private var currentIndex = 0 // Índice inicial
+    var currentIndex = 0 // Índice inicial
     let maos = Maos()
-    let taro = Taro()
     // Propriedades para os emitters de partículas
     var particleEmitters: [SKEmitterNode] = []
+    let carta1 = Taro(carta: .carta1)
+    let carta2 = Taro(carta: .carta2)
+    let carta3 = Taro(carta: .carta3)
+    private var isWaitingForDialog = false // Variável para controlar se está esperando o Timer
     
     override init() {
         super.init()
-        scenary.zPosition = -1
-        caixaTexto.zPosition = 2
-        maos.zPosition = 1
-        taro.zPosition = 0
         
         addChild(scenary)
-        addChild(caixaTexto)
+      
         //        addChild(maos)
         //        addChild(taro)
         //startDialog()
         
         setupParticleFire()
+        Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { [self]_ in
+            addChild(caixaTexto)
+        }
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -64,6 +67,10 @@ class DialogView: SKNode {
     }
     
     func handleTap() {
+        if isWaitingForDialog {
+            return // Ignora cliques enquanto está esperando o Timer
+        }
+        
         currentIndex += 1 // Avança para o próximo diálogo
         switch currentIndex {
         case 8:
@@ -71,25 +78,67 @@ class DialogView: SKNode {
             scenary = IntroScenary(backgroundType: .desk)
             removeAllParticleEmitters()
             addChild(scenary)
+            addChild(maos)
+        case 9:
+            self.caixaTexto.isHidden = true
+            isUserInteractionEnabled = false
+            Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { [self]_ in
+                self.maos.animacaoAbrindoMao()
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [self]_ in
+                    self.addChild(self.carta1)
+                }
+            }
+            
+            Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { [self]_ in
+                self.caixaTexto.isHidden = false
+                isUserInteractionEnabled = true
+            }
+        case 10:
+            self.caixaTexto.isHidden = true
+            isUserInteractionEnabled = false
+            addChild(carta2)
+            Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { [self]_ in
+                self.caixaTexto.isHidden = false
+                isUserInteractionEnabled = true
+            }
+        case 11:
+            self.caixaTexto.isHidden = true
+            isUserInteractionEnabled = false
+            addChild(carta3)
+            Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { [self]_ in
+                self.caixaTexto.isHidden = false
+                isUserInteractionEnabled = true
+            }
         case 12:
+            carta1.removeFromParent()
+            carta2.removeFromParent()
+            carta3.removeFromParent()
+            maos.removeFromParent()
             scenary.removeFromParent()
             scenary = IntroScenary(backgroundType: .room)
             setupParticleFire()
             addChild(scenary)
-        default:
-            break
+        default: break
         }
+        
         if currentIndex < dialogo.count {
-            caixaTexto.showNextDialogContent(textContent: dialogo[currentIndex])
-        } else {
-            GameController.shared.isCutScenePassed = true
-            if let currentScene = self.scene {
-                let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = DayNightTransitionScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
-                currentScene.view?.presentScene(mainMenuScene, transition: transition)
+            
+            isUserInteractionEnabled = false
+            isWaitingForDialog = true
+            Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { [self]_ in
+                caixaTexto.showNextDialogContent(textContent: dialogo[currentIndex])
+                isUserInteractionEnabled = true
+                isWaitingForDialog = false // Terminou a espera, permite interação novamente
             }
+        } else {
+            GameController.isCutScenePassed = true
             // O diálogo terminou, você pode executar alguma ação ou remover a caixa de texto se desejar.
             caixaTexto.removeFromParent()
+            if let currentScene = self.scene {
+                let transition = SKTransition.fade(withDuration: 0.5)
+                let mainMenuScene = DayNightTransitionScene(size: currentScene.size)
+                currentScene.view?.presentScene(mainMenuScene, transition: transition)
+            }
         }
     }
 }

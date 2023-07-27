@@ -12,9 +12,18 @@ import GameplayKit
 class GameController: NSObject {
     static let shared = GameController()
     private let dataManager = DataManager.shared
-    let defaults = UserDefaults.standard
-    var isCutScenePassed: Bool = false
-    private let randomCardCount = 6
+    
+    let isCutScenePassedKey = "isCutScenePassedKey"
+    
+    static var isCutScenePassed: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: GameController.shared.isCutScenePassedKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: GameController.shared.isCutScenePassedKey)
+        }
+    }
+    
     let playerLife: Double = 30
     let monsterLife: Double = 100
     @objc dynamic var selectedCard: [Card] = []
@@ -22,7 +31,7 @@ class GameController: NSObject {
     
     // Function to start a new game
     func startNewGame() {
-       _ = DataManager()
+        _ = DataManager()
         dataManager.updatePlayerHP(value: playerLife) // Reset player's health points
         dataManager.updateMonsterHP(value: monsterLife) // Reset monster's health points
         replacePlayerHand()
@@ -33,16 +42,16 @@ class GameController: NSObject {
     func cardsHandPlayer() -> [Card] {
         return dataManager.fetchCardPlayer()
     }
-
+    
     
     private func replacePlayerHand() {
         let player = dataManager.fetchPlayer()
         let allCards = dataManager.fetchCard()
         let selectedCards = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: allCards) as! [Card]
         let firstFiveCards = Array(selectedCards.prefix(5))
-
+        
         let oldCards = player.inHand as? Set<Card> ?? Set<Card>()
-
+        
         if oldCards.isEmpty {
             // If the player has no cards in hand, add the first five cards to the player's hand.
             dataManager.addCardsToPlayerHand(newCards: Set(firstFiveCards))
@@ -123,10 +132,64 @@ class GameController: NSObject {
     }
     
     // MARK: - Helper Functions
-
+    
     
     private func calculateMonsterDamage() -> Int {
         let randomDamage = Int.random(in: 5...10)
         return randomDamage
     }
+    
+    func getDeviceModel() -> String {
+        let iphoneSize = GameViewController.screenSize
+        print(iphoneSize)
+        switch iphoneSize {
+            // iPhone SE (1st & 2nd generation)
+        case CGSize(width: 568, height: 320), CGSize(width: 667, height: 375):
+            return "iPhone SE"
+            // iPhone 8, 8 Plus
+        case CGSize(width: 887, height: 375), CGSize(width: 736, height: 414):
+            return "iPhone 8"
+            // iPhone X, XS, 11 Pro
+        case CGSize(width: 812, height: 375), CGSize(width: 896, height: 375):
+            return "iPhone X"
+            // iPhone XR, 11, 11 Pro Max
+        case CGSize(width: 896, height: 414):
+            return "iPhone 11"
+            // iPhone 12, 12 Pro
+        case CGSize(width: 844, height: 390):
+            return "iPhone 12"
+            // iPhone 12 mini
+        case CGSize(width: 780, height: 360):
+            return "iPhone mini"
+            // iPhone 13, 13 Pro
+        case CGSize(width: 926, height: 428):
+            return "iPhone 13"
+            // iPhone 14
+        case CGSize(width: 852, height: 393), CGSize(width: 926, height: 428), CGSize(width: 932, height: 430):
+            return "iPhone 14"
+        default:
+            return "Unknown iPhone"
+        }
+    }
 }
+/*
+if GameController.shared.getDeviceModel() == "iPhone SE"{
+    
+}else if GameController.shared.getDeviceModel() == "iPhone 8"{
+    
+}else if GameController.shared.getDeviceModel() == "iPhone X"{
+    
+}else if GameController.shared.getDeviceModel() == "iPhone 11"{
+    
+}else if GameController.shared.getDeviceModel() == "iPhone 12"{
+    
+}else if GameController.shared.getDeviceModel() == "iPhone mini"{
+    
+}else if GameController.shared.getDeviceModel() == "iPhone 13"{
+    
+}else if GameController.shared.getDeviceModel() == "iPhone 14"{
+    
+}else {
+    
+}
+*/

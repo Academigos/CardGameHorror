@@ -16,13 +16,15 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
     let diaryOne = Diary()
     let overlayDiary = OverlayDiary()
     
+    let pause = MainPause(isIntro: false, currentScene: "MainMenu")
     override func didMove(to view: SKView) {
         let continueGame = ContinueGameButtom()
         
         continueGame.zPosition = 1
         continueGame.position = CGPoint(x: GameViewController.screenSize.width * 0.20, y: GameViewController.screenSize.height * 0.58)
         addChild(continueGame)
-        
+        pause.zPosition = 10
+        addChild(pause)
         startGame.zPosition = 1
         startGame.position = CGPoint(x: GameViewController.screenSize.width * 0.49, y: GameViewController.screenSize.height * 0.55)
         addChild(startGame)
@@ -43,9 +45,6 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
         self.view?.presentScene(gameScene,transition: transition)
     }
     func newGameButtonTapped() {
-        if GameController.shared.isCutScenePassed{
-            GameController.shared.isCutScenePassed = false
-        }
         let gameScene = IntroScene(size: GameViewController.screenSize)
         gameScene.scaleMode = .aspectFill
         let transition = SKTransition.fade(with: .black, duration: 1)

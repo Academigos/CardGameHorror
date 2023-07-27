@@ -33,7 +33,6 @@ class Maos : SKNode{
         let moveLeftHandAction = SKAction.move(to: finalPosition1, duration: 0.6)
         let moveRightHandAction = SKAction.move(to: finalPosition2, duration: 0.6)
         
-       
         mao1.run(moveLeftHandAction)
         mao2.run(moveRightHandAction){self.animacaoSubindoMao()}
     }

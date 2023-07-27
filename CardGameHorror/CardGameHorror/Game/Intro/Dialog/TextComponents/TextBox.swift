@@ -28,11 +28,11 @@ class TextBox: SKSpriteNode {
     
     func addTextContent(textContent: TextBoxContent) {
         let labelContentNode = SKLabelNode()
-        labelContentNode.text = textContent.content
+        labelContentNode.text = LanguageManager.shared.localizedString(textContent.content)
         setupContentText(label: labelContentNode)
         
         let labelTitleNode = SKLabelNode()
-        labelTitleNode.text = textContent.title
+        labelTitleNode.text = LanguageManager.shared.localizedString(textContent.title)
         setupTitleText(label: labelTitleNode)
         
         labelContentNode.preferredMaxLayoutWidth = size.width * 0.71

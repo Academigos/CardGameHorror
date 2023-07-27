@@ -10,6 +10,7 @@ import SpriteKit
 
 protocol NewGameButtomDelegate: AnyObject {
     func newGameButtonTapped()
+    func openDiaryOne()
 }
 
 class NewGameButtom: SKSpriteNode{
@@ -17,6 +18,8 @@ class NewGameButtom: SKSpriteNode{
     var startLabel: SKLabelNode = SKLabelNode()
 
     weak var delegate: NewGameButtomDelegate?
+    
+    var isButtonInteractionEnabled = true
 
     init() {
         self.buttomNewGame = SKTexture(imageNamed: "Start")
@@ -30,9 +33,15 @@ class NewGameButtom: SKSpriteNode{
         fatalError("init(coder:) has not been implemented")
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        GameController.shared.startNewGame()
+//        GameController.shared.startNewGame()
+//        delegate?.newGameButtonTapped()
+        guard isButtonInteractionEnabled else {
+            return
+        }
+        
+        isButtonInteractionEnabled = false
+        delegate?.openDiaryOne()
         GameController.isCutScenePassed = false
-        delegate?.newGameButtonTapped()
     }
     
     private func setupStartLabel() {

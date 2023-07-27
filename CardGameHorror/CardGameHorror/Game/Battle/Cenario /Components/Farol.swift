@@ -15,7 +15,7 @@ class Farol:SKSpriteNode {
         fatalError("erro")
     }
     init(){
-        farol0 = SKTexture(imageNamed: "farol1")
+        farol0 = SKTexture(imageNamed: "farol01")
         super.init(texture: farol0, color: UIColor.clear, size: farol0.size())
         farolAnimation()
         self.scale(to: GameViewController.screenSize)
@@ -23,7 +23,7 @@ class Farol:SKSpriteNode {
     }
    
     func farolAnimation() {
-        farol = getTexture(with: "farol", textureAtlasName: "farol")
+        farol = getTexture(with: "farol", textureAtlasName: "farolA")
         let farold = farol!
  
         let action = SKAction.animate(with: farold, timePerFrame: 5/TimeInterval(farold.count), resize: true, restore: true)

@@ -36,6 +36,10 @@
 		288F53052A6D637000BC24A2 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F53042A6D637000BC24A2 /* Divider.swift */; };
 		288F53072A6D677B00BC24A2 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F53062A6D677B00BC24A2 /* Camera.swift */; };
 		288F53092A6D760500BC24A2 /* LifeBarOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F53082A6D760500BC24A2 /* LifeBarOverlay.swift */; };
+		28B5ECA32A72F05800F5F04A /* RightPageDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B5EC9F2A72F05800F5F04A /* RightPageDiary.swift */; };
+		28B5ECA42A72F05800F5F04A /* OverlayDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B5ECA02A72F05800F5F04A /* OverlayDiary.swift */; };
+		28B5ECA52A72F05800F5F04A /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B5ECA12A72F05800F5F04A /* Diary.swift */; };
+		28B5ECA62A72F05800F5F04A /* LeftPageDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B5ECA22A72F05800F5F04A /* LeftPageDiary.swift */; };
 		28BDF7772A6431F9002037EB /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDF7762A6431F9002037EB /* GameController.swift */; };
 		28C322C02A66E5BF000E83FF /* HudNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322BF2A66E5BF000E83FF /* HudNode.swift */; };
 		28C322C82A671955000E83FF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F922A5CAB7C0031B95B /* SwiftUIView.swift */; };
@@ -85,11 +89,11 @@
 		B8F9155F2A67214200D828A2 /* MonsterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9155E2A67214200D828A2 /* MonsterEntry.swift */; };
 		C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */; };
 		C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9856EB62A6637CC00936CF2 /* HandCards.swift */; };
-		C9C208FD2A6CD797009C73C4 /* farol.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C9C208FC2A6CD797009C73C4 /* farol.atlas */; };
 		C9C209042A6D5371009C73C4 /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209032A6D5371009C73C4 /* IntroScene.swift */; };
 		C9C2091F2A6E0CF6009C73C4 /* FloatingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2091E2A6E0CF6009C73C4 /* FloatingNode.swift */; };
 		C9C209232A6EC071009C73C4 /* OverlayPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209222A6EC071009C73C4 /* OverlayPause.swift */; };
 		C9C209252A6EFB91009C73C4 /* DayNightTransitionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */; };
+		C9C2094C2A704473009C73C4 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9C2094A2A704473009C73C4 /* MyParticle.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +147,10 @@
 		288F53042A6D637000BC24A2 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		288F53062A6D677B00BC24A2 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		288F53082A6D760500BC24A2 /* LifeBarOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeBarOverlay.swift; sourceTree = "<group>"; };
+		28B5EC9F2A72F05800F5F04A /* RightPageDiary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RightPageDiary.swift; path = "../../../../../../../../Desktop/Diário/RightPageDiary.swift"; sourceTree = "<group>"; };
+		28B5ECA02A72F05800F5F04A /* OverlayDiary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverlayDiary.swift; path = "../../../../../../../../Desktop/Diário/OverlayDiary.swift"; sourceTree = "<group>"; };
+		28B5ECA12A72F05800F5F04A /* Diary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Diary.swift; path = "../../../../../../../../Desktop/Diário/Diary.swift"; sourceTree = "<group>"; };
+		28B5ECA22A72F05800F5F04A /* LeftPageDiary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftPageDiary.swift; path = "../../../../../../../../Desktop/Diário/LeftPageDiary.swift"; sourceTree = "<group>"; };
 		28BDF7762A6431F9002037EB /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		28C322BF2A66E5BF000E83FF /* HudNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudNode.swift; sourceTree = "<group>"; };
 		28C322C92A671DBA000E83FF /* LifeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeBar.swift; sourceTree = "<group>"; };
@@ -195,11 +203,11 @@
 		C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BreeSerif-Regular.ttf"; sourceTree = "<group>"; };
 		C976B3A62A69E786004F891B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9856EB62A6637CC00936CF2 /* HandCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCards.swift; sourceTree = "<group>"; };
-		C9C208FC2A6CD797009C73C4 /* farol.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = farol.atlas; path = CardGameHorror/farol.atlas; sourceTree = SOURCE_ROOT; };
 		C9C209032A6D5371009C73C4 /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroScene.swift; path = CardGameHorror/Game/Intro/IntroScene.swift; sourceTree = SOURCE_ROOT; };
 		C9C2091E2A6E0CF6009C73C4 /* FloatingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNode.swift; sourceTree = "<group>"; };
 		C9C209222A6EC071009C73C4 /* OverlayPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPause.swift; sourceTree = "<group>"; };
 		C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNightTransitionScene.swift; sourceTree = "<group>"; };
+		C9C2094A2A704473009C73C4 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +247,10 @@
 		28076A782A6DC66400F2BD7B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				28B5ECA12A72F05800F5F04A /* Diary.swift */,
+				28B5ECA22A72F05800F5F04A /* LeftPageDiary.swift */,
+				28B5ECA02A72F05800F5F04A /* OverlayDiary.swift */,
+				28B5EC9F2A72F05800F5F04A /* RightPageDiary.swift */,
 				28076A792A6DC67E00F2BD7B /* NewGameButtom.swift */,
 				28076A7B2A6DC6FE00F2BD7B /* ContinueGameButtom.swift */,
 				283227642A6EF39800D13300 /* MainMenuBackground.swift */,
@@ -410,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */,
+				C9C2094A2A704473009C73C4 /* MyParticle.sks */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -577,7 +590,6 @@
 		B8F001502A6B255800392235 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C9C208FC2A6CD797009C73C4 /* farol.atlas */,
 				B8F001512A6B255800392235 /* ArvoresFrente.swift */,
 				B8F001522A6B255800392235 /* Estrada.swift */,
 				B8F001532A6B255800392235 /* Background.swift */,
@@ -718,7 +730,7 @@
 				C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */,
 				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
-				C9C208FD2A6CD797009C73C4 /* farol.atlas in Resources */,
+				C9C2094C2A704473009C73C4 /* MyParticle.sks in Resources */,
 				B8F001632A6B255800392235 /* Assets.xcassets in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
 				B8F001642A6B255800392235 /* Fumaca.sks in Resources */,
@@ -751,6 +763,7 @@
 				B85501BA2A6EEE520038F2F1 /* DialogData.swift in Sources */,
 				28EC727E2A70666300266619 /* Skip.swift in Sources */,
 				B8F9155F2A67214200D828A2 /* MonsterEntry.swift in Sources */,
+				28B5ECA32A72F05800F5F04A /* RightPageDiary.swift in Sources */,
 				B8F9155D2A671E4600D828A2 /* MonsterEntity.swift in Sources */,
 				28C322CA2A671DBA000E83FF /* LifeBar.swift in Sources */,
 				280DF6792A6B18AD00EFF162 /* Languages.swift in Sources */,
@@ -778,6 +791,7 @@
 				28EC72782A70435900266619 /* MainPause.swift in Sources */,
 				B8AECE0B2A6D5B880032AC66 /* DialogView.swift in Sources */,
 				280A53542A6ABD0000267B9E /* ClosePause.swift in Sources */,
+				28B5ECA42A72F05800F5F04A /* OverlayDiary.swift in Sources */,
 				28F54D2A2A60923B00B692F5 /* player.swift in Sources */,
 				B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */,
 				286536712A68BE4D007E8CD3 /* CardConfigurations.swift in Sources */,
@@ -806,6 +820,7 @@
 				B8F001602A6B255800392235 /* ArvoresFrente.swift in Sources */,
 				28C322C02A66E5BF000E83FF /* HudNode.swift in Sources */,
 				28076A862A6DF89000F2BD7B /* BackToMainMenu.swift in Sources */,
+				28B5ECA62A72F05800F5F04A /* LeftPageDiary.swift in Sources */,
 				288F53052A6D637000BC24A2 /* Divider.swift in Sources */,
 				28EC727A2A704B5F00266619 /* MainPauseButtom.swift in Sources */,
 				280A535A2A6AC10A00267B9E /* PauseButtom.swift in Sources */,
@@ -815,6 +830,7 @@
 				70D72CF02A6EFCFA0010AFA8 /* Taro.swift in Sources */,
 				28076A7C2A6DC6FE00F2BD7B /* ContinueGameButtom.swift in Sources */,
 				B8F001682A6B255800392235 /* Carro1.swift in Sources */,
+				28B5ECA52A72F05800F5F04A /* Diary.swift in Sources */,
 				28EC727C2A705FFC00266619 /* Credits.swift in Sources */,
 				C9C209252A6EFB91009C73C4 /* DayNightTransitionScene.swift in Sources */,
 			);

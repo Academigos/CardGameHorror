@@ -165,8 +165,10 @@ class GameController: NSObject {
         case CGSize(width: 926, height: 428):
             return "iPhone 13"
             // iPhone 14
-        case CGSize(width: 852, height: 393), CGSize(width: 926, height: 428), CGSize(width: 932, height: 430):
+        case CGSize(width: 852, height: 393):
             return "iPhone 14"
+        case  CGSize(width: 926, height: 428), CGSize(width: 932, height: 430):
+            return "iPhone 14 Pro"
         default:
             return "Unknown iPhone"
         }

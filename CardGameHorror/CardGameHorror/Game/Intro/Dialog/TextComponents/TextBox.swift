@@ -68,7 +68,7 @@ class TextBox: SKSpriteNode {
     }
     
     private func setupTitleText(label: SKLabelNode) {
-        label.fontName = "BreeSerif-Regular"
+        label.fontName = "BigshotOne-Regular"
         label.fontSize = 19
         label.numberOfLines = 4
         label.zPosition = 4

@@ -19,7 +19,7 @@
 "Creditos" = "Credits";
 
 //Diálogo
-"Cartomante" = "Cartomante";
+"Cartomante" = "Fortune Teller";
 "Cayla" = "Cayla";
 //DIALOGO 1
 "Bem-vinda, querida. Sinto que você carrega um fardo pesado em seu coração, acredito que busque uma forma de aliviar esse peso, certo? Bem, como posso chamá-la?" = "Welcome, dear. I can tell you carry a heavy burden on your heart, and I suppose you're searching for a way to rid yourself of it, yes? Well, how may I call you?";
@@ -28,7 +28,7 @@
 //DIALOGO 3
 "Há cinco anos, eu perdi meus pais em um acidente de carro terrível, causado por um motorista alcoolizado, mas que eu poderia ter evitado. Desde então, venho tendo pesadelos sobre o acidente, e é como se cada dia fosse uma batalha contra a culpa e a dor." = "Five years ago, I lost my parents in a terrible car accident caused by a drunk driver, but I could have avoided it. Since then, I've been having nightmares about that accident, and it feels like every day is a hard battle against the guilt and pain.";
 //DIALOGO 4
-"Lamento pela sua perda, Cayla. Perder aqueles que amamos em circunstâncias tão traumáticas deixa uma marca profunda em nossa alma." = "I'm sorry for your loss, Cayla. Losing our loved ones in such traumatic circunstances can leave a deep cut in our soul.";
+"Lamento pela sua perda, Cayla. Perder aqueles que amamos em circunstâncias tão traumáticas deixa uma marca profunda em nossa alma." = "I'm sorry for your loss, Cayla. Losing our loved ones in such traumatic circumstances can leave a deep cut in our soul.";
 //DIALOGO 5
 "Posso te ajudar a deixar essa culpa ir, mas antes de prosseguirmos, saiba que você não tem culpa pelos atos irresponsáveis de outra pessoa. Sua decisão de dirigir naquela noite foi tomada com responsabilidade, e você não poderia prever o comportamento do outro motorista." = "I can help you let that guilt go, but before we go on, know that you're not at fault for the terrible acts of another person. Your decision to drive that night was made responsibly, and you couldn't have predicted the behavior of the other driver.";
 //DIALOGO 6
@@ -36,9 +36,9 @@
 //DIALOGO 7
 "Claro. Eu estou disposta a tentar qualquer coisa que possa me ajudar a superar essa culpa e seguir adiante com minha vida." = "Of course. I'm open to try anything that can help me get over this guilt and go on with my life.";
 //DIALOGO 8
-"Muito bem, Cayla. Antes de revelar as cartas, saiba que as cartas têm um poder intuitivo, mas apenas revelam possibilidades e influências. O verdadeiro poder está em você, e em como escolhe lidar com o que é revelado." = "Very well, Cayla. Before I reveal the cards, know they have an intuitive power, but can only reveal possibilities and influences. The true power in within yourself, and how you choose to deal with what will be revealed.";
+"Muito bem, Cayla. Antes de revelar as cartas, saiba que as cartas têm um poder intuitivo, mas apenas revelam possibilidades e influências. O verdadeiro poder está em você, e em como escolhe lidar com o que é revelado." = "Very well, Cayla. Before I reveal the cards, know they have an intuitive power, but can only reveal possibilities and influences. The true power is within yourself, and how you choose to deal with what will be revealed.";
 //DIALOGO 9
-"Agora, vamos iniciar a leitura \"Caminho Através de Adversidade\"." = "Now, let's begin the reading \"Path Throught Adversity\".";
+"Agora, vamos iniciar a leitura \"Caminho Através de Adversidade\"." = "Now, let's begin the reading \"Path Through Adversity\".";
 //DIALOGO 10
 "A primeira carta representa suas metas. Aqui temos a carta da Força. Significa que você é capaz de superar o que te traz tanta dor, Cayla. Mesmo diante de lutas intensas, você tem a capacidade de se manter calma e forte, basta restaurar essa sua força." = "The first card represents your goals. Here we have the Strength card. It means that you're capable of getting over what bring you so much pain, Cayla. Even faced with intense battles, you can keep yourself calm and strong, all you need to do is recover that strength of yours.";
 //DIALOGO 11
@@ -50,7 +50,7 @@
 //DIALOGO 14
 "O caminho pode ser desafiador, mas você tem uma força interior notável, e nunca estará sozinha." = "The journey may be challenging, but you have a notable inner strength, and you will never be alone.";
 //DIALOGO 15
-"Muito obrigada… Ainda parece difícil, mas agora sinto que tenho um novo ponto de partida para minha jornada de cura." = "Thank you so much... It's still seems hard, but now I feel like I have a new starting point for my journey through healing.";
+"Muito obrigada… Ainda parece difícil, mas agora sinto que tenho um novo ponto de partida para minha jornada de cura." = "Thank you so much... It still seems hard, but now I feel like I have a new starting point for my journey through healing.";
 //DIALOGO 16
-"Estou feliz em poder ajudar, Cayla. Estarei torcendo por seu sucesso nessa jornada, seja forte. Adeus." = "I'm happy to be of help, Cayla. I will be hoping for you success in this journey, be strong. Goodbye.";
+"Estou feliz em poder ajudar, Cayla. Estarei torcendo por seu sucesso nessa jornada, seja forte. Adeus." = "I'm happy to be of help, Cayla. I will be hoping for your success in this journey, be strong. Goodbye.";
 // FIM DO DIALOGO

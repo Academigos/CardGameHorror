@@ -11,7 +11,6 @@ class DialogView: SKNode {
     let carta3 = Taro(carta: .carta3)
     private var isWaitingForDialog = false // Variável para controlar se está esperando o Timer
     
-    
     override init() {
         super.init()
         

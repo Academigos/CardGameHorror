@@ -83,12 +83,15 @@
 		B8F9155F2A67214200D828A2 /* MonsterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9155E2A67214200D828A2 /* MonsterEntry.swift */; };
 		C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */; };
 		C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9856EB62A6637CC00936CF2 /* HandCards.swift */; };
-		C9C208FD2A6CD797009C73C4 /* farol.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C9C208FC2A6CD797009C73C4 /* farol.atlas */; };
 		C9C209042A6D5371009C73C4 /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209032A6D5371009C73C4 /* IntroScene.swift */; };
 		C9C2091F2A6E0CF6009C73C4 /* FloatingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2091E2A6E0CF6009C73C4 /* FloatingNode.swift */; };
 		C9C209232A6EC071009C73C4 /* OverlayPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209222A6EC071009C73C4 /* OverlayPause.swift */; };
 		C9C209252A6EFB91009C73C4 /* DayNightTransitionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */; };
 		C9C2094C2A704473009C73C4 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9C2094A2A704473009C73C4 /* MyParticle.sks */; };
+		C9C2094F2A713B89009C73C4 /* LeftPageDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2094E2A713B89009C73C4 /* LeftPageDiary.swift */; };
+		C9C209562A713D2A009C73C4 /* RightPageDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209552A713D2A009C73C4 /* RightPageDiary.swift */; };
+		C9C209582A71446F009C73C4 /* OverlayDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209572A71446F009C73C4 /* OverlayDiary.swift */; };
+		C9C209652A72E464009C73C4 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C209642A72E464009C73C4 /* Diary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,12 +195,15 @@
 		C900B2312A6B02C200AC9291 /* BreeSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BreeSerif-Regular.ttf"; sourceTree = "<group>"; };
 		C976B3A62A69E786004F891B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9856EB62A6637CC00936CF2 /* HandCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCards.swift; sourceTree = "<group>"; };
-		C9C208FC2A6CD797009C73C4 /* farol.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = farol.atlas; path = CardGameHorror/farol.atlas; sourceTree = SOURCE_ROOT; };
 		C9C209032A6D5371009C73C4 /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroScene.swift; path = CardGameHorror/Game/Intro/IntroScene.swift; sourceTree = SOURCE_ROOT; };
 		C9C2091E2A6E0CF6009C73C4 /* FloatingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNode.swift; sourceTree = "<group>"; };
 		C9C209222A6EC071009C73C4 /* OverlayPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPause.swift; sourceTree = "<group>"; };
 		C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNightTransitionScene.swift; sourceTree = "<group>"; };
 		C9C2094A2A704473009C73C4 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		C9C2094E2A713B89009C73C4 /* LeftPageDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftPageDiary.swift; sourceTree = "<group>"; };
+		C9C209552A713D2A009C73C4 /* RightPageDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightPageDiary.swift; sourceTree = "<group>"; };
+		C9C209572A71446F009C73C4 /* OverlayDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayDiary.swift; sourceTree = "<group>"; };
+		C9C209642A72E464009C73C4 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +243,7 @@
 		28076A782A6DC66400F2BD7B /* Coponents */ = {
 			isa = PBXGroup;
 			children = (
+				C9C209522A713C15009C73C4 /* DiaryOne */,
 				28076A792A6DC67E00F2BD7B /* NewGameButtom.swift */,
 				28076A7B2A6DC6FE00F2BD7B /* ContinueGameButtom.swift */,
 				283227642A6EF39800D13300 /* MainMenuBackground.swift */,
@@ -583,7 +590,6 @@
 		B8F001502A6B255800392235 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C9C208FC2A6CD797009C73C4 /* farol.atlas */,
 				B8F001512A6B255800392235 /* ArvoresFrente.swift */,
 				B8F001522A6B255800392235 /* Estrada.swift */,
 				B8F001532A6B255800392235 /* Background.swift */,
@@ -612,6 +618,18 @@
 				C9C209242A6EFB91009C73C4 /* DayNightTransitionScene.swift */,
 			);
 			path = DayNighScene;
+			sourceTree = "<group>";
+		};
+		C9C209522A713C15009C73C4 /* DiaryOne */ = {
+			isa = PBXGroup;
+			children = (
+				C9C209552A713D2A009C73C4 /* RightPageDiary.swift */,
+				C9C209642A72E464009C73C4 /* Diary.swift */,
+				C9C2094E2A713B89009C73C4 /* LeftPageDiary.swift */,
+				C9C209572A71446F009C73C4 /* OverlayDiary.swift */,
+			);
+			name = DiaryOne;
+			path = "Diário";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -724,7 +742,6 @@
 				C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */,
 				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
-				C9C208FD2A6CD797009C73C4 /* farol.atlas in Resources */,
 				C9C2094C2A704473009C73C4 /* MyParticle.sks in Resources */,
 				B8F001632A6B255800392235 /* Assets.xcassets in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
@@ -768,6 +785,7 @@
 				28076A842A6DF87D00F2BD7B /* ResetBattleButtom.swift in Sources */,
 				B8F0015E2A6B255800392235 /* Frente.swift in Sources */,
 				28076A7F2A6DF83400F2BD7B /* PlayerEndScene.swift in Sources */,
+				C9C2094F2A713B89009C73C4 /* LeftPageDiary.swift in Sources */,
 				28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */,
 				280A53522A6AB0AB00267B9E /* PauseBackground.swift in Sources */,
 				288F53092A6D760500BC24A2 /* LifeBarOverlay.swift in Sources */,
@@ -775,6 +793,7 @@
 				28C52A6C2A6181ED003AEF25 /* HorrorDataManager.swift in Sources */,
 				B8F001622A6B255800392235 /* Background.swift in Sources */,
 				28D1235E2A681E9D00E37E43 /* LifeBarNode.swift in Sources */,
+				C9C209562A713D2A009C73C4 /* RightPageDiary.swift in Sources */,
 				B8F0015C2A6B255800392235 /* Cenario.swift in Sources */,
 				B8F001692A6B255800392235 /* Farol.swift in Sources */,
 				B8F0016A2A6B255800392235 /* ArvoresFundo.swift in Sources */,
@@ -783,6 +802,7 @@
 				280A534F2A6AAC0A00267B9E /* PauseNode.swift in Sources */,
 				28D123652A68529E00E37E43 /* PlayerHud.swift in Sources */,
 				B8AECE0B2A6D5B880032AC66 /* DialogView.swift in Sources */,
+				C9C209582A71446F009C73C4 /* OverlayDiary.swift in Sources */,
 				280A53542A6ABD0000267B9E /* ClosePause.swift in Sources */,
 				28F54D2A2A60923B00B692F5 /* player.swift in Sources */,
 				B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */,
@@ -820,6 +840,7 @@
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
 				70D72CF02A6EFCFA0010AFA8 /* Taro.swift in Sources */,
 				28076A7C2A6DC6FE00F2BD7B /* ContinueGameButtom.swift in Sources */,
+				C9C209652A72E464009C73C4 /* Diary.swift in Sources */,
 				B8F001682A6B255800392235 /* Carro1.swift in Sources */,
 				C9C209252A6EFB91009C73C4 /* DayNightTransitionScene.swift in Sources */,
 			);

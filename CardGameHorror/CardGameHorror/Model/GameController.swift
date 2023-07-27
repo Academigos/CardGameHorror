@@ -26,7 +26,6 @@ class GameController: NSObject {
         dataManager.updatePlayerHP(value: playerLife) // Reset player's health points
         dataManager.updateMonsterHP(value: monsterLife) // Reset monster's health points
         replacePlayerHand()
-        print(GameController.shared.dataManager.fetchPlayer())
     }
     
     // Function to draw cards for the player's initial hand

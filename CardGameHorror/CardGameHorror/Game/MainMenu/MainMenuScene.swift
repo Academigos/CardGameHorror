@@ -40,9 +40,6 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate{
         self.view?.presentScene(gameScene,transition: transition)
     }
     func newGameButtonTapped() {
-        if GameController.shared.isCutScenePassed{
-            GameController.shared.isCutScenePassed = false
-        }
         let gameScene = IntroScene(size: GameViewController.screenSize)
         gameScene.scaleMode = .aspectFill
         let transition = SKTransition.fade(with: .black, duration: 1)

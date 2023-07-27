@@ -89,7 +89,7 @@ class DialogView: SKNode {
                 isWaitingForDialog = false // Terminou a espera, permite interação novamente
             }
         } else {
-            GameController.shared.isCutScenePassed = true
+            GameController.isCutScenePassed = true
             // O diálogo terminou, você pode executar alguma ação ou remover a caixa de texto se desejar.
             caixaTexto.removeFromParent()
             if let currentScene = self.scene {

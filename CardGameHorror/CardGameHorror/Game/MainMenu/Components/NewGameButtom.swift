@@ -31,6 +31,7 @@ class NewGameButtom: SKSpriteNode{
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         GameController.shared.startNewGame()
+        GameController.isCutScenePassed = false
         delegate?.newGameButtonTapped()
     }
     

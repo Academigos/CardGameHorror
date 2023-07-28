@@ -67,6 +67,7 @@
 		70D72CE62A6EF46D0010AFA8 /* Mao2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CE52A6EF46D0010AFA8 /* Mao2.swift */; };
 		70D72CEE2A6EF5480010AFA8 /* Maos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CED2A6EF5480010AFA8 /* Maos.swift */; };
 		70D72CF02A6EFCFA0010AFA8 /* Taro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CEF2A6EFCFA0010AFA8 /* Taro.swift */; };
+		B83AF42D2A745ADD004D3AC6 /* ContentWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83AF42C2A745ADD004D3AC6 /* ContentWarning.swift */; };
 		B85501BA2A6EEE520038F2F1 /* DialogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85501B92A6EEE520038F2F1 /* DialogData.swift */; };
 		B86261432A6D6DBE00EB5C93 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86261422A6D6DBE00EB5C93 /* TextBox.swift */; };
 		B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AECE082A6D5B770032AC66 /* IntroBackground.swift */; };
@@ -180,6 +181,7 @@
 		70D72CE52A6EF46D0010AFA8 /* Mao2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mao2.swift; sourceTree = "<group>"; };
 		70D72CED2A6EF5480010AFA8 /* Maos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maos.swift; sourceTree = "<group>"; };
 		70D72CEF2A6EFCFA0010AFA8 /* Taro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taro.swift; sourceTree = "<group>"; };
+		B83AF42C2A745ADD004D3AC6 /* ContentWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentWarning.swift; sourceTree = "<group>"; };
 		B85501B92A6EEE520038F2F1 /* DialogData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogData.swift; sourceTree = "<group>"; };
 		B86261422A6D6DBE00EB5C93 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
 		B8AECE082A6D5B770032AC66 /* IntroBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroBackground.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				28076A792A6DC67E00F2BD7B /* NewGameButtom.swift */,
 				28076A7B2A6DC6FE00F2BD7B /* ContinueGameButtom.swift */,
 				283227642A6EF39800D13300 /* MainMenuBackground.swift */,
+				B83AF42C2A745ADD004D3AC6 /* ContentWarning.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -773,6 +776,7 @@
 				28FC6C6C2A6F1C5E00C0A9BE /* LanguageManager.swift in Sources */,
 				28076A842A6DF87D00F2BD7B /* ResetBattleButtom.swift in Sources */,
 				B8F0015E2A6B255800392235 /* Frente.swift in Sources */,
+				B83AF42D2A745ADD004D3AC6 /* ContentWarning.swift in Sources */,
 				28076A7F2A6DF83400F2BD7B /* PlayerEndScene.swift in Sources */,
 				28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */,
 				280A53522A6AB0AB00267B9E /* PauseBackground.swift in Sources */,

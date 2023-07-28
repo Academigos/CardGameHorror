@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "fundo_continuar_diário_1x-2 1.pdf",
+      "filename" : "fundo_continuar_diário_1x.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,7 +11,7 @@
       "scale" : "2x"
     },
     {
-      "filename" : "fundo_continuar_diário_1x.pdf",
+      "filename" : "fundo_continuar_diário_1x-2 1.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }

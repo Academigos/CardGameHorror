@@ -15,7 +15,7 @@ class MainPauseButtom: SKSpriteNode, ClosePauseDelegate{
     let overlayPause = OverlayPause()
     let languages: Languages
     let mainMenu = MainMenu()
-    let credits = Creditos()
+    let credits = Creditos(backScene: "MainMenu")
     var isAnimating = false
     var isIntro: Bool
     

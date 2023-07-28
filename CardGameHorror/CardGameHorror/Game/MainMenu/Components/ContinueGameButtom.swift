@@ -42,7 +42,7 @@ class ContinueGameButtom: SKSpriteNode{
             self.alpha = 0.8 // Half opacity (partially transparent)
             self.isUserInteractionEnabled = false // Disable touch interaction
         }
-    }
+    } 
     private func setupContinueLabel() {
         continueLabel.name = "ContinueLabel"
         continueLabel.fontName = "BreeSerif-Regular"

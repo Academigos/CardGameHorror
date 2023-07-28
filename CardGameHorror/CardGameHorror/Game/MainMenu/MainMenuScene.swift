@@ -17,6 +17,8 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
     let overlayDiary = OverlayDiary()
     
     let pause = MainPause(isIntro: false, currentScene: "MainMenu")
+    
+    
     override func didMove(to view: SKView) {
         let continueGame = ContinueGameButtom()
         
@@ -44,6 +46,7 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
         let transition = SKTransition.fade(with: .black, duration: 1)
         self.view?.presentScene(gameScene,transition: transition)
     }
+    
     func newGameButtonTapped() {
         let gameScene = IntroScene(size: GameViewController.screenSize)
         gameScene.scaleMode = .aspectFill

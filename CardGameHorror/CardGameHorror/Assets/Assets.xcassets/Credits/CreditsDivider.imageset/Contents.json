@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "diário_aberto_pag2_esquerda_1x.pdf",
+      "filename" : "divider_creditos_1x.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "diário_aberto_pag1_esquerda_2x 3.pdf",
+      "filename" : "divider_creditos_2x.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "diário_aberto_pag1_esquerda_3x 3.pdf",
+      "filename" : "divider_creditos_3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }

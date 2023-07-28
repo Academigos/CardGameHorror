@@ -161,9 +161,6 @@ class GameController: NSObject {
             // iPhone 12 mini
         case CGSize(width: 780, height: 360):
             return "iPhone mini"
-            // iPhone 13, 13 Pro
-        case CGSize(width: 926, height: 428):
-            return "iPhone 13"
             // iPhone 14
         case CGSize(width: 852, height: 393):
             return "iPhone 14"

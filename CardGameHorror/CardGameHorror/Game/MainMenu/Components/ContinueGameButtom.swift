@@ -45,11 +45,27 @@ class ContinueGameButtom: SKSpriteNode{
     
     private func setupContinueLabel() {
         continueLabel.name = "ContinueLabel"
-        continueLabel.fontSize = size.height * 0.12
         continueLabel.fontName = "BreeSerif-Regular"
         continueLabel.fontColor = SKColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
         continueLabel.text = LanguageManager.shared.localizedString("Continuar")
-        continueLabel.position = CGPoint(x: GameViewController.screenSize.width * 0.025, y: GameViewController.screenSize.height * -0.2)
+        
+        if GameController.shared.getDeviceModel() == "iPhone SE" || GameController.shared.getDeviceModel() == "iPhone 8"{
+            continueLabel.fontSize = size.height * 0.14
+            continueLabel.position = CGPoint(x: self.size.width * 0.15, y: self.size.height * -0.55)
+        }else if GameController.shared.getDeviceModel() == "iPhone X"{
+            continueLabel.fontSize = size.height * 0.12
+            continueLabel.position = CGPoint(x: self.size.width * 0.1, y: self.size.height * -0.45)
+        }else if GameController.shared.getDeviceModel() == "iPhone 11" || GameController.shared.getDeviceModel() == "iPhone 12"{
+            continueLabel.fontSize = size.height * 0.12
+            continueLabel.position = CGPoint(x: self.size.width * 0.1, y: self.size.height * -0.43)
+        }else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+            continueLabel.fontSize = size.height * 0.10
+            continueLabel.position = CGPoint(x: self.size.width * 0.1, y: self.size.height * -0.4)
+        }else{
+            continueLabel.fontSize = size.height * 0.12
+            continueLabel.position = CGPoint(x: self.size.width * 0.1, y: self.size.height * -0.4)
+        }
+        
         continueLabel.zPosition = 1.0
         addChild(continueLabel)
     }

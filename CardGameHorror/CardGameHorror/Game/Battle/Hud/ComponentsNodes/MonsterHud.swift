@@ -13,11 +13,12 @@ class MonsterHud: SKNode {
     let monsterName = NamePlaceHolder(texture: "Trauma")
     var label: SKLabelNode = SKLabelNode()
     
+   
     override init() {
         super.init()
         monsterName.scale(to: autoScale(monsterName, widthProportion: 0.12, screenSize: GameViewController.screenSize))
-        monsterName.position = CGPoint (x: GameViewController.screenSize.width * 0.258, y: GameViewController.screenSize.height * 0.77)
-        monsterLifeBar.position = CGPoint (x: GameViewController.screenSize.width * 0.14, y: GameViewController.screenSize.height * 0.83)
+        monsterName.position = CGPoint (x: GameViewController.screenSize.width * 0.12, y: GameViewController.screenSize.height * 0.77)
+        monsterLifeBar.position = CGPoint (x: GameViewController.screenSize.width * 0.06, y: GameViewController.screenSize.height * 0.83)
         addChild(monsterName)
         addChild(monsterLifeBar)
         

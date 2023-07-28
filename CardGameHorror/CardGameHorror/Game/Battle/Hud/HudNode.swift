@@ -22,7 +22,7 @@ class Hud: SKNode {
     override init() {
         super.init()
         endTurnButtom.stackPopUp = stackpopup
-        endTurnButtom.position = CGPoint(x: GameViewController.screenSize.width * 0.85, y: GameViewController.screenSize.height * -0.18)
+        endTurnButtom.position = CGPoint(x: GameViewController.screenSize.width * 0.15, y: GameViewController.screenSize.height * -0.18)
         endTurnButtom.scale(to: autoScale(endTurnButtom, widthProportion: 0.14, screenSize: GameViewController.screenSize))
         endTurnButtom.zPosition = 90
         addChild(endTurnButtom)
@@ -83,7 +83,7 @@ class Hud: SKNode {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             if damageMonster != 0 {
-                self.stackpopup.showDamagePopUp(at: CGPoint(x:  GameViewController.screenSize.width * 0.31, y: GameViewController.screenSize.height * 0.2), value: damageMonster)
+                self.stackpopup.showDamagePopUp(at: CGPoint(x:  GameViewController.screenSize.width * 0.75, y: GameViewController.screenSize.height * 0.2), value: damageMonster)
             }
             
             if self.playerHud.playerLifeBar.life != DataManager.shared.fetchPlayer().hp {

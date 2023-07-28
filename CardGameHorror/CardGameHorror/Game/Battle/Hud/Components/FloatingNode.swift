@@ -107,7 +107,7 @@ class FloatingNode: SKSpriteNode {
     
     func showHealPopUp(value: Int) {
         let damageLabel = FloatingLabel(text: "+\(value)", color: .green)
-        damageLabel.position = CGPoint(x:  GameViewController.screenSize.width * 0.31, y: GameViewController.screenSize.height * 0.2)
+        damageLabel.position = CGPoint(x:  GameViewController.screenSize.width * 0.75, y: GameViewController.screenSize.height * 0.2)
         damageLabel.fontSize = self.size.width * 0.25
         addChild(damageLabel)
         

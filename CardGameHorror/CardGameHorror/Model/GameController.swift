@@ -141,7 +141,6 @@ class GameController: NSObject {
     
     func getDeviceModel() -> String {
         let iphoneSize = GameViewController.screenSize
-        print(iphoneSize)
         switch iphoneSize {
             // iPhone SE (1st & 2nd generation)
         case CGSize(width: 568, height: 320), CGSize(width: 667, height: 375):
@@ -161,12 +160,10 @@ class GameController: NSObject {
             // iPhone 12 mini
         case CGSize(width: 780, height: 360):
             return "iPhone mini"
-            // iPhone 13, 13 Pro
-        case CGSize(width: 926, height: 428):
-            return "iPhone 13"
             // iPhone 14
         case CGSize(width: 852, height: 393):
             return "iPhone 14"
+            //iPhone 14 pro 14 pro max iPhone 13 pro max
         case  CGSize(width: 926, height: 428), CGSize(width: 932, height: 430):
             return "iPhone 14 Pro"
         default:

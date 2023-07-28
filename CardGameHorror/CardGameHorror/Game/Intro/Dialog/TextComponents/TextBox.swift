@@ -42,12 +42,16 @@ class TextBox: SKSpriteNode {
       
         if GameController.shared.getDeviceModel() == "iPhone SE"{
             labelTitleNode.position = CGPoint(x: -size.width * 0.36, y: size.height * 0.48)
+        }else if GameController.shared.getDeviceModel() == "Iphone 8 Plus"{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.328, y: size.height * 0.44)
         }else if GameController.shared.getDeviceModel() == "iPhone X"{
             labelTitleNode.position = CGPoint(x: -size.width * 0.30, y: size.height * 0.41)
         }else if GameController.shared.getDeviceModel() == "iPhone 11"{
             labelTitleNode.position = CGPoint(x: -size.width * 0.275, y: size.height * 0.37)
         }else if GameController.shared.getDeviceModel() == "iPhone 14"{
             labelTitleNode.position = CGPoint(x: -size.width * 0.265, y: size.height * 0.345)
+        }else if GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
+            labelTitleNode.position = CGPoint(x: -size.width * 0.259, y: size.height * 0.345)
         }else{
             labelTitleNode.position = CGPoint(x: -size.width * 0.287, y: size.height * 0.39)
         }
@@ -64,7 +68,7 @@ class TextBox: SKSpriteNode {
         label.verticalAlignmentMode = .center
         label.lineBreakMode = .byWordWrapping
         label.fontColor = .black
-        label.preferredMaxLayoutWidth = 200
+        label.preferredMaxLayoutWidth = 200// mudar para o SE
     }
     
     private func setupTitleText(label: SKLabelNode) {

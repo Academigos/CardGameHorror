@@ -22,7 +22,7 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate {
     
     init(currentScene: String) {
         languages = Languages(currentScene: currentScene)
-        self.pauseButtom = SKTexture(imageNamed: "PauseButtom")
+        self.pauseButtom = SKTexture(imageNamed: "PauseButton")
         super.init(texture: pauseButtom, color: .clear, size: pauseButtom.size())
         isUserInteractionEnabled = true
         closePause.delegate = self

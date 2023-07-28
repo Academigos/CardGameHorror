@@ -14,7 +14,7 @@ class Creditos: SKSpriteNode{
     var mainMenuLabel: SKLabelNode = SKLabelNode()
     
     init() {
-        self.creditos = SKTexture(imageNamed: "Buttom")
+        self.creditos = SKTexture(imageNamed: "Button")
         super.init(texture: creditos, color: .clear, size: creditos.size())
         isUserInteractionEnabled = true
         setupMainMenuLabel()

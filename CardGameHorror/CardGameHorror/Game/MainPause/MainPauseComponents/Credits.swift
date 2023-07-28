@@ -12,8 +12,10 @@ class Creditos: SKSpriteNode{
     let creditos: SKTexture
     weak var delegate: ClosePauseDelegate?
     var mainMenuLabel: SKLabelNode = SKLabelNode()
+    let backScene: String
     
-    init() {
+    init(backScene: String) {
+        self.backScene = backScene
         self.creditos = SKTexture(imageNamed: "Buttom")
         super.init(texture: creditos, color: .clear, size: creditos.size())
         isUserInteractionEnabled = true
@@ -35,7 +37,7 @@ class Creditos: SKSpriteNode{
         
         if let currentScene = self.scene {
             let transition = SKTransition.fade(withDuration: 0.5)
-            let mainMenuScene = MainMenuScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+            let mainMenuScene = CreditsScene(backScene: backScene, size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
             currentScene.view?.presentScene(mainMenuScene, transition: transition)
             // Call the startNewGame() function from the GameController
             delegate?.closePauseButtonTapped()

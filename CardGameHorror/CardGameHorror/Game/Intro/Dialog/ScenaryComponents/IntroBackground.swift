@@ -33,7 +33,15 @@ class IntroScenary: SKSpriteNode {
         super.init(texture: scenaryTexture, color: UIColor.clear, size: scenaryTexture.size())
         self.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)
         
-        self.scale(to: GameViewController.screenSize)
+        if GameController.shared.getDeviceModel() == "iPhone SE" || GameController.shared.getDeviceModel() == "iPhone 8" || GameController.shared.getDeviceModel() == "iPhone x" || GameController.shared.getDeviceModel() == "iPhone 11" || GameController.shared.getDeviceModel() == "iPhone 12"{
+            
+            if let currentScene = self.scene {
+                currentScene.scaleMode = .aspectFit
+            }
+            
+        }else{
+            self.scale(to: GameViewController.screenSize)
+        }
         
         zPosition = -1
     }

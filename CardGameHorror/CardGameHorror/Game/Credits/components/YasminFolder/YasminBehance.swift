@@ -21,4 +21,10 @@ class YasminBe: SKSpriteNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        // Open the LinkedIn link when the sprite node is tapped
+        if let url = URL(string: "https://www.behance.net/yasminsrodrigues") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 }

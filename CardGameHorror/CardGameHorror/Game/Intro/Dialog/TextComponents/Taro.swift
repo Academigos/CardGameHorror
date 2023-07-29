@@ -45,9 +45,9 @@ class Taro: SKSpriteNode{
         fatalError("init(coder:) has not been implemented")
     }
     
-    let positionCarta1 = CGPoint(x: 328, y: 235)
-    let positionCarta2 = CGPoint(x: 417, y: 265)
-    let positionCarta3 = CGPoint(x: 506, y: 295)
+    let positionCarta1 = CGPoint(x: GameViewController.screenSize.width * 0.388, y: GameViewController.screenSize.height * 0.6)
+    let positionCarta2 = CGPoint(x: GameViewController.screenSize.width * 0.49, y: GameViewController.screenSize.height * 0.67)
+    let positionCarta3 = CGPoint(x: GameViewController.screenSize.width * 0.59, y: GameViewController.screenSize.height * 0.756)
     
     func animacaoTaro(carta:SKSpriteNode, posicao:CGPoint){
         let delay = SKAction.wait(forDuration: 0.4)

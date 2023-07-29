@@ -50,6 +50,7 @@ class DayNightTransitionScene: SKScene {
         // Criar um sprite para o fundo animado
         let animatedBackground = SKSpriteNode(texture: textures.first)
         animatedBackground.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        animatedBackground.scale(to: GameViewController.screenSize)
         addChild(animatedBackground)
         
         // Criar a ação de animação

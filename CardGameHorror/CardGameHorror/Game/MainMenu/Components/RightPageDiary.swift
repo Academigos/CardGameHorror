@@ -73,7 +73,7 @@ class RightPageDiary: SKSpriteNode{
             continueButtonDiary.position = CGPoint(x: size.width * 0.03, y: size.height * -0.31)
         }else if GameController.shared.getDeviceModel() == "iPhone 14"{
             continueButtonDiary.position = CGPoint(x: size.width * 0.03, y: size.height * -0.33)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
             continueButtonDiary.position = CGPoint(x: size.width * 0.03, y: size.height * -0.30)
         }
         else{
@@ -103,7 +103,7 @@ class RightPageDiary: SKSpriteNode{
             textLabelPT1.preferredMaxLayoutWidth = size.width * 0.70
         }else if GameController.shared.getDeviceModel() == "iPhone 14"{
             textLabelPT1.position = CGPoint(x: size.width * -0.083, y: size.height * -0.09)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
             textLabelPT1.position = CGPoint(x: size.width * -0.07, y: size.height * -0.065)
             textLabelPT1.preferredMaxLayoutWidth = size.width * 0.7
         }
@@ -137,7 +137,7 @@ class RightPageDiary: SKSpriteNode{
             textLabelPT2.preferredMaxLayoutWidth = size.width * 0.71
         }else if GameController.shared.getDeviceModel() == "iPhone 14"{
             textLabelPT2.position = CGPoint(x: size.width * -0.08, y: size.height * -0.4)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
             textLabelPT2.position = CGPoint(x: size.width * -0.07, y: size.height * -0.35)
             textLabelPT2.preferredMaxLayoutWidth = size.width * 0.7
         }
@@ -173,7 +173,7 @@ class RightPageDiary: SKSpriteNode{
             textLabelPT3.preferredMaxLayoutWidth = size.width * 0.71
         }else if GameController.shared.getDeviceModel() == "iPhone 14"{
             textLabelPT3.position = CGPoint(x: size.width * -0.083, y: size.height * 0.26)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
             textLabelPT3.position = CGPoint(x: size.width * -0.09, y: size.height * 0.22)
             textLabelPT3.preferredMaxLayoutWidth = size.width * 0.68
         }
@@ -208,14 +208,13 @@ class RightPageDiary: SKSpriteNode{
             textLabelPT4.preferredMaxLayoutWidth = size.width * 0.68
         }else if GameController.shared.getDeviceModel() == "iPhone 14"{
             textLabelPT4.position = CGPoint(x: size.width * -0.083, y: size.height * 0)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
             textLabelPT4.position = CGPoint(x: size.width * -0.079, y: size.height * -0.02)
             textLabelPT4.preferredMaxLayoutWidth = size.width * 0.68
         }
         else{
             textLabelPT4.position = CGPoint(x: size.width * -0.083, y: size.height * 0)
         }
-        
         addChild(textLabelPT4)
     }
     

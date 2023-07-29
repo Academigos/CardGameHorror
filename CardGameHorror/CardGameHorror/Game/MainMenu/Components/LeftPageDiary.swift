@@ -58,7 +58,7 @@ class LeftPageDiary: SKSpriteNode{
             dataLabel.position = CGPoint(x: size.width * -0.1, y: size.height * 0.33)
         }else if GameController.shared.getDeviceModel() == "iPhone 14"{
             dataLabel.position = CGPoint(x: size.width * -0.09, y: size.height * 0.36)
-        }else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
             dataLabel.position = CGPoint(x: size.width * -0.10, y: size.height * 0.34)
         }else{
             dataLabel.position = CGPoint(x: size.width * -0.09, y: size.height * 0.36)
@@ -89,7 +89,7 @@ class LeftPageDiary: SKSpriteNode{
             textLabelPT1.preferredMaxLayoutWidth = size.width * 0.716
         }else if GameController.shared.getDeviceModel() == "iPhone 14"{
             textLabelPT1.position = CGPoint(x: self.frame.size.width * 0.09, y: size.height * -0.02)
-        }else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
             textLabelPT1.position = CGPoint(x: self.frame.size.width * 0.09, y: size.height * -0.02)
             textLabelPT1.preferredMaxLayoutWidth = size.width * 0.70
         }else{
@@ -124,7 +124,7 @@ class LeftPageDiary: SKSpriteNode{
             textLabelPT2.preferredMaxLayoutWidth = size.width * 0.716
         }else if GameController.shared.getDeviceModel() == "iPhone 14"{
             textLabelPT2.position = CGPoint(x: self.frame.size.width * 0.1, y: size.height * -0.38)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
             textLabelPT2.position = CGPoint(x: self.frame.size.width * 0.08, y: size.height * -0.38)
             textLabelPT2.preferredMaxLayoutWidth = size.width * 0.68
         }

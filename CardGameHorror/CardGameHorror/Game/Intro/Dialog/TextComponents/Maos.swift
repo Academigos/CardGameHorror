@@ -8,16 +8,23 @@
 import SpriteKit
 
 class Maos : SKNode{
-    let mao1 = Mao1(mao1: "handCartomante-1")
-    let mao2 = Mao2(mao2: "handCartomante-2")
+    let mao1 = Mao1(mao1: "handcartomante-1")
+    let mao2 = Mao2(mao2: "handcartomante-2")
     
     override init() {
         super.init()
         zPosition = 1
-        mao1.position = CGPoint(x: 321, y: 290)
-        mao2.position = CGPoint(x: 518, y: 290)
-        mao1.scale(to: autoScale(mao1, widthProportion: 0.15, screenSize: GameViewController.screenSize))
-        mao2.scale(to: autoScale(mao2, widthProportion: 0.15, screenSize: GameViewController.screenSize))
+        mao1.position = CGPoint(x: GameViewController.screenSize.width * 0.415, y: GameViewController.screenSize.height * 0.76)
+        mao2.position = CGPoint(x: GameViewController.screenSize.width * 0.565, y: GameViewController.screenSize.height * 0.76)
+        mao1.scale(to: autoScale(mao1, widthProportion: 0.138, screenSize: GameViewController.screenSize))
+        mao2.scale(to: autoScale(mao2, widthProportion: 0.138, screenSize: GameViewController.screenSize))
+        
+        if GameController.shared.getDeviceModel() == "iPhone SE"{
+            mao1.position = CGPoint(x: GameViewController.screenSize.width * 0.415, y: GameViewController.screenSize.height * 0.80)
+            mao2.position = CGPoint(x: GameViewController.screenSize.width * 0.565, y: GameViewController.screenSize.height * 0.80)
+        }
+        
+        
         addChild(mao1)
         addChild(mao2)
     }
@@ -27,25 +34,35 @@ class Maos : SKNode{
     }
     
     func animacaoAbrindoMao(){
-        let finalPosition1 = CGPoint(x: 200, y: 290)
-        let finalPosition2 = CGPoint(x: 638, y: 290)
+        var finalPosition1 = CGPoint(x: GameViewController.screenSize.width * 0.255, y: GameViewController.screenSize.height * 0.76)
+        var finalPosition2 = CGPoint(x: GameViewController.screenSize.width * 0.735, y: GameViewController.screenSize.height * 0.76)
+        
+        if GameController.shared.getDeviceModel() == "iPhone SE"{
+            finalPosition1 = CGPoint(x: GameViewController.screenSize.width * 0.255, y: GameViewController.screenSize.height * 0.80)
+            finalPosition2 = CGPoint(x: GameViewController.screenSize.width * 0.735, y: GameViewController.screenSize.height * 0.80)
+        }
         
         let moveLeftHandAction = SKAction.move(to: finalPosition1, duration: 0.6)
         let moveRightHandAction = SKAction.move(to: finalPosition2, duration: 0.6)
         
         mao1.run(moveLeftHandAction)
-        mao2.run(moveRightHandAction){self.animacaoSubindoMao()}
+        mao2.run(moveRightHandAction){
+            self.animacaoSubindoMao()
+        }
     }
     
     func animacaoSubindoMao(){
-        let finalPosition1 = CGPoint(x: 200, y: 340)
-        let finalPosition2 = CGPoint(x: 638, y: 340)
+        let finalPosition1 = CGPoint(x: GameViewController.screenSize.width * 0.255, y: GameViewController.screenSize.height * 0.86)
+        let finalPosition2 = CGPoint(x: GameViewController.screenSize.width * 0.735, y: GameViewController.screenSize.height * 0.86)
         
-        let moveLeftHandAction = SKAction.move(to: finalPosition1, duration: 0.3)
-        let moveRightHandAction = SKAction.move(to: finalPosition2, duration: 0.3)
+        let delay = SKAction.wait(forDuration: 0.1)
+        let moveLeftHandAction = SKAction.move(to: finalPosition1, duration: 0.4)
+        let moveRightHandAction = SKAction.move(to: finalPosition2, duration: 0.4)
+        let sequenceMao1 = SKAction.sequence([delay, moveLeftHandAction])
+        let sequenceMao2 = SKAction.sequence([delay, moveRightHandAction])
 
-        mao1.run(moveLeftHandAction)
-        mao2.run(moveRightHandAction)
+        mao1.run(sequenceMao1)
+        mao2.run(sequenceMao2)
     }
     
 }

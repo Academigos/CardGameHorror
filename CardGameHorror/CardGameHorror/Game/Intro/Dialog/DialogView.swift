@@ -35,12 +35,21 @@ class DialogView: SKNode {
     
     func setupParticleFire(){
         // Adicionar 4 emitters de partículas em diferentes posições
-        let positions: [CGPoint] = [
+        var positions: [CGPoint] = [
             CGPoint(x: GameViewController.screenSize.width * 0.292, y: GameViewController.screenSize.height * 0.551),
             CGPoint(x: GameViewController.screenSize.width  * 0.706, y: GameViewController.screenSize.height * 0.551),
             CGPoint(x: GameViewController.screenSize.width * 0.317, y: GameViewController.screenSize.height * 0.483),
             CGPoint(x: GameViewController.screenSize.width  * 0.682, y: GameViewController.screenSize.height * 0.483),
         ]
+        
+        if GameController.shared.getDeviceModel() == "iPhone SE"{
+            positions = [
+                CGPoint(x: GameViewController.screenSize.width * 0.237, y: GameViewController.screenSize.height * 0.551),
+                CGPoint(x: GameViewController.screenSize.width  * 0.762, y: GameViewController.screenSize.height * 0.551),
+                CGPoint(x: GameViewController.screenSize.width * 0.27, y: GameViewController.screenSize.height * 0.483),
+                CGPoint(x: GameViewController.screenSize.width  * 0.73, y: GameViewController.screenSize.height * 0.483),
+            ]
+        }
         
         for position in positions {
             addParticleEmitter(at: position)

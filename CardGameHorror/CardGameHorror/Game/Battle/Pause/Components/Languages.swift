@@ -60,6 +60,12 @@ class Languages: SKSpriteNode{
                 let mainMenuScene = MainMenuScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
+        }else if currentScene == "CreditsScene"{
+            if let currentScene = self.scene {
+                let transition = SKTransition.fade(withDuration: 0.5)
+                let mainMenuScene = CreditsScene(backScene: self.currentScene, size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                currentScene.view?.presentScene(mainMenuScene, transition: transition)
+            }
         }
     }
     private func setupLanguageLabel() {

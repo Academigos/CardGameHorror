@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
         GameViewController.screenSize = view.bounds.size
         //MARK: -Battle Scene
         // get Scene
-        let gameScene = MainMenuScene(size: GameViewController.screenSize)
+        let gameScene = MonsterEnd(size: GameViewController.screenSize)
 
         // Set the scale mode to scale to fit the window
             gameScene.scaleMode = .aspectFill
@@ -27,8 +27,8 @@ class GameViewController: UIViewController {
         if let view = self.view as! SKView? {
             view.presentScene(gameScene)
             view.ignoresSiblingOrder = true
-            view.showsFPS = true
-            view.showsNodeCount = true
+//            view.showsFPS = true
+//            view.showsNodeCount = true
         }
     }
     

@@ -17,6 +17,7 @@ class PlayerEnd: SKScene{
         finalScene.zPosition=0
         let delay = SKAction.wait(forDuration: 3)
         let fadeout = SKAction.sequence([delay,.fadeOut(withDuration: 1)])
+        kaylaWakingVictory.scale(to: GameViewController.screenSize)
         addChild(kaylaWakingVictory)
         kaylaWakingVictory.run(fadeout)
         finalScene(resultado: finalScene)
@@ -36,7 +37,6 @@ class PlayerEnd: SKScene{
                    self.addChild(resultado)
                    resultado.run(transicao)
                }
-        
     }
     
     func addDialogo(){

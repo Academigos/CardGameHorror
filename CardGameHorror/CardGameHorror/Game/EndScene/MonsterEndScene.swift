@@ -15,6 +15,7 @@ class MonsterEnd: SKScene{
     
     
     override func didMove(to view: SKView) {
+        kaylaWakingDefeat.scale(to: GameViewController.screenSize)
         kaylaWakingDefeat.position = CGPoint(x: GameViewController.screenSize.width*0.5, y: GameViewController.screenSize.height*0.5)
         addChild(kaylaWakingDefeat)
         let delay = SKAction.wait(forDuration: 3)

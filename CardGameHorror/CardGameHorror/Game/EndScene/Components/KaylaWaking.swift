@@ -17,15 +17,15 @@ class KaylaWaking:SKSpriteNode{
     init(imagem0:String,imagens:String,pasta:String){
         kaylaWaking0 = SKTexture(imageNamed: imagem0)
         super.init(texture: kaylaWaking0, color: UIColor.clear, size: kaylaWaking0.size())
-        farolAnimation(nomeDaImagem: imagens, nomeDaPasta: pasta)
+        KaylaAnimation(nomeDaImagem: imagens, nomeDaPasta: pasta)
         
     }
    
-    func farolAnimation(nomeDaImagem:String, nomeDaPasta:String) {
+    func KaylaAnimation(nomeDaImagem:String, nomeDaPasta:String) {
         kaylaWaking = getTexture(with: nomeDaImagem, textureAtlasName: nomeDaPasta)
         let kaylaWakingd = kaylaWaking!
  
-        let action = SKAction.animate(with: kaylaWakingd, timePerFrame: 4/TimeInterval(kaylaWakingd.count), resize: true, restore: true)
+        let action = SKAction.animate(with: kaylaWakingd, timePerFrame: 4/TimeInterval(kaylaWakingd.count), resize: false, restore: true)
         self.run(action)
         
     }
@@ -46,6 +46,5 @@ class KaylaWaking:SKSpriteNode{
             }
         }
         return textures
-        
     }
 }

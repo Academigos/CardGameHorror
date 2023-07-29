@@ -134,7 +134,7 @@ class DialogView: SKNode {
             
             isUserInteractionEnabled = false
             isWaitingForDialog = true
-            Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { [self]_ in
+            Timer.scheduledTimer(withTimeInterval: 0.8, repeats: false) { [self]_ in
                 caixaTexto.showNextDialogContent(textContent: dialogo[currentIndex])
                 isUserInteractionEnabled = true
                 isWaitingForDialog = false // Terminou a espera, permite interação novamente

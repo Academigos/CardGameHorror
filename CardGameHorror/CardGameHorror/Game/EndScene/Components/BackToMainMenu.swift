@@ -15,7 +15,7 @@ class MainMenuButtom: SKSpriteNode{
     init() {
         self.resetButtom = SKTexture(imageNamed: "Buttom")
         super.init(texture: resetButtom, color: .clear, size: resetButtom.size())
-        scale(to: autoScale(self, widthProportion: 0.4, screenSize: GameViewController.screenSize))
+        scale(to: autoScale(self, widthProportion: 0.21, screenSize: GameViewController.screenSize))
         isUserInteractionEnabled = true
         setupMainMenuLabel()
     }
@@ -34,11 +34,11 @@ class MainMenuButtom: SKSpriteNode{
     private func setupMainMenuLabel() {
         
         mainMenuLabel.name = "ContinueLabel"
-        mainMenuLabel.fontSize = size.height * 0.3
+        mainMenuLabel.fontSize = self.size.height * 0.3
         mainMenuLabel.fontName = "BreeSerif-Regular"
         mainMenuLabel.fontColor = SKColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
         mainMenuLabel.text = LanguageManager.shared.localizedString("Menu Principal")
-        mainMenuLabel.position = CGPoint(x: size.width * 0, y: size.height * 0)
+        mainMenuLabel.position = CGPoint(x: size.width * 0, y: size.height * -0.1)
         mainMenuLabel.zPosition = 1.0
         addChild(mainMenuLabel)
     }

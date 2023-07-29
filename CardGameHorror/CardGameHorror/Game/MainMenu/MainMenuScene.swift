@@ -17,7 +17,17 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
     let overlayDiary = OverlayDiary()
     
     let pause = MainPause(isIntro: false, currentScene: "MainMenu")
+    
+    
     override func didMove(to view: SKView) {
+        let contentWarning = ContentWarning()
+
+        addChild(contentWarning)
+        
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak contentWarning] timer in
+            contentWarning?.removeFromParent()
+        }
+        
         let continueGame = ContinueGameButtom()
         
         continueGame.zPosition = 1
@@ -44,6 +54,7 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
         let transition = SKTransition.fade(with: .black, duration: 1)
         self.view?.presentScene(gameScene,transition: transition)
     }
+    
     func newGameButtonTapped() {
         let gameScene = IntroScene(size: GameViewController.screenSize)
         gameScene.scaleMode = .aspectFill
@@ -52,7 +63,7 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
     }
     
     func openDiaryOne() {
-
+        
         diaryOne.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: -GameViewController.screenSize.height)
         
         let finalPosition = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)

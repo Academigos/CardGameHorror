@@ -21,6 +21,12 @@
 		280A53582A6ABEC400267B9E /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280A53572A6ABEC400267B9E /* MainMenu.swift */; };
 		280A535A2A6AC10A00267B9E /* PauseButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280A53592A6AC10A00267B9E /* PauseButtom.swift */; };
 		280DF6792A6B18AD00EFF162 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280DF6782A6B18AD00EFF162 /* Languages.swift */; };
+		280F0EF72A74485E008901F8 /* Felipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0EF62A74485E008901F8 /* Felipe.swift */; };
+		280F0EF92A745000008901F8 /* Musicas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0EF82A745000008901F8 /* Musicas.swift */; };
+		280F0EFB2A745808008901F8 /* BackButtomCredits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0EFA2A745808008901F8 /* BackButtomCredits.swift */; };
+		282E42542A7471B300ACFBBB /* KaylaWaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282E42492A7471B300ACFBBB /* KaylaWaking.swift */; };
+		282E42572A74772300ACFBBB /* DerotaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282E42562A74772300ACFBBB /* DerotaText.swift */; };
+		282E42592A747E5C00ACFBBB /* VitoriaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282E42582A747E5C00ACFBBB /* VitoriaText.swift */; };
 		28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F5A2A5CAAD10031B95B /* AppDelegate.swift */; };
 		28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314F622A5CAAD10031B95B /* GameViewController.swift */; };
 		28314F662A5CAAD10031B95B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28314F642A5CAAD10031B95B /* Main.storyboard */; };
@@ -34,6 +40,19 @@
 		28399ADF2A72F35C00FD1866 /* LeftPageDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28399ADB2A72F35C00FD1866 /* LeftPageDiary.swift */; };
 		28399AE02A72F35C00FD1866 /* RightPageDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28399ADC2A72F35C00FD1866 /* RightPageDiary.swift */; };
 		28399AE12A72F35C00FD1866 /* OverlayDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28399ADD2A72F35C00FD1866 /* OverlayDiary.swift */; };
+		2844A6242A740EA900720C3E /* CreditsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2844A6232A740EA900720C3E /* CreditsScene.swift */; };
+		2844A6272A740FE400720C3E /* CreditsBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2844A6262A740FE400720C3E /* CreditsBackground.swift */; };
+		2844A6292A74168100720C3E /* CreditsDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2844A6282A74168100720C3E /* CreditsDivider.swift */; };
+		2844A62D2A7435BE00720C3E /* Yasmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2844A62C2A7435BE00720C3E /* Yasmin.swift */; };
+		2844A6302A7435F200720C3E /* YasminInsta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2844A62F2A7435F200720C3E /* YasminInsta.swift */; };
+		2844A6332A74375000720C3E /* YasminBehance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2844A6322A74375000720C3E /* YasminBehance.swift */; };
+		2844A6352A74389500720C3E /* YasminName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2844A6342A74389500720C3E /* YasminName.swift */; };
+		2844A6372A7443D800720C3E /* Eduardo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2844A6362A7443D800720C3E /* Eduardo.swift */; };
+		2844A6392A74463300720C3E /* Erick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2844A6382A74463300720C3E /* Erick.swift */; };
+		2844A63C2A7446F500720C3E /* Giovanni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2844A63B2A7446F500720C3E /* Giovanni.swift */; };
+		284746942A746ECE00703464 /* FinalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284746912A746ECE00703464 /* FinalScene.swift */; };
+		284746952A746ECE00703464 /* FinalSceneDerrota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284746922A746ECE00703464 /* FinalSceneDerrota.swift */; };
+		284746972A746F3200703464 /* FinalBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284746962A746F3100703464 /* FinalBackground.swift */; };
 		286536712A68BE4D007E8CD3 /* CardConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286536702A68BE4D007E8CD3 /* CardConfigurations.swift */; };
 		286A54B02A5DC96000B2D6BC /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286A54AF2A5DC96000B2D6BC /* CardNode.swift */; };
 		286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */ = {isa = PBXBuildFile; fileRef = 286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */; };
@@ -67,6 +86,7 @@
 		70D72CE62A6EF46D0010AFA8 /* Mao2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CE52A6EF46D0010AFA8 /* Mao2.swift */; };
 		70D72CEE2A6EF5480010AFA8 /* Maos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CED2A6EF5480010AFA8 /* Maos.swift */; };
 		70D72CF02A6EFCFA0010AFA8 /* Taro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CEF2A6EFCFA0010AFA8 /* Taro.swift */; };
+		B83AF42D2A745ADD004D3AC6 /* ContentWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83AF42C2A745ADD004D3AC6 /* ContentWarning.swift */; };
 		B85501BA2A6EEE520038F2F1 /* DialogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85501B92A6EEE520038F2F1 /* DialogData.swift */; };
 		B86261432A6D6DBE00EB5C93 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86261422A6D6DBE00EB5C93 /* TextBox.swift */; };
 		B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AECE082A6D5B770032AC66 /* IntroBackground.swift */; };
@@ -128,6 +148,12 @@
 		280A53572A6ABEC400267B9E /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		280A53592A6AC10A00267B9E /* PauseButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButtom.swift; sourceTree = "<group>"; };
 		280DF6782A6B18AD00EFF162 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
+		280F0EF62A74485E008901F8 /* Felipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Felipe.swift; sourceTree = "<group>"; };
+		280F0EF82A745000008901F8 /* Musicas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musicas.swift; sourceTree = "<group>"; };
+		280F0EFA2A745808008901F8 /* BackButtomCredits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtomCredits.swift; sourceTree = "<group>"; };
+		282E42492A7471B300ACFBBB /* KaylaWaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaylaWaking.swift; sourceTree = "<group>"; };
+		282E42562A74772300ACFBBB /* DerotaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerotaText.swift; sourceTree = "<group>"; };
+		282E42582A747E5C00ACFBBB /* VitoriaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitoriaText.swift; sourceTree = "<group>"; };
 		28314F572A5CAAD10031B95B /* CardGameHorror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardGameHorror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28314F5A2A5CAAD10031B95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28314F622A5CAAD10031B95B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +171,19 @@
 		28399ADB2A72F35C00FD1866 /* LeftPageDiary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftPageDiary.swift; sourceTree = "<group>"; };
 		28399ADC2A72F35C00FD1866 /* RightPageDiary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightPageDiary.swift; sourceTree = "<group>"; };
 		28399ADD2A72F35C00FD1866 /* OverlayDiary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayDiary.swift; sourceTree = "<group>"; };
+		2844A6232A740EA900720C3E /* CreditsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsScene.swift; sourceTree = "<group>"; };
+		2844A6262A740FE400720C3E /* CreditsBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsBackground.swift; sourceTree = "<group>"; };
+		2844A6282A74168100720C3E /* CreditsDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsDivider.swift; sourceTree = "<group>"; };
+		2844A62C2A7435BE00720C3E /* Yasmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yasmin.swift; sourceTree = "<group>"; };
+		2844A62F2A7435F200720C3E /* YasminInsta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YasminInsta.swift; sourceTree = "<group>"; };
+		2844A6322A74375000720C3E /* YasminBehance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YasminBehance.swift; sourceTree = "<group>"; };
+		2844A6342A74389500720C3E /* YasminName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YasminName.swift; sourceTree = "<group>"; };
+		2844A6362A7443D800720C3E /* Eduardo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eduardo.swift; sourceTree = "<group>"; };
+		2844A6382A74463300720C3E /* Erick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Erick.swift; sourceTree = "<group>"; };
+		2844A63B2A7446F500720C3E /* Giovanni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Giovanni.swift; sourceTree = "<group>"; };
+		284746912A746ECE00703464 /* FinalScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalScene.swift; sourceTree = "<group>"; };
+		284746922A746ECE00703464 /* FinalSceneDerrota.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSceneDerrota.swift; sourceTree = "<group>"; };
+		284746962A746F3100703464 /* FinalBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalBackground.swift; sourceTree = "<group>"; };
 		286536702A68BE4D007E8CD3 /* CardConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardConfigurations.swift; sourceTree = "<group>"; };
 		286A54AF2A5DC96000B2D6BC /* CardNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNode.swift; sourceTree = "<group>"; };
 		286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Myaudio.sks; sourceTree = "<group>"; };
@@ -180,6 +219,7 @@
 		70D72CE52A6EF46D0010AFA8 /* Mao2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mao2.swift; sourceTree = "<group>"; };
 		70D72CED2A6EF5480010AFA8 /* Maos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maos.swift; sourceTree = "<group>"; };
 		70D72CEF2A6EFCFA0010AFA8 /* Taro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taro.swift; sourceTree = "<group>"; };
+		B83AF42C2A745ADD004D3AC6 /* ContentWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentWarning.swift; sourceTree = "<group>"; };
 		B85501B92A6EEE520038F2F1 /* DialogData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogData.swift; sourceTree = "<group>"; };
 		B86261422A6D6DBE00EB5C93 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
 		B8AECE082A6D5B770032AC66 /* IntroBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroBackground.swift; sourceTree = "<group>"; };
@@ -254,6 +294,7 @@
 				28076A792A6DC67E00F2BD7B /* NewGameButtom.swift */,
 				28076A7B2A6DC6FE00F2BD7B /* ContinueGameButtom.swift */,
 				283227642A6EF39800D13300 /* MainMenuBackground.swift */,
+				B83AF42C2A745ADD004D3AC6 /* ContentWarning.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -262,6 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				28076A802A6DF83900F2BD7B /* Components */,
+				284746912A746ECE00703464 /* FinalScene.swift */,
+				284746922A746ECE00703464 /* FinalSceneDerrota.swift */,
 				28076A7E2A6DF83400F2BD7B /* PlayerEndScene.swift */,
 				28076A812A6DF85C00F2BD7B /* MonsterEndScene.swift */,
 			);
@@ -271,8 +314,12 @@
 		28076A802A6DF83900F2BD7B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				284746962A746F3100703464 /* FinalBackground.swift */,
+				282E42492A7471B300ACFBBB /* KaylaWaking.swift */,
 				28076A832A6DF87D00F2BD7B /* ResetBattleButtom.swift */,
 				28076A852A6DF89000F2BD7B /* BackToMainMenu.swift */,
+				282E42562A74772300ACFBBB /* DerotaText.swift */,
+				282E42582A747E5C00ACFBBB /* VitoriaText.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -377,6 +424,7 @@
 		28314F8F2A5CAB120031B95B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				2844A6202A740E7A00720C3E /* Credits */,
 				28EC72732A7039A500266619 /* MainPause */,
 				28076A7D2A6DF81300F2BD7B /* EndScene */,
 				28076A772A6DBB0800F2BD7B /* MainMenu */,
@@ -435,6 +483,42 @@
 				28EC727F2A70666B00266619 /* Skip */,
 			);
 			path = Intro;
+			sourceTree = "<group>";
+		};
+		2844A6202A740E7A00720C3E /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				2844A6252A740FD300720C3E /* components */,
+				2844A6232A740EA900720C3E /* CreditsScene.swift */,
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		2844A6252A740FD300720C3E /* components */ = {
+			isa = PBXGroup;
+			children = (
+				2844A62E2A7435DD00720C3E /* YasminFolder */,
+				2844A6262A740FE400720C3E /* CreditsBackground.swift */,
+				2844A6282A74168100720C3E /* CreditsDivider.swift */,
+				2844A62C2A7435BE00720C3E /* Yasmin.swift */,
+				2844A6362A7443D800720C3E /* Eduardo.swift */,
+				2844A6382A74463300720C3E /* Erick.swift */,
+				2844A63B2A7446F500720C3E /* Giovanni.swift */,
+				280F0EF62A74485E008901F8 /* Felipe.swift */,
+				280F0EF82A745000008901F8 /* Musicas.swift */,
+				280F0EFA2A745808008901F8 /* BackButtomCredits.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		2844A62E2A7435DD00720C3E /* YasminFolder */ = {
+			isa = PBXGroup;
+			children = (
+				2844A62F2A7435F200720C3E /* YasminInsta.swift */,
+				2844A6322A74375000720C3E /* YasminBehance.swift */,
+				2844A6342A74389500720C3E /* YasminName.swift */,
+			);
+			path = YasminFolder;
 			sourceTree = "<group>";
 		};
 		28C322BD2A66E583000E83FF /* Hud */ = {
@@ -764,33 +848,42 @@
 				28399AE12A72F35C00FD1866 /* OverlayDiary.swift in Sources */,
 				B85501BA2A6EEE520038F2F1 /* DialogData.swift in Sources */,
 				28EC727E2A70666300266619 /* Skip.swift in Sources */,
+				2844A6332A74375000720C3E /* YasminBehance.swift in Sources */,
 				B8F9155F2A67214200D828A2 /* MonsterEntry.swift in Sources */,
 				B8F9155D2A671E4600D828A2 /* MonsterEntity.swift in Sources */,
 				28C322CA2A671DBA000E83FF /* LifeBar.swift in Sources */,
 				280DF6792A6B18AD00EFF162 /* Languages.swift in Sources */,
 				B86261432A6D6DBE00EB5C93 /* TextBox.swift in Sources */,
+				284746952A746ECE00703464 /* FinalSceneDerrota.swift in Sources */,
+				280F0EFB2A745808008901F8 /* BackButtomCredits.swift in Sources */,
 				28D123612A6847A400E37E43 /* NamePlaceHolder.swift in Sources */,
 				28FC6C6C2A6F1C5E00C0A9BE /* LanguageManager.swift in Sources */,
 				28076A842A6DF87D00F2BD7B /* ResetBattleButtom.swift in Sources */,
 				B8F0015E2A6B255800392235 /* Frente.swift in Sources */,
+				B83AF42D2A745ADD004D3AC6 /* ContentWarning.swift in Sources */,
 				28076A7F2A6DF83400F2BD7B /* PlayerEndScene.swift in Sources */,
 				28314F632A5CAAD10031B95B /* GameViewController.swift in Sources */,
+				2844A6352A74389500720C3E /* YasminName.swift in Sources */,
 				280A53522A6AB0AB00267B9E /* PauseBackground.swift in Sources */,
 				288F53092A6D760500BC24A2 /* LifeBarOverlay.swift in Sources */,
 				280A53562A6ABDC900267B9E /* ResetBattle.swift in Sources */,
 				28C52A6C2A6181ED003AEF25 /* HorrorDataManager.swift in Sources */,
 				B8F001622A6B255800392235 /* Background.swift in Sources */,
 				28D1235E2A681E9D00E37E43 /* LifeBarNode.swift in Sources */,
+				282E42542A7471B300ACFBBB /* KaylaWaking.swift in Sources */,
+				2844A6302A7435F200720C3E /* YasminInsta.swift in Sources */,
 				B8F0015C2A6B255800392235 /* Cenario.swift in Sources */,
 				B8F001692A6B255800392235 /* Farol.swift in Sources */,
 				B8F0016A2A6B255800392235 /* ArvoresFundo.swift in Sources */,
 				28EC72762A70422D00266619 /* MainPauseBackground.swift in Sources */,
+				2844A62D2A7435BE00720C3E /* Yasmin.swift in Sources */,
 				28076A762A6DB7BC00F2BD7B /* MainMenuScene.swift in Sources */,
 				B8F0015D2A6B255800392235 /* Fundo.swift in Sources */,
 				280A534F2A6AAC0A00267B9E /* PauseNode.swift in Sources */,
 				28D123652A68529E00E37E43 /* PlayerHud.swift in Sources */,
 				28EC72782A70435900266619 /* MainPause.swift in Sources */,
 				B8AECE0B2A6D5B880032AC66 /* DialogView.swift in Sources */,
+				2844A6372A7443D800720C3E /* Eduardo.swift in Sources */,
 				280A53542A6ABD0000267B9E /* ClosePause.swift in Sources */,
 				28F54D2A2A60923B00B692F5 /* player.swift in Sources */,
 				B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */,
@@ -801,7 +894,9 @@
 				B8F001652A6B255800392235 /* Carro2.swift in Sources */,
 				B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */,
 				28399ADF2A72F35C00FD1866 /* LeftPageDiary.swift in Sources */,
+				284746942A746ECE00703464 /* FinalScene.swift in Sources */,
 				C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */,
+				282E42592A747E5C00ACFBBB /* VitoriaText.swift in Sources */,
 				B8F001612A6B255800392235 /* Estrada.swift in Sources */,
 				28076A822A6DF85C00F2BD7B /* MonsterEndScene.swift in Sources */,
 				B8F0015F2A6B255800392235 /* Carros.swift in Sources */,
@@ -809,22 +904,31 @@
 				286A54B02A5DC96000B2D6BC /* CardNode.swift in Sources */,
 				28D123672A68743700E37E43 /* ButtomEndTurn.swift in Sources */,
 				280A53582A6ABEC400267B9E /* MainMenu.swift in Sources */,
+				282E42572A74772300ACFBBB /* DerotaText.swift in Sources */,
 				C9C209042A6D5371009C73C4 /* IntroScene.swift in Sources */,
 				70D72CE62A6EF46D0010AFA8 /* Mao2.swift in Sources */,
+				2844A6292A74168100720C3E /* CreditsDivider.swift in Sources */,
 				28D123632A6848C200E37E43 /* MonsterHud.swift in Sources */,
 				28076A7A2A6DC67E00F2BD7B /* NewGameButtom.swift in Sources */,
+				2844A63C2A7446F500720C3E /* Giovanni.swift in Sources */,
 				28D1235C2A68195900E37E43 /* LifeBarBackGround.swift in Sources */,
 				28BDF7772A6431F9002037EB /* GameController.swift in Sources */,
+				2844A6242A740EA900720C3E /* CreditsScene.swift in Sources */,
 				28C52A6A2A617F49003AEF25 /* HorrorDatabase.xcdatamodeld in Sources */,
 				283227652A6EF39800D13300 /* MainMenuBackground.swift in Sources */,
 				70D72CEE2A6EF5480010AFA8 /* Maos.swift in Sources */,
 				C9C2091F2A6E0CF6009C73C4 /* FloatingNode.swift in Sources */,
 				B8F001602A6B255800392235 /* ArvoresFrente.swift in Sources */,
 				28C322C02A66E5BF000E83FF /* HudNode.swift in Sources */,
+				2844A6392A74463300720C3E /* Erick.swift in Sources */,
 				28076A862A6DF89000F2BD7B /* BackToMainMenu.swift in Sources */,
+				284746972A746F3200703464 /* FinalBackground.swift in Sources */,
+				2844A6272A740FE400720C3E /* CreditsBackground.swift in Sources */,
 				288F53052A6D637000BC24A2 /* Divider.swift in Sources */,
+				280F0EF72A74485E008901F8 /* Felipe.swift in Sources */,
 				28EC727A2A704B5F00266619 /* MainPauseButtom.swift in Sources */,
 				280A535A2A6AC10A00267B9E /* PauseButtom.swift in Sources */,
+				280F0EF92A745000008901F8 /* Musicas.swift in Sources */,
 				28DD3AA12A65C05D00D5F951 /* Extensions.swift in Sources */,
 				28FDCD622A70115F00C87920 /* GameScene.swift in Sources */,
 				28314F5B2A5CAAD10031B95B /* AppDelegate.swift in Sources */,
@@ -1022,7 +1126,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TLC9D54B8V;
+				DEVELOPMENT_TEAM = SVGXRR5RRA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MindNight;
@@ -1037,7 +1141,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Eduardo.CardGameHorror;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1056,7 +1160,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TLC9D54B8V;
+				DEVELOPMENT_TEAM = SVGXRR5RRA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MindNight;
@@ -1071,7 +1175,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Eduardo.CardGameHorror;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

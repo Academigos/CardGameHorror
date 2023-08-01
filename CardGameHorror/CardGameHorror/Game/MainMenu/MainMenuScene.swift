@@ -45,6 +45,7 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
         continueGame.delegate = self
         startGame.delegate = self
         diaryOne.rightPage.continueButtonDiary.delegate = self
+        diaryOne.leftPage.delegate = self
     }
     
     func continueGameButtonTapped() {

@@ -11,17 +11,21 @@ import SpriteKit
 class Eduardo: SKSpriteNode{
     let eduardo: SKTexture
     
-    init(){
+    init() {
         self.eduardo = SKTexture(imageNamed: "CreditosEduardo")
         super.init(texture: eduardo, color: .clear, size: eduardo.size())
         self.scale(to: autoScale(self, widthProportion: 0.22, screenSize: GameViewController.screenSize))
+        
+        isUserInteractionEnabled = true
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
-        // Open the LinkedIn link when the sprite node is tapped
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
         if let url = URL(string: "https://www.linkedin.com/in/eduardo-regis-vieira/") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }

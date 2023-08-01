@@ -8,7 +8,8 @@
 import Foundation
 import SpriteKit
 
-class Yasmin: SKNode{
+/// Classe responsável por tratar o node de créditos da Yasmin
+class Yasmin: SKNode {
     let insta = YasminInsta()
     let behance = YasminBe()
     let yasmin = YasminName()

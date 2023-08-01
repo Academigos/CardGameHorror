@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+/// Classe responsável por tratar o node de divider da cena de créditos
 class CreditsDivider: SKSpriteNode{
     let creditsDivider: SKTexture
     init() {

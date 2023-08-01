@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
         GameViewController.screenSize = view.bounds.size
         //MARK: -Battle Scene
         // get Scene
-        let gameScene = MonsterEnd(size: GameViewController.screenSize)
+        let gameScene = MainMenuScene(size: GameViewController.screenSize)
 
         // Set the scale mode to scale to fit the window
             gameScene.scaleMode = .aspectFill

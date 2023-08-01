@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Classe que define a cena de créditos
 class CreditsScene: SKScene{
     let background = CreditsBackground()
     let firstDivader = CreditsDivider()
@@ -34,9 +35,8 @@ class CreditsScene: SKScene{
         fatalError("init(coder:) has not been implemented")
     }
     
+    //Função responsável por coordenar e posicionar cada elemento na tela
     override func didMove(to view: SKView) {
-        
-        
         back.position = CGPoint(x: GameViewController.screenSize.width * 0.09, y: GameViewController.screenSize.height * 0.92)
         back.zPosition = 20
         addChild(back)
@@ -64,7 +64,7 @@ class CreditsScene: SKScene{
         musicas.zPosition = 20
         addChild(musicas)
         
-        title.text = LanguageManager.shared.localizedString("Creditos")
+        title.text = LanguageManager.shared.localizedString("Créditos")
         title.fontName = "BreeSerif-Regular"
         title.fontSize = GameViewController.screenSize.width * 0.04
         title.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.87)

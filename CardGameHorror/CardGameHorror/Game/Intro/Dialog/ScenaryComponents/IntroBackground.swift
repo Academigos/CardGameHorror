@@ -8,8 +8,8 @@
 import SpriteKit
 
 enum BackgroundType: Int {
-    case desk,
-    room
+    case desk
+    case room
 }
 
 class IntroScenary: SKSpriteNode {

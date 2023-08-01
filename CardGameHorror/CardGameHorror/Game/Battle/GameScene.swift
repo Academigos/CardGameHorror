@@ -25,6 +25,8 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
     
     var monsterEntry: MonsterEntry = MonsterEntry()
     
+    let batalhaMusic = SKAudioNode(fileNamed: "batalha_bgm")
+    
     override init(size: CGSize) {
         super.init(size: size)
     }
@@ -49,6 +51,7 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         }
 
         self.isUserInteractionEnabled = true
+        addChild(batalhaMusic)
     }
     
     private func setupGameplay() {

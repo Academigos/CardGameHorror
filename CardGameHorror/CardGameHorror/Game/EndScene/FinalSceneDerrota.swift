@@ -13,6 +13,8 @@ class FinalSceneDerrota : SKNode{
     let tentaBatle = ResetButtom()
     let language = Languages(currentScene: "EndMonster")
     let menu = MainMenuButtom()
+    let finalDialogBox = FinalDialog(finalDialog: "DialogFinalDerrota")
+
     override init() {
         super.init()
         
@@ -21,8 +23,14 @@ class FinalSceneDerrota : SKNode{
         background.zPosition = -1
         addChild(background)
         
+        finalDialogBox.position = CGPoint(x: GameViewController.screenSize.width * 0.76, y: GameViewController.screenSize.height * 0.61)
+        //finalDialogBox.scale(to: GameViewController.screenSize)
+        finalDialogBox.zPosition = 0
+        addChild(finalDialogBox)
+        
         text.position = CGPoint(x: GameViewController.screenSize.width * 0.76, y: GameViewController.screenSize.height * 0.61)
         addChild(text)
+        text.zPosition=1
         
         language.scale(to: autoScale(language, widthProportion: 0.06, screenSize: GameViewController.screenSize))
         language.position = CGPoint(x: GameViewController.screenSize.width * 0.90, y: GameViewController.screenSize.height * 0.92)

@@ -82,6 +82,14 @@
 		28FC6C672A6F10D200C0A9BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28FC6C692A6F10D200C0A9BE /* Localizable.strings */; };
 		28FC6C6C2A6F1C5E00C0A9BE /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C6B2A6F1C5E00C0A9BE /* LanguageManager.swift */; };
 		28FDCD622A70115F00C87920 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDCD612A70115F00C87920 /* GameScene.swift */; };
+		7019E65F2A7976A800C37E82 /* FinalDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7019E65E2A7976A800C37E82 /* FinalDialog.swift */; };
+		705C68E02A784F7A00D80048 /* inicio_bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 705C68D92A784F7A00D80048 /* inicio_bgm.mp3 */; };
+		705C68E12A784F7A00D80048 /* pagina_livro_sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 705C68DA2A784F7A00D80048 /* pagina_livro_sfx.mp3 */; };
+		705C68E22A784F7A00D80048 /* carta_virando_sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 705C68DB2A784F7A00D80048 /* carta_virando_sfx.mp3 */; };
+		705C68E32A784F7A00D80048 /* derrota_bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 705C68DC2A784F7A00D80048 /* derrota_bgm.mp3 */; };
+		705C68E42A784F7A00D80048 /* cartomante_bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 705C68DD2A784F7A00D80048 /* cartomante_bgm.mp3 */; };
+		705C68E52A784F7A00D80048 /* vitoria_msc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 705C68DE2A784F7A00D80048 /* vitoria_msc.mp3 */; };
+		705C68E62A784F7A00D80048 /* batalha_bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 705C68DF2A784F7A00D80048 /* batalha_bgm.mp3 */; };
 		70D72CE42A6EF4600010AFA8 /* Mao1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CE32A6EF4600010AFA8 /* Mao1.swift */; };
 		70D72CE62A6EF46D0010AFA8 /* Mao2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CE52A6EF46D0010AFA8 /* Mao2.swift */; };
 		70D72CEE2A6EF5480010AFA8 /* Maos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D72CED2A6EF5480010AFA8 /* Maos.swift */; };
@@ -215,6 +223,14 @@
 		28FC6C6A2A6F10D600C0A9BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		28FC6C6B2A6F1C5E00C0A9BE /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		28FDCD612A70115F00C87920 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		7019E65E2A7976A800C37E82 /* FinalDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDialog.swift; sourceTree = "<group>"; };
+		705C68D92A784F7A00D80048 /* inicio_bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = inicio_bgm.mp3; sourceTree = "<group>"; };
+		705C68DA2A784F7A00D80048 /* pagina_livro_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pagina_livro_sfx.mp3; sourceTree = "<group>"; };
+		705C68DB2A784F7A00D80048 /* carta_virando_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = carta_virando_sfx.mp3; sourceTree = "<group>"; };
+		705C68DC2A784F7A00D80048 /* derrota_bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = derrota_bgm.mp3; sourceTree = "<group>"; };
+		705C68DD2A784F7A00D80048 /* cartomante_bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cartomante_bgm.mp3; sourceTree = "<group>"; };
+		705C68DE2A784F7A00D80048 /* vitoria_msc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vitoria_msc.mp3; sourceTree = "<group>"; };
+		705C68DF2A784F7A00D80048 /* batalha_bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batalha_bgm.mp3; sourceTree = "<group>"; };
 		70D72CE32A6EF4600010AFA8 /* Mao1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mao1.swift; sourceTree = "<group>"; };
 		70D72CE52A6EF46D0010AFA8 /* Mao2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mao2.swift; sourceTree = "<group>"; };
 		70D72CED2A6EF5480010AFA8 /* Maos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maos.swift; sourceTree = "<group>"; };
@@ -318,6 +334,7 @@
 				282E42492A7471B300ACFBBB /* KaylaWaking.swift */,
 				28076A832A6DF87D00F2BD7B /* ResetBattleButtom.swift */,
 				28076A852A6DF89000F2BD7B /* BackToMainMenu.swift */,
+				7019E65E2A7976A800C37E82 /* FinalDialog.swift */,
 				282E42562A74772300ACFBBB /* DerotaText.swift */,
 				282E42582A747E5C00ACFBBB /* VitoriaText.swift */,
 			);
@@ -469,6 +486,13 @@
 		28314F962A5CAC740031B95B /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				705C68DF2A784F7A00D80048 /* batalha_bgm.mp3 */,
+				705C68DB2A784F7A00D80048 /* carta_virando_sfx.mp3 */,
+				705C68DD2A784F7A00D80048 /* cartomante_bgm.mp3 */,
+				705C68DC2A784F7A00D80048 /* derrota_bgm.mp3 */,
+				705C68D92A784F7A00D80048 /* inicio_bgm.mp3 */,
+				705C68DA2A784F7A00D80048 /* pagina_livro_sfx.mp3 */,
+				705C68DE2A784F7A00D80048 /* vitoria_msc.mp3 */,
 				286A54B12A5DCAAA00B2D6BC /* Myaudio.sks */,
 				C9C2094A2A704473009C73C4 /* MyParticle.sks */,
 			);
@@ -809,14 +833,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705C68E52A784F7A00D80048 /* vitoria_msc.mp3 in Resources */,
 				28314F662A5CAAD10031B95B /* Main.storyboard in Resources */,
+				705C68E22A784F7A00D80048 /* carta_virando_sfx.mp3 in Resources */,
+				705C68E62A784F7A00D80048 /* batalha_bgm.mp3 in Resources */,
+				705C68E42A784F7A00D80048 /* cartomante_bgm.mp3 in Resources */,
 				28FC6C672A6F10D200C0A9BE /* Localizable.strings in Resources */,
 				C900B2322A6B02C200AC9291 /* BreeSerif-Regular.ttf in Resources */,
 				286A54B22A5DCAAA00B2D6BC /* Myaudio.sks in Resources */,
 				28314F682A5CAAD20031B95B /* Assets.xcassets in Resources */,
 				C9C2094C2A704473009C73C4 /* MyParticle.sks in Resources */,
+				705C68E32A784F7A00D80048 /* derrota_bgm.mp3 in Resources */,
+				705C68E02A784F7A00D80048 /* inicio_bgm.mp3 in Resources */,
 				B8F001632A6B255800392235 /* Assets.xcassets in Resources */,
 				28314F6B2A5CAAD20031B95B /* LaunchScreen.storyboard in Resources */,
+				705C68E12A784F7A00D80048 /* pagina_livro_sfx.mp3 in Resources */,
 				B8F001642A6B255800392235 /* Fumaca.sks in Resources */,
 				28DD3A9A2A65B06F00D5F951 /* BigshotOne-Regular.ttf in Resources */,
 			);
@@ -896,6 +927,7 @@
 				B8F001652A6B255800392235 /* Carro2.swift in Sources */,
 				B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */,
 				28399ADF2A72F35C00FD1866 /* LeftPageDiary.swift in Sources */,
+				7019E65F2A7976A800C37E82 /* FinalDialog.swift in Sources */,
 				284746942A746ECE00703464 /* FinalScene.swift in Sources */,
 				C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */,
 				28DCD9AA2A749AF000E01520 /* Erick.swift in Sources */,

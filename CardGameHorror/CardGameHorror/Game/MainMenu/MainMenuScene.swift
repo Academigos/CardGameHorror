@@ -17,7 +17,7 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
     let overlayDiary = OverlayDiary()
     
     let pause = MainPause(isIntro: false, currentScene: "MainMenu")
-    
+    let backgroundMusic = SKAudioNode(fileNamed: "inicio_bgm")
     
     override func didMove(to view: SKView) {
         let contentWarning = ContentWarning()
@@ -45,6 +45,9 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
         continueGame.delegate = self
         startGame.delegate = self
         diaryOne.rightPage.continueButtonDiary.delegate = self
+        
+        addChild(backgroundMusic)
+        
     }
     
     func continueGameButtonTapped() {

@@ -22,6 +22,8 @@ class CardNode: SKSpriteNode {
     var valueLabel: SKLabelNode = SKLabelNode()
     var labelNome: SKLabelNode = SKLabelNode()
     var value:Double = 0.0
+    let cardSong = SKAudioNode(fileNamed: "carta_virando_sfx")
+    
     
     let proportionCard: CGFloat
     //    var newWidthCard: CGFloat
@@ -52,6 +54,8 @@ class CardNode: SKSpriteNode {
         //        newWidthCard = GameViewController.screenSize.width * 0.12
         //        newHeightCard = newWidthCard / proportionCard
         
+
+        
         // Inicializa a classe pai com a textura da carta
         super.init(texture: frontTexture, color: .clear, size: frontTexture.size())
         
@@ -65,6 +69,10 @@ class CardNode: SKSpriteNode {
         
         // adiciona efeito de luz atrás da carta
         self.addGlow(color: .black)
+        
+        //adiciona o audio
+        cardSong.autoplayLooped = false
+        self.addChild(cardSong)
     }
     
     
@@ -111,6 +119,10 @@ class CardNode: SKSpriteNode {
             isCardInteractionEnabled = false // Desativa temporariamente a interação
 
             let moreThanThreeSelected = GameController.shared.selectedCard.count < 3
+            
+            //som da carta virando
+            cardSong.run(SKAction.play())
+            
 
             if moreThanThreeSelected || isSelected {
                 enlarge()

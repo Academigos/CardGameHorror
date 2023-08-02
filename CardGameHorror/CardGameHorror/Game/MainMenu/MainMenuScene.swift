@@ -18,7 +18,6 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
     
     let pause = MainPause(isIntro: false, currentScene: "MainMenu")
     
-    
     override func didMove(to view: SKView) {
         let contentWarning = ContentWarning()
 

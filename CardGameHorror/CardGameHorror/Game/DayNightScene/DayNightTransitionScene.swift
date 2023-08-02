@@ -54,11 +54,11 @@ class DayNightTransitionScene: SKScene {
         addChild(animatedBackground)
         
         // Criar a ação de animação
-        let animationAction = SKAction.animate(with: textures, timePerFrame: 0.1)
-        animationAction.timingMode =  .easeOut
-        animationAction.duration = 2.6
+        let animationAction = SKAction.animate(with: textures, timePerFrame: 0.01)// tempo por frame
+        animationAction.timingMode =  .easeOut// define um slow que aumenta de acordo a animação avança
+        animationAction.duration = 1.4
         
-        let delay = SKAction.wait(forDuration: 1.5)
+        let delay = SKAction.wait(forDuration: 0.26)
         
         let sequence = SKAction.sequence([delay, animationAction])
         

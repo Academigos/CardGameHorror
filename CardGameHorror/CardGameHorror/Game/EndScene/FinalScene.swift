@@ -15,7 +15,7 @@ class FinalSceneVitoria : SKNode{
     let creditos = Creditos(backScene: "EndPlayer")
     override init() {
         super.init()
-      
+        
         background.position = CGPoint(x: GameViewController.screenSize.width*0.5, y: GameViewController.screenSize.height*0.5)
         background.scale(to: GameViewController.screenSize)
         background.zPosition = -1
@@ -42,5 +42,5 @@ class FinalSceneVitoria : SKNode{
     
     
     
-
+    
 }

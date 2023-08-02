@@ -59,7 +59,6 @@ class CreditBack: SKSpriteNode{
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
         }
-        
     }
     
     ///Função para formatar o texto e tratar a língua

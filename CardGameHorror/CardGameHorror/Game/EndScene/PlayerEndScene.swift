@@ -29,14 +29,14 @@ class PlayerEnd: SKScene{
     //delay de 5 segundos
     func finalScene(resultado:SKNode){
         let delayTime: TimeInterval = 4.0
-               Timer.scheduledTimer(withTimeInterval: delayTime, repeats: false) { timer in
-                   let delay = SKAction.wait(forDuration: 0)
-                   let transicao = SKAction.sequence([SKAction.fadeAlpha(to: 0, duration: 0),delay, SKAction.fadeAlpha(to: 1.0, duration: 3)])
-                   
-                   self.removeAllChildren()
-                   self.addChild(resultado)
-                   resultado.run(transicao)
-               }
+        Timer.scheduledTimer(withTimeInterval: delayTime, repeats: false) { timer in
+            let delay = SKAction.wait(forDuration: 0)
+            let transicao = SKAction.sequence([SKAction.fadeAlpha(to: 0, duration: 0),delay, SKAction.fadeAlpha(to: 1.0, duration: 3)])
+            
+            self.removeAllChildren()
+            self.addChild(resultado)
+            resultado.run(transicao)
+        }
     }
     
     func addDialogo(){

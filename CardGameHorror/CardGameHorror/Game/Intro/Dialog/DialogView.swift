@@ -80,7 +80,7 @@ class DialogView: SKNode {
             return // Ignora cliques enquanto está esperando o Timer
         }
         
-        currentIndex += 1 // Avança para o próximo diálogo
+        currentIndex += 1
         switch currentIndex {
         case 8:
             scenary.removeFromParent()
@@ -106,18 +106,10 @@ class DialogView: SKNode {
             self.caixaTexto.isHidden = true
             isUserInteractionEnabled = false
             addChild(carta2)
-            Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { [self]_ in
-                self.caixaTexto.isHidden = false
-                isUserInteractionEnabled = true
-            }
         case 11:
             self.caixaTexto.isHidden = true
             isUserInteractionEnabled = false
             addChild(carta3)
-            Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { [self]_ in
-                self.caixaTexto.isHidden = false
-                isUserInteractionEnabled = true
-            }
         case 12:
             carta1.removeFromParent()
             carta2.removeFromParent()
@@ -131,14 +123,7 @@ class DialogView: SKNode {
         }
         
         if currentIndex < dialogo.count {
-            
-            isUserInteractionEnabled = false
-            isWaitingForDialog = true
-            Timer.scheduledTimer(withTimeInterval: 0.8, repeats: false) { [self]_ in
-                caixaTexto.showNextDialogContent(textContent: dialogo[currentIndex])
-                isUserInteractionEnabled = true
-                isWaitingForDialog = false // Terminou a espera, permite interação novamente
-            }
+            caixaTexto.showNextDialogContent(textContent: dialogo[currentIndex])
         } else {
             GameController.isCutScenePassed = true
             // O diálogo terminou, você pode executar alguma ação ou remover a caixa de texto se desejar.

@@ -12,7 +12,7 @@ class CreditsScene: SKScene{
     let background = CreditsBackground()
     let firstDivader = CreditsDivider()
     let secondDivader = CreditsDivider()
-    let language = Languages(currentScene: "CreditsScene")
+    let language : Languages
     let yasmin = Yasmin()
     let eduardo = Eduardo()
     let erick = Erick()
@@ -27,6 +27,8 @@ class CreditsScene: SKScene{
     
     init(backScene: String, size: CGSize) {
         self.back = CreditBack(currentScene: backScene)
+        self.language = Languages(currentScene: "CreditsScene", isBackScene: backScene)
+
         super.init(size: size)
     }
     

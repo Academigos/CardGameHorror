@@ -15,6 +15,7 @@ class LeftPageDiary: SKSpriteNode{
     
     var diaryType: DiaryTypes = .diaryOne
     var diary: Diary?
+    weak var delegate: closeOverlay?
     
     init() {
         switch diaryType {
@@ -39,6 +40,8 @@ class LeftPageDiary: SKSpriteNode{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if diaryType == .diaryTwo {
             diary?.trocartextura()
+        } else {
+            delegate?.closeOverlay()
         }
     }
     

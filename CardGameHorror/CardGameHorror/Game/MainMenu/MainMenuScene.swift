@@ -48,6 +48,7 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
         
         addChild(backgroundMusic)
         
+        diaryOne.leftPage.delegate = self
     }
     
     func continueGameButtonTapped() {

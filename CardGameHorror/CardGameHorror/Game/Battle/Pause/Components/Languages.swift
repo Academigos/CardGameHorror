@@ -24,8 +24,6 @@ class Languages: SKSpriteNode{
     }
     
     init(currentScene: String, isBackScene: String) {
-        print(isBackScene)
-        print(currentScene)
         self.isBackScene = isBackScene as String
         self.currentScene = currentScene
         self.languages = SKTexture(imageNamed: "Langueges")

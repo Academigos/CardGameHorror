@@ -18,17 +18,9 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
     
     let pause = MainPause(isIntro: false, currentScene: "MainMenu")
     let backgroundMusic = SKAudioNode(fileNamed: "inicio_bgm")
+    let continueGame = ContinueGameButtom()
     
     override func didMove(to view: SKView) {
-        let contentWarning = ContentWarning()
-
-        addChild(contentWarning)
-        
-        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak contentWarning] timer in
-            contentWarning?.removeFromParent()
-        }
-        
-        let continueGame = ContinueGameButtom()
         
         continueGame.zPosition = 1
         continueGame.position = CGPoint(x: GameViewController.screenSize.width * 0.20, y: GameViewController.screenSize.height * 0.58)

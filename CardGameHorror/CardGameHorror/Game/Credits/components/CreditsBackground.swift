@@ -14,7 +14,7 @@ class CreditsBackground:SKSpriteNode{
         self.background = SKTexture(imageNamed: "CreditsBackground")
         super.init(texture: background, color: .clear, size: background.size())
         
-        if GameController.shared.getDeviceModel() == "iPhone SE" || GameController.shared.getDeviceModel() == "iPhone 8" || GameController.shared.getDeviceModel() == "iPhone x" || GameController.shared.getDeviceModel() == "iPhone 11" || GameController.shared.getDeviceModel() == "iPhone 12"{
+        if GameController.shared.getDeviceModel() == "iPhone SE" || GameController.shared.getDeviceModel() == "iPhone 8" || GameController.shared.getDeviceModel() == "iPhone x"{
             if let currentScene = self.scene {
                 currentScene.scaleMode = .aspectFit
             }

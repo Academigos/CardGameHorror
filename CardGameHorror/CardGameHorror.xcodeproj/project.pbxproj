@@ -441,7 +441,6 @@
 		28314F8F2A5CAB120031B95B /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				286A39522A7A9CB500CAC31D /* WakingUPAnimation */,
 				28DCD9912A749AF000E01520 /* Credits */,
 				28EC72732A7039A500266619 /* MainPause */,
 				28076A7D2A6DF81300F2BD7B /* EndScene */,
@@ -508,13 +507,6 @@
 				28EC727F2A70666B00266619 /* Skip */,
 			);
 			path = Intro;
-			sourceTree = "<group>";
-		};
-		286A39522A7A9CB500CAC31D /* WakingUPAnimation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = WakingUPAnimation;
 			sourceTree = "<group>";
 		};
 		28C322BD2A66E583000E83FF /* Hud */ = {

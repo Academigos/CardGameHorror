@@ -25,7 +25,7 @@ class KaylaWaking:SKSpriteNode{
         kaylaWaking = getTexture(with: nomeDaImagem, textureAtlasName: nomeDaPasta)
         let kaylaWakingd = kaylaWaking!
  
-        let action = SKAction.animate(with: kaylaWakingd, timePerFrame: 4/TimeInterval(kaylaWakingd.count), resize: false, restore: true)
+        let action = SKAction.animate(with: kaylaWakingd, timePerFrame: 3/TimeInterval(kaylaWakingd.count), resize: false, restore: true)
         self.run(action)
         
     }

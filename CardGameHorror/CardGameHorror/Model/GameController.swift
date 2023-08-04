@@ -42,7 +42,7 @@ class GameController: NSObject {
     func cardsHandPlayer() -> [Card] {
         return dataManager.fetchCardPlayer()
     }
-    
+
     
     private func replacePlayerHand() {
         let player = dataManager.fetchPlayer()

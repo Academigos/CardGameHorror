@@ -5,11 +5,10 @@
 //  Created by Eduardo on 25/07/23.
 //
 
-import Foundation
 import SpriteKit
 
+/// Classe que define o comportamento do background do botão de pausa na tela inicial
 class MainPauseBackground: SKSpriteNode{
-    
     let pauseBackGround: SKTexture
     weak var delegate: ClosePauseDelegate?
     var optionLabel: SKLabelNode = SKLabelNode()

@@ -12,7 +12,6 @@ class ResetButtom: SKSpriteNode{
     let resetButtom: SKTexture
     var resetLabel: SKLabelNode = SKLabelNode()
     
-    
     init() {
         self.resetButtom = SKTexture(imageNamed: "Buttom")
         super.init(texture: resetButtom, color: .clear, size: resetButtom.size())
@@ -32,6 +31,7 @@ class ResetButtom: SKSpriteNode{
             // Call the startNewGame() function from the GameController
         }
     }
+    
     private func setupResetLabel() {
         
         resetLabel.name = "ContinueLabel"

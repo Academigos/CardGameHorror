@@ -8,7 +8,6 @@
 import SpriteKit
 
 class DayNightTransitionScene: SKScene {
-    
     override func didMove(to view: SKView) {
         // Carregar o atlas
         let atlas = SKTextureAtlas(named: "daynight")

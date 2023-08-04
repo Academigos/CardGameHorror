@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///classe que define o comportamento do nome da yasmin
 class YasminName: SKSpriteNode{
     let yasmin: SKTexture
     

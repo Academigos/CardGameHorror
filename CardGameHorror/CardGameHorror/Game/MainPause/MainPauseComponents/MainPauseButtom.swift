@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+/// Classe que define o comportamento do botão de pausa na tela inicial
 class MainPauseButtom: SKSpriteNode, ClosePauseDelegate{
     let pauseButtom: SKTexture
     let pauseBackground = MainPauseBackground()

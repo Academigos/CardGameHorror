@@ -39,7 +39,6 @@ class Creditos: SKSpriteNode{
             let transition = SKTransition.fade(withDuration: 0.5)
             let mainMenuScene = CreditsScene(backScene: backScene, size: currentScene.size)
             currentScene.view?.presentScene(mainMenuScene, transition: transition)
-            // Call the startNewGame() function from the GameController
             delegate?.closePauseButtonTapped()
         }
     }

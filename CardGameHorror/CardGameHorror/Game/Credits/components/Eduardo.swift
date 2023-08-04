@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+/// Classe responsável por tratar o node de créditos do Eduardo
 class Eduardo: SKSpriteNode{
     let eduardo: SKTexture
     

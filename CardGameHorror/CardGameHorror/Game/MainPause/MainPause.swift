@@ -5,11 +5,10 @@
 //  Created by Eduardo on 25/07/23.
 //
 
-import Foundation
 import SpriteKit
 
+/// Classe que define reúne todos os componentes do elemento pausa
 class MainPause: SKNode{
-    
     
     init(isIntro: Bool, currentScene: String) {
         let PauseButtom = MainPauseButtom(isIntro: isIntro, currentScene: currentScene)

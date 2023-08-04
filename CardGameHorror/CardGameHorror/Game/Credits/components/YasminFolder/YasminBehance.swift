@@ -1,6 +1,7 @@
 import Foundation
 import SpriteKit
 
+///classe que define o comportamento do link do behance da yasmin
 class YasminBe: SKSpriteNode {
     let behance: SKTexture
     

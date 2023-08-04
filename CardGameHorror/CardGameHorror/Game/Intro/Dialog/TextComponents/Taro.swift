@@ -15,6 +15,7 @@ enum CartaIntroType: Int {
 
 class Taro: SKSpriteNode{
     let carta:CartaIntroType
+    let cardSongIntro = SKAudioNode(fileNamed: "carta_virando_sfx")
     
     init(carta: CartaIntroType) {
         self.carta = carta
@@ -40,6 +41,11 @@ class Taro: SKSpriteNode{
         case .carta3:
             animacaoTaro(carta: self, posicao: positionCarta3)
         }
+        
+        //adiciona o audio
+        cardSongIntro.autoplayLooped = false
+        self.addChild(cardSongIntro)
+        
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -54,7 +60,7 @@ class Taro: SKSpriteNode{
         let animacaoCarta = SKAction.sequence([SKAction.fadeAlpha(to: 0, duration: 0),delay, SKAction.fadeAlpha(to: 1.0, duration: 0.5)])
         //self.addChild(carta)
         carta.run(animacaoCarta)
-
+        cardSongIntro.run(SKAction.play())
         carta.position = posicao
     }
 }

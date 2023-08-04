@@ -16,6 +16,7 @@ class Diary: SKNode {
     
     let rightPage = RightPageDiary()
     var leftPage = LeftPageDiary()
+    let diarySong = SKAudioNode(fileNamed: "pagina_livro_sfx")
     
     override init() {
         super.init()
@@ -26,6 +27,10 @@ class Diary: SKNode {
         
         rightPage.diary = self
         leftPage.diary = self
+        
+        //adicao do som 
+        diarySong.autoplayLooped = false
+        self.addChild(diarySong)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -84,5 +89,8 @@ class Diary: SKNode {
         // Defina a nova textura do nó após a mudança do diaryType
         rightPage.texture = rightPage.continueGameButtom
         leftPage.texture = leftPage.continueGameButtom
+        
+        //ativamento do som
+        diarySong.run(SKAction.play())
     }
 }

@@ -13,6 +13,7 @@ class Languages: SKSpriteNode{
     let newLanguage: [String] = ["pt-BR", "en"]
     var LanguageLabel: SKLabelNode = SKLabelNode()
     var currentScene: String
+    var isBackScene: String?
     
     init(currentScene: String) {
         self.currentScene = currentScene
@@ -21,6 +22,16 @@ class Languages: SKSpriteNode{
         setupLanguageLabel()
         isUserInteractionEnabled = true
     }
+    
+    init(currentScene: String, isBackScene: String) {
+        self.isBackScene = isBackScene as String
+        self.currentScene = currentScene
+        self.languages = SKTexture(imageNamed: "Langueges")
+        super.init(texture: languages, color: .clear, size: languages.size())
+        setupLanguageLabel()
+        isUserInteractionEnabled = true
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -63,7 +74,7 @@ class Languages: SKSpriteNode{
         }else if currentScene == "CreditsScene"{
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = CreditsScene(backScene: self.currentScene, size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = CreditsScene(backScene: isBackScene!, size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
         }

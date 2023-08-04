@@ -29,7 +29,7 @@ class YasminInsta: SKSpriteNode{
         alertController.addAction(cancelAction)
         
         let openLinkAction = UIAlertAction(title: "Yes", style: .default) { _ in
-            if let url = URL(string: "https://www.instagram.com/_yasminr_/") {
+            if let url = URL(string: "https://www.instagram.com/mercury_ish/") {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         }

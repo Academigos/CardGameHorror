@@ -51,7 +51,7 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
                     closePause.position = CGPoint(x: pauseBackground.size.width * -0.4, y: pauseBackground.size.height * 0.47)
                     closePause.scale(to: autoScale(closePause, widthProportion: 0.15, screenSize: pauseBackground.size))
                     
-                    languages.position = CGPoint(x: pauseBackground.size.width * 0.2, y: pauseBackground.size.height * 0.05)
+                    languages.position = CGPoint(x: pauseBackground.size.width * 0.2, y: pauseBackground.size.height * 0.04)
                     languages.scale(to: autoScale(languages, widthProportion: 0.35, screenSize: pauseBackground.size))
                 }else if GameController.shared.getDeviceModel() == "iPhone X"{
                     pauseBackground.scale(to: autoScale(pauseBackground, widthProportion: 0.25, screenSize: GameViewController.screenSize))
@@ -59,9 +59,15 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
                     closePause.scale(to: autoScale(closePause, widthProportion: 0.18, screenSize: pauseBackground.size))
                     languages.position = CGPoint(x: GameViewController.screenSize.width * 0.05, y: GameViewController.screenSize.height * 0.03)
                     languages.scale(to: autoScale(languages, widthProportion: 0.40, screenSize: pauseBackground.size))
-                }else if GameController.shared.getDeviceModel() == "iPhone 11" || GameController.shared.getDeviceModel() == "iPhone 12"{
+                }else if GameController.shared.getDeviceModel() == "iPhone 11"{
                     pauseBackground.scale(to: autoScale(pauseBackground, widthProportion: 0.25, screenSize: GameViewController.screenSize))
                     closePause.position = CGPoint(x: pauseBackground.size.width * -0.45, y: pauseBackground.size.height * 0.5)
+                    closePause.scale(to: autoScale(closePause, widthProportion: 0.18, screenSize: pauseBackground.size))
+                    languages.position = CGPoint(x: GameViewController.screenSize.width * 0.05, y: GameViewController.screenSize.height * 0.03)
+                    languages.scale(to: autoScale(languages, widthProportion: 0.40, screenSize: pauseBackground.size))
+                }else if GameController.shared.getDeviceModel() == "iPhone 12"{
+                    pauseBackground.scale(to: autoScale(pauseBackground, widthProportion: 0.25, screenSize: GameViewController.screenSize))
+                    closePause.position = CGPoint(x: pauseBackground.size.width * -0.45, y: pauseBackground.size.height * 0.52)
                     closePause.scale(to: autoScale(closePause, widthProportion: 0.18, screenSize: pauseBackground.size))
                     languages.position = CGPoint(x: GameViewController.screenSize.width * 0.05, y: GameViewController.screenSize.height * 0.03)
                     languages.scale(to: autoScale(languages, widthProportion: 0.40, screenSize: pauseBackground.size))
@@ -69,13 +75,19 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
                     pauseBackground.scale(to: autoScale(pauseBackground, widthProportion: 0.25, screenSize: GameViewController.screenSize))
                     closePause.position = CGPoint(x: pauseBackground.size.width * -0.45, y: pauseBackground.size.height * 0.48)
                     closePause.scale(to: autoScale(closePause, widthProportion: 0.18, screenSize: pauseBackground.size))
-                    languages.position = CGPoint(x: GameViewController.screenSize.width * 0.05, y: GameViewController.screenSize.height * 0.04)
+                    languages.position = CGPoint(x: GameViewController.screenSize.width * 0.05, y: GameViewController.screenSize.height * 0.03)
+                    languages.scale(to: autoScale(languages, widthProportion: 0.40, screenSize: pauseBackground.size))
+                }else if GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
+                    pauseBackground.scale(to: autoScale(pauseBackground, widthProportion: 0.25, screenSize: GameViewController.screenSize))
+                    closePause.position = CGPoint(x: pauseBackground.size.width * -0.45, y: pauseBackground.size.height * 0.48)
+                    closePause.scale(to: autoScale(closePause, widthProportion: 0.18, screenSize: pauseBackground.size))
+                    languages.position = CGPoint(x: GameViewController.screenSize.width * 0.05, y: GameViewController.screenSize.height * 0.03)
                     languages.scale(to: autoScale(languages, widthProportion: 0.40, screenSize: pauseBackground.size))
                 }else{
                     pauseBackground.scale(to: autoScale(pauseBackground, widthProportion: 0.25, screenSize: GameViewController.screenSize))
                     closePause.position = CGPoint(x: pauseBackground.size.width * -0.45, y: pauseBackground.size.height * 0.53)
                     closePause.scale(to: autoScale(closePause, widthProportion: 0.18, screenSize: pauseBackground.size))
-                    languages.position = CGPoint(x: GameViewController.screenSize.width * 0.05, y: GameViewController.screenSize.height * 0.04)
+                    languages.position = CGPoint(x: GameViewController.screenSize.width * 0.05, y: GameViewController.screenSize.height * 0.03)
                     languages.scale(to: autoScale(languages, widthProportion: 0.40, screenSize: pauseBackground.size))
                 }
             

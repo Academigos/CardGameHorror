@@ -71,14 +71,14 @@ class ButtonEndTurn: SKSpriteNode{
                 if DataManager.shared.fetchPlayer().hp <= 0{
                     if let currentScene = self.scene {
                         let transition = SKTransition.fade(withDuration: 1)
-                        let mainMenuScene = MonsterEnd(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                        let mainMenuScene = DefeatKayla(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
                         currentScene.view?.presentScene(mainMenuScene, transition: transition)
                         // Call the startNewGame() function from the GameController
                     }
                 }else if DataManager.shared.fetchMonster().hp <= 0{
                     if let currentScene = self.scene {
                         let transition = SKTransition.fade(withDuration: 1)
-                        let mainMenuScene = PlayerEnd(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                        let mainMenuScene = VictoryKayla(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
                         currentScene.view?.presentScene(mainMenuScene, transition: transition)
                         // Call the startNewGame() function from the GameController
                     }

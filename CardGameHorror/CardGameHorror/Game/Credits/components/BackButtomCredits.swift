@@ -17,6 +17,7 @@ class CreditBack: SKSpriteNode{
         self.currentScene = currentScene
         self.button = SKTexture(imageNamed: "buttonCreditos")
         super.init(texture: button, color: .clear, size: button.size())
+        self.scale(to: autoScale(self, widthProportion: 0.2, screenSize: GameViewController.screenSize))
         setupLanguageLabel()
         isUserInteractionEnabled = true
     }

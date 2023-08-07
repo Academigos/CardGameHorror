@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+/// classe para definir o botão de retornar
 class CreditBack: SKSpriteNode{
     let button: SKTexture
     var LanguageLabel: SKLabelNode = SKLabelNode()
@@ -26,41 +27,42 @@ class CreditBack: SKSpriteNode{
         fatalError("init(coder:) has not been implemented")
     }
     
+    ///Função responsável por gerir o retorno para a cena
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if currentScene == "GameScene"{
+        if currentScene == "GameScene" { // valida se a cena anterior era a GameScene
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = GameScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = GameScene(size: currentScene.size)
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
-        }else if currentScene == "Intro"{
+        }else if currentScene == "Intro" { // valida se a cena anterior era a Intro
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = IntroScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = IntroScene(size: currentScene.size)
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
-        }else if currentScene == "EndPlayer"{
+        }else if currentScene == "EndPlayer" { // valida se a cena anterior era a EndPlayer
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = PlayerEnd(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = PlayerEnd(size: currentScene.size)
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
-        }else if currentScene == "EndMonster"{
+        }else if currentScene == "EndMonster" { // valida se a cena anterior era a EndMonster
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = MonsterEnd(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = MonsterEnd(size: currentScene.size)
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
-        }else if currentScene == "MainMenu"{
+        }else if currentScene == "MainMenu" { // valida se a cena anterior era a MainMenu
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = MainMenuScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = MainMenuScene(size: currentScene.size)
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
         }
-        
     }
     
+    ///Função para formatar o texto e tratar a língua
     private func setupLanguageLabel() {
         LanguageLabel.name = "LanguegeLabel"
         LanguageLabel.fontSize = size.height * 0.4

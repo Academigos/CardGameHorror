@@ -8,10 +8,11 @@
 import Foundation
 import SpriteKit
 
+/// Classe responsável por tratar o node de créditos do Eduardo
 class Eduardo: SKSpriteNode{
     let eduardo: SKTexture
     
-    init(){
+    init() {
         self.eduardo = SKTexture(imageNamed: "CreditosEduardo")
         super.init(texture: eduardo, color: .clear, size: eduardo.size())
         self.scale(to: autoScale(self, widthProportion: 0.22, screenSize: GameViewController.screenSize))

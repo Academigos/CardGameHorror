@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Classe para  a cena em que o oponente ganha
 class MonsterEnd: SKScene{
     let finalScene = FinalSceneDerrota()
     let derrotaMusic = SKAudioNode(fileNamed: "derrota_bgm")

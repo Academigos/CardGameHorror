@@ -7,7 +7,8 @@
 
 import SpriteKit
 
-class Carro2: SKSpriteNode{
+///Define textura do carro
+class Carro2: SKSpriteNode {
     let carro2 : SKTexture
     
     init(carro2: String) {

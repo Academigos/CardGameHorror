@@ -5,11 +5,11 @@
 //  Created by Eduardo on 19/07/23.
 //
 
-import Foundation
+
 import SpriteKit
 
-class ButtonEndTurn: SKSpriteNode{
-    
+///Botão de fim de turno
+class ButtonEndTurn: SKSpriteNode {
     weak var endTurnButtonDelegate: endTurnDelegate?
     var cardsSelectLabel: SKLabelNode = SKLabelNode()
     var finishTurnLabel: SKLabelNode = SKLabelNode()
@@ -39,17 +39,15 @@ class ButtonEndTurn: SKSpriteNode{
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == #keyPath(GameController.selectedCard) {
-            // The observed property has changed, update the opacity
             updateOpacity()
             updateValueCartas()
         }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         guard isButtonInteractionEnabled else {
-               return
-           }
+            return
+        }
         
         if GameController.shared.selectedCard.count == 3{
             isButtonInteractionEnabled = false
@@ -62,7 +60,7 @@ class ButtonEndTurn: SKSpriteNode{
                 hud.updateLife()
             }
             endTurnButtonDelegate?.handCardsDidFinishAnimating()
-            stackPopUp?.checkStackSelectedCards(position: self.position)    
+            stackPopUp?.checkStackSelectedCards(position: self.position)
             // change the scene in case of player or monster die
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
                 
@@ -113,7 +111,6 @@ class ButtonEndTurn: SKSpriteNode{
     }
     
     private func setupFinishTurnLabel() {
-        
         let text =  LanguageManager.shared.localizedString("Finalizar turno")
         let fontSize = size.height * 0.18 // Definindo o tamanho da fonte com base na altura da tela
         
@@ -150,6 +147,7 @@ class ButtonEndTurn: SKSpriteNode{
         addChild(finishTurnLabel)
     }
     
+    //atualiza o contador de cartas
     func updateValueCartas(){
         counter = GameController.shared.selectedCard.count
         let localizedText = LanguageManager.shared.localizedString("key_for_my_text", count: counter, total: totalCount)
@@ -157,7 +155,6 @@ class ButtonEndTurn: SKSpriteNode{
     }
     
     deinit {
-        // Remove the observer when the instance is deallocated
         GameController.shared.removeObserver(self, forKeyPath: #keyPath(GameController.selectedCard))
     }
 }

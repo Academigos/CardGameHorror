@@ -5,11 +5,10 @@
 //  Created by Erick Ribeiro on 24/07/23.
 //
 
-import Foundation
 import SpriteKit
 
+///Lógica de sobreposicionamento do botão de pausa
 class OverlayPause: SKSpriteNode{
-    
     init() {
         super.init(texture: nil, color: .black, size: GameViewController.screenSize)
         position = CGPoint(x: GameViewController.screenSize.width / 2, y: GameViewController.screenSize.height / 2)
@@ -19,13 +18,8 @@ class OverlayPause: SKSpriteNode{
         isUserInteractionEnabled = false
     }
     
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
     }
     
     func animationEntryOverlay(){

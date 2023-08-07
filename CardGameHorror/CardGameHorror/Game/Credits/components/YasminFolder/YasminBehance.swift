@@ -1,15 +1,8 @@
-//
-//  YasminBehance.swift
-//  CardGameHorror
-//
-//  Created by Eduardo on 28/07/23.
-//
-
 import Foundation
 import SpriteKit
 
-
-class YasminBe: SKSpriteNode{
+///classe que define o comportamento do link do behance da yasmin
+class YasminBe: SKSpriteNode {
     let behance: SKTexture
     
     init() {

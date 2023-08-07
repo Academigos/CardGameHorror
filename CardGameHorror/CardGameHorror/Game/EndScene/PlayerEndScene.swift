@@ -5,9 +5,9 @@
 //  Created by Eduardo on 23/07/23.
 //
 
-import Foundation
 import SpriteKit
 
+///Classe para  a cena em que o player ganha
 class PlayerEnd: SKScene{
     let finalScene = FinalSceneVitoria()//cena final (background e label)
     let vitoriaMusic = SKAudioNode(fileNamed: "vitoria_msc")

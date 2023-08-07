@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Classe para manipular o crédito para as músicas
 class Musicas: SKSpriteNode{
     let musicas: SKTexture
     

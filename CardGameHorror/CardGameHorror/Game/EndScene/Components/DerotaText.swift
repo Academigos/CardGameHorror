@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Classe para definir o texto de derrota para inglês ou português
 class DerotaText: SKSpriteNode{
     let text: SKTexture
     

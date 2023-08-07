@@ -5,9 +5,9 @@
 //  Created by Eduardo on 21/07/23.
 //
 
-import Foundation
 import SpriteKit
 
+///Classe para definir o botão de troca de linguagem 
 class Languages: SKSpriteNode{
     let languages: SKTexture
     let newLanguage: [String] = ["pt-BR", "en"]
@@ -41,37 +41,39 @@ class Languages: SKSpriteNode{
         }else{
             LanguageManager.shared.setLanguage(newLanguage[0])
         }
-        if currentScene == "GameScene"{
+        
+        ///validação para poder retornar a scene anterior
+        if currentScene == "GameScene" {
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = GameScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = GameScene(size: currentScene.size)
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
-        }else if currentScene == "Intro"{
+        }else if currentScene == "Intro" {
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = IntroScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = IntroScene(size: currentScene.size)
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
-        }else if currentScene == "EndPlayer"{
+        }else if currentScene == "EndPlayer" {
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = PlayerEnd(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = PlayerEnd(size: currentScene.size)
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
-        }else if currentScene == "EndMonster"{
+        }else if currentScene == "EndMonster" {
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = MonsterEnd(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = MonsterEnd(size: currentScene.size)
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
-        }else if currentScene == "MainMenu"{
+        }else if currentScene == "MainMenu" {
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
-                let mainMenuScene = MainMenuScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+                let mainMenuScene = MainMenuScene(size: currentScene.size)
                 currentScene.view?.presentScene(mainMenuScene, transition: transition)
             }
-        }else if currentScene == "CreditsScene"{
+        }else if currentScene == "CreditsScene" {
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)
                 let mainMenuScene = CreditsScene(backScene: isBackScene!, size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
@@ -79,6 +81,8 @@ class Languages: SKSpriteNode{
             }
         }
     }
+    
+    ///formatar o texto
     private func setupLanguageLabel() {
         LanguageLabel.name = "LanguegeLabel"
         LanguageLabel.fontSize = size.height * 0.4

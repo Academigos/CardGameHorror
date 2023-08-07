@@ -5,7 +5,6 @@
 //  Created by Eduardo on 23/07/23.
 //
 
-import Foundation
 import SpriteKit
 
 protocol NewGameButtomDelegate: AnyObject {
@@ -13,7 +12,8 @@ protocol NewGameButtomDelegate: AnyObject {
     func openDiaryOne()
 }
 
-class NewGameButtom: SKSpriteNode{
+///Classe para o botão de começar o game
+class NewGameButtom: SKSpriteNode {
     let buttomNewGame: SKTexture
     var startLabel: SKLabelNode = SKLabelNode()
 
@@ -33,8 +33,6 @@ class NewGameButtom: SKSpriteNode{
         fatalError("init(coder:) has not been implemented")
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        GameController.shared.startNewGame()
-//        delegate?.newGameButtonTapped()
         guard isButtonInteractionEnabled else {
             return
         }
@@ -44,6 +42,7 @@ class NewGameButtom: SKSpriteNode{
         GameController.isCutScenePassed = false
     }
     
+    //formatar o texto
     private func setupStartLabel() {
         startLabel.name = "ContinueLabel"
         startLabel.fontSize = size.height * 0.12

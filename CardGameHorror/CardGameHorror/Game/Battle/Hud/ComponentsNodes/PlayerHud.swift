@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Classe para controlar os dados  do player
 class PlayerHud: SKNode{
     let playerLifeBar = LifeBarNode(lifeBarName: "PlayerLifeBar", life: DataManager.shared.fetchPlayer().hp, defaultLife: GameController.shared.playerLife)
     let playerName = NamePlaceHolder(texture: "Corage")
@@ -21,8 +22,6 @@ class PlayerHud: SKNode{
         addChild(playerLifeBar)
         
     }
-    
-
     
     func updatePlayer(value: Double){
         playerLifeBar.setLife(DataManager.shared.fetchPlayer().hp)

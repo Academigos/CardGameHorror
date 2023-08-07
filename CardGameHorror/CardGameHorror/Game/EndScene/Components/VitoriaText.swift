@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Classe para definir o texto de vitória para inglês ou português
 class VitoriaText: SKSpriteNode{
     let text: SKTexture
     

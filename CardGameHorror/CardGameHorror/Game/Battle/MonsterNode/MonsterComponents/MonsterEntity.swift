@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+///Classe para definir o comportamento do inimigo 
 class Enemy: SKSpriteNode {
     private let enemyTexture:SKTexture
     // Adicione mais texturas aqui para os outros quadros da animação

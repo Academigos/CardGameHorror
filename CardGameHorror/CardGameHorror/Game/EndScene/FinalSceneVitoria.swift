@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+//Classe para reunir todos os componentes e posicioná-los
 class FinalSceneVitoria : SKNode{
     let background = FinalBackground(finalBackground: "FinalSceneVitoria")
     let text = VitoriaText()
@@ -16,7 +17,7 @@ class FinalSceneVitoria : SKNode{
     let finalDialogBox = FinalDialog(finalDialog: "DialogFinalVitoria")
     override init() {
         super.init()
-      
+        
         background.position = CGPoint(x: GameViewController.screenSize.width*0.5, y: GameViewController.screenSize.height*0.5)
         background.scale(to: GameViewController.screenSize)
         background.zPosition = -1
@@ -46,8 +47,4 @@ class FinalSceneVitoria : SKNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
-
 }

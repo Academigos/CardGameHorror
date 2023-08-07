@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///classe que define o comportamento do link do instagram da yasmin
 class YasminInsta: SKSpriteNode{
     let insta: SKTexture
     

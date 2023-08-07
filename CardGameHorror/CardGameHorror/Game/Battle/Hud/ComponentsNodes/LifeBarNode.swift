@@ -5,9 +5,9 @@
 //  Created by Eduardo on 19/07/23.
 //
 
-import Foundation
 import SpriteKit
 
+///Classe para reunir os componentes que compõe a life bar tanto do monstro quanto do player
 class LifeBarNode: SKNode{
     let lifeBarName: String
     var life: Double
@@ -35,7 +35,6 @@ class LifeBarNode: SKNode{
             lifeOverlay.anchorPoint = CGPoint(x: 0.027, y: 0.08)
         }
         
-        
         lifeOverlay.zPosition = 2
         addChild(lifeOverlay)
         self.backGround.anchorPoint = CGPoint(x: 0.027, y: 0) // Ancoragem na extremidade esquerda do backGround
@@ -52,6 +51,7 @@ class LifeBarNode: SKNode{
         fatalError("init(coder:) has not been implemented")
     }
     
+    //atualiza a o valor da barra de vida
     func updateLifeBar() {
         let scaleAction = SKAction.scaleX(to: -CGFloat(life / defaultLife), duration: 0.3)
         

@@ -7,7 +7,8 @@
 
 import SpriteKit
 
-class Background: SKSpriteNode{
+///Define textura do background
+class Background: SKSpriteNode {
     let background : SKTexture
     
     init(background: String) {

@@ -7,7 +7,8 @@
 
 import SpriteKit
 
-class ArvoresFrente: SKSpriteNode{
+///Define textura das árvores
+class ArvoresFrente: SKSpriteNode {
     let arvoresFrente : SKTexture
     
     init(arvoresFrente: String) {

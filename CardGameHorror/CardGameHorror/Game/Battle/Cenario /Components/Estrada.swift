@@ -7,7 +7,8 @@
 
 import SpriteKit
 
-class Estrada: SKSpriteNode{
+///Define textura da estrada
+class Estrada: SKSpriteNode {
     let estrada : SKTexture
     
     init(estrada: String) {

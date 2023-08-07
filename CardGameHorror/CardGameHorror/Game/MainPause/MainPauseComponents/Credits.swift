@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+/// Classe que define o comportamento do botão de crédito
 class Creditos: SKSpriteNode{
     let creditos: SKTexture
     weak var delegate: ClosePauseDelegate?
@@ -27,23 +28,22 @@ class Creditos: SKSpriteNode{
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Change the color when touched (for example, to red)
         self.texture = SKTexture(imageNamed: "PressedButtom")
         
-        // Add a slight delay (e.g., 0.1 seconds) to revert the color back to clear
+        // intervalo curto antes de trocar a textura
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.texture = self.creditos
         }
         
         if let currentScene = self.scene {
             let transition = SKTransition.fade(withDuration: 0.5)
-            let mainMenuScene = CreditsScene(backScene: backScene, size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+            let mainMenuScene = CreditsScene(backScene: backScene, size: currentScene.size)
             currentScene.view?.presentScene(mainMenuScene, transition: transition)
-            // Call the startNewGame() function from the GameController
             delegate?.closePauseButtonTapped()
         }
     }
     
+    // configuração da formatação do texto
     private func setupMainMenuLabel() {
         mainMenuLabel.name = "mainMenuLabel"
         mainMenuLabel.fontSize = size.height * 0.38

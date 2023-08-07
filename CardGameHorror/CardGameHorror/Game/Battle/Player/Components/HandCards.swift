@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+///Gerencia as cartas na mão
 class HandCards: SKSpriteNode {
     // espaçamento entre às cartas
     let cardSpacing: CGFloat = 7

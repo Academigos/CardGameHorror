@@ -7,13 +7,14 @@
 
 import SpriteKit
 
+//Enum para cada textura de página da Apple
 enum DiaryTypes: String {
     case diaryOne
     case diaryTwo
 }
 
+///Classe que define o comportamento do Diário
 class Diary: SKNode {
-    
     let rightPage = RightPageDiary()
     var leftPage = LeftPageDiary()
     let diarySong = SKAudioNode(fileNamed: "pagina_livro_sfx")
@@ -37,8 +38,8 @@ class Diary: SKNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //troca de textura das páginas
     func trocartextura(){
-        
         if leftPage.diaryType == .diaryOne {
             leftPage.diaryType = .diaryTwo
         } else {

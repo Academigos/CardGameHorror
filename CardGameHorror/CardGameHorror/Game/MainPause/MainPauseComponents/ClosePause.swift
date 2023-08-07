@@ -5,17 +5,15 @@
 //  Created by Eduardo on 21/07/23.
 //
 
-import Foundation
 import SpriteKit
 
 protocol ClosePauseDelegate: AnyObject {
     func closePauseButtonTapped()
 }
 
-class ClosePause: SKSpriteNode{
-    
+///Classe para definir o botão de  fechamento da pausa
+class ClosePause: SKSpriteNode {
     weak var delegate: ClosePauseDelegate?
-    
     let ClosePause: SKTexture
     
     init() {

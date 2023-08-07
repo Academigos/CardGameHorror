@@ -13,6 +13,7 @@ enum CardType: String {
     case DEF
 }
 
+///Classe para gerir cada carta do player
 class CardNode: SKSpriteNode {
     let cardModel:Card
     
@@ -26,8 +27,6 @@ class CardNode: SKSpriteNode {
     
     
     let proportionCard: CGFloat
-    //    var newWidthCard: CGFloat
-    //    var newHeightCard: CGFloat
     
     var faceUp = true
     var isSelected = false
@@ -51,8 +50,6 @@ class CardNode: SKSpriteNode {
         self.cardTexture = CardTexture.fromString(cardModel.typeTexture ?? "")
         self.indexArray = indexArray
         proportionCard = frontTexture.size().width / frontTexture.size().height
-        //        newWidthCard = GameViewController.screenSize.width * 0.12
-        //        newHeightCard = newWidthCard / proportionCard
         
 
         
@@ -113,6 +110,7 @@ class CardNode: SKSpriteNode {
         labelNome.zPosition = zPosition + 0.1
     }
     var isCardInteractionEnabled = true
+    
     // identifica o toque na carta
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isCardInteractionEnabled, (touches.first != nil) {
@@ -180,7 +178,6 @@ class CardNode: SKSpriteNode {
 }
 
 extension SKSpriteNode {
-    
     // Adiciona Efeito
     func addGlow(radius: Float = 40, color: UIColor) {
         removeGlow()

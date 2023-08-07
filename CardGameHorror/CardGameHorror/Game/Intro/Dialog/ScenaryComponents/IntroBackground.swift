@@ -8,10 +8,11 @@
 import SpriteKit
 
 enum BackgroundType: Int {
-    case desk,
-    room
+    case desk
+    case room
 }
 
+///Classe para gerir o cenário da introdução 
 class IntroScenary: SKSpriteNode {
     let backgroundType: BackgroundType
     let scenaryTexture: SKTexture

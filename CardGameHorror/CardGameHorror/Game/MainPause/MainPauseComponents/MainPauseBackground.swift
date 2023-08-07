@@ -5,11 +5,10 @@
 //  Created by Eduardo on 25/07/23.
 //
 
-import Foundation
 import SpriteKit
 
+/// Classe que define o comportamento do background do botão de pausa na tela inicial
 class MainPauseBackground: SKSpriteNode{
-    
     let pauseBackGround: SKTexture
     weak var delegate: ClosePauseDelegate?
     var optionLabel: SKLabelNode = SKLabelNode()
@@ -28,6 +27,7 @@ class MainPauseBackground: SKSpriteNode{
         fatalError("init(coder:) has not been implemented")
     }
     
+    ///Formata o texto
     private func setUpContinueLabel() {
         continueLabel.name = "continueLabel"
         continueLabel.fontSize = size.height * 0.05
@@ -40,6 +40,7 @@ class MainPauseBackground: SKSpriteNode{
         addChild(continueLabel)
     }
     
+    ///Formata o texto
     private func setUpOptionLabel() {
         optionLabel.name = "optionLabel"
         optionLabel.fontSize = size.height * 0.075
@@ -52,6 +53,7 @@ class MainPauseBackground: SKSpriteNode{
         addChild(optionLabel)
     }
     
+    ///Formata o texto
     private func setLanguageLabel() {
         languageLabel.name = "languageLabel"
         languageLabel.fontSize = size.height * 0.04

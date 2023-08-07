@@ -10,6 +10,7 @@ import Foundation
 class LanguageManager {
     static let shared = LanguageManager()
     
+    //save user language preferences
        private let userDefaultsKey = "selectedLanguage"
        
        private(set) var currentLanguage: String {
@@ -22,11 +23,11 @@ class LanguageManager {
        }
     
     private init() {}
-    
+    // set the languege chossed
     func setLanguage(_ languageCode: String) {
         currentLanguage = languageCode
     }
-    
+    //get the string based on languege seted
     func localizedString(_ key: String) -> String {
         let path = Bundle.main.path(forResource: currentLanguage, ofType: "lproj")
         let bundle = Bundle(path: path!)

@@ -9,6 +9,7 @@ import Foundation
 import CoreData
 import GameplayKit
 
+///
 class GameController: NSObject {
     static let shared = GameController()
     private let dataManager = DataManager.shared
@@ -139,6 +140,8 @@ class GameController: NSObject {
         return randomDamage
     }
     
+    
+    // func to get the user device
     func getDeviceModel() -> String {
         let iphoneSize = GameViewController.screenSize
         switch iphoneSize {
@@ -175,24 +178,4 @@ class GameController: NSObject {
         }
     }
 }
-/*
-if GameController.shared.getDeviceModel() == "iPhone SE"{
-    
-}else if GameController.shared.getDeviceModel() == "iPhone 8"{
-    
-}else if GameController.shared.getDeviceModel() == "iPhone X"{
-    
-}else if GameController.shared.getDeviceModel() == "iPhone 11"{
-    
-}else if GameController.shared.getDeviceModel() == "iPhone 12"{
-    
-}else if GameController.shared.getDeviceModel() == "iPhone mini"{
-    
-}else if GameController.shared.getDeviceModel() == "iPhone 13"{
-    
-}else if GameController.shared.getDeviceModel() == "iPhone 14"{
-    
-}else {
-    
-}
-*/
+

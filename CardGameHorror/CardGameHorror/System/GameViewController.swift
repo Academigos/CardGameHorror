@@ -10,11 +10,12 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    // static to get accesse of screen size
     static var screenSize = CGSize()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //get screen size in var
         GameViewController.screenSize = view.bounds.size
         //MARK: -Battle Scene
         // get Scene
@@ -27,8 +28,6 @@ class GameViewController: UIViewController {
         if let view = self.view as! SKView? {
             view.presentScene(gameScene)
             view.ignoresSiblingOrder = true
-//            view.showsFPS = true
-//            view.showsNodeCount = true
         }
     }
     

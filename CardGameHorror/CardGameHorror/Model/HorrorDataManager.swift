@@ -91,13 +91,13 @@ class DataManager {
         player.hp = value
         saveContext()
     }
-    
+    // set cards in relationship
     func addCardsToPlayerHand(newCards: Set<Card>) {
         let player = fetchPlayer()
         player.addToInHand(newCards as NSSet)
         saveContext()
     }
-    
+    // change cards in relationship inHand
     func updatePlayerHand(newCards: Set<Card>, usedCards: Set<Card>) {
         let player = fetchPlayer()
         player.removeFromInHand(usedCards as NSSet)
@@ -121,6 +121,7 @@ class DataManager {
             }
         }
     
+    //update monster HP to new value
     func updateMonsterHP(value: Double) {
         let monster = fetchMonster()
         monster.hp = value
@@ -128,7 +129,7 @@ class DataManager {
     }
     
     // MARK: - Fetch Requests
-    
+    // get cards in relationship
     func fetchCardPlayer() -> [Card] {
         let player = fetchPlayer()
         
@@ -142,7 +143,7 @@ class DataManager {
             fatalError("Error fetching cards: \(error)")
         }
     }
-    
+    //get cards data
     func fetchCard() -> [Card] {
         do {
             let card = try context.fetch(Card.fetchRequest())
@@ -151,7 +152,7 @@ class DataManager {
             fatalError("Error in fetchCard: \(error)")
         }
     }
-    
+    //get player data
     func fetchPlayer() -> Player {
         do {
             let players = try context.fetch(Player.fetchRequest()) as! [Player]
@@ -167,6 +168,7 @@ class DataManager {
         }
     }
     
+    // get mosnter data
     func fetchMonster() -> Monster {
         do {
             let monsters = try context.fetch(Monster.fetchRequest()) as! [Monster]

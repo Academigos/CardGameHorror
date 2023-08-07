@@ -9,7 +9,7 @@ import Foundation
 import SpriteKit
 
 extension SKNode{
-    
+    // func to auto scale assets without distorting them
     func autoScale <T: SKSpriteNode>(_ node: T, widthProportion: Double, screenSize: CGSize) -> CGSize  {
             let proportion = node.size.width / node.size.height
             let width = screenSize.width

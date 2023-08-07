@@ -8,7 +8,8 @@
 import Foundation
 import SpriteKit
 
-class Divader: SKSpriteNode{
+///Classe para gerir o divider na tela
+class Divader: SKSpriteNode {
     let divader : SKTexture
     
     init() {

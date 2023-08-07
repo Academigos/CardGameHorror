@@ -1,27 +1,23 @@
 import Foundation
 import SpriteKit
 
+///Classe para gerir todos os componentes da experiência de diálogo
 class DialogView: SKNode {
     var scenary = IntroScenary(backgroundType: .room)
     let caixaTexto = TextBox(dialogo: dialogo[0])
-    var currentIndex = 0 // Índice inicial
+    var currentIndex = 0
     let maos = Maos()
     // Propriedades para os emitters de partículas
     var particleEmitters: [SKEmitterNode] = []
     let carta1 = Taro(carta: .carta1)
     let carta2 = Taro(carta: .carta2)
     let carta3 = Taro(carta: .carta3)
-    private var isWaitingForDialog = false // Variável para controlar se está esperando o Timer
+    private var isWaitingForDialog = false
     
     override init() {
         super.init()
         
         addChild(scenary)
-      
-        //        addChild(maos)
-        //        addChild(taro)
-        //startDialog()
-        
         setupParticleFire()
         Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { [self]_ in
             addChild(caixaTexto)
@@ -33,7 +29,7 @@ class DialogView: SKNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupParticleFire(){
+    func setupParticleFire() {
         // Adicionar 4 emitters de partículas em diferentes posições
         var positions: [CGPoint] = [
             CGPoint(x: GameViewController.screenSize.width * 0.292, y: GameViewController.screenSize.height * 0.551),
@@ -42,7 +38,7 @@ class DialogView: SKNode {
             CGPoint(x: GameViewController.screenSize.width  * 0.682, y: GameViewController.screenSize.height * 0.483),
         ]
         
-        if GameController.shared.getDeviceModel() == "iPhone SE"{
+        if GameController.shared.getDeviceModel() == "iPhone SE" {
             positions = [
                 CGPoint(x: GameViewController.screenSize.width * 0.237, y: GameViewController.screenSize.height * 0.551),
                 CGPoint(x: GameViewController.screenSize.width  * 0.762, y: GameViewController.screenSize.height * 0.551),
@@ -126,7 +122,6 @@ class DialogView: SKNode {
             caixaTexto.showNextDialogContent(textContent: dialogo[currentIndex])
         } else {
             GameController.isCutScenePassed = true
-            // O diálogo terminou, você pode executar alguma ação ou remover a caixa de texto se desejar.
             caixaTexto.removeFromParent()
             if let currentScene = self.scene {
                 let transition = SKTransition.fade(withDuration: 0.5)

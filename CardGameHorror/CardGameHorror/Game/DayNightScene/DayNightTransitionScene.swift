@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+///Classe para gerir a animação de transição de dia para noite
 class DayNightTransitionScene: SKScene {
     override func didMove(to view: SKView) {
         // Carregar o atlas
@@ -39,11 +40,6 @@ class DayNightTransitionScene: SKScene {
         for frameName in sortedTextureNames {
             let texture = atlas.textureNamed(frameName)
             textures.append(texture)
-//
-//            // Duplicar o frame para tornar a animação mais lenta
-//            for _ in 0..<6 { // Neste exemplo, cada frame é duplicado 3 vezes
-//                textures.append(texture)
-//            }
         }
         
         // Criar um sprite para o fundo animado

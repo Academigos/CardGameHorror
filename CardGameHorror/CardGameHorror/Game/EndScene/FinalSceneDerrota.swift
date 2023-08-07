@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+//Classe para reunir todos os componentes e posicioná-los
 class FinalSceneDerrota : SKNode{
     let background = FinalBackground(finalBackground: "FinalSceneDerrota")
     let text = DerotaText()
@@ -38,8 +39,4 @@ class FinalSceneDerrota : SKNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
-    
 }

@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+///aviso de conteúdo sensível
 class ContentWarning:SKSpriteNode {
     private let warningTexture:SKTexture
     
@@ -20,11 +21,11 @@ class ContentWarning:SKSpriteNode {
         super.init(texture: warningTexture, color: UIColor.clear, size: warningTexture.size())
         self.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)
         self.zPosition = 20
-        if GameController.shared.getDeviceModel() == "iPhone SE" || GameController.shared.getDeviceModel() == "iPhone 8" || GameController.shared.getDeviceModel() == "iPhone x" || GameController.shared.getDeviceModel() == "iPhone 12"{
+        if GameController.shared.getDeviceModel() == "iPhone SE" || GameController.shared.getDeviceModel() == "iPhone 8" || GameController.shared.getDeviceModel() == "iPhone x" || GameController.shared.getDeviceModel() == "iPhone 12" {
             if let currentScene = self.scene {
                 currentScene.scaleMode = .aspectFit
             }
-        }else{
+        }else {
             self.scale(to: GameViewController.screenSize)
         }
     }

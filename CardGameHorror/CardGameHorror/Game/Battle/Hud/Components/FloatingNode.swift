@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+///Classe para visualizar os valores 
 class FloatingNode: SKSpriteNode {
     var stack:Int = 0
     var colorLabel:UIColor = .white

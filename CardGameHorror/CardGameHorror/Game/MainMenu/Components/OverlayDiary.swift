@@ -11,7 +11,8 @@ protocol closeOverlay : AnyObject {
     func closeOverlay()
 }
 
-class OverlayDiary: SKSpriteNode{
+///Classe que define o comportamento de sobreposição do diário
+class OverlayDiary: SKSpriteNode {
     
     weak var delegate: closeOverlay?
     var isButtonInteractionEnabled = true
@@ -40,7 +41,8 @@ class OverlayDiary: SKSpriteNode{
         delegate?.closeOverlay()
     }
     
-    func animationEntryOverlay(){
+    //Função para a entrada do diário
+    func animationEntryOverlay() {
         let easeInActionDelay = SKAction.sequence([
             SKAction.fadeAlpha(to:  0, duration: 0),
             SKAction.fadeAlpha(to: 0.7, duration: 0.6)
@@ -49,7 +51,8 @@ class OverlayDiary: SKSpriteNode{
         run(SKAction.sequence([SKAction.wait(forDuration: 2.0)]))
     }
     
-    func animationExitOverlay(){
+    //Função para a saída do diário
+    func animationExitOverlay() {
         let easeInActionDelay = SKAction.sequence([
             SKAction.fadeAlpha(to:  0.7, duration: 0),
             SKAction.fadeAlpha(to: 0, duration: 0.6)

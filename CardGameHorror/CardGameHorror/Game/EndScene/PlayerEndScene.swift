@@ -5,9 +5,9 @@
 //  Created by Eduardo on 23/07/23.
 //
 
-import Foundation
 import SpriteKit
 
+///Classe para  a cena em que o player ganha
 class PlayerEnd: SKScene{
     let kaylaWakingVictory = KaylaWaking(imagem0: "prologo_vitoria_1", imagens: "prologo_vitoria_", pasta: "KaylaVitoria")// animacao
     let finalScene = FinalSceneVitoria()//cena final (background e label)
@@ -21,14 +21,11 @@ class PlayerEnd: SKScene{
         addChild(kaylaWakingVictory)
         kaylaWakingVictory.run(fadeout)
         finalScene(resultado: finalScene)
-        
-        //addChild(finalScene)
     }
     
-    
-    //delay de 5 segundos
+    //delay de 3 segundos para a transição
     func finalScene(resultado:SKNode){
-        let delayTime: TimeInterval = 4.0
+        let delayTime: TimeInterval = 3.0
         Timer.scheduledTimer(withTimeInterval: delayTime, repeats: false) { timer in
             let delay = SKAction.wait(forDuration: 0)
             let transicao = SKAction.sequence([SKAction.fadeAlpha(to: 0, duration: 0),delay, SKAction.fadeAlpha(to: 1.0, duration: 3)])
@@ -37,9 +34,5 @@ class PlayerEnd: SKScene{
             self.addChild(resultado)
             resultado.run(transicao)
         }
-    }
-    
-    func addDialogo(){
-        
     }
 }

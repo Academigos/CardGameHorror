@@ -13,6 +13,7 @@ enum CartaIntroType: Int {
     case carta3
 }
 
+///Classe para controlar o posicionamento e animação das cartas
 class Taro: SKSpriteNode{
     let carta:CartaIntroType
     
@@ -45,14 +46,15 @@ class Taro: SKSpriteNode{
         fatalError("init(coder:) has not been implemented")
     }
     
+    //posição das cartas
     let positionCarta1 = CGPoint(x: GameViewController.screenSize.width * 0.388, y: GameViewController.screenSize.height * 0.6)
     let positionCarta2 = CGPoint(x: GameViewController.screenSize.width * 0.49, y: GameViewController.screenSize.height * 0.67)
     let positionCarta3 = CGPoint(x: GameViewController.screenSize.width * 0.59, y: GameViewController.screenSize.height * 0.756)
     
+    ///animação das cartas
     func animacaoTaro(carta:SKSpriteNode, posicao:CGPoint){
         let delay = SKAction.wait(forDuration: 0.4)
         let animacaoCarta = SKAction.sequence([SKAction.fadeAlpha(to: 0, duration: 0),delay, SKAction.fadeAlpha(to: 1.0, duration: 0.5)])
-        //self.addChild(carta)
         carta.run(animacaoCarta)
 
         carta.position = posicao

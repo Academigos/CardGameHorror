@@ -18,6 +18,7 @@ struct TextBoxContent {
     let boxType: TextBoxType
 }
 
+//Dados do texto
 let dialogo: [TextBoxContent] = [
     TextBoxContent(title: "Cartomante", content: "Bem-vinda, querida. Sinto que você carrega um fardo pesado em seu coração, acredito que busque uma forma de aliviar esse peso, certo? Bem, como posso chamá-la?", boxType: .cartomante),
     TextBoxContent(title: "Cayla", content: "Olá... Meu nome é Cayla. Ouvi falar sobre suas habilidades em trazer clareza às pessoas, e, bem... estou aqui justamente por isso.", boxType: .cayla),

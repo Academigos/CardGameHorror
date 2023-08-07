@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Classe para reunir os componentes do cenario de batalha
 class Cenario:SKNode{
     let fundo = Fundo()
     let carro = Carros()

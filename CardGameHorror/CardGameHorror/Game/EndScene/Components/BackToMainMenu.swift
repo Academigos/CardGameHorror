@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-
+///Classe que define o botão para retornar ao menu principal
 class MainMenuButtom: SKSpriteNode{
     let resetButtom: SKTexture
     var mainMenuLabel: SKLabelNode = SKLabelNode()
@@ -26,13 +26,13 @@ class MainMenuButtom: SKSpriteNode{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let currentScene = self.scene {
             let transition = SKTransition.fade(withDuration: 0.5)
-            let mainMenuScene = MainMenuScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+            let mainMenuScene = MainMenuScene(size: currentScene.size)
             currentScene.view?.presentScene(mainMenuScene, transition: transition)
-            // Call the startNewGame() function from the GameController
         }
     }
+    
+    //formata o texto
     private func setupMainMenuLabel() {
-        
         mainMenuLabel.name = "ContinueLabel"
         mainMenuLabel.fontSize = self.size.height * 0.3
         mainMenuLabel.fontName = "BreeSerif-Regular"

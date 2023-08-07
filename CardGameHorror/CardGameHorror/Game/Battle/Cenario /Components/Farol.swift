@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+///Define textura e comportamento dos faróis
 class Farol:SKSpriteNode {
     var farol: [SKTexture]?
     let farol0:SKTexture
@@ -14,7 +15,7 @@ class Farol:SKSpriteNode {
     required init?(coder aDecoder: NSCoder) {
         fatalError("erro")
     }
-    init(){
+    init() {
         farol0 = SKTexture(imageNamed: "farol01")
         super.init(texture: farol0, color: UIColor.clear, size: farol0.size())
         farolAnimation()
@@ -22,6 +23,7 @@ class Farol:SKSpriteNode {
        
     }
    
+    ///animação do farol
     func farolAnimation() {
         farol = getTexture(with: "farol", textureAtlasName: "farolA")
         let farold = farol!
@@ -31,7 +33,7 @@ class Farol:SKSpriteNode {
     }
     
     
-    //busca das texturas
+    ///busca das texturas
     func getTexture(with name:String, textureAtlasName:String) -> [SKTexture] {
         let textureAtlas = SKTextureAtlas(named: textureAtlasName)
         var textures: [SKTexture] = []

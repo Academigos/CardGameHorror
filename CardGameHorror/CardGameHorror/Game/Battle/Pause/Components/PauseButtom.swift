@@ -5,11 +5,10 @@
 //  Created by Eduardo on 21/07/23.
 //
 
-import Foundation
 import SpriteKit
 
-class PauseButtom: SKSpriteNode, ClosePauseDelegate{
-    
+///Classe que monta e reúne os componentes do botão de pausa
+class PauseButtom: SKSpriteNode, ClosePauseDelegate {
     let pauseButtom: SKTexture
     let pauseBackground = PauseBackground()
     let closePause = ClosePause()
@@ -44,10 +43,9 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
                     SKAction.fadeAlpha(to: 1, duration: 0.6) // Fade-in com aceleração gradual em toda a duração
                 ])
                 
-                
+                //validação de aparelho para posicionamento
                 if GameController.shared.getDeviceModel() == "iPhone SE" || GameController.shared.getDeviceModel() == "iPhone 8"{
                     pauseBackground.scale(to: autoScale(pauseBackground, widthProportion: 0.35, screenSize: GameViewController.screenSize))
-                    
                     closePause.position = CGPoint(x: pauseBackground.size.width * -0.4, y: pauseBackground.size.height * 0.47)
                     closePause.scale(to: autoScale(closePause, widthProportion: 0.15, screenSize: pauseBackground.size))
                     
@@ -78,7 +76,7 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
                     languages.position = CGPoint(x: GameViewController.screenSize.width * 0.05, y: GameViewController.screenSize.height * 0.04)
                     languages.scale(to: autoScale(languages, widthProportion: 0.40, screenSize: pauseBackground.size))
                 }
-            
+                ///posicionamento
                 pauseBackground.zPosition = 100
                 pauseBackground.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)
                 scene.addChild(pauseBackground)
@@ -101,7 +99,6 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
                 pauseBackground.addChild(mainMenu)
                 
                 overlayPause.animationEntryOverlay()
-                // Executar a animação "Pop In"
                 pauseBackground.run(easeInAction){
                     scene.isPaused = true
                     self.isAnimating = false
@@ -116,7 +113,6 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
                 ])
                 overlayPause.animationExitOverlay()
                 
-                // Executar a animação "Pop Out"
                 pauseBackground.run(easeInAction) {
                     self.closePause.removeFromParent()
                     self.resetBattle.removeFromParent()
@@ -130,6 +126,7 @@ class PauseButtom: SKSpriteNode, ClosePauseDelegate{
         }
     }
     
+    ///lógica de fechamento do botão de pausa
     func closePauseButtonTapped() {
         if !isAnimating, let scene = self.scene {
             isAnimating = true

@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+//Classe para reunir todos os componentes e posicioná-los
 class FinalSceneVitoria : SKNode{
     let background = FinalBackground(finalBackground: "FinalSceneVitoria")
     let text = VitoriaText()
@@ -39,8 +40,4 @@ class FinalSceneVitoria : SKNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
-    
 }

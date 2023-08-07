@@ -12,6 +12,7 @@ enum BackgroundType: Int {
     case room
 }
 
+///Classe para gerir o cenário da introdução 
 class IntroScenary: SKSpriteNode {
     let backgroundType: BackgroundType
     let scenaryTexture: SKTexture

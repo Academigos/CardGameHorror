@@ -12,6 +12,7 @@ protocol endTurnDelegate: AnyObject {
     func handCardsDidFinishAnimating()
 }
 
+///Classe para controlar a cena de combate
 class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
     var cenario: Cenario?
     // hud
@@ -37,7 +38,6 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         if GameController.shared.isGameOver() == true{
             GameController.shared.startNewGame()
         }
-//        addChild(dialogView!)
         setupCenario()
         setupBoss()
         
@@ -51,6 +51,7 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         self.isUserInteractionEnabled = true
     }
     
+    //Inicializa as cartas no início do jogo
     private func setupGameplay() {
         // cartas da mão inicial
         let cardsHand = GameController.shared.cardsHandPlayer()
@@ -58,6 +59,7 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         setupHand(cards: cardsHand)
     }
     
+    //incializa o HUD
     private func setupHud(){
         hud = Hud()
         addChild(hud!)
@@ -70,6 +72,7 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         hud!.run(fadeInAction)
     }
     
+    //inicializa o oponente
     private func setupBoss() {
         boss = Boss()
         addChild(monsterEntry)
@@ -79,11 +82,13 @@ class GameScene: SKScene, endTurnDelegate, ResetBattleDelegate {
         boss!.enemyEntity.idle()
     }
     
+    //inicializa o cenário
     private func setupCenario(){
         cenario = Cenario()
         addChild(cenario!)
     }
     
+    //recarrega as cartas a cada turno
     private func setupHand(cards: [Card]) {
         handCards = HandCards(cards: cards)
         // Defina a posição inicial abaixo da tela

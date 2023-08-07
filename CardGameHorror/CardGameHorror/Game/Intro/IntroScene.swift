@@ -1,5 +1,6 @@
 import SpriteKit
 
+///scene para a introdução narrativa
 class IntroScene: SKScene {
     let dialogView = DialogView()
     let pause = MainPause(isIntro: true, currentScene: "Intro")

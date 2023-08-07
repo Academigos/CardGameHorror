@@ -7,8 +7,8 @@
 
 import SpriteKit
 
+///Classe para definir o comportamento da segunda camada do cenário
 class Frente:SKNode{
-
     let estrada = Estrada(estrada: "Estrada")
     let arvoresFrentre = ArvoresFrente(arvoresFrente: "Arvores")
     override init() {

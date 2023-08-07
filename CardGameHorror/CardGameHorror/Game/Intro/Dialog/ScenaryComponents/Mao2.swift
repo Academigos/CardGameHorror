@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+///Classe para definir a textura da mão
 class Mao2: SKSpriteNode{
     let mao2 : SKTexture
     

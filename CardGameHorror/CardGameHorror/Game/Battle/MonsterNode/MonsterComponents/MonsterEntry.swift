@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+///Classe para definir o comportamento de animação da entrada do inimigo
 class MonsterEntry: SKNode {
     private var mistTextureLeft: [SKTexture] = [
         SKTexture(imageNamed: "nevoa_esquerda_1"),
@@ -44,6 +45,7 @@ class MonsterEntry: SKNode {
         animateMist()
     }
   
+    ///animação da névoa
     private func animateMist() {
         mistLeft.position.x = GameViewController.screenSize.width * -0.235
         mistLeft.scale(to: autoScale(mistLeft, widthProportion: 0.53, screenSize: GameViewController.screenSize))

@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Classe para controlar o efeito de câmera 
 class Camera: SKSpriteNode {
     let camera: SKTexture
     

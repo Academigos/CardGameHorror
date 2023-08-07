@@ -8,7 +8,8 @@
 import Foundation
 import SpriteKit
 
-class LifeBarOverlay: SKSpriteNode{
+///Sobreposição da barra de vida
+class LifeBarOverlay: SKSpriteNode {
     let lifeBarOverlay: SKTexture
     
     init() {

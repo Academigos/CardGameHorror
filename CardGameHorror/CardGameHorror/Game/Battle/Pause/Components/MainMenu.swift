@@ -5,10 +5,10 @@
 //  Created by Eduardo on 21/07/23.
 //
 
-import Foundation
 import SpriteKit
 
-class MainMenu: SKSpriteNode{
+///Classe para definir o botão para o menu principal
+class MainMenu: SKSpriteNode {
     let mainMenu: SKTexture
     weak var delegate: ClosePauseDelegate?
     var mainMenuLabel: SKLabelNode = SKLabelNode()
@@ -25,24 +25,22 @@ class MainMenu: SKSpriteNode{
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Change the color when touched (for example, to red)
         self.texture = SKTexture(imageNamed: "PressedButtom")
         
-        // Add a slight delay (e.g., 0.1 seconds) to revert the color back to clear
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.texture = self.mainMenu
         }
         
         if let currentScene = self.scene {
             let transition = SKTransition.fade(withDuration: 0.5)
-            let mainMenuScene = MainMenuScene(size: currentScene.size) // Assuming MainMenuScene is the class for the scene you want to transition to.
+            let mainMenuScene = MainMenuScene(size: currentScene.size)
             currentScene.view?.presentScene(mainMenuScene, transition: transition)
-            // Call the startNewGame() function from the GameController
             delegate?.closePauseButtonTapped()
             GameController.shared.selectedCard = []
         }
     }
     
+    ///formatar o texto
     private func setupMainMenuLabel() {
         mainMenuLabel.name = "mainMenuLabel"
         mainMenuLabel.fontSize = size.height * 0.32

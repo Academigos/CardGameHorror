@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Classe que define a textura do background da barra de vida
 class LifeBarBackGround: SKSpriteNode{
     let BackGroundTexture: SKTexture = SKTexture(imageNamed: "LifeBarBackGround")
     var hp = 0
@@ -23,6 +24,7 @@ class LifeBarBackGround: SKSpriteNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     private func setupValueLabel() {
         valueLabel.name = "valueLabel"
         valueLabel.fontSize = 12

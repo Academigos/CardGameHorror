@@ -37,7 +37,7 @@
 		28399ADF2A72F35C00FD1866 /* LeftPageDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28399ADB2A72F35C00FD1866 /* LeftPageDiary.swift */; };
 		28399AE02A72F35C00FD1866 /* RightPageDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28399ADC2A72F35C00FD1866 /* RightPageDiary.swift */; };
 		28399AE12A72F35C00FD1866 /* OverlayDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28399ADD2A72F35C00FD1866 /* OverlayDiary.swift */; };
-		284746942A746ECE00703464 /* FinalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284746912A746ECE00703464 /* FinalScene.swift */; };
+		284746942A746ECE00703464 /* FinalSceneVitoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284746912A746ECE00703464 /* FinalSceneVitoria.swift */; };
 		284746952A746ECE00703464 /* FinalSceneDerrota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284746922A746ECE00703464 /* FinalSceneDerrota.swift */; };
 		284746972A746F3200703464 /* FinalBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284746962A746F3100703464 /* FinalBackground.swift */; };
 		286536712A68BE4D007E8CD3 /* CardConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286536702A68BE4D007E8CD3 /* CardConfigurations.swift */; };
@@ -78,7 +78,6 @@
 		28EC727A2A704B5F00266619 /* MainPauseButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EC72792A704B5F00266619 /* MainPauseButtom.swift */; };
 		28EC727C2A705FFC00266619 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EC727B2A705FFC00266619 /* Credits.swift */; };
 		28EC727E2A70666300266619 /* Skip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EC727D2A70666300266619 /* Skip.swift */; };
-		28F54D2A2A60923B00B692F5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F54D292A60923B00B692F5 /* player.swift */; };
 		28FC6C672A6F10D200C0A9BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28FC6C692A6F10D200C0A9BE /* Localizable.strings */; };
 		28FC6C6C2A6F1C5E00C0A9BE /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C6B2A6F1C5E00C0A9BE /* LanguageManager.swift */; };
 		28FDCD622A70115F00C87920 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDCD612A70115F00C87920 /* GameScene.swift */; };
@@ -168,7 +167,7 @@
 		28399ADB2A72F35C00FD1866 /* LeftPageDiary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftPageDiary.swift; sourceTree = "<group>"; };
 		28399ADC2A72F35C00FD1866 /* RightPageDiary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightPageDiary.swift; sourceTree = "<group>"; };
 		28399ADD2A72F35C00FD1866 /* OverlayDiary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayDiary.swift; sourceTree = "<group>"; };
-		284746912A746ECE00703464 /* FinalScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalScene.swift; sourceTree = "<group>"; };
+		284746912A746ECE00703464 /* FinalSceneVitoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSceneVitoria.swift; sourceTree = "<group>"; };
 		284746922A746ECE00703464 /* FinalSceneDerrota.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSceneDerrota.swift; sourceTree = "<group>"; };
 		284746962A746F3100703464 /* FinalBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalBackground.swift; sourceTree = "<group>"; };
 		286536702A68BE4D007E8CD3 /* CardConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardConfigurations.swift; sourceTree = "<group>"; };
@@ -208,7 +207,6 @@
 		28EC72792A704B5F00266619 /* MainPauseButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPauseButtom.swift; sourceTree = "<group>"; };
 		28EC727B2A705FFC00266619 /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
 		28EC727D2A70666300266619 /* Skip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skip.swift; sourceTree = "<group>"; };
-		28F54D292A60923B00B692F5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		28FC6C632A6F0F7000C0A9BE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		28FC6C642A6F0F7000C0A9BE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		28FC6C682A6F10D200C0A9BE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -303,7 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				28076A802A6DF83900F2BD7B /* Components */,
-				284746912A746ECE00703464 /* FinalScene.swift */,
+				284746912A746ECE00703464 /* FinalSceneVitoria.swift */,
 				284746922A746ECE00703464 /* FinalSceneDerrota.swift */,
 				28076A7E2A6DF83400F2BD7B /* PlayerEndScene.swift */,
 				28076A812A6DF85C00F2BD7B /* MonsterEndScene.swift */,
@@ -596,7 +594,6 @@
 			isa = PBXGroup;
 			children = (
 				28F54D2C2A60929F00B692F5 /* Components */,
-				28F54D292A60923B00B692F5 /* player.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -887,7 +884,6 @@
 				28EC72782A70435900266619 /* MainPause.swift in Sources */,
 				B8AECE0B2A6D5B880032AC66 /* DialogView.swift in Sources */,
 				280A53542A6ABD0000267B9E /* ClosePause.swift in Sources */,
-				28F54D2A2A60923B00B692F5 /* player.swift in Sources */,
 				B8B2469A2A66CF3400EB2FFB /* MonsterView.swift in Sources */,
 				286536712A68BE4D007E8CD3 /* CardConfigurations.swift in Sources */,
 				288F53072A6D677B00BC24A2 /* Camera.swift in Sources */,
@@ -896,7 +892,7 @@
 				B8F001652A6B255800392235 /* Carro2.swift in Sources */,
 				B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */,
 				28399ADF2A72F35C00FD1866 /* LeftPageDiary.swift in Sources */,
-				284746942A746ECE00703464 /* FinalScene.swift in Sources */,
+				284746942A746ECE00703464 /* FinalSceneVitoria.swift in Sources */,
 				C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */,
 				28DCD9AA2A749AF000E01520 /* Erick.swift in Sources */,
 				282E42592A747E5C00ACFBBB /* VitoriaText.swift in Sources */,

@@ -5,9 +5,9 @@
 //  Created by Eduardo on 19/07/23.
 //
 
-import Foundation
 import SpriteKit
 
+///Classe para controlar os dados do monstro
 class MonsterHud: SKNode{
     let monsterLifeBar = LifeBarNode(lifeBarName: "MonsterLifeBar", life: DataManager.shared.fetchMonster().hp, defaultLife: GameController.shared.monsterLife)
     let monsterName = NamePlaceHolder(texture: "Trauma")
@@ -24,6 +24,7 @@ class MonsterHud: SKNode{
     func updateMonster(value: Double){
         monsterLifeBar.setLife(DataManager.shared.fetchMonster().hp)
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

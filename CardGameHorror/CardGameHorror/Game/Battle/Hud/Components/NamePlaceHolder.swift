@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Componente da barra de vida, mostra o nome 
 class NamePlaceHolder: SKSpriteNode{
     let textureName: SKTexture
     var label: SKLabelNode = SKLabelNode()

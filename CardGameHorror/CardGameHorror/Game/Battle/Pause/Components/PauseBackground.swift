@@ -5,11 +5,10 @@
 //  Created by Eduardo on 21/07/23.
 //
 
-import Foundation
 import SpriteKit
 
-
-class PauseBackground: SKSpriteNode{
+///Classe para definir o background do botão de pausa
+class PauseBackground: SKSpriteNode {
      let pauseBackGround: SKTexture
     weak var delegate: ClosePauseDelegate?
     var optionLabel: SKLabelNode = SKLabelNode()
@@ -28,6 +27,7 @@ class PauseBackground: SKSpriteNode{
         fatalError("init(coder:) has not been implemented")
     }
     
+    ///formata o texto
     private func setUpContinueLabel() {
         continueLabel.name = "continueLabel"
         continueLabel.fontSize = size.height * 0.05
@@ -40,6 +40,7 @@ class PauseBackground: SKSpriteNode{
         addChild(continueLabel)
     }
     
+    ///formata o texto
     private func setUpOptionLabel() {
         optionLabel.name = "optionLabel"
         optionLabel.fontSize = size.height * 0.075
@@ -52,6 +53,7 @@ class PauseBackground: SKSpriteNode{
         addChild(optionLabel)
     }
     
+    ///formata de acordo com a linguagem
     private func setLanguageLabel() {
         languageLabel.name = "languageLabel"
         languageLabel.fontSize = size.height * 0.04

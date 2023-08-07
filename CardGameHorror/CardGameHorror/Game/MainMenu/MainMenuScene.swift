@@ -5,11 +5,10 @@
 //  Created by Eduardo on 23/07/23.
 //
 
-import Foundation
 import SpriteKit
 
+///Scene que reúne e posiciona os elementos
 class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate, closeOverlay {
-    
     let background = MainMenuBackground()
     let startGame = NewGameButtom()
     
@@ -46,14 +45,15 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
         diaryOne.rightPage.continueButtonDiary.delegate = self
     }
     
+    //botão para continuar
     func continueGameButtonTapped() {
-        // Transition to the GameScene when the button is tappedlet transition = SKTransition.crossFade(withDuration: 0.5)
         let gameScene = GameScene(size: GameViewController.screenSize)
         gameScene.scaleMode = .aspectFill
         let transition = SKTransition.fade(with: .black, duration: 1)
         self.view?.presentScene(gameScene,transition: transition)
     }
     
+    //botão para direcionar para a cena de batalha
     func newGameButtonTapped() {
         let gameScene = IntroScene(size: GameViewController.screenSize)
         gameScene.scaleMode = .aspectFill
@@ -61,8 +61,8 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
         self.view?.presentScene(gameScene,transition: transition)
     }
     
+    //botão para abrir o diário
     func openDiaryOne() {
-        
         diaryOne.position = CGPoint(x: GameViewController.screenSize.width * 0.5, y: -GameViewController.screenSize.height)
         
         let finalPosition = CGPoint(x: GameViewController.screenSize.width * 0.5, y: GameViewController.screenSize.height * 0.5)
@@ -86,8 +86,8 @@ class MainMenuScene: SKScene, ContinueGameButtomDelegate, NewGameButtomDelegate,
         diaryOne.run(sequence)
     }
     
+    //função para fechar o diário
     func closeOverlay() {
-        
         overlayDiary.animationExitOverlay()
         
         let finalPosition = CGPoint(x: GameViewController.screenSize.width * 0.5, y: -GameViewController.screenSize.height)

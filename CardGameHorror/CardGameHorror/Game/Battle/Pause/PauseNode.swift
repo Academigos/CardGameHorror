@@ -5,9 +5,9 @@
 //  Created by Eduardo on 21/07/23.
 //
 
-import Foundation
 import SpriteKit
 
+///Classe que controla o botão de pausa
 class PauseNode: SKNode{
     let pauseButtom = PauseButtom(currentScene: "GameScene")
     

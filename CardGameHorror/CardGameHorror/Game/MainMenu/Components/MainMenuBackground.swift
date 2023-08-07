@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Background do menu principal
 class MainMenuBackground: SKSpriteNode{
     let background: SKTexture
     

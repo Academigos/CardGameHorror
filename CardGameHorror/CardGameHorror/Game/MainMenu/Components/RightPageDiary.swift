@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+///Classe que define a textura da página direita
 class RightPageDiary: SKSpriteNode{
     var continueGameButtom: SKTexture
     var continueLabel: SKLabelNode = SKLabelNode()
@@ -33,7 +34,6 @@ class RightPageDiary: SKSpriteNode{
         
         super.init(texture: self.continueGameButtom, color: .clear, size: self.continueGameButtom.size())
         self.scale(to: autoScale(self, widthProportion: 0.34, screenSize: GameViewController.screenSize))
-        //setupContinueLabel()
         
         isUserInteractionEnabled = true
         setupTextLabelPT1()
@@ -50,6 +50,7 @@ class RightPageDiary: SKSpriteNode{
         }
     }
     
+    //formatação de texto
     private func setupContinueLabel() {
         continueLabel.name = "ContinueLabel"
         continueLabel.fontSize = size.height * 0.12
@@ -61,27 +62,29 @@ class RightPageDiary: SKSpriteNode{
         addChild(continueLabel)
     }
     
+    //formatação de texto
     func setupButtonContinue(){
         addChild(continueButtonDiary)
         continueButtonDiary.zPosition = 6
         continueButtonDiary.position = CGPoint(x: size.width * 0.03, y: size.height * -0.33)
-        if GameController.shared.getDeviceModel() == "iPhone SE"{
+        if GameController.shared.getDeviceModel() == "iPhone SE" {
             continueButtonDiary.position = CGPoint(x: size.width * 0.03, y: size.height * -0.39)
-        }else if GameController.shared.getDeviceModel() == "iPhone X"{
+        }else if GameController.shared.getDeviceModel() == "iPhone X" {
             continueButtonDiary.position = CGPoint(x: size.width * 0.03, y: size.height * -0.33)
-        }else if GameController.shared.getDeviceModel() == "iPhone 11"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 11" {
             continueButtonDiary.position = CGPoint(x: size.width * 0.03, y: size.height * -0.31)
-        }else if GameController.shared.getDeviceModel() == "iPhone 14"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 14" {
             continueButtonDiary.position = CGPoint(x: size.width * 0.03, y: size.height * -0.33)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max" {
             continueButtonDiary.position = CGPoint(x: size.width * 0.03, y: size.height * -0.30)
         }
-        else{
+        else {
             continueButtonDiary.position = CGPoint(x: size.width * 0.03, y: size.height * -0.33)
         }
         
     }
     
+    //formatação de texto
     func setupTextLabelPT1() {
         textLabelPT1.name = "textLabelPt1"
         textLabelPT1.fontSize = max(size.height * 0.03, 12)
@@ -93,21 +96,21 @@ class RightPageDiary: SKSpriteNode{
         textLabelPT1.text = LanguageManager.shared.localizedString("Sei que aquele motorista incompetente já está pagando pelo que fez, mas isso não é o suficiente para me tranquilizar. Pelo menos não quando eu sei que se tivesse reagido mais rapidamente tudo aquilo poderia ter sido evitado. Havia tempo o suficiente para salvar meus pais, mas a impotência que senti naquele momento foi sufocante, e essa sensação de culpa me assombra todos os dias.")
         textLabelPT1.position = CGPoint(x: size.width * -0.083, y: size.height * -0.09)
         
-        if GameController.shared.getDeviceModel() == "iPhone SE"{
+        if GameController.shared.getDeviceModel() == "iPhone SE" {
             textLabelPT1.position = CGPoint(x: size.width * -0.083, y: size.height * -0.09)
             textLabelPT1.preferredMaxLayoutWidth = size.width * 0.95
-        }else if GameController.shared.getDeviceModel() == "iPhone X"{
+        }else if GameController.shared.getDeviceModel() == "iPhone X" {
             textLabelPT1.position = CGPoint(x: size.width * -0.083, y: size.height * -0.11)
-        }else if GameController.shared.getDeviceModel() == "iPhone 11"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 11" {
             textLabelPT1.position = CGPoint(x: size.width * -0.083, y: size.height * -0.09)
             textLabelPT1.preferredMaxLayoutWidth = size.width * 0.70
-        }else if GameController.shared.getDeviceModel() == "iPhone 14"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 14" {
             textLabelPT1.position = CGPoint(x: size.width * -0.083, y: size.height * -0.09)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max" {
             textLabelPT1.position = CGPoint(x: size.width * -0.07, y: size.height * -0.065)
             textLabelPT1.preferredMaxLayoutWidth = size.width * 0.7
         }
-        else{
+        else {
             textLabelPT1.position = CGPoint(x: size.width * -0.083, y: size.height * -0.09)
         }
         
@@ -116,6 +119,7 @@ class RightPageDiary: SKSpriteNode{
         addChild(textLabelPT1)
     }
     
+    //formatação de texto
     func setupTextLabelPT2() {
         textLabelPT2.name = "textLabelPt2"
         textLabelPT2.fontSize = max(size.height * 0.03, 12)
@@ -127,21 +131,21 @@ class RightPageDiary: SKSpriteNode{
         textLabelPT2.text = LanguageManager.shared.localizedString("Já tentei acalmar meu coração de tantas formas… Meus amigos tem me recomendado procurar ajudar profissional para lidar com esse trauma, mas não me sinto pronta para voltar a falar sobre esse desastre.")
         textLabelPT2.position = CGPoint(x: size.width * -0.08, y: size.height * -0.38)
         
-        if GameController.shared.getDeviceModel() == "iPhone SE"{
+        if GameController.shared.getDeviceModel() == "iPhone SE" {
             textLabelPT2.position = CGPoint(x: size.width * -0.08, y: size.height * -0.45)
             textLabelPT2.preferredMaxLayoutWidth = size.width * 0.95
-        }else if GameController.shared.getDeviceModel() == "iPhone X"{
+        }else if GameController.shared.getDeviceModel() == "iPhone X" {
             textLabelPT2.position = CGPoint(x: size.width * -0.08, y: size.height * -0.4)
-        }else if GameController.shared.getDeviceModel() == "iPhone 11"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 11" {
             textLabelPT2.position = CGPoint(x: size.width * -0.08, y: size.height * -0.38)
             textLabelPT2.preferredMaxLayoutWidth = size.width * 0.71
-        }else if GameController.shared.getDeviceModel() == "iPhone 14"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 14" {
             textLabelPT2.position = CGPoint(x: size.width * -0.08, y: size.height * -0.4)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max" {
             textLabelPT2.position = CGPoint(x: size.width * -0.07, y: size.height * -0.35)
             textLabelPT2.preferredMaxLayoutWidth = size.width * 0.7
         }
-        else{
+        else {
             textLabelPT2.position = CGPoint(x: size.width * -0.08, y: size.height * -0.38)
         }
         
@@ -150,6 +154,7 @@ class RightPageDiary: SKSpriteNode{
         addChild(textLabelPT2)
     }
     
+    //formatação de texto
     func setupTextLabelPT3() {
         textLabelPT3.name = "textLabelPt3"
         textLabelPT3.fontSize = max(size.height * 0.03, 12)
@@ -162,29 +167,29 @@ class RightPageDiary: SKSpriteNode{
         textLabelPT3.position = CGPoint(x: size.width * -0.083, y: size.height * 0.27)
         textLabelPT3.zPosition = 1.0
         
-        if GameController.shared.getDeviceModel() == "iPhone SE"{
+        if GameController.shared.getDeviceModel() == "iPhone SE" {
             textLabelPT3.position = CGPoint(x: size.width * -0.088, y: size.height * 0.30)
             textLabelPT3.preferredMaxLayoutWidth = size.width * 0.96
-        }else if GameController.shared.getDeviceModel() == "iPhone X"{
+        }else if GameController.shared.getDeviceModel() == "iPhone X" {
             textLabelPT3.position = CGPoint(x: size.width * -0.11, y: size.height * 0.23)
             textLabelPT3.preferredMaxLayoutWidth = size.width * 0.78
-        }else if GameController.shared.getDeviceModel() == "iPhone 11"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 11" {
             textLabelPT3.position = CGPoint(x: size.width * -0.09, y: size.height * 0.23)
             textLabelPT3.preferredMaxLayoutWidth = size.width * 0.71
-        }else if GameController.shared.getDeviceModel() == "iPhone 14"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 14" {
             textLabelPT3.position = CGPoint(x: size.width * -0.083, y: size.height * 0.26)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" || GameController.shared.getDeviceModel() == "iPhone 14 Pro Max" {
             textLabelPT3.position = CGPoint(x: size.width * -0.09, y: size.height * 0.22)
             textLabelPT3.preferredMaxLayoutWidth = size.width * 0.68
         }
-        else{
+        else {
             textLabelPT3.position = CGPoint(x: size.width * -0.083, y: size.height * 0.27)
         }
-        
         
         addChild(textLabelPT3)
     }
     
+    //formatação de texto
     func setupTextLabelPT4() {
         textLabelPT4.name = "textLabelPt4"
         textLabelPT4.fontSize = max(size.height * 0.03, 12)
@@ -218,6 +223,7 @@ class RightPageDiary: SKSpriteNode{
         addChild(textLabelPT4)
     }
     
+    //formatação de texto
     func setupTextLabelCartomante() {
         let angleInRadians = -7.55 * CGFloat.pi / 180.0
         
@@ -230,24 +236,25 @@ class RightPageDiary: SKSpriteNode{
         labelCartomante.zPosition = 1.0
         labelCartomante.zRotation = angleInRadians
         
-        if GameController.shared.getDeviceModel() == "iPhone SE"{
+        if GameController.shared.getDeviceModel() == "iPhone SE" {
             labelCartomante.position = CGPoint(x: size.width * 0.095, y: size.height * -0.16)
-        }else if GameController.shared.getDeviceModel() == "iPhone X"{
+        }else if GameController.shared.getDeviceModel() == "iPhone X" {
             labelCartomante.position = CGPoint(x: size.width * 0.065, y: size.height * -0.13)
-        }else if GameController.shared.getDeviceModel() == "iPhone 11"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 11" {
             labelCartomante.position = CGPoint(x: size.width * 0.065, y: size.height * -0.13)
-        }else if GameController.shared.getDeviceModel() == "iPhone 14"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 14" {
             labelCartomante.position = CGPoint(x: size.width * 0.065, y: size.height * -0.13)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" {
             labelCartomante.position = CGPoint(x: size.width * 0.065, y: size.height * -0.13)
         }
-        else{
+        else {
             labelCartomante.position = CGPoint(x: size.width * 0.065, y: size.height * -0.13)
         }
         
         addChild(labelCartomante)
     }
     
+    //formatação de texto
     func setupTextLabelPhone() {
         let angleInRadians = -7.55 * CGFloat.pi / 180.0
         
@@ -260,24 +267,25 @@ class RightPageDiary: SKSpriteNode{
         labelPhone.zPosition = 1.0
         labelPhone.zRotation = angleInRadians
         
-        if GameController.shared.getDeviceModel() == "iPhone SE"{
+        if GameController.shared.getDeviceModel() == "iPhone SE" {
             labelPhone.position = CGPoint(x: size.width * 0.07, y: size.height * -0.25)
-        }else if GameController.shared.getDeviceModel() == "iPhone X"{
+        }else if GameController.shared.getDeviceModel() == "iPhone X" {
             labelPhone.position = CGPoint(x: size.width * 0.06, y: size.height * -0.2)
-        }else if GameController.shared.getDeviceModel() == "iPhone 11"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 11" {
             labelPhone.position = CGPoint(x: size.width * 0.06, y: size.height * -0.2)
-        }else if GameController.shared.getDeviceModel() == "iPhone 14"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 14" {
             labelPhone.position = CGPoint(x: size.width * 0.06, y: size.height * -0.2)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" {
             labelPhone.position = CGPoint(x: size.width * 0.06, y: size.height * -0.2)
         }
-        else{
+        else {
             labelPhone.position = CGPoint(x: size.width * 0.06, y: size.height * -0.2)
         }
         
         addChild(labelPhone)
     }
     
+    //formatação de texto
     func setupTextLabelAdress() {
         let angleInRadians = -7.55 * CGFloat.pi / 180.0
         
@@ -290,19 +298,19 @@ class RightPageDiary: SKSpriteNode{
         labelAdress.zPosition = 1.0
         labelAdress.zRotation = angleInRadians
         
-        if GameController.shared.getDeviceModel() == "iPhone SE"{
+        if GameController.shared.getDeviceModel() == "iPhone SE" {
             labelAdress.position = CGPoint(x: size.width * 0.06, y: size.height * -0.30)
-        }else if GameController.shared.getDeviceModel() == "iPhone X"{
+        }else if GameController.shared.getDeviceModel() == "iPhone X" {
             labelAdress.position = CGPoint(x: size.width * 0.05, y: size.height * -0.25)
-        }else if GameController.shared.getDeviceModel() == "iPhone 11"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 11" {
             labelAdress.position = CGPoint(x: size.width * 0.05, y: size.height * -0.25)
-        }else if GameController.shared.getDeviceModel() == "iPhone 14"{
+        }else if GameController.shared.getDeviceModel() == "iPhone 14" {
             labelAdress.position = CGPoint(x: size.width * 0.05, y: size.height * -0.25)
-        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro"{
+        } else if GameController.shared.getDeviceModel() == "iPhone 14 Pro" {
             labelAdress.position = CGPoint(x: size.width * 0.04, y: size.height * -0.25)
             labelAdress.fontSize = max(size.height * 0.018, 8)
         }
-        else{
+        else {
             labelPhone.position = CGPoint(x: size.width * 0.06, y: size.height * -0.2)
         }
         
@@ -310,9 +318,7 @@ class RightPageDiary: SKSpriteNode{
     }
 }
 
-
-import SpriteKit
-
+///Classe para o botão de continue do diário
 class ContinueButtonDiary: SKSpriteNode {
     weak var delegate: NewGameButtomDelegate?
     var continueGameButtom: SKLabelNode = SKLabelNode()
@@ -327,6 +333,7 @@ class ContinueButtonDiary: SKSpriteNode {
         
         print(size.width)
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -339,7 +346,7 @@ class ContinueButtonDiary: SKSpriteNode {
         GameController.shared.startNewGame()
         delegate?.newGameButtonTapped()
     }
-    
+    //formatação de texto
     func setupContinueIntroLabel() {
         let angleInRadians = -7.55 * CGFloat.pi / 180.0
         
@@ -355,10 +362,10 @@ class ContinueButtonDiary: SKSpriteNode {
         
         let scaleUpAction = SKAction.scale(to: 1.0, duration: 0.7)
         let scaleDownAction = SKAction.scale(to: 0.8, duration: 0.7)
-
+        
         // Crie a ação de pulsação para sempre, repetindo as ações em sequência
         let pulseForeverAction = SKAction.repeatForever(SKAction.sequence([scaleUpAction, scaleDownAction]))
-
+        
         // Aplique a ação de pulsação ao SKLabelNode
         continueGameButtom.run(pulseForeverAction)
     }

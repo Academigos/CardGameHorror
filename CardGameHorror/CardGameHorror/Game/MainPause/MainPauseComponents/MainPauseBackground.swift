@@ -27,6 +27,7 @@ class MainPauseBackground: SKSpriteNode{
         fatalError("init(coder:) has not been implemented")
     }
     
+    ///Formata o texto
     private func setUpContinueLabel() {
         continueLabel.name = "continueLabel"
         continueLabel.fontSize = size.height * 0.05
@@ -39,6 +40,7 @@ class MainPauseBackground: SKSpriteNode{
         addChild(continueLabel)
     }
     
+    ///Formata o texto
     private func setUpOptionLabel() {
         optionLabel.name = "optionLabel"
         optionLabel.fontSize = size.height * 0.075
@@ -51,6 +53,7 @@ class MainPauseBackground: SKSpriteNode{
         addChild(optionLabel)
     }
     
+    ///Formata o texto
     private func setLanguageLabel() {
         languageLabel.name = "languageLabel"
         languageLabel.fontSize = size.height * 0.04

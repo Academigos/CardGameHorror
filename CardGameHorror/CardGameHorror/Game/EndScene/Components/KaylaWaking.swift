@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+///Classe que define a textura e animação da cayla acordando
 class KaylaWaking:SKSpriteNode{
     var kaylaWaking: [SKTexture]?
     let kaylaWaking0:SKTexture

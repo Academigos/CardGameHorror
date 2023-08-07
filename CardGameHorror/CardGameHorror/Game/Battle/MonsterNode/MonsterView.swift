@@ -7,6 +7,7 @@
 
 import SpriteKit
 
+///Monta o chefe 
 class Boss: SKNode {
     let enemyEntity = Enemy()
     

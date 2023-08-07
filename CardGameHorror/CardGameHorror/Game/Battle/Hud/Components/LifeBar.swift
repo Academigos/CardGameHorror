@@ -8,6 +8,7 @@
 import Foundation
 import SpriteKit
 
+///Classe que define a textura da barra de vida
 class LifeBar: SKSpriteNode{
     let lifeBarTexture: SKTexture
     

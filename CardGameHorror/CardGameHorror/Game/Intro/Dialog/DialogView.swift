@@ -102,10 +102,18 @@ class DialogView: SKNode {
             self.caixaTexto.isHidden = true
             isUserInteractionEnabled = false
             addChild(carta2)
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [self]_ in
+                self.caixaTexto.isHidden = false
+                isUserInteractionEnabled = true
+            }
         case 11:
             self.caixaTexto.isHidden = true
             isUserInteractionEnabled = false
             addChild(carta3)
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [self]_ in
+                self.caixaTexto.isHidden = false
+                isUserInteractionEnabled = true
+            }
         case 12:
             carta1.removeFromParent()
             carta2.removeFromParent()

@@ -954,7 +954,7 @@
 				B8AECE092A6D5B770032AC66 /* IntroBackground.swift in Sources */,
 				28399ADF2A72F35C00FD1866 /* LeftPageDiary.swift in Sources */,
 				7019E65F2A7976A800C37E82 /* FinalDialog.swift in Sources */,
-				284746942A746ECE00703464 /* FinalScene.swift in Sources */,
+				284746942A746ECE00703464 /* FinalSceneVitoria.swift in Sources */,
 				C9856EB72A6637CC00936CF2 /* HandCards.swift in Sources */,
 				28DCD9AA2A749AF000E01520 /* Erick.swift in Sources */,
 				282E42592A747E5C00ACFBBB /* VitoriaText.swift in Sources */,
@@ -1186,7 +1186,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TLC9D54B8V;
+				DEVELOPMENT_TEAM = SVGXRR5RRA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MindNight;
@@ -1197,6 +1197,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1220,7 +1221,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TLC9D54B8V;
+				DEVELOPMENT_TEAM = SVGXRR5RRA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGameHorror/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MindNight;
@@ -1231,6 +1232,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
